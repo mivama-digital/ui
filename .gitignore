@@ -5,3 +5,9 @@ storybook-static/
 npm-debug.log*
 .DS_Store
 mivama-ui-*.tgz
+
+# Test & report artifacts
+coverage/
+.artifacts/
+playwright-report/
+test-results/
