@@ -165,3 +165,37 @@ test("built-in modal closes reserve title space without taxing custom compositio
   assert.doesNotMatch(dialogHeader, /\bpr-\d/)
   assert.doesNotMatch(sheetHeader, /\bpr-\d/)
 })
+
+test("portaled overlays sync every matching root and avoid observer feedback", async () => {
+  const [attributes, dialog, sheet, tooltip] = await Promise.all([
+    readRoot("src/lib/shell-attributes.ts"),
+    readUiSource("dialog"),
+    readUiSource("sheet"),
+    readUiSource("tooltip"),
+  ])
+  assert.match(attributes, /document\.querySelectorAll\(portalSelector\)/)
+  assert.match(
+    attributes,
+    /attributeFilter: \["data-slot", "data-open", "data-state", "data-side"\]/
+  )
+  assert.match(attributes, /element\.removeAttribute\(attribute\)/)
+  assert.match(dialog, /useShellAttributes\("\[data-slot=dialog-content\]"\)/)
+  assert.match(dialog, /useShellAttributes\("\[data-slot=dialog-overlay\]"\)/)
+  assert.match(sheet, /useShellAttributes\("\[data-slot=sheet-content\]"\)/)
+  assert.match(sheet, /useShellAttributes\("\[data-slot=sheet-overlay\]"\)/)
+  assert.match(tooltip, /useShellAttributes\("\[data-slot=tooltip-content\]"\)/)
+})
+
+test("overlay, empty, and message primitives use semantic tokens and selectors", async () => {
+  const [dialog, empty, message, tooltip] = await Promise.all([
+    readUiSource("dialog"),
+    readUiSource("empty"),
+    readUiSource("message"),
+    readUiSource("tooltip"),
+  ])
+  assert.match(dialog, /bg-overlay/)
+  assert.doesNotMatch(dialog, /bg-black\/10/)
+  assert.match(empty, /border border-border border-dashed/)
+  assert.doesNotMatch(tooltip, /data-\[state=delayed-open\]/)
+  assert.doesNotMatch(message, /group-has-data-\[variant=ghost\]/)
+})

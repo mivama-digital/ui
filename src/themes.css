@@ -71,41 +71,42 @@
 [data-mivama-theme="editorial"],
 .mivama-editorial-theme {
   color-scheme: light;
-  --editorial-paper: #f3f4ef;
+  --editorial-paper: #f2efe6;
   --editorial-cobalt: #1649ff;
   --editorial-lime: #c9ff45;
   --editorial-instrument: #0b1018;
   --background: var(--editorial-paper);
-  --foreground: #0b0f17;
-  --surface: #e9ebe5;
-  --surface-elevated: #fbfcf8;
-  --card: #fbfcf8;
-  --card-foreground: #0b0f17;
-  --popover: #fbfcf8;
-  --popover-foreground: #0b0f17;
-  --muted: #e8eae4;
-  --muted-foreground: #5b626b;
-  --secondary: #e5e8e1;
-  --secondary-foreground: #171c25;
+  --foreground: #1c1913;
+  --surface: #e9e5d8;
+  --surface-elevated: #fbf9f2;
+  --card: #fbf9f2;
+  --card-foreground: #1c1913;
+  --popover: #fbf9f2;
+  --popover-foreground: #1c1913;
+  --muted: #e9e5d8;
+  --muted-foreground: #57503f;
+  --secondary: #e3decf;
+  --secondary-foreground: #241f16;
   --primary: var(--editorial-cobalt);
   --primary-hover: #0b38d8;
   --primary-foreground: #ffffff;
-  --accent: #dfe5ff;
+  --accent: #e3e8ff;
   --accent-foreground: #102b92;
-  --border: color-mix(in srgb, #0b0f17 14%, transparent);
-  --border-strong: color-mix(in srgb, #0b0f17 32%, transparent);
-  --input: color-mix(in srgb, #0b0f17 18%, transparent);
+  --border: color-mix(in srgb, #1c1913 16%, transparent);
+  --border-strong: color-mix(in srgb, #1c1913 36%, transparent);
+  --input: color-mix(in srgb, #1c1913 52%, transparent);
   --ring: var(--editorial-cobalt);
   --focus-ring: var(--editorial-cobalt);
-  --signal: var(--editorial-lime);
-  --instrument: var(--editorial-instrument);
-  --instrument-elevated: #121a27;
-  --instrument-foreground: #f7f8f4;
-  --instrument-muted: #aeb7c4;
-  --instrument-border: rgb(247 248 244 / 18%);
+  --signal: var(--editorial-cobalt);
+  --instrument: #f3f0e7;
+  --instrument-elevated: #fbf9f2;
+  --instrument-foreground: #1c1913;
+  --instrument-muted: #57503f;
+  --instrument-border: color-mix(in srgb, #1c1913 16%, transparent);
   --brand: var(--editorial-cobalt);
   --brand-foreground: #ffffff;
   --shadow-editorial: 0 28px 80px -42px rgb(11 15 23 / 42%);
+  --shadow-elevated: var(--shadow-editorial);
 }
 
 .dark,
@@ -203,7 +204,7 @@
   --accent-foreground: #dce3ff;
   --border: rgb(255 255 255 / 13%);
   --border-strong: rgb(255 255 255 / 28%);
-  --input: rgb(255 255 255 / 18%);
+  --input: rgb(255 255 255 / 36%);
   --ring: #91a5ff;
   --focus-ring: #91a5ff;
   --signal: var(--editorial-lime);
@@ -212,9 +213,10 @@
   --instrument-foreground: #f7f8f4;
   --instrument-muted: #aeb7c4;
   --instrument-border: rgb(247 248 244 / 18%);
-  --brand: #2442c8;
-  --brand-foreground: #ffffff;
+  --brand: var(--editorial-cobalt);
+  --brand-foreground: #071022;
   --shadow-editorial: 0 34px 100px -46px rgb(0 0 0 / 90%);
+  --shadow-elevated: var(--shadow-editorial);
 }
 
 [data-mivama-theme="portal"][data-density="compact"] {

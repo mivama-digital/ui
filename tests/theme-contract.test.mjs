@@ -77,12 +77,27 @@ test("editorial theme is opt-in and carries the verified light and dark palette"
     themes.indexOf('.dark [data-mivama-theme="editorial"],'),
     themes.indexOf("@media (pointer: coarse)")
   )
-  assert.match(editorial, /--editorial-paper: #f3f4ef;/)
+  assert.match(editorial, /--editorial-paper: #f2efe6;/)
   assert.match(editorial, /--editorial-cobalt: #1649ff;/)
   assert.match(editorial, /--editorial-lime: #c9ff45;/)
   assert.match(editorial, /--editorial-instrument: #0b1018;/)
+  assert.match(editorial, /--signal: var\(--editorial-cobalt\);/)
+  assert.match(editorial, /--instrument: #f3f0e7;/)
+  assert.match(editorial, /--instrument-elevated: #fbf9f2;/)
+  assert.match(editorial, /--instrument-foreground: #1c1913;/)
+  assert.match(editorial, /--instrument-muted: #57503f;/)
+  assert.match(
+    editorial,
+    /--instrument-border: color-mix\(in srgb, #1c1913 16%, transparent\);/
+  )
+  assert.match(editorial, /--shadow-elevated: var\(--shadow-editorial\);/)
   assert.match(editorialDark, /--editorial-paper: #080b10;/)
   assert.match(editorialDark, /--editorial-cobalt: #7792ff;/)
+  assert.match(editorialDark, /--signal: var\(--editorial-lime\);/)
+  assert.match(editorialDark, /--input: rgb\(255 255 255 \/ 36%\);/)
+  assert.match(editorialDark, /--brand: var\(--editorial-cobalt\);/)
+  assert.match(editorialDark, /--brand-foreground: #071022;/)
+  assert.match(editorialDark, /--shadow-elevated: var\(--shadow-editorial\);/)
   assert.doesNotMatch(
     themes.slice(
       themes.indexOf(":root,"),

@@ -49,6 +49,12 @@ test("shared buttons default to type button unless overridden", async () => {
   )
 })
 
+test("sidebar active buttons announce the current page to assistive technology", async () => {
+  const menu = await readUiSource("sidebar/menu")
+  const marker = /"aria-current": isActive \? "page" : undefined,/g
+  assert.equal(menu.match(marker)?.length, 2)
+})
+
 test("normal targets are 44px by default while xs remains explicitly dense", async () => {
   const [button, tabs, sidebarMenu, tokens] = await Promise.all([
     readUiSource("button"),
