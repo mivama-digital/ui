@@ -25,7 +25,13 @@ export async function preparePackageSource({
   packArgs.push("--json", "--pack-destination", artifacts)
 
   const { stdout } = await runNpm(packArgs, { cwd: root, echo: false })
-  const [packed] = JSON.parse(stdout)
+  const jsonStart = stdout.indexOf("[")
+  const jsonEnd = stdout.lastIndexOf("]")
+  const [packed] = JSON.parse(
+    jsonStart !== -1 && jsonEnd !== -1
+      ? stdout.slice(jsonStart, jsonEnd + 1)
+      : stdout
+  )
   const tarball = path.join(artifacts, packed.filename)
 
   return {

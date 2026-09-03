@@ -40,9 +40,8 @@ export function useShellAttributes(portalSelector: string) {
     apply()
 
     const portalObserver = new MutationObserver(apply)
-    portalObserver.observe(document.documentElement, {
+    portalObserver.observe(document.body, {
       childList: true,
-      subtree: true,
       attributes: true,
       // Observe overlay lifecycle attributes, but never the attributes this
       // hook writes, to avoid a MutationObserver feedback loop.

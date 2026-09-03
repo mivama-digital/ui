@@ -1,3 +1,4 @@
+import * as React from "react"
 import { mergeProps } from "@base-ui/react/merge-props"
 import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -33,17 +34,20 @@ const badgeVariants = cva(
   }
 )
 
-function Badge({
-  className,
-  variant = "default",
-  wrap = false,
-  render,
-  ...props
-}: useRender.ComponentProps<"span"> & VariantProps<typeof badgeVariants>) {
+interface BadgeProps
+  extends
+    useRender.ComponentProps<"span">,
+    VariantProps<typeof badgeVariants> {}
+
+const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
+  { className, variant = "default", wrap = false, render, ...props },
+  ref
+) {
   return useRender({
     defaultTagName: "span",
     props: mergeProps<"span">(
       {
+        ref,
         className: cn(badgeVariants({ variant, wrap }), className),
       },
       props
@@ -55,6 +59,8 @@ function Badge({
       wrap,
     },
   })
-}
+})
+Badge.displayName = "Badge"
 
 export { Badge, badgeVariants }
+export type { BadgeProps }

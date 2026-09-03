@@ -73,7 +73,7 @@ const MivamaProvider = React.forwardRef<HTMLDivElement, MivamaProviderProps>(
           ref={setShellRef}
           data-mivama-theme={theme}
           data-density={density}
-          className={cn("isolate", className)}
+          className={cn(className)}
         >
           {children}
         </div>

@@ -30,14 +30,13 @@ type CardProps = React.ComponentProps<"div"> &
     size?: "default" | "sm" | "lg"
   }
 
-function Card({
-  className,
-  size = "default",
-  variant = "surface",
-  ...props
-}: CardProps) {
+const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
+  { className, size = "default", variant = "surface", ...props },
+  ref
+) {
   return (
     <div
+      ref={ref}
       data-slot="card"
       data-size={size}
       data-variant={variant}
@@ -45,11 +44,16 @@ function Card({
       {...props}
     />
   )
-}
+})
+Card.displayName = "Card"
 
-function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div">
+>(function CardHeader({ className, ...props }, ref) {
   return (
     <div
+      ref={ref}
       data-slot="card-header"
       className={cn(
         "group/card-header @container/card-header grid min-w-0 auto-rows-min items-start gap-1 rounded-t-xl px-(--card-spacing) has-data-[slot=card-action]:grid-cols-[minmax(0,1fr)_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-(--card-spacing)",
@@ -58,7 +62,8 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
       {...props}
     />
   )
-}
+})
+CardHeader.displayName = "CardHeader"
 
 function CardTitle({
   className,
@@ -81,9 +86,13 @@ function CardTitle({
   })
 }
 
-function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
+const CardDescription = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div">
+>(function CardDescription({ className, ...props }, ref) {
   return (
     <div
+      ref={ref}
       data-slot="card-description"
       className={cn(
         "text-sm text-muted-foreground group-data-[variant=instrument]/card:text-instrument-muted",
@@ -92,11 +101,16 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
       {...props}
     />
   )
-}
+})
+CardDescription.displayName = "CardDescription"
 
-function CardAction({ className, ...props }: React.ComponentProps<"div">) {
+const CardAction = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div">
+>(function CardAction({ className, ...props }, ref) {
   return (
     <div
+      ref={ref}
       data-slot="card-action"
       className={cn(
         "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
@@ -105,21 +119,31 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
       {...props}
     />
   )
-}
+})
+CardAction.displayName = "CardAction"
 
-function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div">
+>(function CardContent({ className, ...props }, ref) {
   return (
     <div
+      ref={ref}
       data-slot="card-content"
       className={cn("min-w-0 px-(--card-spacing)", className)}
       {...props}
     />
   )
-}
+})
+CardContent.displayName = "CardContent"
 
-function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div">
+>(function CardFooter({ className, ...props }, ref) {
   return (
     <div
+      ref={ref}
       data-slot="card-footer"
       className={cn(
         "flex items-center rounded-b-xl border-t bg-muted/50 p-(--card-spacing) group-data-[variant=instrument]/card:border-instrument-border group-data-[variant=instrument]/card:bg-instrument-elevated",
@@ -128,7 +152,8 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
       {...props}
     />
   )
-}
+})
+CardFooter.displayName = "CardFooter"
 
 export {
   Card,

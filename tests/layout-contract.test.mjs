@@ -20,9 +20,9 @@ import {
 import { readRoot, readUiSource } from "./lib/source.mjs"
 
 test("the stable scrollbar gutter does not offset both viewport edges", async () => {
-  const styles = await readRoot("src/styles.css")
-  assert.match(styles, /scrollbar-gutter: stable;/)
-  assert.doesNotMatch(styles, /scrollbar-gutter: stable both-edges/)
+  const reset = await readRoot("src/reset.css")
+  assert.match(reset, /scrollbar-gutter: stable;/)
+  assert.doesNotMatch(reset, /scrollbar-gutter: stable both-edges/)
 })
 
 test("layout primitives centralize width and rhythm without fixing document semantics", async () => {

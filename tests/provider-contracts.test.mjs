@@ -29,7 +29,7 @@ test("MivamaProvider scopes theme, density, portal container, and refs", async (
   )
   assert.ok(
     provider.indexOf("{...props}") <
-      provider.indexOf('className={cn("isolate", className)}')
+      provider.indexOf("className={cn(className)}")
   )
 })
 

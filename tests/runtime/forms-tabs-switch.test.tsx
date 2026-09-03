@@ -13,6 +13,7 @@ import {
   Fieldset,
 } from "../../src/components/ui/field.js"
 import { Input } from "../../src/components/ui/input.js"
+import { Select } from "../../src/components/ui/select.js"
 import { Switch } from "../../src/components/ui/switch.js"
 import {
   Tabs,
@@ -20,6 +21,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "../../src/components/ui/tabs.js"
+import { Textarea } from "../../src/components/ui/textarea.js"
 
 describe("tabs, switch, and form primitives", () => {
   it("supports manual keyboard tab activation and exposes the active panel", async () => {
@@ -116,5 +118,70 @@ describe("tabs, switch, and form primitives", () => {
       screen.getByRole("group", { name: "Profile" })
     )
     expect(results.violations).toEqual([])
+  })
+
+  it("automatically binds id, description, and invalid state via FieldContext", async () => {
+    render(
+      <div>
+        <Field id="test-input-field" isInvalid isRequired>
+          <FieldLabel>Full Name</FieldLabel>
+          <Input />
+          <FieldDescription>First and last name.</FieldDescription>
+          <FieldError>Full name is required.</FieldError>
+        </Field>
+
+        <Field id="test-select-field">
+          <FieldLabel>Role</FieldLabel>
+          <Select aria-label="Role">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+          </Select>
+          <FieldDescription>Choose your access role.</FieldDescription>
+        </Field>
+
+        <Field id="test-textarea-field" isInvalid>
+          <FieldLabel>Biography</FieldLabel>
+          <Textarea />
+          <FieldError>Bio cannot be empty.</FieldError>
+        </Field>
+      </div>
+    )
+
+    const input = screen.getByRole("textbox", { name: "Full Name" })
+    expect(input).toHaveAttribute("id", "test-input-field")
+    expect(input).toHaveAttribute("aria-invalid", "true")
+    expect(input).toHaveAccessibleDescription(
+      "First and last name. Full name is required."
+    )
+
+    const select = screen.getByRole("combobox", { name: "Role" })
+    expect(select).toHaveAttribute("id", "test-select-field")
+    expect(select).toHaveAccessibleDescription("Choose your access role.")
+    expect(select).not.toHaveAttribute("aria-invalid")
+
+    const textarea = screen.getByRole("textbox", { name: "Biography" })
+    expect(textarea).toHaveAttribute("id", "test-textarea-field")
+    expect(textarea).toHaveAttribute("aria-invalid", "true")
+    expect(textarea).toHaveAccessibleDescription("Bio cannot be empty.")
+  })
+
+  it("renders standalone inputs, selects, and textareas without FieldContext", () => {
+    render(
+      <div>
+        <Input placeholder="Standalone input" />
+        <Select aria-label="Standalone select">
+          <option>Option</option>
+        </Select>
+        <Textarea placeholder="Standalone textarea" />
+      </div>
+    )
+
+    expect(screen.getByPlaceholderText("Standalone input")).toBeInTheDocument()
+    expect(
+      screen.getByRole("combobox", { name: "Standalone select" })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByPlaceholderText("Standalone textarea")
+    ).toBeInTheDocument()
   })
 })

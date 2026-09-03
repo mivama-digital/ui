@@ -324,6 +324,7 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 
 ## Stylesheet exports
 
+- `@mivama/ui/reset.css` → `./dist/reset.css`
 - `@mivama/ui/styles.css` → `./dist/styles.css`
 - `@mivama/ui/themes.css` → `./dist/themes.css`
 - `@mivama/ui/tokens.css` → `./dist/tokens.css`

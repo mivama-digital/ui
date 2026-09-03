@@ -47,7 +47,8 @@ describe("MivamaProvider", () => {
 
     expect(ref.current).toHaveAttribute("data-mivama-theme", "dashboard")
     expect(ref.current).toHaveAttribute("data-density", "compact")
-    expect(ref.current).toHaveClass("isolate", "custom-shell")
+    expect(ref.current).toHaveClass("custom-shell")
+    expect(ref.current).not.toHaveClass("isolate")
   })
 
   it("uses an explicit portal container", () => {

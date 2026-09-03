@@ -273,19 +273,6 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background font-sans text-foreground antialiased;
-  }
-  html {
-    @apply font-sans;
-    scrollbar-gutter: stable;
-  }
-}
-
 @media (prefers-contrast: more) {
   :root,
   [data-mivama-theme],

@@ -14,164 +14,197 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
     "./provider": {
       "types": "./dist/components/mivama-provider.d.ts",
       "import": "./dist/components/mivama-provider.js",
+      "require": "./dist/components/mivama-provider.cjs",
       "default": "./dist/components/mivama-provider.js"
     },
     "./alert": {
       "types": "./dist/components/ui/alert.d.ts",
       "import": "./dist/components/ui/alert.js",
+      "require": "./dist/components/ui/alert.cjs",
       "default": "./dist/components/ui/alert.js"
     },
     "./attachment": {
       "types": "./dist/components/ui/attachment.d.ts",
       "import": "./dist/components/ui/attachment.js",
+      "require": "./dist/components/ui/attachment.cjs",
       "default": "./dist/components/ui/attachment.js"
     },
     "./badge": {
       "types": "./dist/components/ui/badge.d.ts",
       "import": "./dist/components/ui/badge.js",
+      "require": "./dist/components/ui/badge.cjs",
       "default": "./dist/components/ui/badge.js"
     },
     "./bento-grid": {
       "types": "./dist/components/ui/bento-grid.d.ts",
       "import": "./dist/components/ui/bento-grid.js",
+      "require": "./dist/components/ui/bento-grid.cjs",
       "default": "./dist/components/ui/bento-grid.js"
     },
     "./breadcrumb": {
       "types": "./dist/components/ui/breadcrumb.d.ts",
       "import": "./dist/components/ui/breadcrumb.js",
+      "require": "./dist/components/ui/breadcrumb.cjs",
       "default": "./dist/components/ui/breadcrumb.js"
     },
     "./button": {
       "types": "./dist/components/ui/button.d.ts",
       "import": "./dist/components/ui/button.js",
+      "require": "./dist/components/ui/button.cjs",
       "default": "./dist/components/ui/button.js"
     },
     "./card": {
       "types": "./dist/components/ui/card.d.ts",
       "import": "./dist/components/ui/card.js",
+      "require": "./dist/components/ui/card.cjs",
       "default": "./dist/components/ui/card.js"
     },
     "./choice": {
       "types": "./dist/components/ui/choice.d.ts",
       "import": "./dist/components/ui/choice.js",
+      "require": "./dist/components/ui/choice.cjs",
       "default": "./dist/components/ui/choice.js"
     },
     "./container": {
       "types": "./dist/components/ui/container.d.ts",
       "import": "./dist/components/ui/container.js",
+      "require": "./dist/components/ui/container.cjs",
       "default": "./dist/components/ui/container.js"
     },
     "./dialog": {
       "types": "./dist/components/ui/dialog.d.ts",
       "import": "./dist/components/ui/dialog.js",
+      "require": "./dist/components/ui/dialog.cjs",
       "default": "./dist/components/ui/dialog.js"
     },
     "./editorial-grid": {
       "types": "./dist/components/ui/editorial-grid.d.ts",
       "import": "./dist/components/ui/editorial-grid.js",
+      "require": "./dist/components/ui/editorial-grid.cjs",
       "default": "./dist/components/ui/editorial-grid.js"
     },
     "./empty": {
       "types": "./dist/components/ui/empty.d.ts",
       "import": "./dist/components/ui/empty.js",
+      "require": "./dist/components/ui/empty.cjs",
       "default": "./dist/components/ui/empty.js"
     },
     "./field": {
       "types": "./dist/components/ui/field.d.ts",
       "import": "./dist/components/ui/field.js",
+      "require": "./dist/components/ui/field.cjs",
       "default": "./dist/components/ui/field.js"
     },
     "./input": {
       "types": "./dist/components/ui/input.d.ts",
       "import": "./dist/components/ui/input.js",
+      "require": "./dist/components/ui/input.cjs",
       "default": "./dist/components/ui/input.js"
     },
     "./message": {
       "types": "./dist/components/ui/message.d.ts",
       "import": "./dist/components/ui/message.js",
+      "require": "./dist/components/ui/message.cjs",
       "default": "./dist/components/ui/message.js"
     },
     "./pagination": {
       "types": "./dist/components/ui/pagination.d.ts",
       "import": "./dist/components/ui/pagination.js",
+      "require": "./dist/components/ui/pagination.cjs",
       "default": "./dist/components/ui/pagination.js"
     },
     "./progress": {
       "types": "./dist/components/ui/progress.d.ts",
       "import": "./dist/components/ui/progress.js",
+      "require": "./dist/components/ui/progress.cjs",
       "default": "./dist/components/ui/progress.js"
     },
     "./scroll-scene": {
       "types": "./dist/components/ui/scroll-scene.d.ts",
       "import": "./dist/components/ui/scroll-scene.js",
+      "require": "./dist/components/ui/scroll-scene.cjs",
       "default": "./dist/components/ui/scroll-scene.js"
     },
     "./section": {
       "types": "./dist/components/ui/section.d.ts",
       "import": "./dist/components/ui/section.js",
+      "require": "./dist/components/ui/section.cjs",
       "default": "./dist/components/ui/section.js"
     },
     "./select": {
       "types": "./dist/components/ui/select.d.ts",
       "import": "./dist/components/ui/select.js",
+      "require": "./dist/components/ui/select.cjs",
       "default": "./dist/components/ui/select.js"
     },
     "./separator": {
       "types": "./dist/components/ui/separator.d.ts",
       "import": "./dist/components/ui/separator.js",
+      "require": "./dist/components/ui/separator.cjs",
       "default": "./dist/components/ui/separator.js"
     },
     "./sheet": {
       "types": "./dist/components/ui/sheet.d.ts",
       "import": "./dist/components/ui/sheet.js",
+      "require": "./dist/components/ui/sheet.cjs",
       "default": "./dist/components/ui/sheet.js"
     },
     "./sidebar": {
       "types": "./dist/components/ui/sidebar.d.ts",
       "import": "./dist/components/ui/sidebar.js",
+      "require": "./dist/components/ui/sidebar.cjs",
       "default": "./dist/components/ui/sidebar.js"
     },
     "./skeleton": {
       "types": "./dist/components/ui/skeleton.d.ts",
       "import": "./dist/components/ui/skeleton.js",
+      "require": "./dist/components/ui/skeleton.cjs",
       "default": "./dist/components/ui/skeleton.js"
     },
     "./switch": {
       "types": "./dist/components/ui/switch.d.ts",
       "import": "./dist/components/ui/switch.js",
+      "require": "./dist/components/ui/switch.cjs",
       "default": "./dist/components/ui/switch.js"
     },
     "./tabs": {
       "types": "./dist/components/ui/tabs.d.ts",
       "import": "./dist/components/ui/tabs.js",
+      "require": "./dist/components/ui/tabs.cjs",
       "default": "./dist/components/ui/tabs.js"
     },
     "./textarea": {
       "types": "./dist/components/ui/textarea.d.ts",
       "import": "./dist/components/ui/textarea.js",
+      "require": "./dist/components/ui/textarea.cjs",
       "default": "./dist/components/ui/textarea.js"
     },
     "./tooltip": {
       "types": "./dist/components/ui/tooltip.d.ts",
       "import": "./dist/components/ui/tooltip.js",
+      "require": "./dist/components/ui/tooltip.cjs",
       "default": "./dist/components/ui/tooltip.js"
     },
     "./typography": {
       "types": "./dist/components/ui/typography.d.ts",
       "import": "./dist/components/ui/typography.js",
+      "require": "./dist/components/ui/typography.cjs",
       "default": "./dist/components/ui/typography.js"
     },
     "./forms": {
       "types": "./dist/forms.d.ts",
       "import": "./dist/forms.js",
+      "require": "./dist/forms.cjs",
       "default": "./dist/forms.js"
     },
     "./styles.css": "./dist/styles.css",
+    "./reset.css": "./dist/reset.css",
     "./tokens.css": "./dist/tokens.css",
     "./themes.css": "./dist/themes.css"
   },
@@ -180,7 +213,7 @@
     "src"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && cp src/*.css dist/ && cp -R src/fonts dist/",
+    "build": "tsup & npm run build:css & wait",
     "sync:imports": "node scripts/fix-shadcn-imports.mjs",
     "typecheck": "tsc -p tsconfig.json",
     "test": "npm run test:runtime && npm run test:contracts",
@@ -205,7 +238,7 @@
     "storybook:typecheck": "tsc -p tsconfig.storybook.json",
     "storybook:build": "storybook build",
     "package:publint": "publint",
-    "package:types": "attw --pack . --profile node16 --exclude-entrypoints styles.css tokens.css themes.css --ignore-rules cjs-resolves-to-esm",
+    "package:types": "attw --pack . --profile node16 --exclude-entrypoints styles.css reset.css tokens.css themes.css --ignore-rules cjs-resolves-to-esm false-esm",
     "package:lint": "npm run package:publint && npm run package:types",
     "registry:write": "node scripts/check-component-registry.mjs --write",
     "registry:check": "node scripts/check-component-registry.mjs",
@@ -213,12 +246,13 @@
     "api:report": "api-extractor run --local",
     "changeset": "changeset",
     "release:status": "changeset status",
-    "release:version": "changeset version && node scripts/sync-package-lock-version.mjs"
+    "release:version": "changeset version && node scripts/sync-package-lock-version.mjs",
+    "build:js": "tsup",
+    "build:css": "tailwindcss -i src/styles.css -o dist/styles.css --minify && tailwindcss -i src/reset.css -o dist/reset.css --minify && cp src/tokens.css dist/ && cp src/themes.css dist/ && cp src/tailwind.css dist/ && cp -R src/fonts dist/"
   },
   "peerDependencies": {
     "react": ">=18 <20",
-    "react-dom": ">=18 <20",
-    "tailwindcss": ">=4.1 <5"
+    "react-dom": ">=18 <20"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
@@ -239,6 +273,7 @@
     "@storybook/addon-a11y": "^10.5.5",
     "@storybook/addon-docs": "^10.5.5",
     "@storybook/react-vite": "^10.5.5",
+    "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.0",
@@ -250,19 +285,31 @@
     "axe-core": "^4.12.1",
     "eslint": "^10.8.0",
     "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-unused-imports": "^4.4.1",
     "globals": "^17.9.0",
     "jsdom": "^30.0.1",
+    "postcss": "^8.5.28",
     "prettier": "^3.9.6",
     "publint": "^0.3.23",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "storybook": "^10.5.5",
     "tailwindcss": "^4.3.3",
+    "tsup": "^8.5.1",
     "typescript": "^7",
+    "typescript-eslint": "^8.69.0",
     "vitest": "^4.1.10",
     "vitest-axe": "^0.1.0"
+  },
+  "overrides": {
+    "eslint-plugin-jsx-a11y": {
+      "eslint": "$eslint"
+    },
+    "typescript-eslint": {
+      "typescript": "$typescript"
+    }
   },
   "publishConfig": {
     "access": "public"
