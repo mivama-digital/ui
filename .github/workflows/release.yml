@@ -108,11 +108,18 @@ jobs:
           node --input-type=module <<'NODE'
           import { execFileSync } from "node:child_process"
 
-          const output = execFileSync(
-            "npm",
-            ["view", "@mivama/ui", "versions", "--json"],
-            { encoding: "utf8", stdio: ["ignore", "pipe", "inherit"] }
-          )
+          let output
+          try {
+            output = execFileSync(
+              "npm",
+              ["view", "@mivama/ui", "versions", "--json"],
+              { encoding: "utf8", stdio: ["ignore", "pipe", "inherit"] }
+            )
+          } catch (error) {
+            const stdout = error.stdout?.toString() ?? ""
+            if (!/"code":\s*"E404"/.test(stdout)) throw error
+            output = "[]"
+          }
           const parsed = JSON.parse(output)
           const versions = Array.isArray(parsed) ? parsed : [parsed]
           if (versions.includes(process.env.VERSION)) {
