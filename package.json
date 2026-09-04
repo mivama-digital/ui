@@ -364,11 +364,9 @@
     "vitest-axe": "^0.1.0"
   },
   "overrides": {
+    "typescript": "$typescript",
     "eslint-plugin-jsx-a11y": {
       "eslint": "$eslint"
-    },
-    "typescript-eslint": {
-      "typescript": "$typescript"
     }
   },
   "publishConfig": {
