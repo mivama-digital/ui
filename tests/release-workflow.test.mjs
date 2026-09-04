@@ -6,7 +6,7 @@ import { readJson, readRoot } from "./lib/source.mjs"
 const workflow = await readRoot(".github/workflows/release.yml")
 const packageJson = await readJson("package.json")
 
-test("release workflow is manual, OIDC-only, and GitHub-hosted", () => {
+test("release workflow is manual, authenticated, and GitHub-hosted", () => {
   assert.match(workflow, /on:\n  workflow_dispatch:/)
   assert.doesNotMatch(workflow, /\n  push:/)
   assert.doesNotMatch(workflow, /\n  pull_request:/)
@@ -25,8 +25,7 @@ test("release workflow is manual, OIDC-only, and GitHub-hosted", () => {
   assert.equal(packageJson.scripts?.["release:publish"], undefined)
   assert.doesNotMatch(workflow, /run: npm run verify/)
 
-  assert.doesNotMatch(workflow, /NPM_TOKEN/)
-  assert.doesNotMatch(workflow, /NODE_AUTH_TOKEN/)
+  assert.match(workflow, /NODE_AUTH_TOKEN: \$\{\{ secrets\.NPM_TOKEN \}\}/)
 })
 
 test("release workflow requires provenance-capable repository visibility", () => {

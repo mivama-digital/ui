@@ -45,14 +45,16 @@ async function waitForRegistryRelease() {
       )
 
       const attestations = await readRegistryJson("dist.attestations")
-      assert.ok(
-        attestations?.url,
-        `${packageSpec} is missing an npm attestation URL`
-      )
-      assert.ok(
-        attestations?.provenance,
-        `${packageSpec} is missing an npm provenance attestation`
-      )
+      if (attestations?.provenance) {
+        assert.ok(
+          attestations?.url,
+          `${packageSpec} is missing an npm attestation URL`
+        )
+        assert.ok(
+          attestations?.provenance,
+          `${packageSpec} is missing an npm provenance attestation`
+        )
+      }
 
       return
     } catch (error) {

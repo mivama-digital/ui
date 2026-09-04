@@ -130,6 +130,7 @@ jobs:
       - name: Publish with prepublishOnly verification and npm Trusted Publishing
         env:
           NPM_TAG: ${{ inputs.tag }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --access public --tag "$NPM_TAG"
       - name: Verify exact published registry release
         run: node scripts/check-registry-release.mjs "${{ inputs.version }}"
