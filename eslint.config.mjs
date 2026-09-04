@@ -83,6 +83,8 @@ export default [
     },
     rules: {
       ...sharedRules,
+      // Note: JSX variable references (<Component />) require jsx-uses-vars from eslint-plugin-react.
+      // Kept disabled here until typescript-eslint adds TypeScript 7 parser support.
       "unused-imports/no-unused-imports": "off",
       "unused-imports/no-unused-vars": "off",
       "react-hooks/rules-of-hooks": "error",

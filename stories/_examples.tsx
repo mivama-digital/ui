@@ -2,6 +2,15 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
   Attachment,
   AttachmentContent,
   AttachmentDescription,
@@ -55,11 +64,13 @@ import {
   Progress,
   ProgressLabel,
   ProgressValue,
+  ScrollArea,
   ScrollLayer,
   ScrollScene,
   Section,
   Select,
   Separator,
+  Slider,
   Sheet,
   SheetContent,
   SheetDescription,
@@ -548,5 +559,55 @@ export function FormsExample() {
       </label>
       <Textarea aria-label="Notes" placeholder="Notes" />
     </div>
+  )
+}
+
+export function AlertDialogExample() {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger render={<Button variant="destructive" />}>
+        Delete workspace
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your
+            workspace and remove all associated data.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction variant="destructive">Delete</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  )
+}
+
+export function SliderExample() {
+  return (
+    <div className="grid w-80 max-w-full gap-4">
+      <div className="flex justify-between text-sm">
+        <span>Volume</span>
+        <span className="text-muted-foreground">50%</span>
+      </div>
+      <Slider defaultValue={50} max={100} step={1} aria-label="Volume" />
+    </div>
+  )
+}
+
+export function ScrollAreaExample() {
+  return (
+    <ScrollArea className="h-48 w-64 rounded-md border p-4">
+      <div className="space-y-4">
+        <h4 className="text-sm font-medium leading-none">Changelog</h4>
+        {Array.from({ length: 15 }).map((_, i) => (
+          <p key={i} className="text-sm text-muted-foreground">
+            v26.{9 - Math.floor(i / 3)}.{i % 3} release notes and updates.
+          </p>
+        ))}
+      </div>
+    </ScrollArea>
   )
 }

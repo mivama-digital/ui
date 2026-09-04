@@ -4,7 +4,9 @@ import { describe, expect, it } from "vitest"
 
 import {
   MivamaProvider,
+  useMivamaContext,
   useMivamaPortalContainer,
+  useOptionalMivamaContext,
 } from "../../src/components/mivama-provider.js"
 
 function PortalProbe() {
@@ -51,15 +53,37 @@ describe("MivamaProvider", () => {
     expect(ref.current).not.toHaveClass("isolate")
   })
 
-  it("uses an explicit portal container", () => {
-    const portal = document.createElement("div")
-    portal.dataset.mivamaTheme = "external"
+  it("provides typed context inside provider and throws outside provider", () => {
+    let contextValue: ReturnType<typeof useMivamaContext> | null = null
+
+    function Consumer() {
+      contextValue = useMivamaContext()
+      return <span>ready</span>
+    }
+
     render(
-      <MivamaProvider portalContainer={portal}>
-        <PortalProbe />
+      <MivamaProvider theme="portal" density="compact">
+        <Consumer />
       </MivamaProvider>
     )
 
-    expect(screen.getByTestId("portal-probe")).toHaveTextContent("external")
+    expect(contextValue).not.toBeNull()
+    expect(contextValue?.theme).toBe("portal")
+    expect(contextValue?.density).toBe("compact")
+
+    // Expect useMivamaContext to throw outside MivamaProvider
+    expect(() => render(<Consumer />)).toThrow(
+      "useMivamaContext must be used within a <MivamaProvider>"
+    )
+
+    // Expect useOptionalMivamaContext to return null outside MivamaProvider
+    let optionalValue: unknown = undefined
+    function OptionalConsumer() {
+      optionalValue = useOptionalMivamaContext()
+      return <span>optional</span>
+    }
+
+    render(<OptionalConsumer />)
+    expect(optionalValue).toBeNull()
   })
 })

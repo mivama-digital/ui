@@ -32,6 +32,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/alert.d.ts`
 - Runtime: `./dist/components/ui/alert.js`
 
+## `@mivama/ui/alert-dialog`
+
+- Primary component: AlertDialog
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/alert-dialog.d.ts`
+- Runtime: `./dist/components/ui/alert-dialog.js`
+
 ## `@mivama/ui/attachment`
 
 - Primary component: Attachment
@@ -252,6 +262,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/mivama-provider.d.ts`
 - Runtime: `./dist/components/mivama-provider.js`
 
+## `@mivama/ui/scroll-area`
+
+- Primary component: ScrollArea
+- Category: layout
+- Status: stable
+- Client boundary: Yes
+- Interactive: No
+- Types: `./dist/components/ui/scroll-area.d.ts`
+- Runtime: `./dist/components/ui/scroll-area.js`
+
 ## `@mivama/ui/scroll-scene`
 
 - Primary component: ScrollScene
@@ -321,6 +341,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: No
 - Types: `./dist/components/ui/skeleton.d.ts`
 - Runtime: `./dist/components/ui/skeleton.js`
+
+## `@mivama/ui/slider`
+
+- Primary component: Slider
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/slider.d.ts`
+- Runtime: `./dist/components/ui/slider.js`
 
 ## `@mivama/ui/switch`
 

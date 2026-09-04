@@ -80,7 +80,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
       data-slot="dropdown-menu-sub-trigger"
       data-inset={inset || undefined}
       className={cn(
-        "flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none focus:bg-muted focus:text-foreground data-highlighted:bg-muted data-highlighted:text-foreground data-[state=open]:bg-muted data-[inset]:pl-8 [&>svg]:size-4 [&>svg]:shrink-0",
+        "flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none focus:bg-muted focus:text-foreground data-highlighted:bg-muted data-highlighted:text-foreground data-[state=open]:bg-muted data-inset:pl-8 [&>svg]:size-4 [&>svg]:shrink-0",
         className
       )}
       {...props}
@@ -177,7 +177,7 @@ const DropdownMenuItem = React.forwardRef<
       data-variant={variant}
       data-inset={inset || undefined}
       className={cn(
-        "relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none transition-colors motion-reduce:transition-none focus:bg-muted focus:text-foreground data-highlighted:bg-muted data-highlighted:text-foreground data-disabled:pointer-events-none data-disabled:opacity-50 data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:data-highlighted:bg-destructive/10 [&>svg]:size-4 [&>svg]:shrink-0",
+        "relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none transition-colors motion-reduce:transition-none focus:bg-muted focus:text-foreground data-highlighted:bg-muted data-highlighted:text-foreground data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:data-highlighted:bg-destructive/10 [&>svg]:size-4 [&>svg]:shrink-0",
         className
       )}
       {...props}
@@ -258,7 +258,7 @@ const DropdownMenuLabel = React.forwardRef<
       data-slot="dropdown-menu-label"
       data-inset={inset || undefined}
       className={cn(
-        "px-2 py-1.5 text-xs font-semibold text-muted-foreground data-[inset]:pl-8",
+        "px-2 py-1.5 text-xs font-semibold text-muted-foreground data-inset:pl-8",
         className
       )}
       {...props}

@@ -86,8 +86,14 @@ function useOptionalMivamaContext() {
   return React.useContext(MivamaContext)
 }
 
-function useMivamaContext() {
-  return useOptionalMivamaContext()
+function useMivamaContext(): MivamaContextValue {
+  const context = useOptionalMivamaContext()
+  if (!context) {
+    throw new Error(
+      "useMivamaContext must be used within a <MivamaProvider>. If optional context is intended, use useOptionalMivamaContext()."
+    )
+  }
+  return context
 }
 
 function useMivamaPortalContainer() {

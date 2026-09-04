@@ -5,14 +5,17 @@
 ```ts
 
 import { Accordion as Accordion_2 } from '@base-ui/react/accordion';
+import { AlertDialog as AlertDialog_2 } from '@base-ui/react/alert-dialog';
 import { Avatar as Avatar_2 } from '@base-ui/react/avatar';
 import * as _base_ui_react from '@base-ui/react';
 import * as _base_ui_react_accordion from '@base-ui/react/accordion';
+import * as _base_ui_react_alert_dialog from '@base-ui/react/alert-dialog';
 import * as _base_ui_react_avatar from '@base-ui/react/avatar';
 import * as _base_ui_react_collapsible from '@base-ui/react/collapsible';
 import * as _base_ui_react_dialog from '@base-ui/react/dialog';
 import * as _base_ui_react_menu from '@base-ui/react/menu';
 import * as _base_ui_react_popover from '@base-ui/react/popover';
+import * as _base_ui_react_slider from '@base-ui/react/slider';
 import * as _base_ui_react_toast from '@base-ui/react/toast';
 import { Button as Button_2 } from '@base-ui/react/button';
 import * as class_variance_authority_types from 'class-variance-authority/types';
@@ -24,7 +27,9 @@ import { Menu } from '@base-ui/react/menu';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
 import * as React_2 from 'react';
+import { ScrollArea as ScrollArea_2 } from '@base-ui/react/scroll-area';
 import { Separator as Separator_2 } from '@base-ui/react/separator';
+import { Slider as Slider_2 } from '@base-ui/react/slider';
 import { Switch as Switch_2 } from '@base-ui/react/switch';
 import { Tabs as Tabs_2 } from '@base-ui/react/tabs';
 import { Toast } from '@base-ui/react/toast';
@@ -58,6 +63,61 @@ export function AlertAction(input: React_2.ComponentProps<"div">): React_2.JSX.E
 
 // @public (undocumented)
 export function AlertDescription(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function AlertDialog(input: AlertDialog_2.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace AlertDialog {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const AlertDialogAction: React_2.ForwardRefExoticComponent<Omit<AlertDialogActionProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export interface AlertDialogActionProps extends AlertDialog_2.Close.Props {
+    // (undocumented)
+    variant?: "default" | "destructive";
+}
+
+// @public (undocumented)
+export const AlertDialogCancel: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_alert_dialog.AlertDialogCloseProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export const AlertDialogContent: React_2.ForwardRefExoticComponent<Omit<AlertDialogContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface AlertDialogContentProps extends AlertDialog_2.Popup.Props {
+}
+
+// @public (undocumented)
+export const AlertDialogDescription: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_alert_dialog.AlertDialogDescriptionProps, "ref"> & React_2.RefAttributes<HTMLParagraphElement>>;
+
+// @public (undocumented)
+export const AlertDialogFooter: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const AlertDialogHeader: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const AlertDialogOverlay: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_alert_dialog.AlertDialogBackdropProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export function AlertDialogPortal(input: AlertDialog_2.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace AlertDialogPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const AlertDialogTitle: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_alert_dialog.AlertDialogTitleProps, "ref"> & React_2.RefAttributes<HTMLHeadingElement>>;
+
+// @public (undocumented)
+export const AlertDialogTrigger: React_2.ForwardRefExoticComponent<Omit<AlertDialog_2.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export type AlertProps = React_2.ComponentProps<"div"> & {
@@ -270,7 +330,7 @@ export const containerVariants: (props?: ({
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // @public (undocumented)
-export const defaultToastManager: _base_ui_react_toast.ToastManager<any>;
+export const defaultToastManager: _base_ui_react_toast.ToastManager<ToastData>;
 
 // @public (undocumented)
 export function Dialog(input: Dialog_2.Root.Props): React_2.JSX.Element;
@@ -682,6 +742,20 @@ export function ProgressTrack(input: Progress_2.Track.Props): React_2.JSX.Elemen
 export function ProgressValue(input: Progress_2.Value.Props): React_2.JSX.Element;
 
 // @public (undocumented)
+export const ScrollArea: React_2.ForwardRefExoticComponent<Omit<ScrollAreaProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ScrollAreaProps extends ScrollArea_2.Root.Props {
+}
+
+// @public (undocumented)
+export const ScrollBar: React_2.ForwardRefExoticComponent<Omit<ScrollBarProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ScrollBarProps extends ScrollArea_2.Scrollbar.Props {
+}
+
+// @public (undocumented)
 export function ScrollLayer(input: ScrollLayerProps): React_2.JSX.Element;
 
 // @public (undocumented)
@@ -891,6 +965,22 @@ export function SidebarTrigger(input: React_2.ComponentProps<typeof Button> & {
 export function Skeleton(input: React.ComponentProps<"div">): React_2.JSX.Element;
 
 // @public (undocumented)
+export const Slider: React_2.ForwardRefExoticComponent<Omit<SliderProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const SliderIndicator: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_slider.SliderIndicatorProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface SliderProps extends Slider_2.Root.Props {
+}
+
+// @public (undocumented)
+export const SliderThumb: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_slider.SliderThumbProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const SliderTrack: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_slider.SliderTrackProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
 export function Switch(input: Switch_2.Root.Props & {
     size?: "sm" | "default";
 }): React_2.JSX.Element;
@@ -968,21 +1058,34 @@ export namespace toast {
 }
 
 // @public (undocumented)
+export interface ToastAction {
+    // (undocumented)
+    label: string;
+    // (undocumented)
+    onClick: () => void;
+}
+
+// @public (undocumented)
+export interface ToastData {
+    // (undocumented)
+    action?: ToastAction;
+    // (undocumented)
+    variant?: "default" | "destructive";
+}
+
+// @public (undocumented)
 export function Toaster(input: ToasterProps): React_2.JSX.Element;
 
 // @public (undocumented)
 export interface ToasterProps extends React_2.ComponentProps<"div"> {
     // (undocumented)
-    toastManager?: ReturnType<typeof Toast.createToastManager>;
+    toastManager?: ReturnType<typeof Toast.createToastManager<ToastData>>;
 }
 
 // @public (undocumented)
 export interface ToastOptions {
     // (undocumented)
-    action?: {
-        label: string;
-        onClick: () => void;
-    };
+    action?: ToastAction;
     // (undocumented)
     description?: React_2.ReactNode;
     // (undocumented)
@@ -996,7 +1099,7 @@ export interface ToastOptions {
 // @public (undocumented)
 export function ToastRootProvider(input: {
     children?: React_2.ReactNode;
-    toastManager?: ReturnType<typeof Toast.createToastManager>;
+    toastManager?: ReturnType<typeof Toast.createToastManager<ToastData>>;
 }): React_2.JSX.Element;
 
 // @public (undocumented)
@@ -1024,7 +1127,7 @@ export type TypographyTone = "default" | "inherit";
 export function useFieldContext(): FieldContextValue | null;
 
 // @public (undocumented)
-export function useMivamaContext(): MivamaContextValue | null;
+export function useMivamaContext(): MivamaContextValue;
 
 // @public (undocumented)
 export function useMivamaPortalContainer(): MivamaPortalContainer | undefined;

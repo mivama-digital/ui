@@ -283,5 +283,39 @@ export {
   Toaster,
   ToastRootProvider,
 } from "./components/ui/toast.js"
-export type { ToastOptions, ToasterProps } from "./components/ui/toast.js"
+export type {
+  ToastAction,
+  ToastData,
+  ToastOptions,
+  ToasterProps,
+} from "./components/ui/toast.js"
+export {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "./components/ui/alert-dialog.js"
+export type {
+  AlertDialogActionProps,
+  AlertDialogContentProps,
+} from "./components/ui/alert-dialog.js"
+export {
+  Slider,
+  SliderTrack,
+  SliderIndicator,
+  SliderThumb,
+} from "./components/ui/slider.js"
+export type { SliderProps } from "./components/ui/slider.js"
+export { ScrollArea, ScrollBar } from "./components/ui/scroll-area.js"
+export type {
+  ScrollAreaProps,
+  ScrollBarProps,
+} from "./components/ui/scroll-area.js"
 export { cn } from "./lib/utils.js"

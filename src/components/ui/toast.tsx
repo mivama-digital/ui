@@ -8,15 +8,22 @@ import { useMivamaPortalContainer } from "../mivama-provider.js"
 import { useShellAttributes } from "../../lib/shell-attributes.js"
 import { cn } from "../../lib/utils.js"
 
-const defaultToastManager = ToastPrimitive.createToastManager()
+interface ToastAction {
+  label: string
+  onClick: () => void
+}
+
+interface ToastData {
+  action?: ToastAction
+  variant?: "default" | "destructive"
+}
+
+const defaultToastManager = ToastPrimitive.createToastManager<ToastData>()
 
 interface ToastOptions {
   title?: React.ReactNode
   description?: React.ReactNode
-  action?: {
-    label: string
-    onClick: () => void
-  }
+  action?: ToastAction
   variant?: "default" | "destructive"
   timeout?: number
 }
@@ -50,7 +57,7 @@ toast.error = (
 toast.dismiss = (id?: string) => defaultToastManager.close(id)
 
 interface ToasterProps extends React.ComponentProps<"div"> {
-  toastManager?: ReturnType<typeof ToastPrimitive.createToastManager>
+  toastManager?: ReturnType<typeof ToastPrimitive.createToastManager<ToastData>>
 }
 
 function Toaster({
@@ -61,7 +68,7 @@ function Toaster({
   const providerContainer = useMivamaPortalContainer()
   useShellAttributes("[data-slot=toast-viewport]")
 
-  const toasts = ToastPrimitive.useToastManager().toasts
+  const toasts = ToastPrimitive.useToastManager<ToastData>().toasts
 
   return (
     <ToastPrimitive.Portal container={providerContainer}>
@@ -78,11 +85,7 @@ function Toaster({
             key={t.id}
             toast={t}
             data-slot="toast"
-            data-variant={
-              (t.data as { variant?: string } | undefined)?.variant ??
-              t.type ??
-              "default"
-            }
+            data-variant={t.data?.variant ?? t.type ?? "default"}
             className={cn(
               "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-xl border border-border bg-popover p-4 text-popover-foreground shadow-lg ring-1 ring-foreground/10 transition-all data-open:animate-in data-open:slide-in-from-bottom-5 data-closed:animate-out data-closed:fade-out-80 data-closed:slide-out-to-right-full data-[variant=destructive]:border-destructive-border data-[variant=destructive]:bg-destructive-subtle data-[variant=destructive]:text-destructive-foreground"
             )}
@@ -105,22 +108,13 @@ function Toaster({
                 </ToastPrimitive.Description>
               )}
             </div>
-            {(
-              t.data as
-                { action?: { label: string; onClick: () => void } } | undefined
-            )?.action && (
+            {t.data?.action && (
               <button
                 type="button"
-                onClick={
-                  (t.data as { action: { label: string; onClick: () => void } })
-                    .action.onClick
-                }
+                onClick={t.data.action.onClick}
                 className="inline-flex h-8 shrink-0 items-center justify-center rounded-md border border-input bg-transparent px-3 text-xs font-medium transition-colors hover:bg-muted focus:outline-none focus:ring-1 focus:ring-ring"
               >
-                {
-                  (t.data as { action: { label: string; onClick: () => void } })
-                    .action.label
-                }
+                {t.data.action.label}
               </button>
             )}
             <ToastPrimitive.Close
@@ -141,7 +135,7 @@ function ToastRootProvider({
   toastManager = defaultToastManager,
 }: {
   children?: React.ReactNode
-  toastManager?: ReturnType<typeof ToastPrimitive.createToastManager>
+  toastManager?: ReturnType<typeof ToastPrimitive.createToastManager<ToastData>>
 }) {
   return (
     <ToastPrimitive.Provider toastManager={toastManager}>
@@ -153,4 +147,4 @@ function ToastRootProvider({
 ToastRootProvider.displayName = "ToastRootProvider"
 
 export { toast, defaultToastManager, Toaster, ToastRootProvider }
-export type { ToastOptions, ToasterProps }
+export type { ToastAction, ToastData, ToastOptions, ToasterProps }

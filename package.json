@@ -248,6 +248,24 @@
       "import": "./dist/components/ui/toast.js",
       "require": "./dist/components/ui/toast.cjs",
       "default": "./dist/components/ui/toast.js"
+    },
+    "./alert-dialog": {
+      "types": "./dist/components/ui/alert-dialog.d.ts",
+      "import": "./dist/components/ui/alert-dialog.js",
+      "require": "./dist/components/ui/alert-dialog.cjs",
+      "default": "./dist/components/ui/alert-dialog.js"
+    },
+    "./slider": {
+      "types": "./dist/components/ui/slider.d.ts",
+      "import": "./dist/components/ui/slider.js",
+      "require": "./dist/components/ui/slider.cjs",
+      "default": "./dist/components/ui/slider.js"
+    },
+    "./scroll-area": {
+      "types": "./dist/components/ui/scroll-area.d.ts",
+      "import": "./dist/components/ui/scroll-area.js",
+      "require": "./dist/components/ui/scroll-area.cjs",
+      "default": "./dist/components/ui/scroll-area.js"
     }
   },
   "files": [
