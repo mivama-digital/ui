@@ -201,7 +201,7 @@ export const Badge: React_2.ForwardRefExoticComponent<Omit<BadgeProps, "ref"> & 
 
 // @public (undocumented)
 export const badgeVariants: (props?: ({
-    variant?: "default" | "link" | "secondary" | "destructive" | "outline" | "ghost" | null | undefined;
+    variant?: "default" | "link" | "outline" | "secondary" | "ghost" | "destructive" | null | undefined;
     wrap?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
@@ -249,7 +249,7 @@ export const Button: React_2.ForwardRefExoticComponent<Omit<ButtonProps, "ref"> 
 
 // @public (undocumented)
 export const buttonVariants: (props?: ({
-    variant?: "default" | "link" | "navigation" | "secondary" | "destructive" | "outline" | "ghost" | "inverse" | null | undefined;
+    variant?: "default" | "link" | "navigation" | "outline" | "secondary" | "ghost" | "destructive" | "inverse" | null | undefined;
     size?: "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg" | null | undefined;
     wrap?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
@@ -586,7 +586,7 @@ export type HeadingProps = useRender.ComponentProps<"h2"> & VariantProps<typeof 
 
 // @public (undocumented)
 export const headingVariants: (props?: ({
-    variant?: "section" | "title" | "page" | "card" | "display" | "hero" | "statement" | null | undefined;
+    variant?: "section" | "title" | "page" | "display" | "hero" | "statement" | "card" | null | undefined;
     tone?: "default" | "inherit" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
@@ -779,7 +779,7 @@ export type SectionProps = useRender.ComponentProps<"section"> & VariantProps<ty
 
 // @public (undocumented)
 export const sectionVariants: (props?: ({
-    density?: "compact" | "default" | "hero" | null | undefined;
+    density?: "default" | "compact" | "hero" | null | undefined;
     tone?: "default" | "instrument" | "muted" | "accent" | "brand" | null | undefined;
     bordered?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;

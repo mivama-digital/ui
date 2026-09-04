@@ -2,31 +2,32 @@ import { defineConfig } from "tsup"
 import fs from "node:fs"
 import path from "node:path"
 
-// Dynamically resolve component subpath entries from src/components/ui
-const uiDir = path.resolve(process.cwd(), "src/components/ui")
-const uiEntries: Record<string, string> = {}
+function collectEntries(dir: string, base = ""): Record<string, string> {
+  const entries: Record<string, string> = {}
+  if (!fs.existsSync(dir)) return entries
 
-if (fs.existsSync(uiDir)) {
-  for (const file of fs.readdirSync(uiDir)) {
-    if (
-      file.endsWith(".tsx") &&
-      !file.includes(".test.") &&
-      !file.includes(".stories.")
+  for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, item.name)
+    const relPath = base ? path.join(base, item.name) : item.name
+    if (item.isDirectory()) {
+      if (item.name === "fonts") continue
+      Object.assign(entries, collectEntries(fullPath, relPath))
+    } else if (
+      /\.(ts|tsx)$/.test(item.name) &&
+      !item.name.includes(".test.") &&
+      !item.name.includes(".stories.")
     ) {
-      const name = path.basename(file, ".tsx")
-      uiEntries[`components/ui/${name}`] = `src/components/ui/${file}`
+      const entryKey = relPath.replace(/\.(ts|tsx)$/, "")
+      entries[entryKey] = fullPath
     }
   }
+  return entries
 }
 
+const allEntries = collectEntries(path.resolve(process.cwd(), "src"))
+
 export default defineConfig({
-  entry: {
-    index: "src/index.ts",
-    "components/mivama-provider": "src/components/mivama-provider.tsx",
-    forms: "src/forms.ts",
-    "lib/shell-contract": "src/lib/shell-contract.ts",
-    ...uiEntries,
-  },
+  entry: allEntries,
   format: ["esm", "cjs"],
   dts: true,
   sourcemap: true,
