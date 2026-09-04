@@ -24,6 +24,7 @@ export default defineConfig({
     index: "src/index.ts",
     "components/mivama-provider": "src/components/mivama-provider.tsx",
     forms: "src/forms.ts",
+    "lib/shell-contract": "src/lib/shell-contract.ts",
     ...uiEntries,
   },
   format: ["esm", "cjs"],
