@@ -12,6 +12,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 
 ## Component and module subpaths
 
+## `@mivama/ui/accordion`
+
+- Primary component: Accordion
+- Category: layout
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/accordion.d.ts`
+- Runtime: `./dist/components/ui/accordion.js`
+
 ## `@mivama/ui/alert`
 
 - Primary component: Alert
@@ -31,6 +41,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/attachment.d.ts`
 - Runtime: `./dist/components/ui/attachment.js`
+
+## `@mivama/ui/avatar`
+
+- Primary component: Avatar
+- Category: feedback
+- Status: stable
+- Client boundary: Yes
+- Interactive: No
+- Types: `./dist/components/ui/avatar.d.ts`
+- Runtime: `./dist/components/ui/avatar.js`
 
 ## `@mivama/ui/badge`
 
@@ -92,6 +112,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/choice.d.ts`
 - Runtime: `./dist/components/ui/choice.js`
 
+## `@mivama/ui/collapsible`
+
+- Primary component: Collapsible
+- Category: layout
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/collapsible.d.ts`
+- Runtime: `./dist/components/ui/collapsible.js`
+
 ## `@mivama/ui/container`
 
 - Primary component: Container
@@ -111,6 +141,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/dialog.d.ts`
 - Runtime: `./dist/components/ui/dialog.js`
+
+## `@mivama/ui/dropdown-menu`
+
+- Primary component: DropdownMenu
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/dropdown-menu.d.ts`
+- Runtime: `./dist/components/ui/dropdown-menu.js`
 
 ## `@mivama/ui/editorial-grid`
 
@@ -181,6 +221,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/pagination.d.ts`
 - Runtime: `./dist/components/ui/pagination.js`
+
+## `@mivama/ui/popover`
+
+- Primary component: Popover
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/popover.d.ts`
+- Runtime: `./dist/components/ui/popover.js`
 
 ## `@mivama/ui/progress`
 
@@ -282,6 +332,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/switch.d.ts`
 - Runtime: `./dist/components/ui/switch.js`
 
+## `@mivama/ui/table`
+
+- Primary component: Table
+- Category: layout
+- Status: stable
+- Client boundary: No
+- Interactive: No
+- Types: `./dist/components/ui/table.d.ts`
+- Runtime: `./dist/components/ui/table.js`
+
 ## `@mivama/ui/tabs`
 
 - Primary component: Tabs
@@ -301,6 +361,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/textarea.d.ts`
 - Runtime: `./dist/components/ui/textarea.js`
+
+## `@mivama/ui/toast`
+
+- Primary component: Toast
+- Category: feedback
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/toast.d.ts`
+- Runtime: `./dist/components/ui/toast.js`
 
 ## `@mivama/ui/tooltip`
 

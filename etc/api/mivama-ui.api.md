@@ -4,20 +4,51 @@
 
 ```ts
 
+import { Accordion as Accordion_2 } from '@base-ui/react/accordion';
+import { Avatar as Avatar_2 } from '@base-ui/react/avatar';
+import * as _base_ui_react from '@base-ui/react';
+import * as _base_ui_react_accordion from '@base-ui/react/accordion';
+import * as _base_ui_react_avatar from '@base-ui/react/avatar';
+import * as _base_ui_react_collapsible from '@base-ui/react/collapsible';
 import * as _base_ui_react_dialog from '@base-ui/react/dialog';
+import * as _base_ui_react_menu from '@base-ui/react/menu';
+import * as _base_ui_react_popover from '@base-ui/react/popover';
+import * as _base_ui_react_toast from '@base-ui/react/toast';
 import { Button as Button_2 } from '@base-ui/react/button';
 import * as class_variance_authority_types from 'class-variance-authority/types';
 import { ClassValue } from 'clsx';
+import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
 import { ComponentProps } from 'react';
 import { Dialog as Dialog_2 } from '@base-ui/react/dialog';
+import { Menu } from '@base-ui/react/menu';
+import { Popover as Popover_2 } from '@base-ui/react/popover';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
 import * as React_2 from 'react';
 import { Separator as Separator_2 } from '@base-ui/react/separator';
 import { Switch as Switch_2 } from '@base-ui/react/switch';
 import { Tabs as Tabs_2 } from '@base-ui/react/tabs';
+import { Toast } from '@base-ui/react/toast';
 import { Tooltip as Tooltip_2 } from '@base-ui/react/tooltip';
 import { useRender } from '@base-ui/react/use-render';
 import { VariantProps } from 'class-variance-authority';
+
+// @public (undocumented)
+export function Accordion(props: Accordion_2.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace Accordion {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const AccordionContent: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_accordion.AccordionPanelProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const AccordionItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_accordion.AccordionItemProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const AccordionTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_accordion.AccordionTriggerProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export function Alert(input: AlertProps): React_2.JSX.Element;
@@ -74,6 +105,34 @@ export function AttachmentTitle(input: React_2.ComponentProps<"span">): React_2.
 
 // @public (undocumented)
 export function AttachmentTrigger(input: useRender.ComponentProps<"button">): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
+
+// @public (undocumented)
+export const Avatar: React_2.ForwardRefExoticComponent<Omit<AvatarProps, "ref"> & React_2.RefAttributes<HTMLSpanElement>>;
+
+// @public (undocumented)
+export const AvatarFallback: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_avatar.AvatarFallbackProps, "ref"> & React_2.RefAttributes<HTMLSpanElement>>;
+
+// @public (undocumented)
+export function AvatarGroup(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace AvatarGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const AvatarImage: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_avatar.AvatarImageProps, "ref"> & React_2.RefAttributes<HTMLImageElement>>;
+
+// @public (undocumented)
+export interface AvatarProps extends Avatar_2.Root.Props, VariantProps<typeof avatarVariants> {
+}
+
+// @public (undocumented)
+export const avatarVariants: (props?: ({
+    size?: "default" | "sm" | "lg" | "xl" | null | undefined;
+    shape?: "circle" | "square" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "BadgeProps" needs to be exported by the entry point index.d.ts
 //
@@ -184,6 +243,21 @@ export type ChoiceProps = Omit<ComponentProps<"input">, "type"> & {
 export function cn(...inputs: ClassValue[]): string;
 
 // @public (undocumented)
+export function Collapsible(props: Collapsible_2.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace Collapsible {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const CollapsibleContent: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_collapsible.CollapsiblePanelProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const CollapsibleTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_collapsible.CollapsibleTriggerProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
 export function Container(input: ContainerProps): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
 
 // @public (undocumented)
@@ -194,6 +268,9 @@ export const containerVariants: (props?: ({
     size?: "standard" | "reading" | "wide" | null | undefined;
     gutter?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export const defaultToastManager: _base_ui_react_toast.ToastManager<any>;
 
 // @public (undocumented)
 export function Dialog(input: Dialog_2.Root.Props): React_2.JSX.Element;
@@ -240,6 +317,117 @@ export const DialogTitle: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_
 
 // @public (undocumented)
 export const DialogTrigger: React_2.ForwardRefExoticComponent<Omit<Dialog_2.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export function DropdownMenu(props: Menu.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace DropdownMenu {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const DropdownMenuCheckboxItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menu.MenuCheckboxItemProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const DropdownMenuContent: React_2.ForwardRefExoticComponent<Omit<DropdownMenuContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface DropdownMenuContentProps extends Menu.Popup.Props {
+    // (undocumented)
+    align?: "start" | "center" | "end";
+    // (undocumented)
+    side?: "top" | "right" | "bottom" | "left";
+    // (undocumented)
+    sideOffset?: number;
+}
+
+// @public (undocumented)
+export function DropdownMenuGroup(props: Menu.Group.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace DropdownMenuGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const DropdownMenuItem: React_2.ForwardRefExoticComponent<Omit<DropdownMenuItemProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface DropdownMenuItemProps extends Menu.Item.Props {
+    // (undocumented)
+    inset?: boolean;
+    // (undocumented)
+    variant?: "default" | "destructive";
+}
+
+// @public (undocumented)
+export const DropdownMenuLabel: React_2.ForwardRefExoticComponent<Omit<DropdownMenuLabelProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface DropdownMenuLabelProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    inset?: boolean;
+}
+
+// @public (undocumented)
+export function DropdownMenuPortal(input: Menu.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace DropdownMenuPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function DropdownMenuRadioGroup(props: Menu.RadioGroup.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace DropdownMenuRadioGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const DropdownMenuRadioItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menu.MenuRadioItemProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const DropdownMenuSeparator: React_2.ForwardRefExoticComponent<Omit<_base_ui_react.SeparatorProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export function DropdownMenuShortcut(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace DropdownMenuShortcut {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function DropdownMenuSub(props: Menu.SubmenuRoot.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace DropdownMenuSub {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const DropdownMenuSubContent: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menu.MenuPopupProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const DropdownMenuSubTrigger: React_2.ForwardRefExoticComponent<Omit<DropdownMenuSubTriggerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface DropdownMenuSubTriggerProps extends Menu.SubmenuTrigger.Props {
+    // (undocumented)
+    inset?: boolean;
+}
+
+// @public (undocumented)
+export const DropdownMenuTrigger: React_2.ForwardRefExoticComponent<Omit<Menu.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export function EditorialGrid(input: EditorialGridProps): React_2.JSX.Element;
@@ -436,6 +624,49 @@ export function PaginationPrevious(input: React_2.ComponentProps<typeof Paginati
 }): React_2.JSX.Element;
 
 // @public (undocumented)
+export function Popover(props: Popover_2.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace Popover {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const PopoverClose: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_popover.PopoverCloseProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export const PopoverContent: React_2.ForwardRefExoticComponent<Omit<PopoverContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface PopoverContentProps extends Popover_2.Popup.Props {
+    // (undocumented)
+    align?: "start" | "center" | "end";
+    // (undocumented)
+    side?: "top" | "right" | "bottom" | "left";
+    // (undocumented)
+    sideOffset?: number;
+}
+
+// @public (undocumented)
+export const PopoverDescription: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_popover.PopoverDescriptionProps, "ref"> & React_2.RefAttributes<HTMLParagraphElement>>;
+
+// @public (undocumented)
+export function PopoverPortal(input: Popover_2.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace PopoverPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const PopoverTitle: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_popover.PopoverTitleProps, "ref"> & React_2.RefAttributes<HTMLHeadingElement>>;
+
+// @public (undocumented)
+export const PopoverTrigger: React_2.ForwardRefExoticComponent<Omit<Popover_2.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
 export function Progress(input: Progress_2.Root.Props): React_2.JSX.Element;
 
 // @public (undocumented)
@@ -474,7 +705,7 @@ export type SectionProps = useRender.ComponentProps<"section"> & VariantProps<ty
 
 // @public (undocumented)
 export const sectionVariants: (props?: ({
-    density?: "default" | "compact" | "hero" | null | undefined;
+    density?: "compact" | "default" | "hero" | null | undefined;
     tone?: "default" | "instrument" | "muted" | "accent" | "brand" | null | undefined;
     bordered?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
@@ -665,6 +896,30 @@ export function Switch(input: Switch_2.Root.Props & {
 }): React_2.JSX.Element;
 
 // @public (undocumented)
+export const Table: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.TableHTMLAttributes<HTMLTableElement>, HTMLTableElement>, "ref"> & React_2.RefAttributes<HTMLTableElement>>;
+
+// @public (undocumented)
+export const TableBody: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>, "ref"> & React_2.RefAttributes<HTMLTableSectionElement>>;
+
+// @public (undocumented)
+export const TableCaption: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLElement>, HTMLElement>, "ref"> & React_2.RefAttributes<HTMLTableCaptionElement>>;
+
+// @public (undocumented)
+export const TableCell: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>, "ref"> & React_2.RefAttributes<HTMLTableCellElement>>;
+
+// @public (undocumented)
+export const TableFooter: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>, "ref"> & React_2.RefAttributes<HTMLTableSectionElement>>;
+
+// @public (undocumented)
+export const TableHead: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.ThHTMLAttributes<HTMLTableHeaderCellElement>, HTMLTableHeaderCellElement>, "ref"> & React_2.RefAttributes<HTMLTableCellElement>>;
+
+// @public (undocumented)
+export const TableHeader: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>, "ref"> & React_2.RefAttributes<HTMLTableSectionElement>>;
+
+// @public (undocumented)
+export const TableRow: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLTableRowElement>, HTMLTableRowElement>, "ref"> & React_2.RefAttributes<HTMLTableRowElement>>;
+
+// @public (undocumented)
 export function Tabs(input: Tabs_2.Root.Props): React_2.JSX.Element;
 
 // @public (undocumented)
@@ -698,6 +953,57 @@ export const textVariants: (props?: ({
     variant?: "body" | "meta" | "small" | "lead" | "eyebrow" | "signal" | null | undefined;
     tone?: "default" | "inherit" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function toast(input: ToastOptions): string;
+
+// @public (undocumented)
+export namespace toast {
+    var // (undocumented)
+    success: (title: React_2.ReactNode, options?: Omit<ToastOptions, "title">) => string;
+    var // (undocumented)
+    error: (title: React_2.ReactNode, options?: Omit<ToastOptions, "title" | "variant">) => string;
+    var // (undocumented)
+    dismiss: (id?: string) => void;
+}
+
+// @public (undocumented)
+export function Toaster(input: ToasterProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface ToasterProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    toastManager?: ReturnType<typeof Toast.createToastManager>;
+}
+
+// @public (undocumented)
+export interface ToastOptions {
+    // (undocumented)
+    action?: {
+        label: string;
+        onClick: () => void;
+    };
+    // (undocumented)
+    description?: React_2.ReactNode;
+    // (undocumented)
+    timeout?: number;
+    // (undocumented)
+    title?: React_2.ReactNode;
+    // (undocumented)
+    variant?: "default" | "destructive";
+}
+
+// @public (undocumented)
+export function ToastRootProvider(input: {
+    children?: React_2.ReactNode;
+    toastManager?: ReturnType<typeof Toast.createToastManager>;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ToastRootProvider {
+    var // (undocumented)
+    displayName: string;
+}
 
 // @public (undocumented)
 export function Tooltip(input: Tooltip_2.Root.Props): React_2.JSX.Element;

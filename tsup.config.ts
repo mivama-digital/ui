@@ -34,5 +34,6 @@ export default defineConfig({
   external: ["react", "react-dom"],
   treeshake: true,
   splitting: false,
+  bundle: false,
   tsconfig: "tsconfig.build.json",
 })

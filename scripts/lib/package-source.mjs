@@ -25,12 +25,16 @@ export async function preparePackageSource({
   packArgs.push("--json", "--pack-destination", artifacts)
 
   const { stdout } = await runNpm(packArgs, { cwd: root, echo: false })
-  const jsonStart = stdout.indexOf("[")
-  const jsonEnd = stdout.lastIndexOf("]")
+  const cleanStdout = stdout.replace(/\u001b\[[0-9;]*[a-zA-Z]/g, "")
+  const jsonMatch = cleanStdout.match(/\[\s*\{[\s\S]*"filename":[\s\S]*\}\s*\]/)
+  const jsonStart = cleanStdout.indexOf("[")
+  const jsonEnd = cleanStdout.lastIndexOf("]")
   const [packed] = JSON.parse(
-    jsonStart !== -1 && jsonEnd !== -1
-      ? stdout.slice(jsonStart, jsonEnd + 1)
-      : stdout
+    jsonMatch
+      ? jsonMatch[0]
+      : jsonStart !== -1 && jsonEnd !== -1
+        ? cleanStdout.slice(jsonStart, jsonEnd + 1)
+        : cleanStdout
   )
   const tarball = path.join(artifacts, packed.filename)
 

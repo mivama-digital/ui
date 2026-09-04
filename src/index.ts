@@ -215,4 +215,73 @@ export type {
   TextProps,
   TypographyTone,
 } from "./components/ui/typography.js"
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "./components/ui/accordion.js"
+export {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "./components/ui/collapsible.js"
+export {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  AvatarGroup,
+  avatarVariants,
+} from "./components/ui/avatar.js"
+export type { AvatarProps } from "./components/ui/avatar.js"
+export {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuGroup,
+  DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuRadioGroup,
+} from "./components/ui/dropdown-menu.js"
+export type {
+  DropdownMenuContentProps,
+  DropdownMenuItemProps,
+  DropdownMenuLabelProps,
+  DropdownMenuSubTriggerProps,
+} from "./components/ui/dropdown-menu.js"
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverClose,
+  PopoverPortal,
+  PopoverTitle,
+  PopoverDescription,
+} from "./components/ui/popover.js"
+export type { PopoverContentProps } from "./components/ui/popover.js"
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "./components/ui/table.js"
+export {
+  toast,
+  defaultToastManager,
+  Toaster,
+  ToastRootProvider,
+} from "./components/ui/toast.js"
+export type { ToastOptions, ToasterProps } from "./components/ui/toast.js"
 export { cn } from "./lib/utils.js"

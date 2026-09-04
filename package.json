@@ -206,7 +206,49 @@
     "./styles.css": "./dist/styles.css",
     "./reset.css": "./dist/reset.css",
     "./tokens.css": "./dist/tokens.css",
-    "./themes.css": "./dist/themes.css"
+    "./themes.css": "./dist/themes.css",
+    "./dropdown-menu": {
+      "types": "./dist/components/ui/dropdown-menu.d.ts",
+      "import": "./dist/components/ui/dropdown-menu.js",
+      "require": "./dist/components/ui/dropdown-menu.cjs",
+      "default": "./dist/components/ui/dropdown-menu.js"
+    },
+    "./popover": {
+      "types": "./dist/components/ui/popover.d.ts",
+      "import": "./dist/components/ui/popover.js",
+      "require": "./dist/components/ui/popover.cjs",
+      "default": "./dist/components/ui/popover.js"
+    },
+    "./accordion": {
+      "types": "./dist/components/ui/accordion.d.ts",
+      "import": "./dist/components/ui/accordion.js",
+      "require": "./dist/components/ui/accordion.cjs",
+      "default": "./dist/components/ui/accordion.js"
+    },
+    "./collapsible": {
+      "types": "./dist/components/ui/collapsible.d.ts",
+      "import": "./dist/components/ui/collapsible.js",
+      "require": "./dist/components/ui/collapsible.cjs",
+      "default": "./dist/components/ui/collapsible.js"
+    },
+    "./avatar": {
+      "types": "./dist/components/ui/avatar.d.ts",
+      "import": "./dist/components/ui/avatar.js",
+      "require": "./dist/components/ui/avatar.cjs",
+      "default": "./dist/components/ui/avatar.js"
+    },
+    "./table": {
+      "types": "./dist/components/ui/table.d.ts",
+      "import": "./dist/components/ui/table.js",
+      "require": "./dist/components/ui/table.cjs",
+      "default": "./dist/components/ui/table.js"
+    },
+    "./toast": {
+      "types": "./dist/components/ui/toast.d.ts",
+      "import": "./dist/components/ui/toast.js",
+      "require": "./dist/components/ui/toast.cjs",
+      "default": "./dist/components/ui/toast.js"
+    }
   },
   "files": [
     "dist",
