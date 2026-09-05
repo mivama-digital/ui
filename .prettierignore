@@ -11,3 +11,11 @@ storybook-static
 out
 .vite
 etc/api/*.api.md
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.woff
+*.woff2
+*.tsbuildinfo
+tests/e2e/**/*.png

@@ -287,6 +287,7 @@ export type {
   ToastAction,
   ToastData,
   ToastOptions,
+  ToastVariant,
   ToasterProps,
 } from "./components/ui/toast.js"
 export {

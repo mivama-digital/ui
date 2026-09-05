@@ -146,9 +146,9 @@ test("bento grids stay server-compatible and expand spans only after mobile", as
 
 test("large cards stay compact on phones and expand from sm upward", async () => {
   const card = await readUiSource("card")
-  assert.match(card, /data-\[size=lg\]:\[--card-spacing:--spacing\(6\)\]/)
-  assert.match(card, /sm:data-\[size=lg\]:\[--card-spacing:--spacing\(8\)\]/)
-  assert.match(card, /data-\[size=sm\]:\[--card-spacing:--spacing\(4\)\]/)
+  assert.match(card, /data-\[size=lg\]:\[--card-spacing:var\(--space-6\)\]/)
+  assert.match(card, /sm:data-\[size=lg\]:\[--card-spacing:var\(--space-8\)\]/)
+  assert.match(card, /data-\[size=sm\]:\[--card-spacing:var\(--space-4\)\]/)
 })
 
 test("card variants preserve the surface default and pair hover with focus-within", () => {

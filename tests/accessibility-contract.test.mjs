@@ -63,8 +63,9 @@ test("normal targets are 44px by default while xs remains explicitly dense", asy
     readRoot("src/tokens.css"),
   ])
   assert.match(button, /xs: "min-h-8/)
+  assert.match(button, /sm: "min-h-9/)
   assert.match(button, /"icon-xs":[\s\S]*"size-8/)
-  assert.match(button, /"icon-sm":[\s\S]*"size-\(--control-height\)/)
+  assert.match(button, /"icon-sm":[\s\S]*"size-9/)
   assert.match(button, /default:\s*"min-h-\(--control-height\)/)
   assert.match(tabs, /min-h-\(--control-height\)/)
   assert.match(sidebarMenu, /default: "min-h-\(--sidebar-row-height\)/)

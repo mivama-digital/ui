@@ -2,7 +2,12 @@
 
 import * as React from "react"
 import { Toast as ToastPrimitive } from "@base-ui/react/toast"
-import { XIcon } from "lucide-react"
+import {
+  AlertCircleIcon,
+  AlertTriangleIcon,
+  CheckCircle2Icon,
+  XIcon,
+} from "lucide-react"
 
 import { useMivamaPortalContainer } from "../mivama-provider.js"
 import { useShellAttributes } from "../../lib/shell-attributes.js"
@@ -13,9 +18,11 @@ interface ToastAction {
   onClick: () => void
 }
 
+type ToastVariant = "default" | "success" | "warning" | "destructive"
+
 interface ToastData {
   action?: ToastAction
-  variant?: "default" | "destructive"
+  variant?: ToastVariant
 }
 
 const defaultToastManager = ToastPrimitive.createToastManager<ToastData>()
@@ -24,7 +31,7 @@ interface ToastOptions {
   title?: React.ReactNode
   description?: React.ReactNode
   action?: ToastAction
-  variant?: "default" | "destructive"
+  variant?: ToastVariant
   timeout?: number
 }
 
@@ -46,8 +53,13 @@ function toast({
 
 toast.success = (
   title: React.ReactNode,
-  options?: Omit<ToastOptions, "title">
-) => toast({ title, variant: "default", ...options })
+  options?: Omit<ToastOptions, "title" | "variant">
+) => toast({ title, variant: "success", ...options })
+
+toast.warning = (
+  title: React.ReactNode,
+  options?: Omit<ToastOptions, "title" | "variant">
+) => toast({ title, variant: "warning", ...options })
 
 toast.error = (
   title: React.ReactNode,
@@ -60,11 +72,7 @@ interface ToasterProps extends React.ComponentProps<"div"> {
   toastManager?: ReturnType<typeof ToastPrimitive.createToastManager<ToastData>>
 }
 
-function Toaster({
-  toastManager = defaultToastManager,
-  className,
-  ...props
-}: ToasterProps) {
+function ToasterViewport({ className, ...props }: React.ComponentProps<"div">) {
   const providerContainer = useMivamaPortalContainer()
   useShellAttributes("[data-slot=toast-viewport]")
 
@@ -80,53 +88,82 @@ function Toaster({
         )}
         {...props}
       >
-        {toasts.map((t) => (
-          <ToastPrimitive.Root
-            key={t.id}
-            toast={t}
-            data-slot="toast"
-            data-variant={t.data?.variant ?? t.type ?? "default"}
-            className={cn(
-              "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-xl border border-border bg-popover p-4 text-popover-foreground shadow-lg ring-1 ring-foreground/10 transition-all data-open:animate-in data-open:slide-in-from-bottom-5 data-closed:animate-out data-closed:fade-out-80 data-closed:slide-out-to-right-full data-[variant=destructive]:border-destructive-border data-[variant=destructive]:bg-destructive-subtle data-[variant=destructive]:text-destructive-foreground"
-            )}
-          >
-            <div className="grid gap-1 pr-6">
-              {t.title && (
-                <ToastPrimitive.Title
-                  data-slot="toast-title"
-                  className="text-sm font-semibold"
-                >
-                  {t.title}
-                </ToastPrimitive.Title>
+        {toasts.map((t) => {
+          const variant =
+            t.data?.variant ?? (t.type as ToastVariant) ?? "default"
+          return (
+            <ToastPrimitive.Root
+              key={t.id}
+              toast={t}
+              data-slot="toast"
+              data-variant={variant}
+              className={cn(
+                "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-xl border border-border bg-popover p-4 text-popover-foreground shadow-lg ring-1 ring-foreground/10 transition-all data-open:animate-in data-open:slide-in-from-bottom-5 data-closed:animate-out data-closed:fade-out-80 data-closed:slide-out-to-right-full",
+                "data-[variant=destructive]:border-destructive-border data-[variant=destructive]:bg-destructive-subtle data-[variant=destructive]:text-destructive-foreground",
+                "data-[variant=success]:border-success-border data-[variant=success]:bg-success-subtle data-[variant=success]:text-success-foreground",
+                "data-[variant=warning]:border-warning-border data-[variant=warning]:bg-warning-subtle data-[variant=warning]:text-warning-foreground"
               )}
-              {t.description && (
-                <ToastPrimitive.Description
-                  data-slot="toast-description"
-                  className="text-xs text-muted-foreground group-data-[variant=destructive]:text-destructive-foreground/80"
-                >
-                  {t.description}
-                </ToastPrimitive.Description>
-              )}
-            </div>
-            {t.data?.action && (
-              <button
-                type="button"
-                onClick={t.data.action.onClick}
-                className="inline-flex h-8 shrink-0 items-center justify-center rounded-md border border-input bg-transparent px-3 text-xs font-medium transition-colors hover:bg-muted focus:outline-none focus:ring-1 focus:ring-ring"
-              >
-                {t.data.action.label}
-              </button>
-            )}
-            <ToastPrimitive.Close
-              data-slot="toast-close"
-              className="absolute top-2 right-2 rounded-md p-1 text-muted-foreground opacity-70 transition-opacity hover:opacity-100 focus:opacity-100 focus:outline-none"
             >
-              <XIcon className="size-4" />
-            </ToastPrimitive.Close>
-          </ToastPrimitive.Root>
-        ))}
+              <div className="flex items-start gap-3 pr-6">
+                {variant === "success" && (
+                  <CheckCircle2Icon className="mt-0.5 size-5 shrink-0 text-success" />
+                )}
+                {variant === "warning" && (
+                  <AlertTriangleIcon className="mt-0.5 size-5 shrink-0 text-warning" />
+                )}
+                {variant === "destructive" && (
+                  <AlertCircleIcon className="mt-0.5 size-5 shrink-0 text-destructive" />
+                )}
+                <div className="grid gap-1">
+                  {t.title && (
+                    <ToastPrimitive.Title
+                      data-slot="toast-title"
+                      className="text-sm font-semibold"
+                    >
+                      {t.title}
+                    </ToastPrimitive.Title>
+                  )}
+                  {t.description && (
+                    <ToastPrimitive.Description
+                      data-slot="toast-description"
+                      className="text-xs text-muted-foreground group-data-[variant=destructive]:text-destructive-foreground/80 group-data-[variant=success]:text-success-foreground/80 group-data-[variant=warning]:text-warning-foreground/80"
+                    >
+                      {t.description}
+                    </ToastPrimitive.Description>
+                  )}
+                </div>
+              </div>
+              {t.data?.action && (
+                <button
+                  type="button"
+                  onClick={t.data.action.onClick}
+                  className="inline-flex h-8 shrink-0 items-center justify-center rounded-md border border-input bg-transparent px-3 text-xs font-medium transition-colors hover:bg-muted focus:outline-none focus:ring-1 focus:ring-ring"
+                >
+                  {t.data.action.label}
+                </button>
+              )}
+              <ToastPrimitive.Close
+                data-slot="toast-close"
+                className="absolute top-2 right-2 rounded-md p-1 text-muted-foreground opacity-70 transition-opacity hover:opacity-100 focus:opacity-100 focus:outline-none"
+              >
+                <XIcon className="size-4" />
+              </ToastPrimitive.Close>
+            </ToastPrimitive.Root>
+          )
+        })}
       </ToastPrimitive.Viewport>
     </ToastPrimitive.Portal>
+  )
+}
+
+function Toaster({
+  toastManager = defaultToastManager,
+  ...props
+}: ToasterProps) {
+  return (
+    <ToastPrimitive.Provider toastManager={toastManager}>
+      <ToasterViewport {...props} />
+    </ToastPrimitive.Provider>
   )
 }
 
@@ -140,11 +177,11 @@ function ToastRootProvider({
   return (
     <ToastPrimitive.Provider toastManager={toastManager}>
       {children}
-      <Toaster toastManager={toastManager} />
+      <ToasterViewport />
     </ToastPrimitive.Provider>
   )
 }
 ToastRootProvider.displayName = "ToastRootProvider"
 
 export { toast, defaultToastManager, Toaster, ToastRootProvider }
-export type { ToastAction, ToastData, ToastOptions, ToasterProps }
+export type { ToastAction, ToastData, ToastOptions, ToastVariant, ToasterProps }

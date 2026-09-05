@@ -57,7 +57,7 @@ const AccordionContent = React.forwardRef<
     <AccordionPrimitive.Panel
       ref={ref}
       data-slot="accordion-content"
-      className="overflow-hidden text-sm data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0"
+      className="overflow-hidden text-sm data-open:animate-accordion-down data-closed:animate-accordion-up"
       {...props}
     >
       <div className={cn("pt-0 pb-4", className)}>{children}</div>

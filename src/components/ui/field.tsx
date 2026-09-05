@@ -118,6 +118,8 @@ const FieldError = React.forwardRef<HTMLParagraphElement, FieldErrorProps>(
       <p
         ref={ref}
         id={id}
+        role="status"
+        aria-live="polite"
         data-slot="field-error"
         className={cn("text-sm/relaxed text-destructive-foreground", className)}
         {...props}

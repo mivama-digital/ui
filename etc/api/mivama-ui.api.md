@@ -1050,7 +1050,9 @@ export function toast(input: ToastOptions): string;
 // @public (undocumented)
 export namespace toast {
     var // (undocumented)
-    success: (title: React_2.ReactNode, options?: Omit<ToastOptions, "title">) => string;
+    success: (title: React_2.ReactNode, options?: Omit<ToastOptions, "title" | "variant">) => string;
+    var // (undocumented)
+    warning: (title: React_2.ReactNode, options?: Omit<ToastOptions, "title" | "variant">) => string;
     var // (undocumented)
     error: (title: React_2.ReactNode, options?: Omit<ToastOptions, "title" | "variant">) => string;
     var // (undocumented)
@@ -1070,7 +1072,7 @@ export interface ToastData {
     // (undocumented)
     action?: ToastAction;
     // (undocumented)
-    variant?: "default" | "destructive";
+    variant?: ToastVariant;
 }
 
 // @public (undocumented)
@@ -1093,7 +1095,7 @@ export interface ToastOptions {
     // (undocumented)
     title?: React_2.ReactNode;
     // (undocumented)
-    variant?: "default" | "destructive";
+    variant?: ToastVariant;
 }
 
 // @public (undocumented)
@@ -1107,6 +1109,9 @@ export namespace ToastRootProvider {
     var // (undocumented)
     displayName: string;
 }
+
+// @public (undocumented)
+export type ToastVariant = "default" | "success" | "warning" | "destructive";
 
 // @public (undocumented)
 export function Tooltip(input: Tooltip_2.Root.Props): React_2.JSX.Element;
