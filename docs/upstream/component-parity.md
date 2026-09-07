@@ -75,13 +75,13 @@ This ledger records complete component parity between official upstream shadcn/u
 
 These components are proprietary Mivama additions and do not satisfy or substitute for any official upstream row:
 
-| Component      | Slug           | Source Path                          | Category | Interactive | Description                                                 |
-| -------------- | -------------- | ------------------------------------ | -------- | ----------- | ----------------------------------------------------------- |
-| MivamaProvider | provider       | src/components/mivama-provider.tsx   | provider | false       | Context provider for theme, density, and portal containers. |
-| BentoGrid      | bento-grid     | src/components/ui/bento-grid.tsx     | layout   | false       | Modern bento grid layout containers and items.              |
-| Choice         | choice         | src/components/ui/choice.tsx         | form     | true        | Native accessible radio and checkbox inputs.                |
-| Container      | container      | src/components/ui/container.tsx      | layout   | false       | Responsive max-width container wrapper.                     |
-| EditorialGrid  | editorial-grid | src/components/ui/editorial-grid.tsx | layout   | false       | Art-directed editorial magazine grid layout.                |
-| Forms          | forms          | src/forms.ts                         | form     | false       | Form layout helpers and form state utilities.               |
-| ScrollScene    | scroll-scene   | src/components/ui/scroll-scene.tsx   | layout   | false       | Parallax and scroll-linked scene effects.                   |
-| Section        | section        | src/components/ui/section.tsx        | layout   | false       | Semantic section container with vertical rhythm.            |
+| Component      | Slug           | Source Path                          | Category | Type             | Interactive | Description                                                 |
+| -------------- | -------------- | ------------------------------------ | -------- | ---------------- | ----------- | ----------------------------------------------------------- |
+| MivamaProvider | provider       | src/components/mivama-provider.tsx   | provider | Mivama-extension | false       | Context provider for theme, density, and portal containers. |
+| BentoGrid      | bento-grid     | src/components/ui/bento-grid.tsx     | layout   | Mivama-extension | false       | Modern bento grid layout containers and items.              |
+| Choice         | choice         | src/components/ui/choice.tsx         | form     | Mivama-extension | true        | Native accessible radio and checkbox inputs.                |
+| Container      | container      | src/components/ui/container.tsx      | layout   | Mivama-extension | false       | Responsive max-width container wrapper.                     |
+| EditorialGrid  | editorial-grid | src/components/ui/editorial-grid.tsx | layout   | Mivama-extension | false       | Art-directed editorial magazine grid layout.                |
+| Forms          | forms          | src/forms.ts                         | form     | Mivama-extension | false       | Form layout helpers and form state utilities.               |
+| ScrollScene    | scroll-scene   | src/components/ui/scroll-scene.tsx   | layout   | Mivama-extension | false       | Parallax and scroll-linked scene effects.                   |
+| Section        | section        | src/components/ui/section.tsx        | layout   | Mivama-extension | false       | Semantic section container with vertical rhythm.            |

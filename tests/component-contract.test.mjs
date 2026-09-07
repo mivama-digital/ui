@@ -13,7 +13,8 @@ import {
   Fieldset,
   Select,
 } from "../dist/index.js"
-import { readRoot, readUiSource } from "./lib/source.mjs"
+import { components } from "../config/components.mjs"
+import { readJson, readRoot, readUiSource } from "./lib/source.mjs"
 
 test("sidebar internal buttons never submit ancestor forms and expose disclosure state", async () => {
   const [shell, content, menu, context] = await Promise.all([
@@ -283,6 +284,13 @@ test("official component catalog and parity ledger are fully specified and accou
     "Must track all 64 official upstream components"
   )
 
+  const [packageJson, exportsDoc] = await Promise.all([
+    readJson("package.json"),
+    readRoot("docs/generated/exports.md"),
+  ])
+
+  const registeredSlugs = new Set(components.map((c) => c.slug))
+
   for (const slug of officialSlugs) {
     const slugRegex = new RegExp(
       `\\|\\s*[^|]+\\s*\\|\\s*${slug}\\s*\\|\\s*src/components/ui/${slug}\\.tsx\\s*\\|\\s*(keep|add)\\s*\\|`
@@ -291,6 +299,19 @@ test("official component catalog and parity ledger are fully specified and accou
       parityLedger,
       slugRegex,
       `Ledger must record official component row for ${slug}`
+    )
+    assert.ok(
+      registeredSlugs.has(slug),
+      `Official component ${slug} must be registered in config/components.mjs`
+    )
+    assert.ok(
+      packageJson.exports[`./${slug}`],
+      `Official component ${slug} must be exported in package.json`
+    )
+    assert.match(
+      exportsDoc,
+      new RegExp(`@mivama/ui/${slug}`),
+      `Official component ${slug} must be documented in docs/generated/exports.md`
     )
   }
 
@@ -305,12 +326,39 @@ test("official component catalog and parity ledger are fully specified and accou
     "section",
   ]
 
+  assert.equal(
+    extensionSlugs.length,
+    8,
+    "Must track exactly 8 Mivama proprietary extensions"
+  )
+
+  const officialSet = new Set(officialSlugs)
   for (const slug of extensionSlugs) {
-    const extRegex = new RegExp(`\\|\\s*[^|]+\\s*\\|\\s*${slug}\\s*\\|`)
+    assert.ok(
+      !officialSet.has(slug),
+      `Extension ${slug} must not collide with or substitute for official component`
+    )
+    const extRegex = new RegExp(
+      `\\|\\s*[^|]+\\s*\\|\\s*${slug}\\s*\\|[^|]+\\|[^|]+\\|\\s*Mivama-extension\\s*\\|`
+    )
     assert.match(
       parityLedger,
       extRegex,
-      `Ledger must record Mivama extension row for ${slug}`
+      `Ledger must record Mivama extension row with Type 'Mivama-extension' for ${slug}`
+    )
+    assert.ok(
+      registeredSlugs.has(slug),
+      `Extension component ${slug} must be registered in config/components.mjs`
+    )
+    assert.ok(
+      packageJson.exports[`./${slug}`],
+      `Extension component ${slug} must be exported in package.json`
     )
   }
+
+  assert.equal(
+    components.length,
+    72,
+    "Complete component registry must contain exactly 72 modules (64 official + 8 extensions)"
+  )
 })
