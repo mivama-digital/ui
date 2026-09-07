@@ -1712,6 +1712,79 @@ export function ProgressTrack(input: Progress_2.Track.Props): React_2.JSX.Elemen
 export function ProgressValue(input: Progress_2.Value.Props): React_2.JSX.Element;
 
 // @public (undocumented)
+export const Questionnaire: React_2.ForwardRefExoticComponent<Omit<QuestionnaireProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export function QuestionnaireDescription(input: React_2.ComponentProps<"p">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function QuestionnaireFooter(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function QuestionnaireHeader(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface QuestionnaireOption {
+    // (undocumented)
+    description?: string;
+    // (undocumented)
+    disabled?: boolean;
+    // (undocumented)
+    label: string;
+    // (undocumented)
+    value: string;
+}
+
+// @public (undocumented)
+export interface QuestionnaireProps extends Omit<React_2.ComponentProps<"div">, "onComplete"> {
+    // (undocumented)
+    answers?: Record<string, any>;
+    // (undocumented)
+    backText?: string;
+    // (undocumented)
+    completeText?: string;
+    // (undocumented)
+    currentStep?: number;
+    // (undocumented)
+    defaultAnswers?: Record<string, any>;
+    // (undocumented)
+    defaultStep?: number;
+    // (undocumented)
+    nextText?: string;
+    // (undocumented)
+    onAnswersChange?: (answers: Record<string, any>) => void;
+    // (undocumented)
+    onComplete?: (answers: Record<string, any>) => void;
+    // (undocumented)
+    onStepChange?: (stepIndex: number) => void;
+    // (undocumented)
+    showProgress?: boolean;
+    // (undocumented)
+    steps: QuestionnaireStepData[];
+}
+
+// @public (undocumented)
+export interface QuestionnaireStepData {
+    // (undocumented)
+    description?: string;
+    // (undocumented)
+    id: string;
+    // (undocumented)
+    options?: QuestionnaireOption[];
+    // (undocumented)
+    placeholder?: string;
+    // (undocumented)
+    required?: boolean;
+    // (undocumented)
+    title: string;
+    // (undocumented)
+    type?: "radio" | "checkbox" | "text";
+}
+
+// @public (undocumented)
+export function QuestionnaireTitle(input: React_2.ComponentProps<"h3">): React_2.JSX.Element;
+
+// @public (undocumented)
 export function RadioGroup(input: RadioGroup_2.Props): React_2.JSX.Element;
 
 // @public (undocumented)

@@ -638,4 +638,13 @@ export const components = [
     client: true,
     interactive: true,
   },
+  {
+    name: "Questionnaire",
+    slug: "questionnaire",
+    source: "src/components/ui/questionnaire.tsx",
+    category: "form",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
 ]

@@ -512,6 +512,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/mivama-provider.d.ts`
 - Runtime: `./dist/components/mivama-provider.js`
 
+## `@mivama/ui/questionnaire`
+
+- Primary component: Questionnaire
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/questionnaire.d.ts`
+- Runtime: `./dist/components/ui/questionnaire.js`
+
 ## `@mivama/ui/radio-group`
 
 - Primary component: RadioGroup

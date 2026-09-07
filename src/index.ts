@@ -580,4 +580,16 @@ export type {
   ChartLegendContentProps,
   ChartTooltipContentProps,
 } from "./components/ui/chart.js"
+export {
+  Questionnaire,
+  QuestionnaireDescription,
+  QuestionnaireFooter,
+  QuestionnaireHeader,
+  QuestionnaireTitle,
+} from "./components/ui/questionnaire.js"
+export type {
+  QuestionnaireOption,
+  QuestionnaireProps,
+  QuestionnaireStepData,
+} from "./components/ui/questionnaire.js"
 export { cn } from "./lib/utils.js"
