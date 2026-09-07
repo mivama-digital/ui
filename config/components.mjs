@@ -180,6 +180,15 @@ export const components = [
     interactive: false,
   },
   {
+    name: "Drawer",
+    slug: "drawer",
+    source: "src/components/ui/drawer.tsx",
+    category: "overlay",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
+  {
     name: "EditorialGrid",
     slug: "editorial-grid",
     source: "src/components/ui/editorial-grid.tsx",

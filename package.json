@@ -83,6 +83,12 @@
       "require": "./dist/components/ui/dialog.cjs",
       "default": "./dist/components/ui/dialog.js"
     },
+    "./drawer": {
+      "types": "./dist/components/ui/drawer.d.ts",
+      "import": "./dist/components/ui/drawer.js",
+      "require": "./dist/components/ui/drawer.cjs",
+      "default": "./dist/components/ui/drawer.js"
+    },
     "./editorial-grid": {
       "types": "./dist/components/ui/editorial-grid.d.ts",
       "import": "./dist/components/ui/editorial-grid.js",

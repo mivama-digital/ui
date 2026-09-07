@@ -242,6 +242,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/direction.d.ts`
 - Runtime: `./dist/components/ui/direction.js`
 
+## `@mivama/ui/drawer`
+
+- Primary component: Drawer
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/drawer.d.ts`
+- Runtime: `./dist/components/ui/drawer.js`
+
 ## `@mivama/ui/dropdown-menu`
 
 - Primary component: DropdownMenu

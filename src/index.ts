@@ -75,6 +75,19 @@ export {
   DialogTrigger,
 } from "./components/ui/dialog.js"
 export {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerPortal,
+  DrawerSwipeHandle,
+  DrawerTitle,
+  DrawerTrigger,
+} from "./components/ui/drawer.js"
+export {
   Empty,
   EmptyContent,
   EmptyDescription,

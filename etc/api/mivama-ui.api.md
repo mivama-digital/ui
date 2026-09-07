@@ -32,6 +32,7 @@ import { DayPicker } from 'react-day-picker';
 import { Dialog as Dialog_2 } from '@base-ui/react/dialog';
 import { DirectionProvider } from '@base-ui/react/direction-provider';
 import { DirectionProviderProps } from '@base-ui/react/direction-provider';
+import { Drawer as Drawer_2 } from '@base-ui/react/drawer';
 import { Menu } from '@base-ui/react/menu';
 import { NavigationMenu as NavigationMenu_2 } from '@base-ui/react/navigation-menu';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
@@ -647,6 +648,43 @@ export const DialogTrigger: React_2.ForwardRefExoticComponent<Omit<Dialog_2.Trig
 export { DirectionProvider }
 
 export { DirectionProviderProps }
+
+// @public (undocumented)
+export function Drawer(input: Drawer_2.Root.Props & {
+    showSwipeHandle?: boolean;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerClose(input: Drawer_2.Close.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerContent(input: Drawer_2.Popup.Props & {
+    container?: HTMLElement | null;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerDescription(input: Drawer_2.Description.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerFooter(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerHeader(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerOverlay(input: Drawer_2.Backdrop.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerPortal(input: Drawer_2.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerSwipeHandle(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerTitle(input: Drawer_2.Title.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DrawerTrigger(input: Drawer_2.Trigger.Props): React_2.JSX.Element;
 
 // @public (undocumented)
 export function DropdownMenu(props: Menu.Root.Props): React_2.JSX.Element;
