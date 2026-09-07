@@ -162,6 +162,15 @@ export const components = [
     interactive: true,
   },
   {
+    name: "InputGroup",
+    slug: "input-group",
+    source: "src/components/ui/input-group.tsx",
+    category: "form",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
+  {
     name: "Item",
     slug: "item",
     source: "src/components/ui/item.tsx",
@@ -196,6 +205,15 @@ export const components = [
     status: "stable",
     client: false,
     interactive: false,
+  },
+  {
+    name: "MessageScroller",
+    slug: "message-scroller",
+    source: "src/components/ui/message-scroller.tsx",
+    category: "feedback",
+    status: "stable",
+    client: true,
+    interactive: true,
   },
   {
     name: "Marker",

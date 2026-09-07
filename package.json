@@ -320,6 +320,18 @@
       "import": "./dist/components/ui/spinner.js",
       "require": "./dist/components/ui/spinner.cjs",
       "default": "./dist/components/ui/spinner.js"
+    },
+    "./input-group": {
+      "types": "./dist/components/ui/input-group.d.ts",
+      "import": "./dist/components/ui/input-group.js",
+      "require": "./dist/components/ui/input-group.cjs",
+      "default": "./dist/components/ui/input-group.js"
+    },
+    "./message-scroller": {
+      "types": "./dist/components/ui/message-scroller.d.ts",
+      "import": "./dist/components/ui/message-scroller.js",
+      "require": "./dist/components/ui/message-scroller.cjs",
+      "default": "./dist/components/ui/message-scroller.js"
     }
   },
   "files": [

@@ -242,6 +242,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/input.d.ts`
 - Runtime: `./dist/components/ui/input.js`
 
+## `@mivama/ui/input-group`
+
+- Primary component: InputGroup
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/input-group.d.ts`
+- Runtime: `./dist/components/ui/input-group.js`
+
 ## `@mivama/ui/item`
 
 - Primary component: Item
@@ -291,6 +301,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: No
 - Types: `./dist/components/ui/message.d.ts`
 - Runtime: `./dist/components/ui/message.js`
+
+## `@mivama/ui/message-scroller`
+
+- Primary component: MessageScroller
+- Category: feedback
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/message-scroller.d.ts`
+- Runtime: `./dist/components/ui/message-scroller.js`
 
 ## `@mivama/ui/native-select`
 

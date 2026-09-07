@@ -372,4 +372,34 @@ export {
 export type { NativeSelectProps } from "./components/ui/native-select.js"
 export { Spinner } from "./components/ui/spinner.js"
 export type { SpinnerProps } from "./components/ui/spinner.js"
+export {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+  InputGroupText,
+  InputGroupTextarea,
+  inputGroupAddonVariants,
+  inputGroupButtonVariants,
+} from "./components/ui/input-group.js"
+export type {
+  InputGroupAddonProps,
+  InputGroupButtonProps,
+} from "./components/ui/input-group.js"
+export {
+  MessageScroller,
+  MessageScrollerButton,
+  MessageScrollerContent,
+  MessageScrollerItem,
+  MessageScrollerProvider,
+  MessageScrollerViewport,
+  useMessageScroller,
+  useMessageScrollerScrollable,
+  useMessageScrollerVisibility,
+} from "./components/ui/message-scroller.js"
+export type {
+  MessageScrollerButtonProps,
+  MessageScrollerItemProps,
+  MessageScrollerProviderProps,
+} from "./components/ui/message-scroller.js"
 export { cn } from "./lib/utils.js"

@@ -284,7 +284,7 @@ export const bubbleReactionsVariants: (props?: ({
 
 // @public (undocumented)
 export const bubbleVariants: (props?: ({
-    variant?: "default" | "outline" | "secondary" | "ghost" | "destructive" | "muted" | "tinted" | null | undefined;
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "muted" | "tinted" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "ButtonProps" needs to be exported by the entry point index.d.ts
@@ -657,6 +657,42 @@ export const headingVariants: (props?: ({
 export const Input: React_2.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React_2.RefAttributes<HTMLInputElement>>;
 
 // @public (undocumented)
+export function InputGroup(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputGroupAddon(input: InputGroupAddonProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface InputGroupAddonProps extends React_2.ComponentProps<"div">, VariantProps<typeof inputGroupAddonVariants> {
+}
+
+// @public (undocumented)
+export const inputGroupAddonVariants: (props?: ({
+    align?: "inline-end" | "inline-start" | "block-end" | "block-start" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function InputGroupButton(input: InputGroupButtonProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface InputGroupButtonProps extends Omit<React_2.ComponentProps<typeof Button>, "size">, VariantProps<typeof inputGroupButtonVariants> {
+}
+
+// @public (undocumented)
+export const inputGroupButtonVariants: (props?: ({
+    size?: "xs" | "sm" | "icon-xs" | "icon-sm" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function InputGroupInput(input: React_2.ComponentProps<"input">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputGroupText(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputGroupTextarea(input: React_2.ComponentProps<"textarea">): React_2.JSX.Element;
+
+// @public (undocumented)
 export function Item(input: useRender.ComponentProps<"div"> & VariantProps<typeof itemVariants>): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
 
 // @public (undocumented)
@@ -747,6 +783,48 @@ export function MessageGroup(input: React_2.ComponentProps<"div">): React_2.JSX.
 
 // @public (undocumented)
 export function MessageHeader(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function MessageScroller(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function MessageScrollerButton(input: MessageScrollerButtonProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface MessageScrollerButtonProps extends React_2.ComponentProps<typeof Button> {
+    // (undocumented)
+    direction?: "start" | "end";
+}
+
+// @public (undocumented)
+export function MessageScrollerContent(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function MessageScrollerItem(input: MessageScrollerItemProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface MessageScrollerItemProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    messageId?: string;
+    // (undocumented)
+    scrollAnchor?: boolean;
+}
+
+// @public (undocumented)
+export function MessageScrollerProvider(input: MessageScrollerProviderProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface MessageScrollerProviderProps {
+    // (undocumented)
+    autoScroll?: boolean;
+    // (undocumented)
+    children?: React_2.ReactNode;
+    // (undocumented)
+    defaultScrollPosition?: "start" | "end";
+}
+
+// @public (undocumented)
+export function MessageScrollerViewport(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
 
 // @public (undocumented)
 export type MivamaContextValue = {
@@ -1285,6 +1363,25 @@ export type TypographyTone = "default" | "inherit";
 
 // @public (undocumented)
 export function useFieldContext(): FieldContextValue | null;
+
+// @public (undocumented)
+export function useMessageScroller(): {
+    scrollToEnd: (options?: ScrollIntoViewOptions) => void;
+    scrollToStart: (options?: ScrollIntoViewOptions) => void;
+    scrollToMessage: (id: string, options?: ScrollIntoViewOptions) => void;
+};
+
+// @public (undocumented)
+export function useMessageScrollerScrollable(): {
+    isAtBottom: boolean;
+    isAtTop: boolean;
+    isScrollable: boolean;
+};
+
+// @public (undocumented)
+export function useMessageScrollerVisibility(): {
+    isVisible: boolean;
+};
 
 // @public (undocumented)
 export function useMivamaContext(): MivamaContextValue;
