@@ -59,3 +59,20 @@ test("mobile navigation has no WCAG A/AA violations", async ({
   ).toBeVisible()
   await expectNoAxeViolations(page)
 })
+
+test("keyboard-sensitive testbed has no WCAG A/AA violations", async ({
+  page,
+  browserName,
+}) => {
+  test.skip(
+    browserName !== "chromium",
+    "Chromium owns deterministic browser accessibility scanning"
+  )
+
+  await page.goto("/?suite=keyboard")
+  await expect(
+    page.getByRole("heading", { name: "Keyboard Testbed" })
+  ).toBeVisible()
+  await expectNoAxeViolations(page)
+})
+

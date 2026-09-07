@@ -46,8 +46,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@mivama/ui/tooltip"
+import { KeyboardTestbed } from "./KeyboardTestbed"
 
 export function App() {
+  const isKeyboardSuite =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("suite") === "keyboard"
+
+  if (isKeyboardSuite) {
+    return <KeyboardTestbed />
+  }
+
   return (
     <MivamaProvider
       theme="product"
