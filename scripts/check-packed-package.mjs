@@ -46,7 +46,12 @@ try {
   await runCommand(process.execPath, [checkCjsFile], commandOptions)
 
   assert.deepEqual(installedPackage.sideEffects, ["**/*.css"])
-  for (const stylesheet of ["styles.css", "tokens.css", "themes.css", "reset.css"]) {
+  for (const stylesheet of [
+    "styles.css",
+    "tokens.css",
+    "themes.css",
+    "reset.css",
+  ]) {
     assert.equal(
       installedPackage.exports[`./${stylesheet}`],
       `./dist/${stylesheet}`
@@ -58,7 +63,11 @@ try {
     if (typeof target === "string") continue
     assert.equal(typeof target.types, "string", `${subpath} is missing types`)
     assert.equal(typeof target.import, "string", `${subpath} is missing import`)
-    assert.equal(typeof target.require, "string", `${subpath} is missing require`)
+    assert.equal(
+      typeof target.require,
+      "string",
+      `${subpath} is missing require`
+    )
     assert.equal(
       target.default,
       target.import,

@@ -369,7 +369,10 @@ test("all registered components are documented in docs/components.md with comple
   for (const component of components) {
     const { slug, name } = component
     // Check that component has a dedicated section
-    const sectionHeaderRegex = new RegExp(`##\\s+.*\\b(${name}|${slug})\\b`, "i")
+    const sectionHeaderRegex = new RegExp(
+      `##\\s+.*\\b(${name}|${slug})\\b`,
+      "i"
+    )
     assert.match(
       docs,
       sectionHeaderRegex,
@@ -377,7 +380,9 @@ test("all registered components are documented in docs/components.md with comple
     )
 
     // Find section content up to next ## or end of file
-    const sectionStart = docs.search(new RegExp(`##\\s+.*\\b(${name}|${slug})\\b`, "i"))
+    const sectionStart = docs.search(
+      new RegExp(`##\\s+.*\\b(${name}|${slug})\\b`, "i")
+    )
     assert.ok(sectionStart !== -1, `Section start for ${slug} must be found`)
     const nextSectionIndex = docs.slice(sectionStart + 2).search(/\n##\s/)
     const sectionContent =

@@ -75,4 +75,3 @@ test("keyboard-sensitive testbed has no WCAG A/AA violations", async ({
   ).toBeVisible()
   await expectNoAxeViolations(page)
 })
-

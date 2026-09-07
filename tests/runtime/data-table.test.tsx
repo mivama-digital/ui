@@ -152,4 +152,18 @@ describe("DataTable runtime & accessibility", () => {
     const results = await axe.run(container)
     expect(results.violations).toEqual([])
   })
+
+  it("supports pagination navigation across multiple pages and row selection", () => {
+    render(
+      <DataTable
+        columns={columns}
+        data={data}
+        showPagination
+        state={{ pagination: { pageIndex: 0, pageSize: 2 } }}
+      />
+    )
+
+    expect(screen.getByText("Page 1 of 2")).toBeInTheDocument()
+    expect(screen.getByText("0 of 3 row(s) selected.")).toBeInTheDocument()
+  })
 })

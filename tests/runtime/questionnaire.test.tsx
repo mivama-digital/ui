@@ -5,6 +5,10 @@ import { describe, expect, it, vi } from "vitest"
 
 import {
   Questionnaire,
+  QuestionnaireDescription,
+  QuestionnaireFooter,
+  QuestionnaireHeader,
+  QuestionnaireTitle,
   type QuestionnaireStepData,
 } from "../../src/components/ui/questionnaire.js"
 
@@ -155,5 +159,63 @@ describe("Questionnaire runtime & accessibility", () => {
     expect(
       screen.getByRole("heading", { name: "What is your primary goal?" })
     ).toBeInTheDocument()
+  })
+
+  it("renders checkbox question and handles toggling options", async () => {
+    const checkboxStep = [
+      {
+        id: "features",
+        title: "Select features",
+        description: "Pick all that apply",
+        type: "checkbox" as const,
+        options: [
+          {
+            value: "auth",
+            label: "Authentication",
+            description: "Secure login flow",
+          },
+          { value: "db", label: "Database", description: "Persistent storage" },
+        ],
+      },
+    ]
+
+    const onComplete = vi.fn()
+    const { container } = render(
+      <Questionnaire steps={checkboxStep} onComplete={onComplete} />
+    )
+
+    const authCheckbox = container.querySelector<HTMLInputElement>(
+      'input[value="auth"]'
+    )!
+    expect(authCheckbox).toBeInTheDocument()
+    expect(authCheckbox.checked).toBe(false)
+
+    fireEvent.click(authCheckbox)
+    expect(authCheckbox.checked).toBe(true)
+
+    // Uncheck
+    fireEvent.click(authCheckbox)
+    expect(authCheckbox.checked).toBe(false)
+
+    fireEvent.click(authCheckbox)
+    const completeBtn = screen.getByRole("button", { name: "Complete" })
+    fireEvent.click(completeBtn)
+    expect(onComplete).toHaveBeenCalledWith({ features: ["auth"] })
+  })
+
+  it("renders standalone questionnaire compound components", () => {
+    render(
+      <QuestionnaireHeader className="custom-header">
+        <QuestionnaireTitle>Standalone Title</QuestionnaireTitle>
+        <QuestionnaireDescription>
+          Standalone Description
+        </QuestionnaireDescription>
+        <QuestionnaireFooter>Standalone Footer</QuestionnaireFooter>
+      </QuestionnaireHeader>
+    )
+
+    expect(screen.getByText("Standalone Title")).toBeInTheDocument()
+    expect(screen.getByText("Standalone Description")).toBeInTheDocument()
+    expect(screen.getByText("Standalone Footer")).toBeInTheDocument()
   })
 })

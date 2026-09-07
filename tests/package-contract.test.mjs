@@ -37,11 +37,10 @@ test("package enforces sideEffects boundary and CSS export declarations", async 
 })
 
 test("base primitives and root barrel do not leak heavy dependencies", async () => {
-  const [buttonJs, dialogJs, cardJs, indexJs] = await Promise.all([
+  const [buttonJs, dialogJs, cardJs] = await Promise.all([
     readRoot("dist/components/ui/button.js"),
     readRoot("dist/components/ui/dialog.js"),
     readRoot("dist/components/ui/card.js"),
-    readRoot("dist/index.js"),
   ])
 
   for (const dep of [

@@ -7,6 +7,7 @@ This guide explains how to migrate existing applications to the complete shadcn-
 This release upgrades `@mivama/ui` into an exhaustive, pre-packaged distribution containing all 64 official shadcn/ui components plus 8 Mivama proprietary extensions (72 modules total).
 
 Key architectural decisions:
+
 1. **Base UI Foundation**: All interactive primitives are powered by `@base-ui-components/react` (Base UI 1.7.0). Zero `@radix-ui/*` or `vaul` dependencies are present in the package.
 2. **Neutral Semantic Theme Baseline**: The default visual baseline for `product` and `portal` themes aligns with standard shadcn neutral tokens (`var(--background)`, `var(--foreground)`, `var(--card)`, `var(--popover)`, `var(--primary)`, `var(--secondary)`, `var(--muted)`, `var(--accent)`, `var(--destructive)`, `var(--border)`, `var(--input)`, `var(--ring)`).
 3. **Opt-In Editorial Theme**: The Mivama editorial palette (`theme="editorial"`) remains available as an opt-in theme for marketing surfaces.
@@ -25,6 +26,7 @@ npm install @mivama/ui
 ### Approved Runtime Dependencies
 
 The package bundles and integrates the following external libraries for specialized primitives:
+
 - `cmdk` — Command palette and Combobox
 - `embla-carousel-react` — Accessible Carousel
 - `input-otp` — One-Time Password input
@@ -70,14 +72,13 @@ The default theme (`theme="product"`) now renders a clean neutral grayscale pale
 If your application relied on the legacy brand colors by default, explicitly opt into the editorial theme:
 
 ```tsx
-<MivamaProvider theme="editorial">
-  {children}
-</MivamaProvider>
+<MivamaProvider theme="editorial">{children}</MivamaProvider>
 ```
 
 Or via shell data attributes:
+
 ```html
-<html data-mivama-theme="editorial">
+<html data-mivama-theme="editorial"></html>
 ```
 
 ### Dark Mode
@@ -112,6 +113,7 @@ import { ChartContainer } from "@mivama/ui/chart"
 ## 5. Summary of New Components
 
 The following components are newly available in this release:
+
 - **Aspect Ratio**: `@mivama/ui/aspect-ratio`
 - **Button Group**: `@mivama/ui/button-group`
 - **Calendar**: `@mivama/ui/calendar`

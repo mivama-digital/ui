@@ -14,7 +14,11 @@ const budgets = {
   "dist/components/ui/sidebar.js": { raw: 48_000, gzip: 10_500, brotli: 9_200 },
   "dist/components/ui/calendar.js": { raw: 10_000, gzip: 2_500, brotli: 2_200 },
   "dist/components/ui/chart.js": { raw: 12_000, gzip: 3_000, brotli: 2_600 },
-  "dist/components/ui/data-table.js": { raw: 10_000, gzip: 2_500, brotli: 2_200 },
+  "dist/components/ui/data-table.js": {
+    raw: 10_000,
+    gzip: 2_500,
+    brotli: 2_200,
+  },
   "dist/components/ui/carousel.js": { raw: 7_000, gzip: 1_800, brotli: 1_500 },
   "dist/styles.css": { raw: 185_000, gzip: 30_000, brotli: 25_000 },
   "dist/tokens.css": { raw: 6_200, gzip: 1_500, brotli: 1_300 },

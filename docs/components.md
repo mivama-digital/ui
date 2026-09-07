@@ -39,10 +39,22 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
 ```tsx
 // Root barrel import
-import { MivamaProvider, useMivamaTheme, useMivamaDensity, useMivamaPortalContainer, useShellAttributes } from "@mivama/ui"
+import {
+  MivamaProvider,
+  useMivamaTheme,
+  useMivamaDensity,
+  useMivamaPortalContainer,
+  useShellAttributes,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { MivamaProvider, useMivamaTheme, useMivamaDensity, useMivamaPortalContainer, useShellAttributes } from "@mivama/ui/provider"
+import {
+  MivamaProvider,
+  useMivamaTheme,
+  useMivamaDensity,
+  useMivamaPortalContainer,
+  useShellAttributes,
+} from "@mivama/ui/provider"
 ```
 
 ### Purpose
@@ -118,7 +130,9 @@ export function SystemAlert() {
     <Alert variant="destructive">
       <AlertCircle className="h-4 w-4" />
       <AlertTitle>Error</AlertTitle>
-      <AlertDescription>Your session has expired. Please re-authenticate.</AlertDescription>
+      <AlertDescription>
+        Your session has expired. Please re-authenticate.
+      </AlertDescription>
     </Alert>
   )
 }
@@ -162,7 +176,11 @@ import { AspectRatio } from "@mivama/ui/aspect-ratio"
 export function MediaCard() {
   return (
     <AspectRatio ratio={16 / 9} className="bg-muted rounded-md overflow-hidden">
-      <img src="/preview.jpg" alt="Project preview" className="object-cover w-full h-full" />
+      <img
+        src="/preview.jpg"
+        alt="Project preview"
+        className="object-cover w-full h-full"
+      />
     </AspectRatio>
   )
 }
@@ -176,10 +194,20 @@ export function MediaCard() {
 
 ```tsx
 // Root barrel import
-import { Attachment, AttachmentList, AttachmentRemove, AttachmentPreview } from "@mivama/ui"
+import {
+  Attachment,
+  AttachmentList,
+  AttachmentRemove,
+  AttachmentPreview,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Attachment, AttachmentList, AttachmentRemove, AttachmentPreview } from "@mivama/ui/attachment"
+import {
+  Attachment,
+  AttachmentList,
+  AttachmentRemove,
+  AttachmentPreview,
+} from "@mivama/ui/attachment"
 ```
 
 ### Purpose
@@ -201,7 +229,11 @@ States: default, uploading (with progress indication), error, disabled.
 ### Minimal Example
 
 ```tsx
-import { Attachment, AttachmentList, AttachmentRemove } from "@mivama/ui/attachment"
+import {
+  Attachment,
+  AttachmentList,
+  AttachmentRemove,
+} from "@mivama/ui/attachment"
 import { FileText } from "lucide-react"
 
 export function FileAttachments() {
@@ -295,8 +327,16 @@ import { BentoGrid, BentoGridItem } from "@mivama/ui/bento-grid"
 export function FeatureSection() {
   return (
     <BentoGrid>
-      <BentoGridItem colSpan={2} title="Analytics" description="Real-time pipeline metrics." />
-      <BentoGridItem colSpan={1} title="Security" description="SOC 2 Type II certified." />
+      <BentoGridItem
+        colSpan={2}
+        title="Analytics"
+        description="Real-time pipeline metrics."
+      />
+      <BentoGridItem
+        colSpan={1}
+        title="Security"
+        description="SOC 2 Type II certified."
+      />
     </BentoGrid>
   )
 }
@@ -310,10 +350,26 @@ export function FeatureSection() {
 
 ```tsx
 // Root barrel import
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis } from "@mivama/ui"
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis } from "@mivama/ui/breadcrumb"
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+} from "@mivama/ui/breadcrumb"
 ```
 
 ### Purpose
@@ -335,15 +391,26 @@ States: interactive link, current active page (non-interactive), collapsed ellip
 ### Minimal Example
 
 ```tsx
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@mivama/ui/breadcrumb"
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@mivama/ui/breadcrumb"
 
 export function Navigation() {
   return (
     <Breadcrumb>
       <BreadcrumbList>
-        <BreadcrumbItem><BreadcrumbLink href="/">Home</BreadcrumbLink></BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbItem><BreadcrumbPage>Dashboard</BreadcrumbPage></BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbPage>Dashboard</BreadcrumbPage>
+        </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
   )
@@ -358,10 +425,24 @@ export function Navigation() {
 
 ```tsx
 // Root barrel import
-import { Bubble, BubbleHeader, BubbleBody, BubbleFooter, BubbleAuthor, BubbleTimestamp } from "@mivama/ui"
+import {
+  Bubble,
+  BubbleHeader,
+  BubbleBody,
+  BubbleFooter,
+  BubbleAuthor,
+  BubbleTimestamp,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Bubble, BubbleHeader, BubbleBody, BubbleFooter, BubbleAuthor, BubbleTimestamp } from "@mivama/ui/bubble"
+import {
+  Bubble,
+  BubbleHeader,
+  BubbleBody,
+  BubbleFooter,
+  BubbleAuthor,
+  BubbleTimestamp,
+} from "@mivama/ui/bubble"
 ```
 
 ### Purpose
@@ -383,7 +464,12 @@ Variants: incoming (muted neutral surface), outgoing (primary brand surface).
 ### Minimal Example
 
 ```tsx
-import { Bubble, BubbleBody, BubbleAuthor, BubbleTimestamp } from "@mivama/ui/bubble"
+import {
+  Bubble,
+  BubbleBody,
+  BubbleAuthor,
+  BubbleTimestamp,
+} from "@mivama/ui/bubble"
 
 export function ChatMessage() {
   return (
@@ -432,7 +518,11 @@ Variants: default, destructive, outline, secondary, ghost, link, inverse. Sizes:
 import { Button } from "@mivama/ui/button"
 
 export function ActionButton() {
-  return <Button variant="default" onClick={() => alert("Action triggered")}>Continue</Button>
+  return (
+    <Button variant="default" onClick={() => alert("Action triggered")}>
+      Continue
+    </Button>
+  )
 }
 ```
 
@@ -520,7 +610,14 @@ import { Calendar } from "@mivama/ui/calendar"
 
 export function DateSelector() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
-  return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border" />
+  return (
+    <Calendar
+      mode="single"
+      selected={date}
+      onSelect={setDate}
+      className="rounded-md border"
+    />
+  )
 }
 ```
 
@@ -532,10 +629,24 @@ export function DateSelector() {
 
 ```tsx
 // Root barrel import
-import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@mivama/ui"
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@mivama/ui/card"
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@mivama/ui/card"
 ```
 
 ### Purpose
@@ -557,7 +668,14 @@ Variants: default, interactive (hover lift and focus-within ring). States: resti
 ### Minimal Example
 
 ```tsx
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@mivama/ui/card"
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@mivama/ui/card"
 import { Button } from "@mivama/ui/button"
 
 export function OverviewCard() {
@@ -567,8 +685,12 @@ export function OverviewCard() {
         <CardTitle>Notifications</CardTitle>
         <CardDescription>Configure your alert preferences.</CardDescription>
       </CardHeader>
-      <CardContent><p className="text-sm">You have 3 unread updates.</p></CardContent>
-      <CardFooter><Button variant="outline">Mark as read</Button></CardFooter>
+      <CardContent>
+        <p className="text-sm">You have 3 unread updates.</p>
+      </CardContent>
+      <CardFooter>
+        <Button variant="outline">Mark as read</Button>
+      </CardFooter>
     </Card>
   )
 }
@@ -582,10 +704,24 @@ export function OverviewCard() {
 
 ```tsx
 // Root barrel import
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, useCarousel } from "@mivama/ui"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  useCarousel,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, useCarousel } from "@mivama/ui/carousel"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  useCarousel,
+} from "@mivama/ui/carousel"
 ```
 
 ### Purpose
@@ -607,14 +743,24 @@ Orientations: horizontal (default), vertical. States: previous/next disabled at 
 ### Minimal Example
 
 ```tsx
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@mivama/ui/carousel"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@mivama/ui/carousel"
 
 export function Showcase() {
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>
-        <CarouselItem><div className="p-4 border rounded-md">Slide 1</div></CarouselItem>
-        <CarouselItem><div className="p-4 border rounded-md">Slide 2</div></CarouselItem>
+        <CarouselItem>
+          <div className="p-4 border rounded-md">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+          <div className="p-4 border rounded-md">Slide 2</div>
+        </CarouselItem>
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
@@ -707,7 +853,12 @@ import { Choice, ChoiceGroup } from "@mivama/ui/choice"
 export function PreferenceChoice() {
   return (
     <ChoiceGroup>
-      <Choice type="checkbox" name="marketing" label="Receive newsletters" description="Weekly curated product digest." />
+      <Choice
+        type="checkbox"
+        name="marketing"
+        label="Receive newsletters"
+        description="Weekly curated product digest."
+      />
     </ChoiceGroup>
   )
 }
@@ -721,10 +872,24 @@ export function PreferenceChoice() {
 
 ```tsx
 // Root barrel import
-import { Combobox, ComboboxInput, ComboboxContent, ComboboxList, ComboboxItem, ComboboxEmpty } from "@mivama/ui"
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxContent,
+  ComboboxList,
+  ComboboxItem,
+  ComboboxEmpty,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Combobox, ComboboxInput, ComboboxContent, ComboboxList, ComboboxItem, ComboboxEmpty } from "@mivama/ui/combobox"
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxContent,
+  ComboboxList,
+  ComboboxItem,
+  ComboboxEmpty,
+} from "@mivama/ui/combobox"
 ```
 
 ### Purpose
@@ -746,7 +911,14 @@ States: closed, open, focused, disabled, empty results.
 ### Minimal Example
 
 ```tsx
-import { Combobox, ComboboxInput, ComboboxContent, ComboboxList, ComboboxItem, ComboboxEmpty } from "@mivama/ui/combobox"
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxContent,
+  ComboboxList,
+  ComboboxItem,
+  ComboboxEmpty,
+} from "@mivama/ui/combobox"
 
 export function FrameworkPicker() {
   return (
@@ -772,10 +944,30 @@ export function FrameworkPicker() {
 
 ```tsx
 // Root barrel import
-import { Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandShortcut, CommandSeparator } from "@mivama/ui"
+import {
+  Command,
+  CommandDialog,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandShortcut,
+  CommandSeparator,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandShortcut, CommandSeparator } from "@mivama/ui/command"
+import {
+  Command,
+  CommandDialog,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandShortcut,
+  CommandSeparator,
+} from "@mivama/ui/command"
 ```
 
 ### Purpose
@@ -797,7 +989,14 @@ Display modes: inline palette (Command), modal overlay (CommandDialog). States: 
 ### Minimal Example
 
 ```tsx
-import { Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem } from "@mivama/ui/command"
+import {
+  Command,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+} from "@mivama/ui/command"
 
 export function QuickMenu() {
   return (
@@ -863,10 +1062,42 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
 
 ```tsx
 // Root barrel import
-import { ContextMenu, ContextMenuTrigger, ContextMenuContent, ContextMenuItem, ContextMenuCheckboxItem, ContextMenuRadioItem, ContextMenuLabel, ContextMenuSeparator, ContextMenuShortcut, ContextMenuGroup, ContextMenuPortal, ContextMenuSub, ContextMenuSubContent, ContextMenuSubTrigger, ContextMenuRadioGroup } from "@mivama/ui"
+import {
+  ContextMenu,
+  ContextMenuTrigger,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuCheckboxItem,
+  ContextMenuRadioItem,
+  ContextMenuLabel,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuGroup,
+  ContextMenuPortal,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuRadioGroup,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { ContextMenu, ContextMenuTrigger, ContextMenuContent, ContextMenuItem, ContextMenuCheckboxItem, ContextMenuRadioItem, ContextMenuLabel, ContextMenuSeparator, ContextMenuShortcut, ContextMenuGroup, ContextMenuPortal, ContextMenuSub, ContextMenuSubContent, ContextMenuSubTrigger, ContextMenuRadioGroup } from "@mivama/ui/context-menu"
+import {
+  ContextMenu,
+  ContextMenuTrigger,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuCheckboxItem,
+  ContextMenuRadioItem,
+  ContextMenuLabel,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuGroup,
+  ContextMenuPortal,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuRadioGroup,
+} from "@mivama/ui/context-menu"
 ```
 
 ### Purpose
@@ -888,7 +1119,12 @@ Items: standard item, checkbox item (aria-checked), radio item, nested submenu. 
 ### Minimal Example
 
 ```tsx
-import { ContextMenu, ContextMenuTrigger, ContextMenuContent, ContextMenuItem } from "@mivama/ui/context-menu"
+import {
+  ContextMenu,
+  ContextMenuTrigger,
+  ContextMenuContent,
+  ContextMenuItem,
+} from "@mivama/ui/context-menu"
 
 export function RightClickArea() {
   return (
@@ -943,7 +1179,13 @@ import { DatePicker } from "@mivama/ui/date-picker"
 
 export function BookingDate() {
   const [selected, setSelected] = React.useState<Date | undefined>()
-  return <DatePicker date={selected} onDateChange={setSelected} placeholder="Select booking date" />
+  return (
+    <DatePicker
+      date={selected}
+      onDateChange={setSelected}
+      placeholder="Select booking date"
+    />
+  )
 }
 ```
 
@@ -955,10 +1197,28 @@ export function BookingDate() {
 
 ```tsx
 // Root barrel import
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@mivama/ui"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+  DialogClose,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@mivama/ui/dialog"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+  DialogClose,
+} from "@mivama/ui/dialog"
 ```
 
 ### Purpose
@@ -980,20 +1240,35 @@ Sizes: default (max-w-lg), sm, lg, full. States: open, closed, animating in/out.
 ### Minimal Example
 
 ```tsx
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "@mivama/ui/dialog"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+} from "@mivama/ui/dialog"
 import { Button } from "@mivama/ui/button"
 
 export function ConfirmationModal() {
   return (
     <Dialog>
-      <DialogTrigger asChild><Button variant="outline">Open Dialog</Button></DialogTrigger>
+      <DialogTrigger asChild>
+        <Button variant="outline">Open Dialog</Button>
+      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Confirm Action</DialogTitle>
-          <DialogDescription>Are you sure you want to proceed?</DialogDescription>
+          <DialogDescription>
+            Are you sure you want to proceed?
+          </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <DialogClose asChild><Button variant="outline">Cancel</Button></DialogClose>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogClose>
           <Button variant="default">Confirm</Button>
         </DialogFooter>
       </DialogContent>
@@ -1050,10 +1325,32 @@ export function LocalizedSubtree({ children }: { children: React.ReactNode }) {
 
 ```tsx
 // Root barrel import
-import { Drawer, DrawerTrigger, DrawerClose, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription, DrawerOverlay, DrawerPortal } from "@mivama/ui"
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerOverlay,
+  DrawerPortal,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Drawer, DrawerTrigger, DrawerClose, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription, DrawerOverlay, DrawerPortal } from "@mivama/ui/drawer"
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerOverlay,
+  DrawerPortal,
+} from "@mivama/ui/drawer"
 ```
 
 ### Purpose
@@ -1075,19 +1372,34 @@ Sides: bottom (default mobile bottom sheet), top, left, right. States: open, clo
 ### Minimal Example
 
 ```tsx
-import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription, DrawerFooter, DrawerClose } from "@mivama/ui/drawer"
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerClose,
+} from "@mivama/ui/drawer"
 import { Button } from "@mivama/ui/button"
 
 export function MobileMenu() {
   return (
     <Drawer>
-      <DrawerTrigger asChild><Button variant="outline">Open Drawer</Button></DrawerTrigger>
+      <DrawerTrigger asChild>
+        <Button variant="outline">Open Drawer</Button>
+      </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Options</DrawerTitle>
           <DrawerDescription>Adjust your mobile settings.</DrawerDescription>
         </DrawerHeader>
-        <DrawerFooter><DrawerClose asChild><Button variant="outline">Close</Button></DrawerClose></DrawerFooter>
+        <DrawerFooter>
+          <DrawerClose asChild>
+            <Button variant="outline">Close</Button>
+          </DrawerClose>
+        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   )
@@ -1132,8 +1444,12 @@ import { EditorialGrid } from "@mivama/ui/editorial-grid"
 export function BrandStory() {
   return (
     <EditorialGrid>
-      <div className="col-span-8"><h2>Featured Story</h2></div>
-      <div className="col-span-4"><aside>Sidebar notes</aside></div>
+      <div className="col-span-8">
+        <h2>Featured Story</h2>
+      </div>
+      <div className="col-span-4">
+        <aside>Sidebar notes</aside>
+      </div>
     </EditorialGrid>
   )
 }
@@ -1147,10 +1463,22 @@ export function BrandStory() {
 
 ```tsx
 // Root barrel import
-import { Empty, EmptyImage, EmptyTitle, EmptyDescription, EmptyActions } from "@mivama/ui"
+import {
+  Empty,
+  EmptyImage,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyActions,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Empty, EmptyImage, EmptyTitle, EmptyDescription, EmptyActions } from "@mivama/ui/empty"
+import {
+  Empty,
+  EmptyImage,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyActions,
+} from "@mivama/ui/empty"
 ```
 
 ### Purpose
@@ -1172,15 +1500,24 @@ Variants: default (centered card/container), compact (inline card).
 ### Minimal Example
 
 ```tsx
-import { Empty, EmptyTitle, EmptyDescription, EmptyActions } from "@mivama/ui/empty"
+import {
+  Empty,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyActions,
+} from "@mivama/ui/empty"
 import { Button } from "@mivama/ui/button"
 
 export function NoDataView() {
   return (
     <Empty>
       <EmptyTitle>No projects found</EmptyTitle>
-      <EmptyDescription>Get started by creating your first workspace project.</EmptyDescription>
-      <EmptyActions><Button variant="default">Create Project</Button></EmptyActions>
+      <EmptyDescription>
+        Get started by creating your first workspace project.
+      </EmptyDescription>
+      <EmptyActions>
+        <Button variant="default">Create Project</Button>
+      </EmptyActions>
     </Empty>
   )
 }
@@ -1194,10 +1531,24 @@ export function NoDataView() {
 
 ```tsx
 // Root barrel import
-import { Field, FieldLabel, FieldDescription, FieldError, Fieldset, FieldLegend } from "@mivama/ui"
+import {
+  Field,
+  FieldLabel,
+  FieldDescription,
+  FieldError,
+  Fieldset,
+  FieldLegend,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Field, FieldLabel, FieldDescription, FieldError, Fieldset, FieldLegend } from "@mivama/ui/field"
+import {
+  Field,
+  FieldLabel,
+  FieldDescription,
+  FieldError,
+  Fieldset,
+  FieldLegend,
+} from "@mivama/ui/field"
 ```
 
 ### Purpose
@@ -1219,7 +1570,12 @@ States: default, invalid (applies error token styling to labels and messages), d
 ### Minimal Example
 
 ```tsx
-import { Field, FieldLabel, FieldDescription, FieldError } from "@mivama/ui/field"
+import {
+  Field,
+  FieldLabel,
+  FieldDescription,
+  FieldError,
+} from "@mivama/ui/field"
 import { Input } from "@mivama/ui/input"
 
 export function EmailField() {
@@ -1227,7 +1583,9 @@ export function EmailField() {
     <Field>
       <FieldLabel htmlFor="email">Email</FieldLabel>
       <Input id="email" type="email" placeholder="you@domain.com" />
-      <FieldDescription id="email-help">We never share your email.</FieldDescription>
+      <FieldDescription id="email-help">
+        We never share your email.
+      </FieldDescription>
     </Field>
   )
 }
@@ -1241,10 +1599,20 @@ export function EmailField() {
 
 ```tsx
 // Root barrel import
-import { HoverCard, HoverCardTrigger, HoverCardContent, HoverCardPortal } from "@mivama/ui"
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+  HoverCardPortal,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { HoverCard, HoverCardTrigger, HoverCardContent, HoverCardPortal } from "@mivama/ui/hover-card"
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+  HoverCardPortal,
+} from "@mivama/ui/hover-card"
 ```
 
 ### Purpose
@@ -1266,13 +1634,23 @@ Sides: top, right, bottom, left. States: closed, open.
 ### Minimal Example
 
 ```tsx
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@mivama/ui/hover-card"
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+} from "@mivama/ui/hover-card"
 
 export function AuthorPreview() {
   return (
     <HoverCard>
-      <HoverCardTrigger asChild><a href="/user/jane" className="underline">@jane</a></HoverCardTrigger>
-      <HoverCardContent><p className="text-sm">Jane Doe — Staff Engineer</p></HoverCardContent>
+      <HoverCardTrigger asChild>
+        <a href="/user/jane" className="underline">
+          @jane
+        </a>
+      </HoverCardTrigger>
+      <HoverCardContent>
+        <p className="text-sm">Jane Doe — Staff Engineer</p>
+      </HoverCardContent>
     </HoverCard>
   )
 }
@@ -1329,7 +1707,11 @@ export function SearchField() {
 import { InputGroup, InputGroupAddon, InputGroupButton } from "@mivama/ui"
 
 // Clean subpath import
-import { InputGroup, InputGroupAddon, InputGroupButton } from "@mivama/ui/input-group"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+} from "@mivama/ui/input-group"
 ```
 
 ### Purpose
@@ -1358,7 +1740,9 @@ import { Search } from "lucide-react"
 export function GroupedSearch() {
   return (
     <InputGroup>
-      <InputGroupAddon><Search className="h-4 w-4 text-muted-foreground" /></InputGroupAddon>
+      <InputGroupAddon>
+        <Search className="h-4 w-4 text-muted-foreground" />
+      </InputGroupAddon>
       <Input placeholder="Search..." />
     </InputGroup>
   )
@@ -1373,10 +1757,20 @@ export function GroupedSearch() {
 
 ```tsx
 // Root barrel import
-import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@mivama/ui"
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+  InputOTPSeparator,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@mivama/ui/input-otp"
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+  InputOTPSeparator,
+} from "@mivama/ui/input-otp"
 ```
 
 ### Purpose
@@ -1398,7 +1792,12 @@ Slot lengths: 4, 6, 8. States: empty, filled, active (pulsing caret), disabled.
 ### Minimal Example
 
 ```tsx
-import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@mivama/ui/input-otp"
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+  InputOTPSeparator,
+} from "@mivama/ui/input-otp"
 
 export function TwoFactorCode() {
   return (
@@ -1495,7 +1894,11 @@ Sizes: default, sm. Variants: default, outline.
 import { Kbd } from "@mivama/ui/kbd"
 
 export function ShortcutHint() {
-  return <p>Press <Kbd>Ctrl</Kbd> + <Kbd>K</Kbd> to search</p>
+  return (
+    <p>
+      Press <Kbd>Ctrl</Kbd> + <Kbd>K</Kbd> to search
+    </p>
+  )
 }
 ```
 
@@ -1598,10 +2001,44 @@ export function NotificationBell() {
 
 ```tsx
 // Root barrel import
-import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator, MenubarLabel, MenubarCheckboxItem, MenubarRadioGroup, MenubarRadioItem, MenubarPortal, MenubarSubContent, MenubarSubTrigger, MenubarGroup, MenubarSub, MenubarShortcut } from "@mivama/ui"
+import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+  MenubarSeparator,
+  MenubarLabel,
+  MenubarCheckboxItem,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarPortal,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarGroup,
+  MenubarSub,
+  MenubarShortcut,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator, MenubarLabel, MenubarCheckboxItem, MenubarRadioGroup, MenubarRadioItem, MenubarPortal, MenubarSubContent, MenubarSubTrigger, MenubarGroup, MenubarSub, MenubarShortcut } from "@mivama/ui/menubar"
+import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+  MenubarSeparator,
+  MenubarLabel,
+  MenubarCheckboxItem,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarPortal,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarGroup,
+  MenubarSub,
+  MenubarShortcut,
+} from "@mivama/ui/menubar"
 ```
 
 ### Purpose
@@ -1623,14 +2060,22 @@ Items: standard item, checkbox item, radio group item, nested submenu. States: c
 ### Minimal Example
 
 ```tsx
-import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem } from "@mivama/ui/menubar"
+import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+} from "@mivama/ui/menubar"
 
 export function TopNav() {
   return (
     <Menubar>
       <MenubarMenu>
         <MenubarTrigger>File</MenubarTrigger>
-        <MenubarContent><MenubarItem>New Tab</MenubarItem></MenubarContent>
+        <MenubarContent>
+          <MenubarItem>New Tab</MenubarItem>
+        </MenubarContent>
       </MenubarMenu>
     </Menubar>
   )
@@ -1645,10 +2090,24 @@ export function TopNav() {
 
 ```tsx
 // Root barrel import
-import { Message, MessageHeader, MessageBody, MessageFooter, MessageAuthor, MessageTimestamp } from "@mivama/ui"
+import {
+  Message,
+  MessageHeader,
+  MessageBody,
+  MessageFooter,
+  MessageAuthor,
+  MessageTimestamp,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Message, MessageHeader, MessageBody, MessageFooter, MessageAuthor, MessageTimestamp } from "@mivama/ui/message"
+import {
+  Message,
+  MessageHeader,
+  MessageBody,
+  MessageFooter,
+  MessageAuthor,
+  MessageTimestamp,
+} from "@mivama/ui/message"
 ```
 
 ### Purpose
@@ -1670,7 +2129,13 @@ Variants: default (neutral border), highlighted, compact.
 ### Minimal Example
 
 ```tsx
-import { Message, MessageHeader, MessageBody, MessageAuthor, MessageTimestamp } from "@mivama/ui/message"
+import {
+  Message,
+  MessageHeader,
+  MessageBody,
+  MessageAuthor,
+  MessageTimestamp,
+} from "@mivama/ui/message"
 
 export function LogEntry() {
   return (
@@ -1778,10 +2243,28 @@ export function CountrySelect() {
 
 ```tsx
 // Root barrel import
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuIndicator, NavigationMenuViewport } from "@mivama/ui"
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuIndicator, NavigationMenuViewport } from "@mivama/ui/navigation-menu"
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+} from "@mivama/ui/navigation-menu"
 ```
 
 ### Purpose
@@ -1803,7 +2286,13 @@ Orientations: horizontal (default), vertical. States: closed, open, moving betwe
 ### Minimal Example
 
 ```tsx
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@mivama/ui/navigation-menu"
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+} from "@mivama/ui/navigation-menu"
 
 export function MainNav() {
   return (
@@ -1811,7 +2300,9 @@ export function MainNav() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-          <NavigationMenuContent className="p-4">Overview and catalog</NavigationMenuContent>
+          <NavigationMenuContent className="p-4">
+            Overview and catalog
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
@@ -1827,10 +2318,26 @@ export function MainNav() {
 
 ```tsx
 // Root barrel import
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@mivama/ui"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@mivama/ui/pagination"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@mivama/ui/pagination"
 ```
 
 ### Purpose
@@ -1852,15 +2359,30 @@ States: active page, inactive link, disabled previous/next, ellipsis.
 ### Minimal Example
 
 ```tsx
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationPrevious, PaginationNext } from "@mivama/ui/pagination"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationPrevious,
+  PaginationNext,
+} from "@mivama/ui/pagination"
 
 export function PageBar() {
   return (
     <Pagination>
       <PaginationContent>
-        <PaginationItem><PaginationPrevious href="#prev" /></PaginationItem>
-        <PaginationItem><PaginationLink href="#1" isActive>1</PaginationLink></PaginationItem>
-        <PaginationItem><PaginationNext href="#next" /></PaginationItem>
+        <PaginationItem>
+          <PaginationPrevious href="#prev" />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#1" isActive>
+            1
+          </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationNext href="#next" />
+        </PaginationItem>
       </PaginationContent>
     </Pagination>
   )
@@ -1997,7 +2519,9 @@ import { ScrollScene, ScrollLayer } from "@mivama/ui/scroll-scene"
 export function HeroScroll() {
   return (
     <ScrollScene>
-      <ScrollLayer speed={0.5}><h1>Parallax Title</h1></ScrollLayer>
+      <ScrollLayer speed={0.5}>
+        <h1>Parallax Title</h1>
+      </ScrollLayer>
     </ScrollScene>
   )
 }
@@ -2140,10 +2664,32 @@ export function Divider() {
 
 ```tsx
 // Root barrel import
-import { Sheet, SheetTrigger, SheetClose, SheetContent, SheetHeader, SheetFooter, SheetTitle, SheetDescription, SheetOverlay, SheetPortal } from "@mivama/ui"
+import {
+  Sheet,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription,
+  SheetOverlay,
+  SheetPortal,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Sheet, SheetTrigger, SheetClose, SheetContent, SheetHeader, SheetFooter, SheetTitle, SheetDescription, SheetOverlay, SheetPortal } from "@mivama/ui/sheet"
+import {
+  Sheet,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription,
+  SheetOverlay,
+  SheetPortal,
+} from "@mivama/ui/sheet"
 ```
 
 ### Purpose
@@ -2165,13 +2711,22 @@ Sides: right (default), left, top, bottom. Sizes: sm (max-w-sm), md (max-w-lg), 
 ### Minimal Example
 
 ```tsx
-import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@mivama/ui/sheet"
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@mivama/ui/sheet"
 import { Button } from "@mivama/ui/button"
 
 export function SettingsSheet() {
   return (
     <Sheet>
-      <SheetTrigger asChild><Button variant="outline">Settings</Button></SheetTrigger>
+      <SheetTrigger asChild>
+        <Button variant="outline">Settings</Button>
+      </SheetTrigger>
       <SheetContent side="right">
         <SheetHeader>
           <SheetTitle>Preferences</SheetTitle>
@@ -2191,10 +2746,58 @@ export function SettingsSheet() {
 
 ```tsx
 // Root barrel import
-import { Sidebar, SidebarProvider, SidebarTrigger, SidebarRail, SidebarInset, SidebarContent, SidebarHeader, SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarGroupAction, SidebarGroupContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuAction, SidebarMenuBadge, SidebarMenuSkeleton, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton, SidebarSeparator, useSidebar } from "@mivama/ui"
+import {
+  Sidebar,
+  SidebarProvider,
+  SidebarTrigger,
+  SidebarRail,
+  SidebarInset,
+  SidebarContent,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarGroupAction,
+  SidebarGroupContent,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarMenuAction,
+  SidebarMenuBadge,
+  SidebarMenuSkeleton,
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
+  SidebarSeparator,
+  useSidebar,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Sidebar, SidebarProvider, SidebarTrigger, SidebarRail, SidebarInset, SidebarContent, SidebarHeader, SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarGroupAction, SidebarGroupContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuAction, SidebarMenuBadge, SidebarMenuSkeleton, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton, SidebarSeparator, useSidebar } from "@mivama/ui/sidebar"
+import {
+  Sidebar,
+  SidebarProvider,
+  SidebarTrigger,
+  SidebarRail,
+  SidebarInset,
+  SidebarContent,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarGroupAction,
+  SidebarGroupContent,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarMenuAction,
+  SidebarMenuBadge,
+  SidebarMenuSkeleton,
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
+  SidebarSeparator,
+  useSidebar,
+} from "@mivama/ui/sidebar"
 ```
 
 ### Purpose
@@ -2216,12 +2819,23 @@ Variants: sidebar, floating, inset. Collapsible modes: offcanvas, icon, none. St
 ### Minimal Example
 
 ```tsx
-import { SidebarProvider, Sidebar, SidebarContent, SidebarHeader, SidebarTrigger } from "@mivama/ui/sidebar"
+import {
+  SidebarProvider,
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
+  SidebarTrigger,
+} from "@mivama/ui/sidebar"
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <Sidebar><SidebarHeader><SidebarTrigger /></SidebarHeader><SidebarContent>Menu items</SidebarContent></Sidebar>
+      <Sidebar>
+        <SidebarHeader>
+          <SidebarTrigger />
+        </SidebarHeader>
+        <SidebarContent>Menu items</SidebarContent>
+      </Sidebar>
       <main className="flex-1 p-6">{children}</main>
     </SidebarProvider>
   )
@@ -2309,7 +2923,12 @@ Sizes: default (h-4 w-4), sm (h-3 w-3), lg (h-6 w-6). States: spinning.
 import { Spinner } from "@mivama/ui/spinner"
 
 export function LoadingNotice() {
-  return <div className="flex items-center gap-2"><Spinner /><span>Processing...</span></div>
+  return (
+    <div className="flex items-center gap-2">
+      <Spinner />
+      <span>Processing...</span>
+    </div>
+  )
 }
 ```
 
@@ -2456,10 +3075,20 @@ export function FeedbackInput() {
 
 ```tsx
 // Root barrel import
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@mivama/ui"
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@mivama/ui/tooltip"
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from "@mivama/ui/tooltip"
 ```
 
 ### Purpose
@@ -2481,15 +3110,24 @@ Sides: top (default), right, bottom, left. States: closed, open.
 ### Minimal Example
 
 ```tsx
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@mivama/ui/tooltip"
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from "@mivama/ui/tooltip"
 import { Button } from "@mivama/ui/button"
 
 export function SaveButton() {
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger asChild><Button variant="outline">Save</Button></TooltipTrigger>
-        <TooltipContent><p>Save changes to cloud</p></TooltipContent>
+        <TooltipTrigger asChild>
+          <Button variant="outline">Save</Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Save changes to cloud</p>
+        </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   )
@@ -2535,8 +3173,12 @@ export function HeroHeading() {
   return (
     <div>
       <Eyebrow>New Release</Eyebrow>
-      <Heading variant="display" render={<h1 />}>Antigravity Platform</Heading>
-      <Text variant="lead">Autonomous developer workflows built for scale.</Text>
+      <Heading variant="display" render={<h1 />}>
+        Antigravity Platform
+      </Heading>
+      <Text variant="lead">
+        Autonomous developer workflows built for scale.
+      </Text>
     </div>
   )
 }
@@ -2550,10 +3192,34 @@ export function HeroHeading() {
 
 ```tsx
 // Root barrel import
-import { Field, Input, Textarea, Select, Choice, ChoiceGroup, FieldLabel, FieldDescription, FieldError, Fieldset, FieldLegend } from "@mivama/ui"
+import {
+  Field,
+  Input,
+  Textarea,
+  Select,
+  Choice,
+  ChoiceGroup,
+  FieldLabel,
+  FieldDescription,
+  FieldError,
+  Fieldset,
+  FieldLegend,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Field, Input, Textarea, Select, Choice, ChoiceGroup, FieldLabel, FieldDescription, FieldError, Fieldset, FieldLegend } from "@mivama/ui/forms"
+import {
+  Field,
+  Input,
+  Textarea,
+  Select,
+  Choice,
+  ChoiceGroup,
+  FieldLabel,
+  FieldDescription,
+  FieldError,
+  Fieldset,
+  FieldLegend,
+} from "@mivama/ui/forms"
 ```
 
 ### Purpose
@@ -2595,10 +3261,42 @@ export function LoginForm() {
 
 ```tsx
 // Root barrel import
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuCheckboxItem, DropdownMenuRadioItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuGroup, DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuRadioGroup } from "@mivama/ui"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuGroup,
+  DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuRadioGroup,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuCheckboxItem, DropdownMenuRadioItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuGroup, DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuRadioGroup } from "@mivama/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuGroup,
+  DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuRadioGroup,
+} from "@mivama/ui/dropdown-menu"
 ```
 
 ### Purpose
@@ -2620,13 +3318,20 @@ Items: standard item, destructive item, checkbox item, radio group item, nested 
 ### Minimal Example
 
 ```tsx
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@mivama/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@mivama/ui/dropdown-menu"
 import { Button } from "@mivama/ui/button"
 
 export function OptionsMenu() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild><Button variant="outline">Options</Button></DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Options</Button>
+      </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>Profile</DropdownMenuItem>
         <DropdownMenuItem>Billing</DropdownMenuItem>
@@ -2644,10 +3349,22 @@ export function OptionsMenu() {
 
 ```tsx
 // Root barrel import
-import { Popover, PopoverTrigger, PopoverContent, PopoverPortal, PopoverAnchor } from "@mivama/ui"
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverPortal,
+  PopoverAnchor,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Popover, PopoverTrigger, PopoverContent, PopoverPortal, PopoverAnchor } from "@mivama/ui/popover"
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverPortal,
+  PopoverAnchor,
+} from "@mivama/ui/popover"
 ```
 
 ### Purpose
@@ -2675,8 +3392,12 @@ import { Button } from "@mivama/ui/button"
 export function InfoPopover() {
   return (
     <Popover>
-      <PopoverTrigger asChild><Button variant="outline">Details</Button></PopoverTrigger>
-      <PopoverContent className="w-80"><p className="text-sm">Additional detailed configuration parameters.</p></PopoverContent>
+      <PopoverTrigger asChild>
+        <Button variant="outline">Details</Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-80">
+        <p className="text-sm">Additional detailed configuration parameters.</p>
+      </PopoverContent>
     </Popover>
   )
 }
@@ -2690,10 +3411,20 @@ export function InfoPopover() {
 
 ```tsx
 // Root barrel import
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@mivama/ui"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@mivama/ui/accordion"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@mivama/ui/accordion"
 ```
 
 ### Purpose
@@ -2715,14 +3446,21 @@ Modes: single (one panel open at a time), multiple. States: collapsed, expanded,
 ### Minimal Example
 
 ```tsx
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@mivama/ui/accordion"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@mivama/ui/accordion"
 
 export function Faq() {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>Yes. It adheres strictly to WAI-ARIA design patterns.</AccordionContent>
+        <AccordionContent>
+          Yes. It adheres strictly to WAI-ARIA design patterns.
+        </AccordionContent>
       </AccordionItem>
     </Accordion>
   )
@@ -2740,7 +3478,11 @@ export function Faq() {
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@mivama/ui"
 
 // Clean subpath import
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@mivama/ui/collapsible"
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "@mivama/ui/collapsible"
 ```
 
 ### Purpose
@@ -2762,14 +3504,22 @@ States: open, closed, disabled.
 ### Minimal Example
 
 ```tsx
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@mivama/ui/collapsible"
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "@mivama/ui/collapsible"
 import { Button } from "@mivama/ui/button"
 
 export function ToggleDetails() {
   return (
     <Collapsible>
-      <CollapsibleTrigger asChild><Button variant="ghost">Show more</Button></CollapsibleTrigger>
-      <CollapsibleContent className="p-2 border rounded-md">Hidden details unveiled.</CollapsibleContent>
+      <CollapsibleTrigger asChild>
+        <Button variant="ghost">Show more</Button>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="p-2 border rounded-md">
+        Hidden details unveiled.
+      </CollapsibleContent>
     </Collapsible>
   )
 }
@@ -2828,10 +3578,28 @@ export function UserAvatar() {
 
 ```tsx
 // Root barrel import
-import { Table, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption } from "@mivama/ui"
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Table, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption } from "@mivama/ui/table"
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "@mivama/ui/table"
 ```
 
 ### Purpose
@@ -2853,13 +3621,30 @@ States: default, row hover, row selected.
 ### Minimal Example
 
 ```tsx
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@mivama/ui/table"
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@mivama/ui/table"
 
 export function InvoiceTable() {
   return (
     <Table>
-      <TableHeader><TableRow><TableHead>Invoice</TableHead><TableHead>Amount</TableHead></TableRow></TableHeader>
-      <TableBody><TableRow><TableCell>INV-001</TableCell><TableCell>$250.00</TableCell></TableRow></TableBody>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Invoice</TableHead>
+          <TableHead>Amount</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>INV-001</TableCell>
+          <TableCell>$250.00</TableCell>
+        </TableRow>
+      </TableBody>
     </Table>
   )
 }
@@ -2903,7 +3688,11 @@ import { toast } from "@mivama/ui/toast"
 
 export function NotifyButton() {
   return (
-    <Button onClick={() => toast({ title: "Saved", description: "Changes recorded." })}>
+    <Button
+      onClick={() =>
+        toast({ title: "Saved", description: "Changes recorded." })
+      }
+    >
       Save Changes
     </Button>
   )
@@ -2918,10 +3707,30 @@ export function NotifyButton() {
 
 ```tsx
 // Root barrel import
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogAction, AlertDialogCancel } from "@mivama/ui"
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogAction, AlertDialogCancel } from "@mivama/ui/alert-dialog"
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel,
+} from "@mivama/ui/alert-dialog"
 ```
 
 ### Purpose
@@ -2943,17 +3752,31 @@ States: open, closed. Action buttons: default, destructive.
 ### Minimal Example
 
 ```tsx
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from "@mivama/ui/alert-dialog"
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@mivama/ui/alert-dialog"
 import { Button } from "@mivama/ui/button"
 
 export function DeleteConfirmation() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild><Button variant="destructive">Delete Project</Button></AlertDialogTrigger>
+      <AlertDialogTrigger asChild>
+        <Button variant="destructive">Delete Project</Button>
+      </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-          <AlertDialogDescription>This action cannot be undone.</AlertDialogDescription>
+          <AlertDialogDescription>
+            This action cannot be undone.
+          </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
@@ -3043,7 +3866,9 @@ import { ScrollArea } from "@mivama/ui/scroll-area"
 export function ScrollableList({ items }: { items: string[] }) {
   return (
     <ScrollArea className="h-48 w-48 rounded-md border p-4">
-      {items.map((item, i) => <div key={i}>{item}</div>)}
+      {items.map((item, i) => (
+        <div key={i}>{item}</div>
+      ))}
     </ScrollArea>
   )
 }
@@ -3133,9 +3958,15 @@ import { Bold, Italic, Underline } from "lucide-react"
 export function FormattingToolbar() {
   return (
     <ToggleGroup type="multiple">
-      <ToggleGroupItem value="bold" aria-label="Bold"><Bold className="h-4 w-4" /></ToggleGroupItem>
-      <ToggleGroupItem value="italic" aria-label="Italic"><Italic className="h-4 w-4" /></ToggleGroupItem>
-      <ToggleGroupItem value="underline" aria-label="Underline"><Underline className="h-4 w-4" /></ToggleGroupItem>
+      <ToggleGroupItem value="bold" aria-label="Bold">
+        <Bold className="h-4 w-4" />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="italic" aria-label="Italic">
+        <Italic className="h-4 w-4" />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="underline" aria-label="Underline">
+        <Underline className="h-4 w-4" />
+      </ToggleGroupItem>
     </ToggleGroup>
   )
 }
@@ -3149,10 +3980,18 @@ export function FormattingToolbar() {
 
 ```tsx
 // Root barrel import
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@mivama/ui"
+import {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@mivama/ui/resizable"
+import {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from "@mivama/ui/resizable"
 ```
 
 ### Purpose
@@ -3174,11 +4013,18 @@ Orientations: horizontal (default), vertical. States: resting, hover handle, dra
 ### Minimal Example
 
 ```tsx
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@mivama/ui/resizable"
+import {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from "@mivama/ui/resizable"
 
 export function SplitLayout() {
   return (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[200px] border rounded-lg">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[200px] border rounded-lg"
+    >
       <ResizablePanel defaultSize={30}>Left pane</ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={70}>Right content</ResizablePanel>
@@ -3195,10 +4041,20 @@ export function SplitLayout() {
 
 ```tsx
 // Root barrel import
-import { DataTable, DataTableColumnHeader, DataTablePagination, DataTableViewOptions } from "@mivama/ui"
+import {
+  DataTable,
+  DataTableColumnHeader,
+  DataTablePagination,
+  DataTableViewOptions,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { DataTable, DataTableColumnHeader, DataTablePagination, DataTableViewOptions } from "@mivama/ui/data-table"
+import {
+  DataTable,
+  DataTableColumnHeader,
+  DataTablePagination,
+  DataTableViewOptions,
+} from "@mivama/ui/data-table"
 ```
 
 ### Purpose
@@ -3223,7 +4079,10 @@ States: loading skeleton, empty records, filtered results, sorted columns, pagin
 import { DataTable } from "@mivama/ui/data-table"
 import type { ColumnDef } from "@tanstack/react-table"
 
-interface User { id: string; name: string }
+interface User {
+  id: string
+  name: string
+}
 const columns: ColumnDef<User>[] = [{ accessorKey: "name", header: "Name" }]
 
 export function UsersTable({ data }: { data: User[] }) {
@@ -3239,10 +4098,24 @@ export function UsersTable({ data }: { data: User[] }) {
 
 ```tsx
 // Root barrel import
-import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, ChartStyle } from "@mivama/ui"
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, ChartStyle } from "@mivama/ui/chart"
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+} from "@mivama/ui/chart"
 ```
 
 ### Purpose
@@ -3264,10 +4137,17 @@ Supports all standard Recharts charts (Bar, Line, Area, Pie, Radar). States: nor
 ### Minimal Example
 
 ```tsx
-import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@mivama/ui/chart"
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  type ChartConfig,
+} from "@mivama/ui/chart"
 import { Bar, BarChart, XAxis } from "recharts"
 
-const config = { desktop: { label: "Desktop", color: "var(--primary)" } } satisfies ChartConfig
+const config = {
+  desktop: { label: "Desktop", color: "var(--primary)" },
+} satisfies ChartConfig
 const data = [{ month: "Jan", desktop: 186 }]
 
 export function MonthlyChart() {
@@ -3291,10 +4171,20 @@ export function MonthlyChart() {
 
 ```tsx
 // Root barrel import
-import { Questionnaire, QuestionnaireStep, QuestionnaireQuestion, QuestionnaireActions } from "@mivama/ui"
+import {
+  Questionnaire,
+  QuestionnaireStep,
+  QuestionnaireQuestion,
+  QuestionnaireActions,
+} from "@mivama/ui"
 
 // Clean subpath import
-import { Questionnaire, QuestionnaireStep, QuestionnaireQuestion, QuestionnaireActions } from "@mivama/ui/questionnaire"
+import {
+  Questionnaire,
+  QuestionnaireStep,
+  QuestionnaireQuestion,
+  QuestionnaireActions,
+} from "@mivama/ui/questionnaire"
 ```
 
 ### Purpose
@@ -3316,12 +4206,22 @@ States: active step, completed step, validation error, submission pending.
 ### Minimal Example
 
 ```tsx
-import { Questionnaire, QuestionnaireStep, QuestionnaireQuestion, QuestionnaireActions } from "@mivama/ui/questionnaire"
+import {
+  Questionnaire,
+  QuestionnaireStep,
+  QuestionnaireQuestion,
+  QuestionnaireActions,
+} from "@mivama/ui/questionnaire"
 import { Button } from "@mivama/ui/button"
 
 export function OnboardingFlow() {
   return (
-    <Questionnaire steps={[{ id: "s1", title: "Profile" }, { id: "s2", title: "Team" }]}>
+    <Questionnaire
+      steps={[
+        { id: "s1", title: "Profile" },
+        { id: "s2", title: "Team" },
+      ]}
+    >
       <QuestionnaireStep stepIndex={0}>
         <QuestionnaireQuestion title="What is your role?" />
         <QuestionnaireActions>
@@ -3334,4 +4234,3 @@ export function OnboardingFlow() {
 ```
 
 ---
-

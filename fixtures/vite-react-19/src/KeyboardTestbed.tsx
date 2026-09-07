@@ -36,11 +36,7 @@ import {
   ResizableHandle,
 } from "@mivama/ui/resizable"
 import { DatePicker } from "@mivama/ui/date-picker"
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@mivama/ui/input-otp"
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@mivama/ui/input-otp"
 import {
   Drawer,
   DrawerTrigger,
@@ -71,23 +67,35 @@ const tableColumns: any[] = [
 ]
 
 export function KeyboardTestbed() {
-  const [selectedDate, setSelectedDate] = React.useState<Date | undefined>(new Date(2026, 8, 7))
+  const [selectedDate, setSelectedDate] = React.useState<Date | undefined>(
+    new Date(2026, 8, 7)
+  )
   const [pickerDate, setPickerDate] = React.useState<Date | undefined>()
   const [otpValue, setOtpValue] = React.useState("")
   const [menuAction, setMenuAction] = React.useState("")
 
   return (
-    <MivamaProvider theme="product" density="comfortable" className="p-8 space-y-8 min-h-screen bg-background text-foreground">
+    <MivamaProvider
+      theme="product"
+      density="comfortable"
+      className="p-8 space-y-8 min-h-screen bg-background text-foreground"
+    >
       <h1 className="text-2xl font-bold">Keyboard Testbed</h1>
 
       {/* 1. Menus */}
       <section data-testid="section-menu">
         <h2>Menu Family</h2>
         <DropdownMenu>
-          <DropdownMenuTrigger render={<Button />}>Open dropdown menu</DropdownMenuTrigger>
+          <DropdownMenuTrigger render={<Button />}>
+            Open dropdown menu
+          </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem onClick={() => setMenuAction("profile")}>Profile</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setMenuAction("settings")}>Settings</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setMenuAction("profile")}>
+              Profile
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setMenuAction("settings")}>
+              Settings
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         {menuAction && <span data-testid="menu-action">{menuAction}</span>}
@@ -101,7 +109,9 @@ export function KeyboardTestbed() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Nav Products</NavigationMenuTrigger>
               <NavigationMenuContent className="p-4">
-                <a href="#prod-1" data-testid="nav-link">Product Overview</a>
+                <a href="#prod-1" data-testid="nav-link">
+                  Product Overview
+                </a>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -122,7 +132,10 @@ export function KeyboardTestbed() {
       <section data-testid="section-combobox">
         <h2>Combobox Family</h2>
         <Combobox>
-          <ComboboxInput placeholder="Search framework..." aria-label="Framework search" />
+          <ComboboxInput
+            placeholder="Search framework..."
+            aria-label="Framework search"
+          />
           <ComboboxContent>
             <ComboboxList>
               <ComboboxEmpty>No results</ComboboxEmpty>
@@ -138,8 +151,12 @@ export function KeyboardTestbed() {
         <h2>Carousel Family</h2>
         <Carousel className="w-64">
           <CarouselContent>
-            <CarouselItem><div className="p-4 border">Slide 1</div></CarouselItem>
-            <CarouselItem><div className="p-4 border">Slide 2</div></CarouselItem>
+            <CarouselItem>
+              <div className="p-4 border">Slide 1</div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="p-4 border">Slide 2</div>
+            </CarouselItem>
           </CarouselContent>
           <CarouselPrevious aria-label="Previous slide" />
           <CarouselNext aria-label="Next slide" />
@@ -149,10 +166,21 @@ export function KeyboardTestbed() {
       {/* 6. Resizable */}
       <section data-testid="section-resizable">
         <h2>Resizable Family</h2>
-        <ResizablePanelGroup orientation="horizontal" className="min-h-[100px] border rounded">
-          <ResizablePanel defaultSize={50} id="left-panel">Panel A</ResizablePanel>
-          <ResizableHandle withHandle aria-label="Resize panels" id="resize-handle" />
-          <ResizablePanel defaultSize={50} id="right-panel">Panel B</ResizablePanel>
+        <ResizablePanelGroup
+          orientation="horizontal"
+          className="min-h-[100px] border rounded"
+        >
+          <ResizablePanel defaultSize={50} id="left-panel">
+            Panel A
+          </ResizablePanel>
+          <ResizableHandle
+            withHandle
+            aria-label="Resize panels"
+            id="resize-handle"
+          />
+          <ResizablePanel defaultSize={50} id="right-panel">
+            Panel B
+          </ResizablePanel>
         </ResizablePanelGroup>
       </section>
 
@@ -169,7 +197,12 @@ export function KeyboardTestbed() {
       {/* 8. Input OTP */}
       <section data-testid="section-otp">
         <h2>Input OTP Family</h2>
-        <InputOTP maxLength={4} value={otpValue} onChange={setOtpValue} aria-label="One-time code">
+        <InputOTP
+          maxLength={4}
+          value={otpValue}
+          onChange={setOtpValue}
+          aria-label="One-time code"
+        >
           <InputOTPGroup>
             <InputOTPSlot index={0} />
             <InputOTPSlot index={1} />
@@ -184,14 +217,18 @@ export function KeyboardTestbed() {
       <section data-testid="section-drawer">
         <h2>Drawer Family</h2>
         <Drawer>
-          <DrawerTrigger render={<Button variant="outline" />}>Open test drawer</DrawerTrigger>
+          <DrawerTrigger render={<Button variant="outline" />}>
+            Open test drawer
+          </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader>
               <DrawerTitle>Drawer Title</DrawerTitle>
               <DrawerDescription>Drawer Description</DrawerDescription>
             </DrawerHeader>
             <DrawerFooter>
-              <DrawerClose render={<Button variant="outline" />}>Close drawer</DrawerClose>
+              <DrawerClose render={<Button variant="outline" />}>
+                Close drawer
+              </DrawerClose>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

@@ -12,10 +12,14 @@ function collectBrowserErrors(page: Page) {
 test.describe("keyboard-sensitive component families", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/?suite=keyboard")
-    await expect(page.getByRole("heading", { name: "Keyboard Testbed" })).toBeVisible()
+    await expect(
+      page.getByRole("heading", { name: "Keyboard Testbed" })
+    ).toBeVisible()
   })
 
-  test("menus: keyboard opens, navigates with arrows, and activates items", async ({ page }) => {
+  test("menus: keyboard opens, navigates with arrows, and activates items", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const trigger = page.getByRole("button", { name: "Open dropdown menu" })
     await trigger.focus()
@@ -34,7 +38,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("navigation: navigation menu opens and dismisses with Escape", async ({ page }) => {
+  test("navigation: navigation menu opens and dismisses with Escape", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const trigger = page.getByRole("button", { name: "Nav Products" })
     await trigger.click()
@@ -46,7 +52,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("calendar: grid renders and supports day interaction", async ({ page }) => {
+  test("calendar: grid renders and supports day interaction", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const calendarSection = page.getByTestId("section-calendar")
     await expect(calendarSection).toBeVisible()
@@ -55,7 +63,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("combobox: filters options and selects via keyboard", async ({ page }) => {
+  test("combobox: filters options and selects via keyboard", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const input = page.getByLabel("Framework search")
     await input.focus()
@@ -69,7 +79,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("carousel: advances slides via keyboard navigation controls", async ({ page }) => {
+  test("carousel: advances slides via keyboard navigation controls", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const nextBtn = page.getByLabel("Next slide")
     await expect(nextBtn).toBeVisible()
@@ -78,7 +90,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("resizable: separator is keyboard focusable and operable", async ({ page }) => {
+  test("resizable: separator is keyboard focusable and operable", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const handle = page.locator("#resize-handle")
     await handle.focus()
@@ -87,7 +101,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("date picker: opens calendar dialog and dismisses with Escape", async ({ page }) => {
+  test("date picker: opens calendar dialog and dismisses with Escape", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const trigger = page.getByRole("button", { name: "Select custom date" })
     await trigger.click()
@@ -95,7 +111,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("input OTP: receives sequential keyboard digits into slots", async ({ page }) => {
+  test("input OTP: receives sequential keyboard digits into slots", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const otpInput = page.getByLabel("One-time code")
     await otpInput.focus()
@@ -104,7 +122,9 @@ test.describe("keyboard-sensitive component families", () => {
     expect(browserErrors).toEqual([])
   })
 
-  test("drawer: opens dialog overlay and dismisses with Escape", async ({ page }) => {
+  test("drawer: opens dialog overlay and dismisses with Escape", async ({
+    page,
+  }) => {
     const browserErrors = collectBrowserErrors(page)
     const trigger = page.getByRole("button", { name: "Open test drawer" })
     await trigger.click()

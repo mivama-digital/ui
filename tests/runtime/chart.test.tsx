@@ -117,4 +117,84 @@ describe("Chart runtime & accessibility", () => {
       container.querySelector("[data-slot='chart-tooltip-content']")
     ).toBeNull()
   })
+
+  it("renders tooltip with line and dashed indicators, hidden indicators, and formatter", () => {
+    render(
+      <ChartContext.Provider value={{ config: chartConfig }}>
+        <ChartTooltipContent
+          active
+          indicator="line"
+          payload={[
+            {
+              name: "desktop",
+              dataKey: "desktop",
+              value: 186,
+              color: "var(--chart-1)",
+              payload: { month: "January", desktop: 186 },
+            },
+            {
+              name: "mobile",
+              dataKey: "mobile",
+              value: 80,
+              color: "var(--chart-2)",
+              payload: { month: "January", mobile: 80 },
+            },
+          ]}
+          label="January"
+        />
+        <ChartTooltipContent
+          active
+          indicator="dashed"
+          payload={[
+            {
+              name: "desktop",
+              dataKey: "desktop",
+              value: 186,
+              color: "var(--chart-1)",
+            },
+          ]}
+        />
+        <ChartTooltipContent
+          active
+          hideIndicator
+          formatter={(value, name) => (
+            <span>
+              {name}: {value} units
+            </span>
+          )}
+          payload={[
+            {
+              name: "desktop",
+              dataKey: "desktop",
+              value: 186,
+              color: "var(--chart-1)",
+            },
+          ]}
+        />
+      </ChartContext.Provider>
+    )
+
+    expect(screen.getByText("January")).toBeInTheDocument()
+    expect(screen.getByText("desktop: 186 units")).toBeInTheDocument()
+  })
+
+  it("renders legend with hideIcon and custom nameKey", () => {
+    render(
+      <ChartContext.Provider value={{ config: chartConfig }}>
+        <ChartLegendContent
+          hideIcon
+          nameKey="desktop"
+          payload={[
+            {
+              value: "desktop",
+              dataKey: "desktop",
+              color: "var(--chart-1)",
+            },
+          ]}
+        />
+      </ChartContext.Provider>
+    )
+
+    expect(screen.getByText("Desktop")).toBeInTheDocument()
+  })
 })
