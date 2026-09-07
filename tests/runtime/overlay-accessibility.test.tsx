@@ -25,6 +25,28 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../../src/components/ui/tooltip.js"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../../src/components/ui/dropdown-menu.js"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../../src/components/ui/popover.js"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../../src/components/ui/alert-dialog.js"
 
 function DialogFixture({ portal }: { portal?: HTMLElement }) {
   return (
@@ -132,5 +154,102 @@ describe("overlay components", () => {
 
     await user.keyboard("{Escape}")
     await waitFor(() => expect(tooltip).not.toBeInTheDocument())
+  })
+
+  it("renders DropdownMenu into provider portal and dismisses on Escape", async () => {
+    const user = userEvent.setup()
+    const portal = document.createElement("div")
+    portal.dataset.testid = "portal"
+    document.body.append(portal)
+
+    render(
+      <MivamaProvider portalContainer={portal}>
+        <DropdownMenu>
+          <DropdownMenuTrigger>Actions</DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>Item 1</DropdownMenuItem>
+            <DropdownMenuItem>Item 2</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </MivamaProvider>
+    )
+
+    const trigger = screen.getByRole("button", { name: "Actions" })
+    await user.click(trigger)
+
+    const menu = await screen.findByRole("menu")
+    expect(portal).toContainElement(menu)
+    expect(screen.getByRole("menuitem", { name: "Item 1" })).toBeInTheDocument()
+
+    await user.keyboard("{Escape}")
+    await waitFor(() => expect(menu).not.toBeInTheDocument())
+    portal.remove()
+  })
+
+  it("renders Popover into provider portal and dismisses on Escape", async () => {
+    const user = userEvent.setup()
+    const portal = document.createElement("div")
+    portal.dataset.testid = "portal"
+    document.body.append(portal)
+
+    render(
+      <MivamaProvider portalContainer={portal}>
+        <Popover>
+          <PopoverTrigger>Open details</PopoverTrigger>
+          <PopoverContent>
+            <div>Popover details</div>
+          </PopoverContent>
+        </Popover>
+      </MivamaProvider>
+    )
+
+    const trigger = screen.getByRole("button", { name: "Open details" })
+    await user.click(trigger)
+
+    const content = await screen.findByText("Popover details")
+    expect(portal).toContainElement(content)
+
+    await user.keyboard("{Escape}")
+    await waitFor(() => expect(content).not.toBeInTheDocument())
+    portal.remove()
+  })
+
+  it("renders AlertDialog into provider portal and handles cancellation", async () => {
+    const user = userEvent.setup()
+    const portal = document.createElement("div")
+    portal.dataset.testid = "portal"
+    document.body.append(portal)
+
+    render(
+      <MivamaProvider portalContainer={portal}>
+        <AlertDialog>
+          <AlertDialogTrigger>Delete</AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Confirm Deletion</AlertDialogTitle>
+              <AlertDialogDescription>Are you sure?</AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Dismiss</AlertDialogCancel>
+              <AlertDialogAction>Confirm</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </MivamaProvider>
+    )
+
+    const trigger = screen.getByRole("button", { name: "Delete" })
+    await user.click(trigger)
+
+    const dialog = await screen.findByRole("alertdialog")
+    expect(portal).toContainElement(dialog)
+    expect(screen.getByText("Confirm Deletion")).toBeVisible()
+
+    const cancel = screen.getByRole("button", { name: "Dismiss" })
+    await user.click(cancel)
+    await waitFor(() => expect(dialog).not.toBeInTheDocument())
+    expect(trigger).toHaveFocus()
+
+    portal.remove()
   })
 })

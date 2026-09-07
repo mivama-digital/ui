@@ -35,6 +35,21 @@ import {
 } from "../../src/components/ui/scroll-scene.js"
 import { Section } from "../../src/components/ui/section.js"
 import { Eyebrow, Heading, Text } from "../../src/components/ui/typography.js"
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "../../src/components/ui/empty.js"
+import {
+  Message,
+  MessageAvatar,
+  MessageContent,
+  MessageGroup,
+  MessageHeader,
+} from "../../src/components/ui/message.js"
 
 describe("navigation and layout components", () => {
   it("composes breadcrumb navigation with a localized label and current page", async () => {
@@ -221,6 +236,48 @@ describe("navigation and layout components", () => {
     expect(screen.getByText("Signal 01").tagName).toBe("SPAN")
     expect(screen.getByText("Signal 01")).toHaveClass("mivama-text-signal")
     expect(screen.getByText("Metadata")).toHaveClass("mivama-text-eyebrow")
+
+    const results = await axe.run(container)
+    expect(results.violations).toEqual([])
+  })
+
+  it("renders empty state and message hierarchy with expected slots and semantics", async () => {
+    const { container } = render(
+      <>
+        <Empty>
+          <EmptyHeader>
+            <EmptyMedia variant="icon">Icon</EmptyMedia>
+            <EmptyTitle>No items found</EmptyTitle>
+            <EmptyDescription>
+              Try searching for something else.
+            </EmptyDescription>
+          </EmptyHeader>
+          <EmptyContent>Content</EmptyContent>
+        </Empty>
+
+        <MessageGroup>
+          <Message align="start">
+            <MessageAvatar>A</MessageAvatar>
+            <MessageContent>
+              <MessageHeader>User</MessageHeader>
+              <div>Hello world</div>
+            </MessageContent>
+          </Message>
+        </MessageGroup>
+      </>
+    )
+
+    expect(container.querySelector('[data-slot="empty"]')).toBeInTheDocument()
+    expect(
+      container.querySelector('[data-slot="empty-title"]')
+    ).toHaveTextContent("No items found")
+    expect(
+      container.querySelector('[data-slot="message-group"]')
+    ).toBeInTheDocument()
+    expect(container.querySelector('[data-slot="message"]')).toHaveAttribute(
+      "data-align",
+      "start"
+    )
 
     const results = await axe.run(container)
     expect(results.violations).toEqual([])
