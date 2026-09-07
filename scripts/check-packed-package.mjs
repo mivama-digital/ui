@@ -27,14 +27,26 @@ try {
     `const specifiers = ${JSON.stringify(importSpecifiers)};\n` +
       "for (const specifier of specifiers) {\n" +
       "  const namespace = await import(specifier);\n" +
-      "  if (Object.keys(namespace).length === 0) throw new Error(`Empty module: ${specifier}`);\n" +
+      "  if (Object.keys(namespace).length === 0) throw new Error(`Empty ESM module: ${specifier}`);\n" +
       "}\n" +
-      "console.log(`Imported ${specifiers.length} public module entry points`);\n"
+      "console.log(`Imported ${specifiers.length} public module entry points via ESM`);\n"
   )
   await runCommand(process.execPath, [checkFile], commandOptions)
 
+  const checkCjsFile = path.join(workspace, "check.cjs")
+  await writeFile(
+    checkCjsFile,
+    `const specifiers = ${JSON.stringify(importSpecifiers)};\n` +
+      "for (const specifier of specifiers) {\n" +
+      "  const mod = require(specifier);\n" +
+      "  if (!mod || Object.keys(mod).length === 0) throw new Error(`Empty CJS module: ${specifier}`);\n" +
+      "}\n" +
+      "console.log(`Required ${specifiers.length} public module entry points via CJS`);\n"
+  )
+  await runCommand(process.execPath, [checkCjsFile], commandOptions)
+
   assert.deepEqual(installedPackage.sideEffects, ["**/*.css"])
-  for (const stylesheet of ["styles.css", "tokens.css", "themes.css"]) {
+  for (const stylesheet of ["styles.css", "tokens.css", "themes.css", "reset.css"]) {
     assert.equal(
       installedPackage.exports[`./${stylesheet}`],
       `./dist/${stylesheet}`
@@ -46,12 +58,14 @@ try {
     if (typeof target === "string") continue
     assert.equal(typeof target.types, "string", `${subpath} is missing types`)
     assert.equal(typeof target.import, "string", `${subpath} is missing import`)
+    assert.equal(typeof target.require, "string", `${subpath} is missing require`)
     assert.equal(
       target.default,
       target.import,
       `${subpath} default/import mismatch`
     )
     await access(path.join(packageDir, target.import))
+    await access(path.join(packageDir, target.require))
     await access(path.join(packageDir, target.types))
   }
 

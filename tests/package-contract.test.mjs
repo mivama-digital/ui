@@ -22,6 +22,49 @@ test("all registry components have package subpath exports", async () => {
     assert.ok(packageJson.exports[subpath], `missing ${subpath} export`)
     assert.equal(typeof packageJson.exports[subpath].types, "string")
     assert.equal(typeof packageJson.exports[subpath].import, "string")
+    assert.equal(typeof packageJson.exports[subpath].require, "string")
+  }
+})
+
+test("package enforces sideEffects boundary and CSS export declarations", async () => {
+  const packageJson = await readJson("package.json")
+
+  assert.deepEqual(
+    packageJson.sideEffects,
+    ["**/*.css"],
+    "Only CSS files may be marked as side effects"
+  )
+})
+
+test("base primitives and root barrel do not leak heavy dependencies", async () => {
+  const [buttonJs, dialogJs, cardJs, indexJs] = await Promise.all([
+    readRoot("dist/components/ui/button.js"),
+    readRoot("dist/components/ui/dialog.js"),
+    readRoot("dist/components/ui/card.js"),
+    readRoot("dist/index.js"),
+  ])
+
+  for (const dep of [
+    "recharts",
+    "@tanstack/react-table",
+    "react-day-picker",
+    "embla-carousel-react",
+  ]) {
+    assert.doesNotMatch(
+      buttonJs,
+      new RegExp(dep),
+      `Button must not bundle or reference ${dep}`
+    )
+    assert.doesNotMatch(
+      dialogJs,
+      new RegExp(dep),
+      `Dialog must not bundle or reference ${dep}`
+    )
+    assert.doesNotMatch(
+      cardJs,
+      new RegExp(dep),
+      `Card must not bundle or reference ${dep}`
+    )
   }
 })
 
