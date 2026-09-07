@@ -5,7 +5,17 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "../../lib/utils.js"
 
-const badgeVariants = cva(
+type BadgeVariant =
+  "default" | "secondary" | "destructive" | "outline" | "ghost" | "link"
+
+interface BadgeVariantProps {
+  variant?: BadgeVariant | null
+  wrap?: boolean | null
+  class?: string
+  className?: string
+}
+
+const badgeVariantsImpl = cva(
   "group/badge inline-flex min-h-5 w-fit items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium transition-colors focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 motion-reduce:transition-none has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none [&>svg]:size-3!",
   {
     variants: {
@@ -34,10 +44,14 @@ const badgeVariants = cva(
   }
 )
 
+function badgeVariants(props?: BadgeVariantProps): string {
+  return badgeVariantsImpl(props as Parameters<typeof badgeVariantsImpl>[0])
+}
+
 interface BadgeProps
   extends
     useRender.ComponentProps<"span">,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariantsImpl> {}
 
 const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
   { className, variant = "default", wrap = false, render, ...props },
@@ -48,7 +62,7 @@ const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
     props: mergeProps<"span">(
       {
         ref,
-        className: cn(badgeVariants({ variant, wrap }), className),
+        className: cn(badgeVariantsImpl({ variant, wrap }), className),
       },
       props
     ),

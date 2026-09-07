@@ -4,7 +4,28 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "../../lib/utils.js"
 
-const buttonVariants = cva(
+type ButtonVariant =
+  | "default"
+  | "outline"
+  | "secondary"
+  | "ghost"
+  | "navigation"
+  | "destructive"
+  | "link"
+  | "inverse"
+
+type ButtonSize =
+  "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg"
+
+interface ButtonVariantProps {
+  variant?: ButtonVariant | null
+  size?: ButtonSize | null
+  wrap?: boolean | null
+  class?: string
+  className?: string
+}
+
+const buttonVariantsImpl = cva(
   "group/button relative inline-flex items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-(--motion-duration-fast) ease-(--motion-easing-standard) outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring active:not-aria-[haspopup]:translate-y-px motion-reduce:transition-none motion-reduce:active:translate-y-0 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
@@ -50,8 +71,12 @@ const buttonVariants = cva(
   }
 )
 
+function buttonVariants(props?: ButtonVariantProps): string {
+  return buttonVariantsImpl(props as Parameters<typeof buttonVariantsImpl>[0])
+}
+
 interface ButtonProps
-  extends ButtonPrimitive.Props, VariantProps<typeof buttonVariants> {
+  extends ButtonPrimitive.Props, VariantProps<typeof buttonVariantsImpl> {
   loading?: boolean
 }
 
@@ -76,7 +101,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       {...props}
       aria-busy={loading || undefined}
       disabled={disabled || loading}
-      className={cn(buttonVariants({ variant, size, wrap, className }))}
+      className={cn(buttonVariantsImpl({ variant, size, wrap, className }))}
     >
       {loading ? (
         <>

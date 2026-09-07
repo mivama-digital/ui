@@ -165,8 +165,11 @@ test("wrapping variants opt into shrinking and emergency label reflow", async ()
     assert.doesNotMatch(wrapped, /whitespace-nowrap/)
     assert.match(variants(), /shrink-0 whitespace-nowrap/)
   }
-  assert.match(button, /buttonVariants\(\{ variant, size, wrap, className \}\)/)
-  assert.match(badge, /badgeVariants\(\{ variant, wrap \}\)/)
+  assert.match(
+    button,
+    /buttonVariantsImpl\(\{ variant, size, wrap, className \}\)/
+  )
+  assert.match(badge, /badgeVariantsImpl\(\{ variant, wrap \}\)/)
 })
 
 test("primary hover and keyboard focus remain opaque across themes", async () => {
@@ -206,4 +209,27 @@ test("disabled inputs keep their cursor feedback and remain inspectable", async 
   assert.match(input, /disabled:bg-input\/50/)
   assert.match(input, /disabled:opacity-50/)
   assert.doesNotMatch(input, /disabled:pointer-events-none/)
+})
+
+test("public CVA variant helpers use explicitly ordered unions", async () => {
+  const [button, badge] = await Promise.all([
+    readUiSource("button"),
+    readUiSource("badge"),
+  ])
+  assert.match(
+    button,
+    /type ButtonVariant =\n  \| "default"\n  \| "outline"\n  \| "secondary"\n  \| "ghost"\n  \| "navigation"\n  \| "destructive"\n  \| "link"\n  \| "inverse"/
+  )
+  assert.match(
+    button,
+    /function buttonVariants\(props\?: ButtonVariantProps\): string/
+  )
+  assert.match(
+    badge,
+    /type BadgeVariant =\s+"default" \| "secondary" \| "destructive" \| "outline" \| "ghost" \| "link"/
+  )
+  assert.match(
+    badge,
+    /function badgeVariants\(props\?: BadgeVariantProps\): string/
+  )
 })
