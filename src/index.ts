@@ -550,4 +550,18 @@ export {
   ResizablePanel,
   ResizablePanelGroup,
 } from "./components/ui/resizable.js"
+export {
+  DataTable,
+  DataTableColumnHeader,
+  DataTablePagination,
+  DataTableViewOptions,
+  defaultDataTableFeatures,
+} from "./components/ui/data-table.js"
+export type {
+  DataTableColumnHeaderProps,
+  DataTablePaginationProps,
+  DataTableProps,
+  DataTableViewOptionsProps,
+  DefaultDataTableFeatures,
+} from "./components/ui/data-table.js"
 export { cn } from "./lib/utils.js"

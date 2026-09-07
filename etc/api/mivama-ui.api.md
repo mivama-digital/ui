@@ -25,6 +25,8 @@ import { Checkbox as Checkbox_2 } from '@base-ui/react/checkbox';
 import * as class_variance_authority_types from 'class-variance-authority/types';
 import { ClassValue } from 'clsx';
 import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
+import { Column } from '@tanstack/react-table';
+import { ColumnDef } from '@tanstack/react-table';
 import { Combobox as Combobox_2 } from '@base-ui/react/combobox';
 import { Command as Command_2 } from 'cmdk';
 import { ComponentProps } from 'react';
@@ -37,19 +39,26 @@ import { DirectionProviderProps } from '@base-ui/react/direction-provider';
 import { Drawer as Drawer_2 } from '@base-ui/react/drawer';
 import { Menu } from '@base-ui/react/menu';
 import { NavigationMenu as NavigationMenu_2 } from '@base-ui/react/navigation-menu';
+import { OnChangeFn } from '@tanstack/react-table';
 import { OTPInput } from 'input-otp';
+import { PaginationState } from '@tanstack/react-table';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
 import { PreviewCard } from '@base-ui/react/preview-card';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
 import { Radio } from '@base-ui/react/radio';
 import { RadioGroup as RadioGroup_2 } from '@base-ui/react/radio-group';
 import * as React_2 from 'react';
+import { ReactTable } from '@tanstack/react-table';
 import * as ResizablePrimitive from 'react-resizable-panels';
+import { RowSelectionState } from '@tanstack/react-table';
 import { ScrollArea as ScrollArea_2 } from '@base-ui/react/scroll-area';
 import { Separator as Separator_2 } from '@base-ui/react/separator';
 import { Slider as Slider_2 } from '@base-ui/react/slider';
+import { SortingState } from '@tanstack/react-table';
 import { Switch as Switch_2 } from '@base-ui/react/switch';
+import { Table as Table_2 } from '@tanstack/react-table';
 import { Tabs as Tabs_2 } from '@base-ui/react/tabs';
+import * as _tanstack_react_table from '@tanstack/react-table';
 import { TextDirection } from '@base-ui/react/direction-provider';
 import { Toast } from '@base-ui/react/toast';
 import { Toggle as Toggle_2 } from '@base-ui/react/toggle';
@@ -660,6 +669,70 @@ export interface ContextMenuSubTriggerProps extends ContextMenu_2.SubmenuTrigger
 export const ContextMenuTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_context_menu.ContextMenuTriggerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
+export function DataTable<TData extends Record<string, any> = Record<string, any>, TValue = unknown>(input: DataTableProps<TData, TValue>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function DataTableColumnHeader<TData extends Record<string, any> = Record<string, any>, TValue = unknown>(input: DataTableColumnHeaderProps<TData, TValue>): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface DataTableColumnHeaderProps<TData extends Record<string, any> = Record<string, any>, TValue = unknown> extends React_2.HTMLAttributes<HTMLDivElement> {
+    // (undocumented)
+    column: Column<DefaultDataTableFeatures, TData, TValue>;
+    // (undocumented)
+    title: string;
+}
+
+// @public (undocumented)
+export function DataTablePagination<TData extends Record<string, any> = Record<string, any>>(input: DataTablePaginationProps<TData>): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface DataTablePaginationProps<TData extends Record<string, any> = Record<string, any>> {
+    // (undocumented)
+    className?: string;
+    // (undocumented)
+    table: ReactTable<DefaultDataTableFeatures, TData>;
+}
+
+// @public (undocumented)
+export interface DataTableProps<TData extends Record<string, any> = Record<string, any>, TValue = unknown> {
+    // (undocumented)
+    className?: string;
+    // (undocumented)
+    columns?: ColumnDef<DefaultDataTableFeatures, TData, TValue>[];
+    // (undocumented)
+    data?: TData[];
+    // (undocumented)
+    emptyMessage?: React_2.ReactNode;
+    // (undocumented)
+    onPaginationChange?: OnChangeFn<PaginationState>;
+    // (undocumented)
+    onRowSelectionChange?: OnChangeFn<RowSelectionState>;
+    // (undocumented)
+    onSortingChange?: OnChangeFn<SortingState>;
+    // (undocumented)
+    showPagination?: boolean;
+    // (undocumented)
+    state?: {
+        sorting?: SortingState;
+        rowSelection?: RowSelectionState;
+        pagination?: PaginationState;
+    };
+    // (undocumented)
+    table?: ReactTable<DefaultDataTableFeatures, TData>;
+}
+
+// @public (undocumented)
+export function DataTableViewOptions<TData extends Record<string, any> = Record<string, any>>(input: DataTableViewOptionsProps<TData>): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface DataTableViewOptionsProps<TData extends Record<string, any> = Record<string, any>> {
+    // (undocumented)
+    className?: string;
+    // (undocumented)
+    table: ReactTable<DefaultDataTableFeatures, TData>;
+}
+
+// @public (undocumented)
 export const DatePicker: React_2.ForwardRefExoticComponent<DatePickerProps & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
@@ -683,6 +756,49 @@ export interface DatePickerProps {
     // (undocumented)
     placeholder?: string;
 }
+
+// @public (undocumented)
+export type DefaultDataTableFeatures = typeof defaultDataTableFeatures;
+
+// @public (undocumented)
+export const defaultDataTableFeatures: {
+    columnFilteringFeature: _tanstack_react_table.TableFeature;
+    columnVisibilityFeature: _tanstack_react_table.TableFeature;
+    rowSortingFeature: _tanstack_react_table.TableFeature;
+    rowPaginationFeature: _tanstack_react_table.TableFeature;
+    rowSelectionFeature: _tanstack_react_table.TableFeature;
+    filteredRowModel: (table: Table_2<any, any>) => () => _tanstack_react_table.RowModel<any, any>;
+    sortedRowModel: (table: Table_2<any, any>) => () => _tanstack_react_table.RowModel<any, any>;
+    paginatedRowModel: (table: Table_2<any, any>) => () => _tanstack_react_table.RowModel<any, any>;
+    sortFns: {
+        alphanumeric: _tanstack_react_table.CreatedSortFn<any, any>;
+        alphanumericCaseSensitive: _tanstack_react_table.CreatedSortFn<any, any>;
+        basic: _tanstack_react_table.CreatedSortFn<any, any>;
+        datetime: _tanstack_react_table.CreatedSortFn<any, any>;
+        text: _tanstack_react_table.CreatedSortFn<any, any>;
+        textCaseSensitive: _tanstack_react_table.CreatedSortFn<any, any>;
+    };
+    filterFns: {
+        arrIncludes: _tanstack_react_table.CreatedFilterFn<any, any>;
+        arrIncludesAll: _tanstack_react_table.CreatedFilterFn<any, any>;
+        arrHas: _tanstack_react_table.CreatedFilterFn<any, any>;
+        arrIncludesSome: _tanstack_react_table.CreatedFilterFn<any, any>;
+        between: _tanstack_react_table.CreatedFilterFn<any, any>;
+        betweenInclusive: _tanstack_react_table.CreatedFilterFn<any, any>;
+        empty: _tanstack_react_table.CreatedFilterFn<any, any>;
+        endsWith: _tanstack_react_table.CreatedFilterFn<any, any>;
+        equals: _tanstack_react_table.CreatedFilterFn<any, any>;
+        equalsString: _tanstack_react_table.CreatedFilterFn<any, any>;
+        equalsStringSensitive: _tanstack_react_table.CreatedFilterFn<any, any>;
+        inDateRange: _tanstack_react_table.CreatedFilterFn<any, any>;
+        inNumberRange: _tanstack_react_table.CreatedFilterFn<any, any>;
+        includesString: _tanstack_react_table.CreatedFilterFn<any, any>;
+        includesStringSensitive: _tanstack_react_table.CreatedFilterFn<any, any>;
+        notEmpty: _tanstack_react_table.CreatedFilterFn<any, any>;
+        startsWith: _tanstack_react_table.CreatedFilterFn<any, any>;
+        weakEquals: _tanstack_react_table.CreatedFilterFn<any, any>;
+    };
+};
 
 // @public (undocumented)
 export const defaultToastManager: _base_ui_react_toast.ToastManager<ToastData>;

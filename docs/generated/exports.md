@@ -232,6 +232,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/context-menu.d.ts`
 - Runtime: `./dist/components/ui/context-menu.js`
 
+## `@mivama/ui/data-table`
+
+- Primary component: DataTable
+- Category: layout
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/data-table.d.ts`
+- Runtime: `./dist/components/ui/data-table.js`
+
 ## `@mivama/ui/date-picker`
 
 - Primary component: DatePicker

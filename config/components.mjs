@@ -620,4 +620,13 @@ export const components = [
     client: true,
     interactive: true,
   },
+  {
+    name: "DataTable",
+    slug: "data-table",
+    source: "src/components/ui/data-table.tsx",
+    category: "layout",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
 ]
