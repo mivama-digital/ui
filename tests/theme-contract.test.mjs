@@ -227,3 +227,25 @@ test("built-in themes and densities map to explicit CSS selectors", async () => 
     /@media \(pointer: coarse\)[\s\S]*--sidebar-row-height: 44px;/
   )
 })
+
+test("theme preview story renders all semantic states across themes and modes", async () => {
+  const [providerStory, examples] = await Promise.all([
+    readRoot("stories/provider.stories.tsx"),
+    readRoot("stories/_examples.tsx"),
+  ])
+  const combined = `${providerStory}\n${examples}`
+  assert.match(providerStory, /export const ThemePreview\b/)
+  for (const state of [
+    "muted",
+    "accent",
+    "destructive",
+    "success",
+    "warning",
+    "card",
+    "popover",
+    "sidebar",
+    "ring",
+  ]) {
+    assert.match(combined, new RegExp(`bg-${state}|ring-${state}`))
+  }
+})

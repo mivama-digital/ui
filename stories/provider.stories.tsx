@@ -1,4 +1,4 @@
-import { MivamaProviderExample } from "./_examples.js"
+import { MivamaProviderExample, ThemePreviewExample } from "./_examples.js"
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
 const meta = {
@@ -20,4 +20,8 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => <MivamaProviderExample />,
+}
+
+export const ThemePreview: Story = {
+  render: () => <ThemePreviewExample />,
 }

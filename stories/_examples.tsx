@@ -117,6 +117,52 @@ export function MivamaProviderExample() {
   )
 }
 
+export function ThemePreviewExample() {
+  return (
+    <div className="grid gap-6 p-6">
+      <Heading variant="title">Semantic Theme Preview</Heading>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-xs font-medium">
+        <div className="bg-background text-foreground border border-border rounded-lg p-3 shadow-xs">
+          Background
+        </div>
+        <div className="bg-muted text-muted-foreground rounded-lg p-3">
+          Muted
+        </div>
+        <div className="bg-accent text-accent-foreground rounded-lg p-3">
+          Accent
+        </div>
+        <div className="bg-primary text-primary-foreground rounded-lg p-3">
+          Primary
+        </div>
+        <div className="bg-secondary text-secondary-foreground rounded-lg p-3">
+          Secondary
+        </div>
+        <div className="bg-card text-card-foreground border border-border rounded-lg p-3 shadow-xs">
+          Card
+        </div>
+        <div className="bg-popover text-popover-foreground border border-border rounded-lg p-3 shadow-xs">
+          Popover
+        </div>
+        <div className="bg-sidebar text-sidebar-foreground border border-sidebar-border rounded-lg p-3">
+          Sidebar
+        </div>
+        <div className="bg-destructive text-destructive-foreground rounded-lg p-3">
+          Destructive
+        </div>
+        <div className="bg-success text-success-foreground rounded-lg p-3">
+          Success
+        </div>
+        <div className="bg-warning text-warning-foreground rounded-lg p-3">
+          Warning
+        </div>
+        <div className="bg-background text-foreground ring-3 ring-ring rounded-lg p-3">
+          Ring Focus
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function AlertExample() {
   return (
     <Alert className="max-w-md">
