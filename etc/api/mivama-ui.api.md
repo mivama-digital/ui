@@ -23,6 +23,8 @@ import { ClassValue } from 'clsx';
 import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
 import { ComponentProps } from 'react';
 import { Dialog as Dialog_2 } from '@base-ui/react/dialog';
+import { DirectionProvider } from '@base-ui/react/direction-provider';
+import { DirectionProviderProps } from '@base-ui/react/direction-provider';
 import { Menu } from '@base-ui/react/menu';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
@@ -32,8 +34,10 @@ import { Separator as Separator_2 } from '@base-ui/react/separator';
 import { Slider as Slider_2 } from '@base-ui/react/slider';
 import { Switch as Switch_2 } from '@base-ui/react/switch';
 import { Tabs as Tabs_2 } from '@base-ui/react/tabs';
+import { TextDirection } from '@base-ui/react/direction-provider';
 import { Toast } from '@base-ui/react/toast';
 import { Tooltip as Tooltip_2 } from '@base-ui/react/tooltip';
+import { useDirection } from '@base-ui/react/direction-provider';
 import { useRender } from '@base-ui/react/use-render';
 import { VariantProps } from 'class-variance-authority';
 
@@ -438,6 +442,10 @@ export const DialogTitle: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_
 
 // @public (undocumented)
 export const DialogTrigger: React_2.ForwardRefExoticComponent<Omit<Dialog_2.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+export { DirectionProvider }
+
+export { DirectionProviderProps }
 
 // @public (undocumented)
 export function DropdownMenu(props: Menu.Root.Props): React_2.JSX.Element;
@@ -1268,6 +1276,8 @@ export { Text_2 as Text }
 // @public (undocumented)
 export const Textarea: React_2.ForwardRefExoticComponent<Omit<TextareaProps, "ref"> & React_2.RefAttributes<HTMLTextAreaElement>>;
 
+export { TextDirection }
+
 // @public (undocumented)
 export type TextProps = useRender.ComponentProps<"p"> & VariantProps<typeof textVariants>;
 
@@ -1360,6 +1370,8 @@ export function TooltipTrigger(input: Tooltip_2.Trigger.Props): React_2.JSX.Elem
 
 // @public (undocumented)
 export type TypographyTone = "default" | "inherit";
+
+export { useDirection }
 
 // @public (undocumented)
 export function useFieldContext(): FieldContextValue | null;

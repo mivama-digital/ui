@@ -126,6 +126,15 @@ export const components = [
     interactive: true,
   },
   {
+    name: "Direction",
+    slug: "direction",
+    source: "src/components/ui/direction.tsx",
+    category: "provider",
+    status: "stable",
+    client: true,
+    interactive: false,
+  },
+  {
     name: "EditorialGrid",
     slug: "editorial-grid",
     source: "src/components/ui/editorial-grid.tsx",

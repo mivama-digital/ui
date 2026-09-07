@@ -332,6 +332,12 @@
       "import": "./dist/components/ui/message-scroller.js",
       "require": "./dist/components/ui/message-scroller.cjs",
       "default": "./dist/components/ui/message-scroller.js"
+    },
+    "./direction": {
+      "types": "./dist/components/ui/direction.d.ts",
+      "import": "./dist/components/ui/direction.js",
+      "require": "./dist/components/ui/direction.cjs",
+      "default": "./dist/components/ui/direction.js"
     }
   },
   "files": [

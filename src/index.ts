@@ -402,4 +402,9 @@ export type {
   MessageScrollerItemProps,
   MessageScrollerProviderProps,
 } from "./components/ui/message-scroller.js"
+export { DirectionProvider, useDirection } from "./components/ui/direction.js"
+export type {
+  DirectionProviderProps,
+  TextDirection,
+} from "./components/ui/direction.js"
 export { cn } from "./lib/utils.js"
