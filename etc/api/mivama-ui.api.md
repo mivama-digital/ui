@@ -51,6 +51,8 @@ import { Toggle as Toggle_2 } from '@base-ui/react/toggle';
 import { ToggleGroup as ToggleGroup_2 } from '@base-ui/react/toggle-group';
 import { Tooltip as Tooltip_2 } from '@base-ui/react/tooltip';
 import { useDirection } from '@base-ui/react/direction-provider';
+import useEmblaCarousel from 'embla-carousel-react';
+import { UseEmblaCarouselType } from 'embla-carousel-react';
 import { useRender } from '@base-ui/react/use-render';
 import { VariantProps } from 'class-variance-authority';
 
@@ -385,6 +387,32 @@ export function CardTitle(input: useRender.ComponentProps<"div">): React_2.React
 export const cardVariants: (props?: ({
     variant?: "outline" | "surface" | "subtle" | "instrument" | "interactive" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export const Carousel: React_2.ForwardRefExoticComponent<Omit<React_2.ClassAttributes<HTMLDivElement> & React_2.HTMLAttributes<HTMLDivElement> & CarouselProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export type CarouselApi = UseEmblaCarouselType[1];
+
+// @public (undocumented)
+export const CarouselContent: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const CarouselItem: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const CarouselNext: React_2.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export const CarouselPrevious: React_2.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export type CarouselProps = {
+    opts?: CarouselOptions;
+    plugins?: CarouselPlugin;
+    orientation?: "horizontal" | "vertical";
+    setApi?: (api: CarouselApi) => void;
+};
 
 // @public (undocumented)
 export function Checkbox(input: Checkbox_2.Root.Props): React_2.JSX.Element;
@@ -1774,6 +1802,11 @@ export function TooltipTrigger(input: Tooltip_2.Trigger.Props): React_2.JSX.Elem
 // @public (undocumented)
 export type TypographyTone = "default" | "inherit";
 
+// Warning: (ae-forgotten-export) The symbol "CarouselContextProps" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export function useCarousel(): CarouselContextProps;
+
 export { useDirection }
 
 // @public (undocumented)
@@ -1809,6 +1842,11 @@ export function useOptionalMivamaContext(): MivamaContextValue | null;
 
 // @public (undocumented)
 export function useSidebar(): SidebarContextProps;
+
+// Warnings were encountered during analysis:
+//
+// dist/components/ui/carousel.d.ts:13:5 - (ae-forgotten-export) The symbol "CarouselOptions" needs to be exported by the entry point index.d.ts
+// dist/components/ui/carousel.d.ts:14:5 - (ae-forgotten-export) The symbol "CarouselPlugin" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

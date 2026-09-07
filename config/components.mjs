@@ -108,6 +108,15 @@ export const components = [
     interactive: false,
   },
   {
+    name: "Carousel",
+    slug: "carousel",
+    source: "src/components/ui/carousel.tsx",
+    category: "layout",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
+  {
     name: "Checkbox",
     slug: "checkbox",
     source: "src/components/ui/checkbox.tsx",

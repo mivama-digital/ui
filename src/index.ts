@@ -487,4 +487,13 @@ export { Calendar, CalendarDayButton } from "./components/ui/calendar.js"
 export type { CalendarProps } from "./components/ui/calendar.js"
 export { DatePicker } from "./components/ui/date-picker.js"
 export type { DatePickerProps } from "./components/ui/date-picker.js"
+export {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  useCarousel,
+} from "./components/ui/carousel.js"
+export type { CarouselApi, CarouselProps } from "./components/ui/carousel.js"
 export { cn } from "./lib/utils.js"
