@@ -386,6 +386,18 @@
       "import": "./dist/components/ui/toggle-group.js",
       "require": "./dist/components/ui/toggle-group.cjs",
       "default": "./dist/components/ui/toggle-group.js"
+    },
+    "./calendar": {
+      "types": "./dist/components/ui/calendar.d.ts",
+      "import": "./dist/components/ui/calendar.js",
+      "require": "./dist/components/ui/calendar.cjs",
+      "default": "./dist/components/ui/calendar.js"
+    },
+    "./date-picker": {
+      "types": "./dist/components/ui/date-picker.d.ts",
+      "import": "./dist/components/ui/date-picker.js",
+      "require": "./dist/components/ui/date-picker.cjs",
+      "default": "./dist/components/ui/date-picker.js"
     }
   },
   "files": [

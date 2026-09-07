@@ -483,4 +483,8 @@ export type {
   ToggleGroupProps,
   ToggleGroupItemProps,
 } from "./components/ui/toggle-group.js"
+export { Calendar, CalendarDayButton } from "./components/ui/calendar.js"
+export type { CalendarProps } from "./components/ui/calendar.js"
+export { DatePicker } from "./components/ui/date-picker.js"
+export type { DatePickerProps } from "./components/ui/date-picker.js"
 export { cn } from "./lib/utils.js"

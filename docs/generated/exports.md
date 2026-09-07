@@ -132,6 +132,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/button-group.d.ts`
 - Runtime: `./dist/components/ui/button-group.js`
 
+## `@mivama/ui/calendar`
+
+- Primary component: Calendar
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/calendar.d.ts`
+- Runtime: `./dist/components/ui/calendar.js`
+
 ## `@mivama/ui/card`
 
 - Primary component: Card
@@ -191,6 +201,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/context-menu.d.ts`
 - Runtime: `./dist/components/ui/context-menu.js`
+
+## `@mivama/ui/date-picker`
+
+- Primary component: DatePicker
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/date-picker.d.ts`
+- Runtime: `./dist/components/ui/date-picker.js`
 
 ## `@mivama/ui/dialog`
 

@@ -27,6 +27,8 @@ import { ClassValue } from 'clsx';
 import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
 import { ComponentProps } from 'react';
 import { ContextMenu as ContextMenu_2 } from '@base-ui/react/context-menu';
+import { DayButton } from 'react-day-picker';
+import { DayPicker } from 'react-day-picker';
 import { Dialog as Dialog_2 } from '@base-ui/react/dialog';
 import { DirectionProvider } from '@base-ui/react/direction-provider';
 import { DirectionProviderProps } from '@base-ui/react/direction-provider';
@@ -331,6 +333,29 @@ export const buttonGroupVariants: (props?: ({
 export function buttonVariants(props?: ButtonVariantProps): string;
 
 // @public (undocumented)
+export function Calendar(input: CalendarProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace Calendar {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function CalendarDayButton(input: React_2.ComponentProps<typeof DayButton>): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace CalendarDayButton {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export type CalendarProps = React_2.ComponentProps<typeof DayPicker> & {
+    buttonVariant?: React_2.ComponentProps<typeof Button>["variant"];
+};
+
+// @public (undocumented)
 export const Card: React_2.ForwardRefExoticComponent<Omit<CardProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
@@ -516,6 +541,31 @@ export interface ContextMenuSubTriggerProps extends ContextMenu_2.SubmenuTrigger
 
 // @public (undocumented)
 export const ContextMenuTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_context_menu.ContextMenuTriggerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const DatePicker: React_2.ForwardRefExoticComponent<DatePickerProps & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export interface DatePickerProps {
+    // (undocumented)
+    align?: "start" | "center" | "end";
+    // (undocumented)
+    calendarProps?: Omit<CalendarProps, "mode" | "selected" | "onSelect">;
+    // (undocumented)
+    className?: string;
+    // (undocumented)
+    date?: Date;
+    // (undocumented)
+    defaultDate?: Date;
+    // (undocumented)
+    disabled?: boolean;
+    // (undocumented)
+    formatDate?: (date: Date) => string;
+    // (undocumented)
+    onDateChange?: (date: Date | undefined) => void;
+    // (undocumented)
+    placeholder?: string;
+}
 
 // @public (undocumented)
 export const defaultToastManager: _base_ui_react_toast.ToastManager<ToastData>;
