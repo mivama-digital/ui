@@ -375,9 +375,11 @@ export {
   ChartTooltip,
   ChartTooltipContent,
   useChart,
+  THEMES,
 }
 export type {
   ChartConfig,
+  ChartContextProps,
   ChartContainerProps,
   ChartLegendContentProps,
   ChartTooltipContentProps,

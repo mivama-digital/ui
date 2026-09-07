@@ -544,7 +544,12 @@ export {
   CarouselNext,
   useCarousel,
 } from "./components/ui/carousel.js"
-export type { CarouselApi, CarouselProps } from "./components/ui/carousel.js"
+export type {
+  CarouselApi,
+  CarouselOptions,
+  CarouselPlugin,
+  CarouselProps,
+} from "./components/ui/carousel.js"
 export {
   ResizableHandle,
   ResizablePanel,
@@ -576,10 +581,12 @@ export {
 } from "./components/ui/chart.js"
 export type {
   ChartConfig,
+  ChartContextProps,
   ChartContainerProps,
   ChartLegendContentProps,
   ChartTooltipContentProps,
 } from "./components/ui/chart.js"
+export { THEMES } from "./components/ui/chart.js"
 export {
   Questionnaire,
   QuestionnaireDescription,

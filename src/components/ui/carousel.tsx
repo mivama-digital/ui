@@ -264,4 +264,4 @@ export {
   CarouselNext,
   useCarousel,
 }
-export type { CarouselProps }
+export type { CarouselProps, CarouselOptions, CarouselPlugin }

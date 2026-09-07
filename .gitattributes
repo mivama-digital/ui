@@ -1,0 +1,16 @@
+# Normalize line endings for generated artifacts and text files
+*.md text=auto
+*.ts text=auto
+*.tsx text=auto
+*.json text=auto
+*.css text=auto
+*.html text=auto
+*.xml text=auto
+*.yaml text=auto
+*.yml text=auto
+*.mjs text=auto
+*.cjs text=auto
+*.txt text=auto
+*.md text=auto
+etc/api/mivama-ui.api.md text eol=lf
+docs/generated/exports.md text eol=lf

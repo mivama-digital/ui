@@ -417,6 +417,14 @@ export const CarouselItem: React_2.ForwardRefExoticComponent<Omit<React_2.Detail
 // @public (undocumented)
 export const CarouselNext: React_2.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
+// Warning: (ae-forgotten-export) The symbol "UseCarouselParameters" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export type CarouselOptions = UseCarouselParameters[0];
+
+// @public (undocumented)
+export type CarouselPlugin = UseCarouselParameters[1];
+
 // @public (undocumented)
 export const CarouselPrevious: React_2.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
@@ -453,10 +461,13 @@ export interface ChartContainerProps extends React_2.ComponentProps<"div"> {
     config: ChartConfig;
 }
 
-// Warning: (ae-forgotten-export) The symbol "ChartContextProps" needs to be exported by the entry point index.d.ts
-//
 // @public (undocumented)
 export const ChartContext: React_2.Context<ChartContextProps | null>;
+
+// @public (undocumented)
+export type ChartContextProps = {
+    config: ChartConfig;
+};
 
 // @public (undocumented)
 export const ChartLegend: React_2.ComponentType<any>;
@@ -2114,6 +2125,12 @@ export const textVariants: (props?: ({
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // @public (undocumented)
+export const THEMES: {
+    readonly light: "";
+    readonly dark: ".dark";
+};
+
+// @public (undocumented)
 export function toast(input: ToastOptions): string;
 
 // @public (undocumented)
@@ -2278,12 +2295,6 @@ export function useOptionalMivamaContext(): MivamaContextValue | null;
 
 // @public (undocumented)
 export function useSidebar(): SidebarContextProps;
-
-// Warnings were encountered during analysis:
-//
-// dist/components/ui/carousel.d.ts:13:5 - (ae-forgotten-export) The symbol "CarouselOptions" needs to be exported by the entry point index.d.ts
-// dist/components/ui/carousel.d.ts:14:5 - (ae-forgotten-export) The symbol "CarouselPlugin" needs to be exported by the entry point index.d.ts
-// dist/components/ui/chart.d.ts:16:9 - (ae-forgotten-export) The symbol "THEMES" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 
