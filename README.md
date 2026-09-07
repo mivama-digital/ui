@@ -1,35 +1,47 @@
 # @mivama/ui
 
-Shared Mivama design tokens and React UI primitives for websites, portals, and product surfaces.
+Shared Mivama design tokens and React UI primitives for websites, portals, and product surfaces. Complete shadcn/ui distribution with 72 accessible components (64 official components + 8 Mivama extensions) built on Base UI 1.7.0.
+
+## Installation
+
+Applications install `@mivama/ui` directly as a pre-built, tree-shakeable package from npm. You do not need to copy and paste code via the shadcn CLI:
+
+```bash
+npm install @mivama/ui
+```
 
 ## Quick start
 
 ```tsx
-import { Button, Card, MivamaProvider } from "@mivama/ui"
+import { MivamaProvider, Button, Toaster } from "@mivama/ui"
 import "@mivama/ui/styles.css"
 
-export function App() {
+export function AppShell({ children }: { children: React.ReactNode }) {
   return (
-    <MivamaProvider theme="product" density="comfortable">
-      <Card>
-        <Button>Continue</Button>
-      </Card>
+    <MivamaProvider theme="product">
+      {children}
+      <Toaster />
     </MivamaProvider>
   )
 }
 ```
 
-`MivamaProvider` is the canonical application-shell integration. It owns the shared theme/density context and the portal container used by portaled components such as Dialog, Sheet, and Tooltip.
+`MivamaProvider` is the canonical application-shell integration. It owns the shared theme/density context and the portal container used by portaled components such as Dialog, Sheet, Drawer, Popover, and Tooltip.
 
-Frequently used modules can bypass the root barrel:
+Frequently used modules can bypass the root barrel using clean subpath imports:
 
 ```tsx
 import { Button } from "@mivama/ui/button"
 import { Card } from "@mivama/ui/card"
 import { Field, Input } from "@mivama/ui/forms"
+import { DataTable } from "@mivama/ui/data-table"
+import { ChartContainer } from "@mivama/ui/chart"
 ```
 
-The authoritative public module and stylesheet catalog is generated from the component registry and package export map in [`docs/generated/exports.md`](docs/generated/exports.md). Do not maintain a second export inventory in this README.
+- For the complete API catalog and usage examples for all 72 components, see [`docs/components.md`](docs/components.md).
+- For upstream parity tracking against shadcn/ui, see [`docs/upstream/component-parity.md`](docs/upstream/component-parity.md).
+- For migrating from prior Mivama releases, see [`docs/migration/shadcn-compatible-release.md`](docs/migration/shadcn-compatible-release.md).
+- The authoritative public module and stylesheet catalog is generated from the component registry and package export map in [`docs/generated/exports.md`](docs/generated/exports.md). Do not maintain a second export inventory in this README.
 
 ## Component documentation
 

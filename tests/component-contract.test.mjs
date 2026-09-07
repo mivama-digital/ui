@@ -362,3 +362,69 @@ test("official component catalog and parity ledger are fully specified and accou
     "Complete component registry must contain exactly 72 modules (64 official + 8 extensions)"
   )
 })
+
+test("all registered components are documented in docs/components.md with complete contracts", async () => {
+  const docs = await readRoot("docs/components.md")
+
+  for (const component of components) {
+    const { slug, name } = component
+    // Check that component has a dedicated section
+    const sectionHeaderRegex = new RegExp(`##\\s+.*\\b(${name}|${slug})\\b`, "i")
+    assert.match(
+      docs,
+      sectionHeaderRegex,
+      `docs/components.md must contain a section for ${name} (${slug})`
+    )
+
+    // Find section content up to next ## or end of file
+    const sectionStart = docs.search(new RegExp(`##\\s+.*\\b(${name}|${slug})\\b`, "i"))
+    assert.ok(sectionStart !== -1, `Section start for ${slug} must be found`)
+    const nextSectionIndex = docs.slice(sectionStart + 2).search(/\n##\s/)
+    const sectionContent =
+      nextSectionIndex !== -1
+        ? docs.slice(sectionStart, sectionStart + 2 + nextSectionIndex)
+        : docs.slice(sectionStart)
+
+    // Must include import path
+    assert.match(
+      sectionContent,
+      new RegExp(`@mivama/ui(/${slug})?`),
+      `Documentation for ${slug} must include import path`
+    )
+
+    // Must include purpose
+    assert.match(
+      sectionContent,
+      /###\s+(Purpose|Description)|(purpose|description):/i,
+      `Documentation for ${slug} must describe its purpose`
+    )
+
+    // Must include client/server note
+    assert.match(
+      sectionContent,
+      /(client|server)/i,
+      `Documentation for ${slug} must specify client/server behavior`
+    )
+
+    // Must include keyboard/accessibility behavior
+    assert.match(
+      sectionContent,
+      /(accessibility|keyboard|a11y)/i,
+      `Documentation for ${slug} must document accessibility/keyboard behavior`
+    )
+
+    // Must include variants/states
+    assert.match(
+      sectionContent,
+      /(variant|state)/i,
+      `Documentation for ${slug} must document variants or states`
+    )
+
+    // Must include minimal example code block
+    assert.match(
+      sectionContent,
+      /```(tsx|jsx|ts|js)/,
+      `Documentation for ${slug} must provide a minimal example`
+    )
+  }
+})
