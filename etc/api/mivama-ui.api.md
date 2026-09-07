@@ -429,6 +429,94 @@ export type CarouselProps = {
 };
 
 // @public (undocumented)
+export type ChartConfig = {
+    [k in string]: {
+        label?: React_2.ReactNode;
+        icon?: React_2.ComponentType;
+    } & ({
+        color?: string;
+        theme?: never;
+    } | {
+        color?: never;
+        theme: Record<keyof typeof THEMES, string>;
+    });
+};
+
+// @public (undocumented)
+export const ChartContainer: React_2.ForwardRefExoticComponent<Omit<ChartContainerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ChartContainerProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    children: React_2.ReactNode;
+    // (undocumented)
+    config: ChartConfig;
+}
+
+// Warning: (ae-forgotten-export) The symbol "ChartContextProps" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export const ChartContext: React_2.Context<ChartContextProps | null>;
+
+// @public (undocumented)
+export const ChartLegend: React_2.ComponentType<any>;
+
+// @public (undocumented)
+export const ChartLegendContent: React_2.ForwardRefExoticComponent<Omit<ChartLegendContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ChartLegendContentProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    hideIcon?: boolean;
+    // (undocumented)
+    nameKey?: string;
+    // (undocumented)
+    payload?: Array<any>;
+    // (undocumented)
+    verticalAlign?: "top" | "bottom" | "middle";
+}
+
+// @public (undocumented)
+export function ChartStyle(input: {
+    id: string;
+    config: ChartConfig;
+}): React_2.JSX.Element | null;
+
+// @public (undocumented)
+export const ChartTooltip: React_2.ComponentType<any>;
+
+// @public (undocumented)
+export const ChartTooltipContent: React_2.ForwardRefExoticComponent<Omit<ChartTooltipContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ChartTooltipContentProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    active?: boolean;
+    // (undocumented)
+    color?: string;
+    // (undocumented)
+    formatter?: (value: any, name: any, item: any, index: number, payload: any) => React_2.ReactNode;
+    // (undocumented)
+    hideIndicator?: boolean;
+    // (undocumented)
+    hideLabel?: boolean;
+    // (undocumented)
+    indicator?: "line" | "dot" | "dashed";
+    // (undocumented)
+    label?: any;
+    // (undocumented)
+    labelClassName?: string;
+    // (undocumented)
+    labelFormatter?: (label: any, payload: Array<any>) => React_2.ReactNode;
+    // (undocumented)
+    labelKey?: string;
+    // (undocumented)
+    nameKey?: string;
+    // (undocumented)
+    payload?: Array<any>;
+}
+
+// @public (undocumented)
 export function Checkbox(input: Checkbox_2.Root.Props): React_2.JSX.Element;
 
 // @public (undocumented)
@@ -2077,6 +2165,9 @@ export type TypographyTone = "default" | "inherit";
 export function useCarousel(): CarouselContextProps;
 
 // @public (undocumented)
+export function useChart(): ChartContextProps;
+
+// @public (undocumented)
 export function useComboboxAnchor(): React_2.RefObject<HTMLDivElement | null>;
 
 export { useDirection }
@@ -2119,6 +2210,7 @@ export function useSidebar(): SidebarContextProps;
 //
 // dist/components/ui/carousel.d.ts:13:5 - (ae-forgotten-export) The symbol "CarouselOptions" needs to be exported by the entry point index.d.ts
 // dist/components/ui/carousel.d.ts:14:5 - (ae-forgotten-export) The symbol "CarouselPlugin" needs to be exported by the entry point index.d.ts
+// dist/components/ui/chart.d.ts:16:9 - (ae-forgotten-export) The symbol "THEMES" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

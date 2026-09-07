@@ -564,4 +564,20 @@ export type {
   DataTableViewOptionsProps,
   DefaultDataTableFeatures,
 } from "./components/ui/data-table.js"
+export {
+  ChartContainer,
+  ChartContext,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
+  useChart,
+} from "./components/ui/chart.js"
+export type {
+  ChartConfig,
+  ChartContainerProps,
+  ChartLegendContentProps,
+  ChartTooltipContentProps,
+} from "./components/ui/chart.js"
 export { cn } from "./lib/utils.js"

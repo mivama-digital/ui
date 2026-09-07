@@ -629,4 +629,13 @@ export const components = [
     client: true,
     interactive: true,
   },
+  {
+    name: "Chart",
+    slug: "chart",
+    source: "src/components/ui/chart.tsx",
+    category: "layout",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
 ]

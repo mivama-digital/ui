@@ -162,6 +162,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/carousel.d.ts`
 - Runtime: `./dist/components/ui/carousel.js`
 
+## `@mivama/ui/chart`
+
+- Primary component: Chart
+- Category: layout
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/chart.d.ts`
+- Runtime: `./dist/components/ui/chart.js`
+
 ## `@mivama/ui/checkbox`
 
 - Primary component: Checkbox

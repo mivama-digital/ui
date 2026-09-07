@@ -440,6 +440,12 @@
       "import": "./dist/components/ui/data-table.js",
       "require": "./dist/components/ui/data-table.cjs",
       "default": "./dist/components/ui/data-table.js"
+    },
+    "./chart": {
+      "types": "./dist/components/ui/chart.d.ts",
+      "import": "./dist/components/ui/chart.js",
+      "require": "./dist/components/ui/chart.cjs",
+      "default": "./dist/components/ui/chart.js"
     }
   },
   "files": [
