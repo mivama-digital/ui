@@ -345,6 +345,12 @@
       "require": "./dist/components/ui/input-group.cjs",
       "default": "./dist/components/ui/input-group.js"
     },
+    "./input-otp": {
+      "types": "./dist/components/ui/input-otp.d.ts",
+      "import": "./dist/components/ui/input-otp.js",
+      "require": "./dist/components/ui/input-otp.cjs",
+      "default": "./dist/components/ui/input-otp.js"
+    },
     "./message-scroller": {
       "types": "./dist/components/ui/message-scroller.d.ts",
       "import": "./dist/components/ui/message-scroller.js",

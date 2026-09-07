@@ -352,6 +352,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/input-group.d.ts`
 - Runtime: `./dist/components/ui/input-group.js`
 
+## `@mivama/ui/input-otp`
+
+- Primary component: InputOTP
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/input-otp.d.ts`
+- Runtime: `./dist/components/ui/input-otp.js`
+
 ## `@mivama/ui/item`
 
 - Primary component: Item

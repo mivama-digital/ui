@@ -68,6 +68,9 @@ describe("Combobox primitive", () => {
     const input = screen.getByRole("combobox", { name: "Select fruit" })
     expect(input).toBeInTheDocument()
 
+    const resultsBefore = await axe.run(container)
+    expect(resultsBefore.violations).toEqual([])
+
     await user.click(input)
 
     const listbox = await screen.findByRole("listbox")
@@ -75,8 +78,8 @@ describe("Combobox primitive", () => {
     expect(screen.getByText("Apple")).toBeInTheDocument()
     expect(screen.getByText("Banana")).toBeInTheDocument()
 
-    const results = await axe.run(container)
-    expect(results.violations).toEqual([])
+    const resultsAfter = await axe.run(listbox.parentElement!)
+    expect(resultsAfter.violations).toEqual([])
   })
 
   it("filters items when typing a query and shows empty message", async () => {

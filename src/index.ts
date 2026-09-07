@@ -151,6 +151,12 @@ export {
 } from "./components/ui/command.js"
 export { Input } from "./components/ui/input.js"
 export {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+} from "./components/ui/input-otp.js"
+export {
   Message,
   MessageAvatar,
   MessageContent,

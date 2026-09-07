@@ -261,6 +261,15 @@ export const components = [
     interactive: true,
   },
   {
+    name: "InputOTP",
+    slug: "input-otp",
+    source: "src/components/ui/input-otp.tsx",
+    category: "form",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
+  {
     name: "Item",
     slug: "item",
     source: "src/components/ui/item.tsx",

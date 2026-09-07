@@ -37,6 +37,7 @@ import { DirectionProviderProps } from '@base-ui/react/direction-provider';
 import { Drawer as Drawer_2 } from '@base-ui/react/drawer';
 import { Menu } from '@base-ui/react/menu';
 import { NavigationMenu as NavigationMenu_2 } from '@base-ui/react/navigation-menu';
+import { OTPInput } from 'input-otp';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
 import { PreviewCard } from '@base-ui/react/preview-card';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
@@ -1060,6 +1061,22 @@ export function InputGroupText(input: React_2.ComponentProps<"span">): React_2.J
 
 // @public (undocumented)
 export function InputGroupTextarea(input: React_2.ComponentProps<"textarea">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputOTP(input: React_2.ComponentProps<typeof OTPInput> & {
+    containerClassName?: string;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputOTPGroup(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputOTPSeparator(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function InputOTPSlot(input: React_2.ComponentProps<"div"> & {
+    index: number;
+}): React_2.JSX.Element;
 
 // @public (undocumented)
 export function Item(input: useRender.ComponentProps<"div"> & VariantProps<typeof itemVariants>): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
