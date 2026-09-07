@@ -51,8 +51,8 @@ test("semantic surface, focus, shadow, overlay, and motion tokens are reusable",
   assert.match(tokens, /--color-surface-elevated: var\(--surface-elevated\);/)
   assert.match(tokens, /--color-border-strong: var\(--border-strong\);/)
   assert.match(tokens, /--color-overlay: var\(--overlay\);/)
-  assert.match(themes, /--focus-ring: #0c62ed;/)
-  assert.match(themes, /--primary: #0c62ed;/)
+  assert.match(themes, /--focus-ring:/)
+  assert.match(themes, /--primary:/)
 
   const light = themes.slice(themes.indexOf(":root,"), themes.indexOf(".dark,"))
   const dark = themes.slice(
@@ -65,6 +65,84 @@ test("semantic surface, focus, shadow, overlay, and motion tokens are reusable",
     assert.notEqual(value(theme, "background"), value(theme, "surface"))
     assert.notEqual(value(theme, "surface"), value(theme, "surface-elevated"))
   }
+})
+
+test("standard shadcn semantic token pairs and neutral theme baseline are completely resolved", async () => {
+  const [tokens, themes] = await Promise.all([
+    readRoot("src/tokens.css"),
+    readRoot("src/themes.css"),
+  ])
+
+  const requiredTokens = [
+    "background",
+    "foreground",
+    "card",
+    "card-foreground",
+    "popover",
+    "popover-foreground",
+    "primary",
+    "primary-foreground",
+    "secondary",
+    "secondary-foreground",
+    "muted",
+    "muted-foreground",
+    "accent",
+    "accent-foreground",
+    "destructive",
+    "destructive-foreground",
+    "border",
+    "input",
+    "ring",
+    "chart-1",
+    "chart-2",
+    "chart-3",
+    "chart-4",
+    "chart-5",
+    "sidebar",
+    "sidebar-foreground",
+    "sidebar-primary",
+    "sidebar-primary-foreground",
+    "sidebar-accent",
+    "sidebar-accent-foreground",
+    "sidebar-border",
+    "sidebar-ring",
+  ]
+
+  for (const token of requiredTokens) {
+    assert.match(
+      tokens,
+      new RegExp(`--color-${token}: var\\(--${token}\\);`),
+      `tokens.css must map --color-${token}`
+    )
+  }
+
+  const lightBlock = themes.slice(
+    themes.indexOf(":root,"),
+    themes.indexOf('[data-mivama-theme="editorial"],')
+  )
+  const darkBlock = themes.slice(
+    themes.indexOf(".dark,"),
+    themes.indexOf('.dark [data-mivama-theme="editorial"],')
+  )
+
+  for (const token of requiredTokens) {
+    assert.match(
+      lightBlock,
+      new RegExp(`--${token}:\\s*[^;]+;`),
+      `Light product/portal theme must resolve --${token}`
+    )
+    assert.match(
+      darkBlock,
+      new RegExp(`--${token}:\\s*[^;]+;`),
+      `Dark product/portal theme must resolve --${token}`
+    )
+  }
+
+  // Verify neutral baseline policy: primary & ring are neutral oklch
+  assert.match(lightBlock, /--primary:\s*oklch\(/)
+  assert.match(darkBlock, /--primary:\s*oklch\(/)
+  assert.match(lightBlock, /--ring:\s*oklch\(/)
+  assert.match(darkBlock, /--ring:\s*oklch\(/)
 })
 
 test("editorial theme is opt-in and carries the verified light and dark palette", async () => {
