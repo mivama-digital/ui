@@ -40,6 +40,7 @@ import {
   ProgressLabel,
   ProgressValue,
 } from "../../src/components/ui/progress.js"
+import { Separator } from "../../src/components/ui/separator.js"
 import { Skeleton } from "../../src/components/ui/skeleton.js"
 
 describe("feedback components", () => {
@@ -183,5 +184,32 @@ describe("feedback components", () => {
     expect(skeleton).toHaveAttribute("data-slot", "skeleton")
     expect(skeleton).toHaveAttribute("aria-hidden", "true")
     expect(skeleton).toHaveClass("min-h-8")
+  })
+
+  it("supports separator orientation and badge states", () => {
+    const { container } = render(
+      <div>
+        <Separator data-testid="sep-h" orientation="horizontal" />
+        <Separator data-testid="sep-v" orientation="vertical" />
+        <Badge variant="default">Default</Badge>
+        <Badge variant="secondary">Secondary</Badge>
+        <Badge variant="destructive">Destructive</Badge>
+        <Badge variant="outline">Outline</Badge>
+      </div>
+    )
+
+    const sepH = screen.getByTestId("sep-h")
+    expect(sepH).toHaveAttribute("data-slot", "separator")
+    expect(sepH).toHaveAttribute("data-orientation", "horizontal")
+
+    const sepV = screen.getByTestId("sep-v")
+    expect(sepV).toHaveAttribute("data-slot", "separator")
+    expect(sepV).toHaveAttribute("data-orientation", "vertical")
+
+    expect(screen.getByText("Default")).toHaveAttribute("data-slot", "badge")
+    expect(screen.getByText("Destructive")).toHaveAttribute(
+      "data-slot",
+      "badge"
+    )
   })
 })

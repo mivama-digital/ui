@@ -27,4 +27,26 @@ describe("Button", () => {
     const results = await axe.run(container)
     expect(results.violations).toEqual([])
   })
+
+  it("exposes shadcn standard variants and native submit semantics", async () => {
+    const { rerender } = render(
+      <Button type="submit" variant="destructive" aria-invalid="true">
+        Delete
+      </Button>
+    )
+
+    const button = screen.getByRole("button", { name: "Delete" })
+    expect(button).toHaveAttribute("type", "submit")
+    expect(button).toHaveAttribute("data-slot", "button")
+    expect(button).toHaveAttribute("aria-invalid", "true")
+
+    rerender(
+      <Button variant="outline" disabled>
+        Outline Disabled
+      </Button>
+    )
+    const disabledBtn = screen.getByRole("button", { name: "Outline Disabled" })
+    expect(disabledBtn).toBeDisabled()
+    expect(disabledBtn).toHaveAttribute("type", "button")
+  })
 })

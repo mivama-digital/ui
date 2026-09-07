@@ -12,6 +12,7 @@ import {
   FieldLegend,
   Fieldset,
 } from "../../src/components/ui/field.js"
+import { Choice } from "../../src/components/ui/choice.js"
 import { Input } from "../../src/components/ui/input.js"
 import { Select } from "../../src/components/ui/select.js"
 import { Switch } from "../../src/components/ui/switch.js"
@@ -183,5 +184,55 @@ describe("tabs, switch, and form primitives", () => {
     expect(
       screen.getByPlaceholderText("Standalone textarea")
     ).toBeInTheDocument()
+  })
+
+  it("supports readOnly, disabled, and Choice native form semantics", async () => {
+    const user = userEvent.setup()
+    const { rerender } = render(
+      <form data-testid="form">
+        <Input readOnly defaultValue="Readonly value" aria-label="RO Input" />
+        <Textarea
+          readOnly
+          defaultValue="Readonly text"
+          aria-label="RO Textarea"
+        />
+        <Select disabled aria-label="Disabled select">
+          <option value="1">One</option>
+        </Select>
+        <Choice type="checkbox" aria-label="Subscribe" name="sub" value="yes" />
+        <Choice
+          type="radio"
+          aria-label="Option A"
+          name="choice"
+          value="a"
+          defaultChecked
+        />
+        <Choice type="radio" aria-label="Option B" name="choice" value="b" />
+      </form>
+    )
+
+    const roInput = screen.getByRole("textbox", { name: "RO Input" })
+    expect(roInput).toHaveAttribute("readonly")
+
+    const roTextarea = screen.getByRole("textbox", { name: "RO Textarea" })
+    expect(roTextarea).toHaveAttribute("readonly")
+
+    const disabledSelect = screen.getByRole("combobox", {
+      name: "Disabled select",
+    })
+    expect(disabledSelect).toBeDisabled()
+
+    const checkbox = screen.getByRole("checkbox", { name: "Subscribe" })
+    expect(checkbox).not.toBeChecked()
+    await user.click(checkbox)
+    expect(checkbox).toBeChecked()
+
+    const radioA = screen.getByRole("radio", { name: "Option A" })
+    const radioB = screen.getByRole("radio", { name: "Option B" })
+    expect(radioA).toBeChecked()
+    expect(radioB).not.toBeChecked()
+    await user.click(radioB)
+    expect(radioB).toBeChecked()
+    expect(radioA).not.toBeChecked()
   })
 })
