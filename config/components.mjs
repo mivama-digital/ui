@@ -530,4 +530,22 @@ export const components = [
     client: true,
     interactive: false,
   },
+  {
+    name: "Toggle",
+    slug: "toggle",
+    source: "src/components/ui/toggle.tsx",
+    category: "action",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
+  {
+    name: "ToggleGroup",
+    slug: "toggle-group",
+    source: "src/components/ui/toggle-group.tsx",
+    category: "action",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
 ]

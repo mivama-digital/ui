@@ -582,6 +582,26 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/toast.d.ts`
 - Runtime: `./dist/components/ui/toast.js`
 
+## `@mivama/ui/toggle`
+
+- Primary component: Toggle
+- Category: action
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/toggle.d.ts`
+- Runtime: `./dist/components/ui/toggle.js`
+
+## `@mivama/ui/toggle-group`
+
+- Primary component: ToggleGroup
+- Category: action
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/toggle-group.d.ts`
+- Runtime: `./dist/components/ui/toggle-group.js`
+
 ## `@mivama/ui/tooltip`
 
 - Primary component: Tooltip

@@ -45,6 +45,8 @@ import { Switch as Switch_2 } from '@base-ui/react/switch';
 import { Tabs as Tabs_2 } from '@base-ui/react/tabs';
 import { TextDirection } from '@base-ui/react/direction-provider';
 import { Toast } from '@base-ui/react/toast';
+import { Toggle as Toggle_2 } from '@base-ui/react/toggle';
+import { ToggleGroup as ToggleGroup_2 } from '@base-ui/react/toggle-group';
 import { Tooltip as Tooltip_2 } from '@base-ui/react/tooltip';
 import { useDirection } from '@base-ui/react/direction-provider';
 import { useRender } from '@base-ui/react/use-render';
@@ -297,7 +299,7 @@ export const bubbleReactionsVariants: (props?: ({
 
 // @public (undocumented)
 export const bubbleVariants: (props?: ({
-    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "muted" | "tinted" | null | undefined;
+    variant?: "default" | "outline" | "secondary" | "ghost" | "destructive" | "muted" | "tinted" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "ButtonProps" needs to be exported by the entry point index.d.ts
@@ -1671,6 +1673,41 @@ export namespace ToastRootProvider {
 
 // @public (undocumented)
 export type ToastVariant = "default" | "success" | "warning" | "destructive";
+
+// @public (undocumented)
+export const Toggle: React_2.ForwardRefExoticComponent<Omit<ToggleProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export const ToggleGroup: React_2.ForwardRefExoticComponent<Omit<ToggleGroupProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const ToggleGroupItem: React_2.ForwardRefExoticComponent<Omit<ToggleGroupItemProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export interface ToggleGroupItemProps extends Toggle_2.Props, VariantProps<typeof toggleVariants> {
+}
+
+// @public (undocumented)
+export interface ToggleGroupProps extends Omit<ToggleGroup_2.Props, "value" | "defaultValue" | "type">, VariantProps<typeof toggleVariants> {
+    // (undocumented)
+    defaultValue?: string | readonly string[];
+    // (undocumented)
+    spacing?: number;
+    // (undocumented)
+    type?: "single" | "multiple";
+    // (undocumented)
+    value?: string | readonly string[];
+}
+
+// @public (undocumented)
+export interface ToggleProps extends Toggle_2.Props, VariantProps<typeof toggleVariants> {
+}
+
+// @public (undocumented)
+export const toggleVariants: (props?: ({
+    variant?: "default" | "outline" | null | undefined;
+    size?: "default" | "sm" | "lg" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // @public (undocumented)
 export function Tooltip(input: Tooltip_2.Root.Props): React_2.JSX.Element;

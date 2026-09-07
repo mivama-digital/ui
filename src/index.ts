@@ -476,4 +476,11 @@ export {
   NavigationMenuPortal,
   navigationMenuTriggerStyle,
 } from "./components/ui/navigation-menu.js"
+export { Toggle, toggleVariants } from "./components/ui/toggle.js"
+export type { ToggleProps } from "./components/ui/toggle.js"
+export { ToggleGroup, ToggleGroupItem } from "./components/ui/toggle-group.js"
+export type {
+  ToggleGroupProps,
+  ToggleGroupItemProps,
+} from "./components/ui/toggle-group.js"
 export { cn } from "./lib/utils.js"

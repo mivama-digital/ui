@@ -374,6 +374,18 @@
       "import": "./dist/components/ui/navigation-menu.js",
       "require": "./dist/components/ui/navigation-menu.cjs",
       "default": "./dist/components/ui/navigation-menu.js"
+    },
+    "./toggle": {
+      "types": "./dist/components/ui/toggle.d.ts",
+      "import": "./dist/components/ui/toggle.js",
+      "require": "./dist/components/ui/toggle.cjs",
+      "default": "./dist/components/ui/toggle.js"
+    },
+    "./toggle-group": {
+      "types": "./dist/components/ui/toggle-group.d.ts",
+      "import": "./dist/components/ui/toggle-group.js",
+      "require": "./dist/components/ui/toggle-group.cjs",
+      "default": "./dist/components/ui/toggle-group.js"
     }
   },
   "files": [
