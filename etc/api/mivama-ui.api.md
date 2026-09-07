@@ -199,11 +199,10 @@ export const avatarVariants: (props?: ({
 // @public (undocumented)
 export const Badge: React_2.ForwardRefExoticComponent<Omit<BadgeProps, "ref"> & React_2.RefAttributes<HTMLSpanElement>>;
 
+// Warning: (ae-forgotten-export) The symbol "BadgeVariantProps" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-export const badgeVariants: (props?: ({
-    variant?: "default" | "link" | "outline" | "secondary" | "ghost" | "destructive" | null | undefined;
-    wrap?: boolean | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string;
+export function badgeVariants(props?: BadgeVariantProps): string;
 
 // @public (undocumented)
 export function BentoGrid(input: BentoGridProps): React_2.JSX.Element;
@@ -247,12 +246,10 @@ export function BreadcrumbSeparator(input: React_2.ComponentProps<"li">): React_
 // @public (undocumented)
 export const Button: React_2.ForwardRefExoticComponent<Omit<ButtonProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
+// Warning: (ae-forgotten-export) The symbol "ButtonVariantProps" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-export const buttonVariants: (props?: ({
-    variant?: "default" | "link" | "navigation" | "outline" | "secondary" | "ghost" | "destructive" | "inverse" | null | undefined;
-    size?: "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg" | null | undefined;
-    wrap?: boolean | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string;
+export function buttonVariants(props?: ButtonVariantProps): string;
 
 // @public (undocumented)
 export const Card: React_2.ForwardRefExoticComponent<Omit<CardProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
