@@ -119,6 +119,36 @@ export type {
 } from "./components/ui/field.js"
 export { Choice, ChoiceGroup } from "./components/ui/choice.js"
 export type { ChoiceGroupProps, ChoiceProps } from "./components/ui/choice.js"
+export {
+  Combobox,
+  ComboboxChip,
+  ComboboxChips,
+  ComboboxChipsInput,
+  ComboboxClear,
+  ComboboxCollection,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxGroup,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxLabel,
+  ComboboxList,
+  ComboboxSeparator,
+  ComboboxTrigger,
+  ComboboxValue,
+  useComboboxAnchor,
+} from "./components/ui/combobox.js"
+export {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "./components/ui/command.js"
 export { Input } from "./components/ui/input.js"
 export {
   Message,

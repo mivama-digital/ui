@@ -71,6 +71,18 @@
       "require": "./dist/components/ui/choice.cjs",
       "default": "./dist/components/ui/choice.js"
     },
+    "./combobox": {
+      "types": "./dist/components/ui/combobox.d.ts",
+      "import": "./dist/components/ui/combobox.js",
+      "require": "./dist/components/ui/combobox.cjs",
+      "default": "./dist/components/ui/combobox.js"
+    },
+    "./command": {
+      "types": "./dist/components/ui/command.d.ts",
+      "import": "./dist/components/ui/command.js",
+      "require": "./dist/components/ui/command.cjs",
+      "default": "./dist/components/ui/command.js"
+    },
     "./container": {
       "types": "./dist/components/ui/container.d.ts",
       "import": "./dist/components/ui/container.js",

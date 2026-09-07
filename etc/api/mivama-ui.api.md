@@ -25,6 +25,8 @@ import { Checkbox as Checkbox_2 } from '@base-ui/react/checkbox';
 import * as class_variance_authority_types from 'class-variance-authority/types';
 import { ClassValue } from 'clsx';
 import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
+import { Combobox as Combobox_2 } from '@base-ui/react/combobox';
+import { Command as Command_2 } from 'cmdk';
 import { ComponentProps } from 'react';
 import { ContextMenu as ContextMenu_2 } from '@base-ui/react/context-menu';
 import { DayButton } from 'react-day-picker';
@@ -304,7 +306,7 @@ export const bubbleReactionsVariants: (props?: ({
 
 // @public (undocumented)
 export const bubbleVariants: (props?: ({
-    variant?: "default" | "outline" | "secondary" | "ghost" | "destructive" | "muted" | "tinted" | null | undefined;
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "muted" | "tinted" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "ButtonProps" needs to be exported by the entry point index.d.ts
@@ -449,6 +451,90 @@ export const CollapsibleContent: React_2.ForwardRefExoticComponent<Omit<_base_ui
 
 // @public (undocumented)
 export const CollapsibleTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_collapsible.CollapsibleTriggerProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export const Combobox: typeof Combobox_2.Root;
+
+// @public (undocumented)
+export function ComboboxChip(input: Combobox_2.Chip.Props & {
+    showRemove?: boolean;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxChips(input: React_2.ComponentPropsWithRef<typeof Combobox_2.Chips> & Combobox_2.Chips.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxChipsInput(input: Combobox_2.Input.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxClear(input: Combobox_2.Clear.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxCollection(input: Combobox_2.Collection.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxContent(input: Combobox_2.Popup.Props & Pick<Combobox_2.Positioner.Props, "side" | "align" | "sideOffset" | "alignOffset" | "anchor"> & {
+    container?: HTMLElement | null;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxEmpty(input: Combobox_2.Empty.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxGroup(input: Combobox_2.Group.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxInput(input: Combobox_2.Input.Props & {
+    showTrigger?: boolean;
+    showClear?: boolean;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxItem(input: Combobox_2.Item.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxLabel(input: Combobox_2.GroupLabel.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxList(input: Combobox_2.List.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxSeparator(input: Combobox_2.Separator.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxTrigger(input: Combobox_2.Trigger.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ComboboxValue(input: Combobox_2.Value.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function Command(input: React_2.ComponentProps<typeof Command_2>): React_2.JSX.Element;
+
+// Warning: (ae-forgotten-export) The symbol "CommandDialogProps" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export function CommandDialog(input: CommandDialogProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandEmpty(input: React_2.ComponentProps<typeof Command_2.Empty>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandGroup(input: React_2.ComponentProps<typeof Command_2.Group>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandInput(input: React_2.ComponentProps<typeof Command_2.Input>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandItem(input: React_2.ComponentProps<typeof Command_2.Item>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandList(input: React_2.ComponentProps<typeof Command_2.List>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandSeparator(input: React_2.ComponentProps<typeof Command_2.Separator>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function CommandShortcut(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
 
 // @public (undocumented)
 export function Container(input: ContainerProps): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
@@ -1844,6 +1930,9 @@ export type TypographyTone = "default" | "inherit";
 //
 // @public (undocumented)
 export function useCarousel(): CarouselContextProps;
+
+// @public (undocumented)
+export function useComboboxAnchor(): React_2.RefObject<HTMLDivElement | null>;
 
 export { useDirection }
 

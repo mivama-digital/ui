@@ -192,6 +192,26 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/collapsible.d.ts`
 - Runtime: `./dist/components/ui/collapsible.js`
 
+## `@mivama/ui/combobox`
+
+- Primary component: Combobox
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/combobox.d.ts`
+- Runtime: `./dist/components/ui/combobox.js`
+
+## `@mivama/ui/command`
+
+- Primary component: Command
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/command.d.ts`
+- Runtime: `./dist/components/ui/command.js`
+
 ## `@mivama/ui/container`
 
 - Primary component: Container

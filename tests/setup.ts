@@ -39,3 +39,7 @@ class IntersectionObserverMock {
 }
 
 globalThis.IntersectionObserver = IntersectionObserverMock as any
+
+if (!window.HTMLElement.prototype.scrollIntoView) {
+  window.HTMLElement.prototype.scrollIntoView = vi.fn()
+}
