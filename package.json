@@ -278,6 +278,48 @@
       "import": "./dist/components/ui/button-group.js",
       "require": "./dist/components/ui/button-group.cjs",
       "default": "./dist/components/ui/button-group.js"
+    },
+    "./bubble": {
+      "types": "./dist/components/ui/bubble.d.ts",
+      "import": "./dist/components/ui/bubble.js",
+      "require": "./dist/components/ui/bubble.cjs",
+      "default": "./dist/components/ui/bubble.js"
+    },
+    "./item": {
+      "types": "./dist/components/ui/item.d.ts",
+      "import": "./dist/components/ui/item.js",
+      "require": "./dist/components/ui/item.cjs",
+      "default": "./dist/components/ui/item.js"
+    },
+    "./kbd": {
+      "types": "./dist/components/ui/kbd.d.ts",
+      "import": "./dist/components/ui/kbd.js",
+      "require": "./dist/components/ui/kbd.cjs",
+      "default": "./dist/components/ui/kbd.js"
+    },
+    "./marker": {
+      "types": "./dist/components/ui/marker.d.ts",
+      "import": "./dist/components/ui/marker.js",
+      "require": "./dist/components/ui/marker.cjs",
+      "default": "./dist/components/ui/marker.js"
+    },
+    "./label": {
+      "types": "./dist/components/ui/label.d.ts",
+      "import": "./dist/components/ui/label.js",
+      "require": "./dist/components/ui/label.cjs",
+      "default": "./dist/components/ui/label.js"
+    },
+    "./native-select": {
+      "types": "./dist/components/ui/native-select.d.ts",
+      "import": "./dist/components/ui/native-select.js",
+      "require": "./dist/components/ui/native-select.cjs",
+      "default": "./dist/components/ui/native-select.js"
+    },
+    "./spinner": {
+      "types": "./dist/components/ui/spinner.d.ts",
+      "import": "./dist/components/ui/spinner.js",
+      "require": "./dist/components/ui/spinner.cjs",
+      "default": "./dist/components/ui/spinner.js"
     }
   },
   "files": [

@@ -250,6 +250,43 @@ export function BreadcrumbPage(input: React_2.ComponentProps<"span">): React_2.J
 // @public (undocumented)
 export function BreadcrumbSeparator(input: React_2.ComponentProps<"li">): React_2.JSX.Element;
 
+// @public (undocumented)
+export function Bubble(input: BubbleProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export function BubbleContent(input: useRender.ComponentProps<"div">): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
+
+// @public (undocumented)
+export function BubbleGroup(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface BubbleProps extends React_2.ComponentProps<"div">, VariantProps<typeof bubbleVariants> {
+    // (undocumented)
+    align?: "start" | "end";
+}
+
+// @public (undocumented)
+export function BubbleReactions(input: BubbleReactionsProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface BubbleReactionsProps extends React_2.ComponentProps<"div">, VariantProps<typeof bubbleReactionsVariants> {
+    // (undocumented)
+    align?: "start" | "end";
+    // (undocumented)
+    side?: "top" | "bottom";
+}
+
+// @public (undocumented)
+export const bubbleReactionsVariants: (props?: ({
+    side?: "bottom" | "top" | null | undefined;
+    align?: "end" | "start" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export const bubbleVariants: (props?: ({
+    variant?: "default" | "outline" | "secondary" | "ghost" | "destructive" | "muted" | "tinted" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
 // Warning: (ae-forgotten-export) The symbol "ButtonProps" needs to be exported by the entry point index.d.ts
 //
 // @public (undocumented)
@@ -620,6 +657,78 @@ export const headingVariants: (props?: ({
 export const Input: React_2.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React_2.RefAttributes<HTMLInputElement>>;
 
 // @public (undocumented)
+export function Item(input: useRender.ComponentProps<"div"> & VariantProps<typeof itemVariants>): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
+
+// @public (undocumented)
+export function ItemActions(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemContent(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemDescription(input: React_2.ComponentProps<"p">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemFooter(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemGroup(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemHeader(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemMedia(input: React_2.ComponentProps<"div"> & VariantProps<typeof itemMediaVariants>): React_2.JSX.Element;
+
+// @public (undocumented)
+export const itemMediaVariants: (props?: ({
+    variant?: "default" | "image" | "icon" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function ItemSeparator(input: React_2.ComponentProps<typeof Separator>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ItemTitle(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export const itemVariants: (props?: ({
+    variant?: "default" | "outline" | "muted" | null | undefined;
+    size?: "default" | "sm" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function Kbd(input: React_2.ComponentProps<"kbd">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function KbdGroup(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
+
+// @public (undocumented)
+export const Label: React_2.ForwardRefExoticComponent<Omit<LabelProps, "ref"> & React_2.RefAttributes<HTMLLabelElement>>;
+
+// @public (undocumented)
+export interface LabelProps extends React_2.ComponentProps<"label"> {
+}
+
+// @public (undocumented)
+export function Marker(input: MarkerProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export function MarkerContent(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function MarkerIcon(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface MarkerProps extends React_2.ComponentProps<"div">, VariantProps<typeof markerVariants> {
+}
+
+// @public (undocumented)
+export const markerVariants: (props?: ({
+    variant?: "default" | "separator" | "border" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
 export function Message(input: React_2.ComponentProps<"div"> & {
     align?: "start" | "end";
 }): React_2.JSX.Element;
@@ -671,6 +780,21 @@ export type MivamaProviderProps = Omit<React_2.ComponentPropsWithoutRef<"div">, 
 
 // @public (undocumented)
 export type MivamaTheme = "product" | "editorial" | "portal" | (string & {});
+
+// @public (undocumented)
+export const NativeSelect: React_2.ForwardRefExoticComponent<Omit<NativeSelectProps, "ref"> & React_2.RefAttributes<HTMLSelectElement>>;
+
+// @public (undocumented)
+export function NativeSelectOptGroup(input: React_2.ComponentProps<"optgroup">): React_2.JSX.Element;
+
+// @public (undocumented)
+export function NativeSelectOption(input: React_2.ComponentProps<"option">): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface NativeSelectProps extends Omit<React_2.ComponentProps<"select">, "size"> {
+    // (undocumented)
+    size?: "sm" | "default";
+}
 
 // @public (undocumented)
 export function Pagination(input: React_2.ComponentProps<"nav"> & {
@@ -804,7 +928,7 @@ export type SectionProps = useRender.ComponentProps<"section"> & VariantProps<ty
 // @public (undocumented)
 export const sectionVariants: (props?: ({
     density?: "default" | "compact" | "hero" | null | undefined;
-    tone?: "default" | "instrument" | "muted" | "accent" | "brand" | null | undefined;
+    tone?: "default" | "muted" | "instrument" | "accent" | "brand" | null | undefined;
     bordered?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
@@ -1003,6 +1127,13 @@ export const SliderThumb: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_
 
 // @public (undocumented)
 export const SliderTrack: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_slider.SliderTrackProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export function Spinner(input: SpinnerProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface SpinnerProps extends React_2.ComponentProps<"svg"> {
+}
 
 // @public (undocumented)
 export function Switch(input: Switch_2.Root.Props & {

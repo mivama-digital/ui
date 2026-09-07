@@ -328,4 +328,48 @@ export {
   buttonGroupVariants,
 } from "./components/ui/button-group.js"
 export type { ButtonGroupProps } from "./components/ui/button-group.js"
+export {
+  Bubble,
+  BubbleContent,
+  BubbleGroup,
+  BubbleReactions,
+  bubbleReactionsVariants,
+  bubbleVariants,
+} from "./components/ui/bubble.js"
+export type {
+  BubbleProps,
+  BubbleReactionsProps,
+} from "./components/ui/bubble.js"
+export {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemFooter,
+  ItemGroup,
+  ItemHeader,
+  ItemMedia,
+  ItemSeparator,
+  ItemTitle,
+  itemMediaVariants,
+  itemVariants,
+} from "./components/ui/item.js"
+export { Kbd, KbdGroup } from "./components/ui/kbd.js"
+export {
+  Marker,
+  MarkerContent,
+  MarkerIcon,
+  markerVariants,
+} from "./components/ui/marker.js"
+export type { MarkerProps } from "./components/ui/marker.js"
+export { Label } from "./components/ui/label.js"
+export type { LabelProps } from "./components/ui/label.js"
+export {
+  NativeSelect,
+  NativeSelectOptGroup,
+  NativeSelectOption,
+} from "./components/ui/native-select.js"
+export type { NativeSelectProps } from "./components/ui/native-select.js"
+export { Spinner } from "./components/ui/spinner.js"
+export type { SpinnerProps } from "./components/ui/spinner.js"
 export { cn } from "./lib/utils.js"

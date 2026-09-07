@@ -102,6 +102,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/breadcrumb.d.ts`
 - Runtime: `./dist/components/ui/breadcrumb.js`
 
+## `@mivama/ui/bubble`
+
+- Primary component: Bubble
+- Category: feedback
+- Status: stable
+- Client boundary: No
+- Interactive: Yes
+- Types: `./dist/components/ui/bubble.d.ts`
+- Runtime: `./dist/components/ui/bubble.js`
+
 ## `@mivama/ui/button`
 
 - Primary component: Button
@@ -232,6 +242,46 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/input.d.ts`
 - Runtime: `./dist/components/ui/input.js`
 
+## `@mivama/ui/item`
+
+- Primary component: Item
+- Category: layout
+- Status: stable
+- Client boundary: No
+- Interactive: Yes
+- Types: `./dist/components/ui/item.d.ts`
+- Runtime: `./dist/components/ui/item.js`
+
+## `@mivama/ui/kbd`
+
+- Primary component: Kbd
+- Category: feedback
+- Status: stable
+- Client boundary: No
+- Interactive: No
+- Types: `./dist/components/ui/kbd.d.ts`
+- Runtime: `./dist/components/ui/kbd.js`
+
+## `@mivama/ui/label`
+
+- Primary component: Label
+- Category: form
+- Status: stable
+- Client boundary: No
+- Interactive: No
+- Types: `./dist/components/ui/label.d.ts`
+- Runtime: `./dist/components/ui/label.js`
+
+## `@mivama/ui/marker`
+
+- Primary component: Marker
+- Category: feedback
+- Status: stable
+- Client boundary: No
+- Interactive: No
+- Types: `./dist/components/ui/marker.d.ts`
+- Runtime: `./dist/components/ui/marker.js`
+
 ## `@mivama/ui/message`
 
 - Primary component: Message
@@ -241,6 +291,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: No
 - Types: `./dist/components/ui/message.d.ts`
 - Runtime: `./dist/components/ui/message.js`
+
+## `@mivama/ui/native-select`
+
+- Primary component: NativeSelect
+- Category: form
+- Status: stable
+- Client boundary: No
+- Interactive: Yes
+- Types: `./dist/components/ui/native-select.d.ts`
+- Runtime: `./dist/components/ui/native-select.js`
 
 ## `@mivama/ui/pagination`
 
@@ -371,6 +431,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/slider.d.ts`
 - Runtime: `./dist/components/ui/slider.js`
+
+## `@mivama/ui/spinner`
+
+- Primary component: Spinner
+- Category: feedback
+- Status: stable
+- Client boundary: No
+- Interactive: No
+- Types: `./dist/components/ui/spinner.d.ts`
+- Runtime: `./dist/components/ui/spinner.js`
 
 ## `@mivama/ui/switch`
 
