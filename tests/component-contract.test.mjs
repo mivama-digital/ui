@@ -199,3 +199,118 @@ test("overlay, empty, and message primitives use semantic tokens and selectors",
   assert.doesNotMatch(tooltip, /data-\[state=delayed-open\]/)
   assert.doesNotMatch(message, /group-has-data-\[variant=ghost\]/)
 })
+
+test("official component catalog and parity ledger are fully specified and accounted for", async () => {
+  const [parityLedger, baseline] = await Promise.all([
+    readRoot("docs/upstream/component-parity.md"),
+    readRoot("docs/upstream/shadcn-baseline.md"),
+  ])
+
+  assert.match(baseline, /5c7072da672b0048bc6771e3204063a2537df91a/)
+  assert.match(baseline, /base-nova/)
+  assert.match(baseline, /neutral/)
+
+  const officialSlugs = [
+    "accordion",
+    "alert-dialog",
+    "alert",
+    "aspect-ratio",
+    "attachment",
+    "avatar",
+    "badge",
+    "breadcrumb",
+    "bubble",
+    "button-group",
+    "button",
+    "calendar",
+    "card",
+    "carousel",
+    "chart",
+    "checkbox",
+    "collapsible",
+    "combobox",
+    "command",
+    "context-menu",
+    "data-table",
+    "date-picker",
+    "dialog",
+    "direction",
+    "drawer",
+    "dropdown-menu",
+    "empty",
+    "field",
+    "hover-card",
+    "input-group",
+    "input-otp",
+    "input",
+    "item",
+    "kbd",
+    "label",
+    "marker",
+    "menubar",
+    "message-scroller",
+    "message",
+    "native-select",
+    "navigation-menu",
+    "pagination",
+    "popover",
+    "progress",
+    "questionnaire",
+    "radio-group",
+    "resizable",
+    "scroll-area",
+    "select",
+    "separator",
+    "sheet",
+    "sidebar",
+    "skeleton",
+    "slider",
+    "spinner",
+    "switch",
+    "table",
+    "tabs",
+    "textarea",
+    "toast",
+    "toggle-group",
+    "toggle",
+    "tooltip",
+    "typography",
+  ]
+
+  assert.equal(
+    officialSlugs.length,
+    64,
+    "Must track all 64 official upstream components"
+  )
+
+  for (const slug of officialSlugs) {
+    const slugRegex = new RegExp(
+      `\\|\\s*[^|]+\\s*\\|\\s*${slug}\\s*\\|\\s*src/components/ui/${slug}\\.tsx\\s*\\|\\s*(keep|add)\\s*\\|`
+    )
+    assert.match(
+      parityLedger,
+      slugRegex,
+      `Ledger must record official component row for ${slug}`
+    )
+  }
+
+  const extensionSlugs = [
+    "provider",
+    "bento-grid",
+    "choice",
+    "container",
+    "editorial-grid",
+    "forms",
+    "scroll-scene",
+    "section",
+  ]
+
+  for (const slug of extensionSlugs) {
+    const extRegex = new RegExp(`\\|\\s*[^|]+\\s*\\|\\s*${slug}\\s*\\|`)
+    assert.match(
+      parityLedger,
+      extRegex,
+      `Ledger must record Mivama extension row for ${slug}`
+    )
+  }
+})
