@@ -502,6 +502,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/radio-group.d.ts`
 - Runtime: `./dist/components/ui/radio-group.js`
 
+## `@mivama/ui/resizable`
+
+- Primary component: Resizable
+- Category: layout
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/resizable.d.ts`
+- Runtime: `./dist/components/ui/resizable.js`
+
 ## `@mivama/ui/scroll-area`
 
 - Primary component: ScrollArea

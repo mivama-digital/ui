@@ -545,4 +545,9 @@ export {
   useCarousel,
 } from "./components/ui/carousel.js"
 export type { CarouselApi, CarouselProps } from "./components/ui/carousel.js"
+export {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "./components/ui/resizable.js"
 export { cn } from "./lib/utils.js"

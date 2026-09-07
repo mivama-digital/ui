@@ -428,6 +428,12 @@
       "import": "./dist/components/ui/carousel.js",
       "require": "./dist/components/ui/carousel.cjs",
       "default": "./dist/components/ui/carousel.js"
+    },
+    "./resizable": {
+      "types": "./dist/components/ui/resizable.d.ts",
+      "import": "./dist/components/ui/resizable.js",
+      "require": "./dist/components/ui/resizable.cjs",
+      "default": "./dist/components/ui/resizable.js"
     }
   },
   "files": [

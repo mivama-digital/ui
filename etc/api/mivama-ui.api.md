@@ -44,6 +44,7 @@ import { Progress as Progress_2 } from '@base-ui/react/progress';
 import { Radio } from '@base-ui/react/radio';
 import { RadioGroup as RadioGroup_2 } from '@base-ui/react/radio-group';
 import * as React_2 from 'react';
+import * as ResizablePrimitive from 'react-resizable-panels';
 import { ScrollArea as ScrollArea_2 } from '@base-ui/react/scroll-area';
 import { Separator as Separator_2 } from '@base-ui/react/separator';
 import { Slider as Slider_2 } from '@base-ui/react/slider';
@@ -1511,6 +1512,17 @@ export function RadioGroup(input: RadioGroup_2.Props): React_2.JSX.Element;
 
 // @public (undocumented)
 export function RadioGroupItem(input: Radio.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ResizableHandle(input: ResizablePrimitive.SeparatorProps & {
+    withHandle?: boolean;
+}): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ResizablePanel(input: ResizablePrimitive.PanelProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ResizablePanelGroup(input: ResizablePrimitive.GroupProps): React_2.JSX.Element;
 
 // @public (undocumented)
 export const ScrollArea: React_2.ForwardRefExoticComponent<Omit<ScrollAreaProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;

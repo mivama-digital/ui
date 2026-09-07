@@ -611,4 +611,13 @@ export const components = [
     client: true,
     interactive: true,
   },
+  {
+    name: "Resizable",
+    slug: "resizable",
+    source: "src/components/ui/resizable.tsx",
+    category: "layout",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
 ]
