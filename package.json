@@ -350,6 +350,30 @@
       "import": "./dist/components/ui/radio-group.js",
       "require": "./dist/components/ui/radio-group.cjs",
       "default": "./dist/components/ui/radio-group.js"
+    },
+    "./context-menu": {
+      "types": "./dist/components/ui/context-menu.d.ts",
+      "import": "./dist/components/ui/context-menu.js",
+      "require": "./dist/components/ui/context-menu.cjs",
+      "default": "./dist/components/ui/context-menu.js"
+    },
+    "./hover-card": {
+      "types": "./dist/components/ui/hover-card.d.ts",
+      "import": "./dist/components/ui/hover-card.js",
+      "require": "./dist/components/ui/hover-card.cjs",
+      "default": "./dist/components/ui/hover-card.js"
+    },
+    "./menubar": {
+      "types": "./dist/components/ui/menubar.d.ts",
+      "import": "./dist/components/ui/menubar.js",
+      "require": "./dist/components/ui/menubar.cjs",
+      "default": "./dist/components/ui/menubar.js"
+    },
+    "./navigation-menu": {
+      "types": "./dist/components/ui/navigation-menu.d.ts",
+      "import": "./dist/components/ui/navigation-menu.js",
+      "require": "./dist/components/ui/navigation-menu.cjs",
+      "default": "./dist/components/ui/navigation-menu.js"
     }
   },
   "files": [

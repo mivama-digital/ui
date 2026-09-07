@@ -12,8 +12,11 @@ import * as _base_ui_react_accordion from '@base-ui/react/accordion';
 import * as _base_ui_react_alert_dialog from '@base-ui/react/alert-dialog';
 import * as _base_ui_react_avatar from '@base-ui/react/avatar';
 import * as _base_ui_react_collapsible from '@base-ui/react/collapsible';
+import * as _base_ui_react_context_menu from '@base-ui/react/context-menu';
 import * as _base_ui_react_dialog from '@base-ui/react/dialog';
 import * as _base_ui_react_menu from '@base-ui/react/menu';
+import * as _base_ui_react_menubar from '@base-ui/react/menubar';
+import * as _base_ui_react_navigation_menu from '@base-ui/react/navigation-menu';
 import * as _base_ui_react_popover from '@base-ui/react/popover';
 import * as _base_ui_react_slider from '@base-ui/react/slider';
 import * as _base_ui_react_toast from '@base-ui/react/toast';
@@ -23,11 +26,14 @@ import * as class_variance_authority_types from 'class-variance-authority/types'
 import { ClassValue } from 'clsx';
 import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
 import { ComponentProps } from 'react';
+import { ContextMenu as ContextMenu_2 } from '@base-ui/react/context-menu';
 import { Dialog as Dialog_2 } from '@base-ui/react/dialog';
 import { DirectionProvider } from '@base-ui/react/direction-provider';
 import { DirectionProviderProps } from '@base-ui/react/direction-provider';
 import { Menu } from '@base-ui/react/menu';
+import { NavigationMenu as NavigationMenu_2 } from '@base-ui/react/navigation-menu';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
+import { PreviewCard } from '@base-ui/react/preview-card';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
 import { Radio } from '@base-ui/react/radio';
 import { RadioGroup as RadioGroup_2 } from '@base-ui/react/radio-group';
@@ -291,7 +297,7 @@ export const bubbleReactionsVariants: (props?: ({
 
 // @public (undocumented)
 export const bubbleVariants: (props?: ({
-    variant?: "default" | "outline" | "secondary" | "ghost" | "destructive" | "muted" | "tinted" | null | undefined;
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "muted" | "tinted" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "ButtonProps" needs to be exported by the entry point index.d.ts
@@ -399,6 +405,115 @@ export const containerVariants: (props?: ({
     size?: "standard" | "reading" | "wide" | null | undefined;
     gutter?: boolean | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function ContextMenu(props: ContextMenu_2.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ContextMenu {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const ContextMenuCheckboxItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_context_menu.ContextMenuCheckboxItemProps & {
+    inset?: boolean;
+}, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const ContextMenuContent: React_2.ForwardRefExoticComponent<Omit<ContextMenuContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ContextMenuContentProps extends ContextMenu_2.Popup.Props, Pick<ContextMenu_2.Positioner.Props, "align" | "alignOffset" | "side" | "sideOffset"> {
+}
+
+// @public (undocumented)
+export function ContextMenuGroup(props: ContextMenu_2.Group.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ContextMenuGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const ContextMenuItem: React_2.ForwardRefExoticComponent<Omit<ContextMenuItemProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ContextMenuItemProps extends ContextMenu_2.Item.Props {
+    // (undocumented)
+    inset?: boolean;
+    // (undocumented)
+    variant?: "default" | "destructive";
+}
+
+// @public (undocumented)
+export const ContextMenuLabel: React_2.ForwardRefExoticComponent<Omit<ContextMenuLabelProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ContextMenuLabelProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    inset?: boolean;
+}
+
+// @public (undocumented)
+export function ContextMenuPortal(input: ContextMenu_2.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ContextMenuPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function ContextMenuRadioGroup(props: ContextMenu_2.RadioGroup.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ContextMenuRadioGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const ContextMenuRadioItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_context_menu.ContextMenuRadioItemProps & {
+    inset?: boolean;
+}, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const ContextMenuSeparator: React_2.ForwardRefExoticComponent<Omit<_base_ui_react.SeparatorProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export function ContextMenuShortcut(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ContextMenuShortcut {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function ContextMenuSub(props: ContextMenu_2.SubmenuRoot.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace ContextMenuSub {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const ContextMenuSubContent: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_context_menu.ContextMenuPopupProps & Pick<_base_ui_react_context_menu.ContextMenuPositionerProps, "sideOffset" | "alignOffset">, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const ContextMenuSubTrigger: React_2.ForwardRefExoticComponent<Omit<ContextMenuSubTriggerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface ContextMenuSubTriggerProps extends ContextMenu_2.SubmenuTrigger.Props {
+    // (undocumented)
+    inset?: boolean;
+}
+
+// @public (undocumented)
+export const ContextMenuTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_context_menu.ContextMenuTriggerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
 export const defaultToastManager: _base_ui_react_toast.ToastManager<ToastData>;
@@ -665,6 +780,42 @@ export const headingVariants: (props?: ({
     tone?: "default" | "inherit" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
+// @public (undocumented)
+export function HoverCard(props: PreviewCard.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace HoverCard {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const HoverCardContent: React_2.ForwardRefExoticComponent<Omit<HoverCardContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface HoverCardContentProps extends PreviewCard.Popup.Props {
+    // (undocumented)
+    align?: "start" | "center" | "end";
+    // (undocumented)
+    alignOffset?: number;
+    // (undocumented)
+    side?: "top" | "right" | "bottom" | "left";
+    // (undocumented)
+    sideOffset?: number;
+}
+
+// @public (undocumented)
+export function HoverCardPortal(input: PreviewCard.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace HoverCardPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const HoverCardTrigger: React_2.ForwardRefExoticComponent<Omit<PreviewCard.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLAnchorElement>>;
+
 // Warning: (ae-forgotten-export) The symbol "InputProps" needs to be exported by the entry point index.d.ts
 //
 // @public (undocumented)
@@ -779,6 +930,118 @@ export const markerVariants: (props?: ({
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // @public (undocumented)
+export const Menubar: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menubar.MenubarProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const MenubarCheckboxItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menu.MenuCheckboxItemProps & {
+    inset?: boolean;
+}, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const MenubarContent: React_2.ForwardRefExoticComponent<Omit<MenubarContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface MenubarContentProps extends Menu.Popup.Props, Pick<Menu.Positioner.Props, "align" | "alignOffset" | "side" | "sideOffset"> {
+}
+
+// @public (undocumented)
+export function MenubarGroup(props: Menu.Group.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace MenubarGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const MenubarItem: React_2.ForwardRefExoticComponent<Omit<MenubarItemProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface MenubarItemProps extends Menu.Item.Props {
+    // (undocumented)
+    inset?: boolean;
+    // (undocumented)
+    variant?: "default" | "destructive";
+}
+
+// @public (undocumented)
+export const MenubarLabel: React_2.ForwardRefExoticComponent<Omit<MenubarLabelProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface MenubarLabelProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    inset?: boolean;
+}
+
+// @public (undocumented)
+export function MenubarMenu(props: Menu.Root.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace MenubarMenu {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function MenubarPortal(input: Menu.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace MenubarPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function MenubarRadioGroup(props: Menu.RadioGroup.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace MenubarRadioGroup {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const MenubarRadioItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menu.MenuRadioItemProps & {
+    inset?: boolean;
+}, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const MenubarSeparator: React_2.ForwardRefExoticComponent<Omit<_base_ui_react.SeparatorProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export function MenubarShortcut(input: React_2.ComponentProps<"span">): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace MenubarShortcut {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export function MenubarSub(props: Menu.SubmenuRoot.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace MenubarSub {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const MenubarSubContent: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_menu.MenuPopupProps & Pick<_base_ui_react_menu.MenuPositionerProps, "sideOffset" | "alignOffset">, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const MenubarSubTrigger: React_2.ForwardRefExoticComponent<Omit<MenubarSubTriggerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export interface MenubarSubTriggerProps extends Menu.SubmenuTrigger.Props {
+    // (undocumented)
+    inset?: boolean;
+}
+
+// @public (undocumented)
+export const MenubarTrigger: React_2.ForwardRefExoticComponent<Omit<Menu.Trigger.Props<unknown>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
 export function Message(input: React_2.ComponentProps<"div"> & {
     align?: "start" | "end";
 }): React_2.JSX.Element;
@@ -887,6 +1150,47 @@ export interface NativeSelectProps extends Omit<React_2.ComponentProps<"select">
     // (undocumented)
     size?: "sm" | "default";
 }
+
+// Warning: (ae-forgotten-export) The symbol "NavigationMenuProps" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export const NavigationMenu: React_2.ForwardRefExoticComponent<Omit<NavigationMenuProps, "ref"> & React_2.RefAttributes<HTMLElement>>;
+
+// @public (undocumented)
+export const NavigationMenuContent: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_navigation_menu.NavigationMenuContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const NavigationMenuIndicator: React_2.ForwardRefExoticComponent<Omit<Omit<_base_ui_react_navigation_menu.NavigationMenuIconProps, "ref"> & React_2.RefAttributes<HTMLSpanElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const NavigationMenuItem: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_navigation_menu.NavigationMenuItemProps, "ref"> & React_2.RefAttributes<HTMLLIElement>>;
+
+// @public (undocumented)
+export const NavigationMenuLink: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_navigation_menu.NavigationMenuLinkProps, "ref"> & React_2.RefAttributes<HTMLAnchorElement>>;
+
+// @public (undocumented)
+export const NavigationMenuList: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_navigation_menu.NavigationMenuListProps, "ref"> & React_2.RefAttributes<HTMLUListElement>>;
+
+// @public (undocumented)
+export function NavigationMenuPortal(input: NavigationMenu_2.Portal.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export namespace NavigationMenuPortal {
+    var // (undocumented)
+    displayName: string;
+}
+
+// @public (undocumented)
+export const NavigationMenuPositioner: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_navigation_menu.NavigationMenuPositionerProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export const NavigationMenuTrigger: React_2.ForwardRefExoticComponent<Omit<_base_ui_react_navigation_menu.NavigationMenuTriggerProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export const navigationMenuTriggerStyle: (props?: class_variance_authority_types.ClassProp | undefined) => string;
+
+// @public (undocumented)
+export const NavigationMenuViewport: React_2.ForwardRefExoticComponent<Omit<Omit<_base_ui_react_navigation_menu.NavigationMenuViewportProps, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
 export function Pagination(input: React_2.ComponentProps<"nav"> & {

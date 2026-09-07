@@ -182,6 +182,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/container.d.ts`
 - Runtime: `./dist/components/ui/container.js`
 
+## `@mivama/ui/context-menu`
+
+- Primary component: ContextMenu
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/context-menu.d.ts`
+- Runtime: `./dist/components/ui/context-menu.js`
+
 ## `@mivama/ui/dialog`
 
 - Primary component: Dialog
@@ -252,6 +262,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/forms.d.ts`
 - Runtime: `./dist/forms.js`
 
+## `@mivama/ui/hover-card`
+
+- Primary component: HoverCard
+- Category: overlay
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/hover-card.d.ts`
+- Runtime: `./dist/components/ui/hover-card.js`
+
 ## `@mivama/ui/input`
 
 - Primary component: Input
@@ -312,6 +332,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/marker.d.ts`
 - Runtime: `./dist/components/ui/marker.js`
 
+## `@mivama/ui/menubar`
+
+- Primary component: Menubar
+- Category: navigation
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/menubar.d.ts`
+- Runtime: `./dist/components/ui/menubar.js`
+
 ## `@mivama/ui/message`
 
 - Primary component: Message
@@ -341,6 +371,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/native-select.d.ts`
 - Runtime: `./dist/components/ui/native-select.js`
+
+## `@mivama/ui/navigation-menu`
+
+- Primary component: NavigationMenu
+- Category: navigation
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/navigation-menu.d.ts`
+- Runtime: `./dist/components/ui/navigation-menu.js`
 
 ## `@mivama/ui/pagination`
 

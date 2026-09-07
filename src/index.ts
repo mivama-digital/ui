@@ -409,4 +409,71 @@ export type {
 } from "./components/ui/direction.js"
 export { Checkbox } from "./components/ui/checkbox.js"
 export { RadioGroup, RadioGroupItem } from "./components/ui/radio-group.js"
+export {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+  HoverCardPortal,
+} from "./components/ui/hover-card.js"
+export type { HoverCardContentProps } from "./components/ui/hover-card.js"
+export {
+  ContextMenu,
+  ContextMenuTrigger,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuCheckboxItem,
+  ContextMenuRadioItem,
+  ContextMenuLabel,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuGroup,
+  ContextMenuPortal,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuRadioGroup,
+} from "./components/ui/context-menu.js"
+export type {
+  ContextMenuContentProps,
+  ContextMenuItemProps,
+  ContextMenuLabelProps,
+  ContextMenuSubTriggerProps,
+} from "./components/ui/context-menu.js"
+export {
+  Menubar,
+  MenubarPortal,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarGroup,
+  MenubarSeparator,
+  MenubarLabel,
+  MenubarItem,
+  MenubarShortcut,
+  MenubarCheckboxItem,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSub,
+  MenubarSubTrigger,
+  MenubarSubContent,
+} from "./components/ui/menubar.js"
+export type {
+  MenubarContentProps,
+  MenubarItemProps,
+  MenubarLabelProps,
+  MenubarSubTriggerProps,
+} from "./components/ui/menubar.js"
+export {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+  NavigationMenuPositioner,
+  NavigationMenuPortal,
+  navigationMenuTriggerStyle,
+} from "./components/ui/navigation-menu.js"
 export { cn } from "./lib/utils.js"
