@@ -338,6 +338,18 @@
       "import": "./dist/components/ui/direction.js",
       "require": "./dist/components/ui/direction.cjs",
       "default": "./dist/components/ui/direction.js"
+    },
+    "./checkbox": {
+      "types": "./dist/components/ui/checkbox.d.ts",
+      "import": "./dist/components/ui/checkbox.js",
+      "require": "./dist/components/ui/checkbox.cjs",
+      "default": "./dist/components/ui/checkbox.js"
+    },
+    "./radio-group": {
+      "types": "./dist/components/ui/radio-group.d.ts",
+      "import": "./dist/components/ui/radio-group.js",
+      "require": "./dist/components/ui/radio-group.cjs",
+      "default": "./dist/components/ui/radio-group.js"
     }
   },
   "files": [

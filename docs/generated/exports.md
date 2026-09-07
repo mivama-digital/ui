@@ -142,6 +142,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/card.d.ts`
 - Runtime: `./dist/components/ui/card.js`
 
+## `@mivama/ui/checkbox`
+
+- Primary component: Checkbox
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/checkbox.d.ts`
+- Runtime: `./dist/components/ui/checkbox.js`
+
 ## `@mivama/ui/choice`
 
 - Primary component: Choice
@@ -371,6 +381,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: No
 - Types: `./dist/components/mivama-provider.d.ts`
 - Runtime: `./dist/components/mivama-provider.js`
+
+## `@mivama/ui/radio-group`
+
+- Primary component: RadioGroup
+- Category: form
+- Status: stable
+- Client boundary: Yes
+- Interactive: Yes
+- Types: `./dist/components/ui/radio-group.d.ts`
+- Runtime: `./dist/components/ui/radio-group.js`
 
 ## `@mivama/ui/scroll-area`
 

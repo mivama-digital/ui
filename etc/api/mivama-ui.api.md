@@ -18,6 +18,7 @@ import * as _base_ui_react_popover from '@base-ui/react/popover';
 import * as _base_ui_react_slider from '@base-ui/react/slider';
 import * as _base_ui_react_toast from '@base-ui/react/toast';
 import { Button as Button_2 } from '@base-ui/react/button';
+import { Checkbox as Checkbox_2 } from '@base-ui/react/checkbox';
 import * as class_variance_authority_types from 'class-variance-authority/types';
 import { ClassValue } from 'clsx';
 import { Collapsible as Collapsible_2 } from '@base-ui/react/collapsible';
@@ -28,6 +29,8 @@ import { DirectionProviderProps } from '@base-ui/react/direction-provider';
 import { Menu } from '@base-ui/react/menu';
 import { Popover as Popover_2 } from '@base-ui/react/popover';
 import { Progress as Progress_2 } from '@base-ui/react/progress';
+import { Radio } from '@base-ui/react/radio';
+import { RadioGroup as RadioGroup_2 } from '@base-ui/react/radio-group';
 import * as React_2 from 'react';
 import { ScrollArea as ScrollArea_2 } from '@base-ui/react/scroll-area';
 import { Separator as Separator_2 } from '@base-ui/react/separator';
@@ -288,7 +291,7 @@ export const bubbleReactionsVariants: (props?: ({
 
 // @public (undocumented)
 export const bubbleVariants: (props?: ({
-    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "muted" | "tinted" | null | undefined;
+    variant?: "default" | "outline" | "secondary" | "ghost" | "destructive" | "muted" | "tinted" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "ButtonProps" needs to be exported by the entry point index.d.ts
@@ -349,6 +352,9 @@ export function CardTitle(input: useRender.ComponentProps<"div">): React_2.React
 export const cardVariants: (props?: ({
     variant?: "outline" | "surface" | "subtle" | "instrument" | "interactive" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
+
+// @public (undocumented)
+export function Checkbox(input: Checkbox_2.Root.Props): React_2.JSX.Element;
 
 // @public (undocumented)
 export function Choice(input: ChoiceProps): React_2.JSX.Element;
@@ -974,6 +980,12 @@ export function ProgressTrack(input: Progress_2.Track.Props): React_2.JSX.Elemen
 
 // @public (undocumented)
 export function ProgressValue(input: Progress_2.Value.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function RadioGroup(input: RadioGroup_2.Props): React_2.JSX.Element;
+
+// @public (undocumented)
+export function RadioGroupItem(input: Radio.Root.Props): React_2.JSX.Element;
 
 // @public (undocumented)
 export const ScrollArea: React_2.ForwardRefExoticComponent<Omit<ScrollAreaProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;

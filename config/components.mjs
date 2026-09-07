@@ -99,6 +99,15 @@ export const components = [
     interactive: false,
   },
   {
+    name: "Checkbox",
+    slug: "checkbox",
+    source: "src/components/ui/checkbox.tsx",
+    category: "form",
+    status: "stable",
+    client: true,
+    interactive: true,
+  },
+  {
     name: "Choice",
     slug: "choice",
     source: "src/components/ui/choice.tsx",
@@ -259,6 +268,15 @@ export const components = [
     status: "stable",
     client: false,
     interactive: false,
+  },
+  {
+    name: "RadioGroup",
+    slug: "radio-group",
+    source: "src/components/ui/radio-group.tsx",
+    category: "form",
+    status: "stable",
+    client: true,
+    interactive: true,
   },
   {
     name: "ScrollScene",

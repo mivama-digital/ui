@@ -407,4 +407,6 @@ export type {
   DirectionProviderProps,
   TextDirection,
 } from "./components/ui/direction.js"
+export { Checkbox } from "./components/ui/checkbox.js"
+export { RadioGroup, RadioGroupItem } from "./components/ui/radio-group.js"
 export { cn } from "./lib/utils.js"
