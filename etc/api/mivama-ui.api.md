@@ -128,6 +128,15 @@ export type AlertProps = React_2.ComponentProps<"div"> & {
 export function AlertTitle(input: React_2.ComponentProps<"div">): React_2.JSX.Element;
 
 // @public (undocumented)
+export function AspectRatio(input: AspectRatioProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface AspectRatioProps extends React_2.ComponentProps<"div"> {
+    // (undocumented)
+    ratio?: number;
+}
+
+// @public (undocumented)
 export function Attachment(input: AttachmentProps): React_2.JSX.Element;
 
 // @public (undocumented)
@@ -245,6 +254,24 @@ export function BreadcrumbSeparator(input: React_2.ComponentProps<"li">): React_
 //
 // @public (undocumented)
 export const Button: React_2.ForwardRefExoticComponent<Omit<ButtonProps, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+
+// @public (undocumented)
+export function ButtonGroup(input: ButtonGroupProps): React_2.JSX.Element;
+
+// @public (undocumented)
+export interface ButtonGroupProps extends React_2.ComponentProps<"div">, VariantProps<typeof buttonGroupVariants> {
+}
+
+// @public (undocumented)
+export function ButtonGroupSeparator(input: React_2.ComponentProps<typeof Separator>): React_2.JSX.Element;
+
+// @public (undocumented)
+export function ButtonGroupText(input: useRender.ComponentProps<"div">): React_2.ReactElement<unknown, string | React_2.JSXElementConstructor<any>>;
+
+// @public (undocumented)
+export const buttonGroupVariants: (props?: ({
+    orientation?: "horizontal" | "vertical" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // Warning: (ae-forgotten-export) The symbol "ButtonVariantProps" needs to be exported by the entry point index.d.ts
 //

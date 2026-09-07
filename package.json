@@ -266,6 +266,18 @@
       "import": "./dist/components/ui/scroll-area.js",
       "require": "./dist/components/ui/scroll-area.cjs",
       "default": "./dist/components/ui/scroll-area.js"
+    },
+    "./aspect-ratio": {
+      "types": "./dist/components/ui/aspect-ratio.d.ts",
+      "import": "./dist/components/ui/aspect-ratio.js",
+      "require": "./dist/components/ui/aspect-ratio.cjs",
+      "default": "./dist/components/ui/aspect-ratio.js"
+    },
+    "./button-group": {
+      "types": "./dist/components/ui/button-group.d.ts",
+      "import": "./dist/components/ui/button-group.js",
+      "require": "./dist/components/ui/button-group.cjs",
+      "default": "./dist/components/ui/button-group.js"
     }
   },
   "files": [

@@ -319,4 +319,13 @@ export type {
   ScrollAreaProps,
   ScrollBarProps,
 } from "./components/ui/scroll-area.js"
+export { AspectRatio } from "./components/ui/aspect-ratio.js"
+export type { AspectRatioProps } from "./components/ui/aspect-ratio.js"
+export {
+  ButtonGroup,
+  ButtonGroupSeparator,
+  ButtonGroupText,
+  buttonGroupVariants,
+} from "./components/ui/button-group.js"
+export type { ButtonGroupProps } from "./components/ui/button-group.js"
 export { cn } from "./lib/utils.js"

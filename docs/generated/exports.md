@@ -42,6 +42,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Types: `./dist/components/ui/alert-dialog.d.ts`
 - Runtime: `./dist/components/ui/alert-dialog.js`
 
+## `@mivama/ui/aspect-ratio`
+
+- Primary component: AspectRatio
+- Category: layout
+- Status: stable
+- Client boundary: No
+- Interactive: No
+- Types: `./dist/components/ui/aspect-ratio.d.ts`
+- Runtime: `./dist/components/ui/aspect-ratio.js`
+
 ## `@mivama/ui/attachment`
 
 - Primary component: Attachment
@@ -101,6 +111,16 @@ The registry is the authoritative catalog of public JavaScript/TypeScript compon
 - Interactive: Yes
 - Types: `./dist/components/ui/button.d.ts`
 - Runtime: `./dist/components/ui/button.js`
+
+## `@mivama/ui/button-group`
+
+- Primary component: ButtonGroup
+- Category: action
+- Status: stable
+- Client boundary: No
+- Interactive: Yes
+- Types: `./dist/components/ui/button-group.d.ts`
+- Runtime: `./dist/components/ui/button-group.js`
 
 ## `@mivama/ui/card`
 

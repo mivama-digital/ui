@@ -18,6 +18,15 @@ export const components = [
     interactive: false,
   },
   {
+    name: "AspectRatio",
+    slug: "aspect-ratio",
+    source: "src/components/ui/aspect-ratio.tsx",
+    category: "layout",
+    status: "stable",
+    client: false,
+    interactive: false,
+  },
+  {
     name: "Attachment",
     slug: "attachment",
     source: "src/components/ui/attachment.tsx",
@@ -60,6 +69,15 @@ export const components = [
     category: "action",
     status: "stable",
     client: true,
+    interactive: true,
+  },
+  {
+    name: "ButtonGroup",
+    slug: "button-group",
+    source: "src/components/ui/button-group.tsx",
+    category: "action",
+    status: "stable",
+    client: false,
     interactive: true,
   },
   {
