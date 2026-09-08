@@ -1,5 +1,7 @@
 # @mivama/ui
 
+> **Migration Notice:** This repository is a Mivama design-token registry. Official UI components are installed from shadcn/ui into consumer applications.
+
 Shared Mivama design tokens and React UI primitives for websites, portals, and product surfaces.
 
 ## Quick start
