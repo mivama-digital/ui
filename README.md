@@ -6,28 +6,28 @@
 
 `mivama-ui` serves as a lightweight, versioned theme registry (`registry:base`) providing Mivama design tokens, CSS variables, and minimal base styling rules. Official UI components (`Button`, `Card`, `Dialog`, etc.) are installed directly from the official shadcn CLI into each consumer application.
 
-## Consumer Quick Start
+## Consumer quick start
 
 1. Initialize the official shadcn CLI in the consumer repository.
-2. Add the Mivama registry URL pinned to an immutable commit SHA in `components.json`:
-   ```json
-   {
-     "registries": {
-       "@mivama": "https://raw.githubusercontent.com/mivama-digital/mivama-ui/<COMMIT_SHA>/public/r/{name}.json"
-     }
-   }
-   ```
-3. Install the Mivama base tokens:
-   ```bash
-   pnpm dlx shadcn@latest add @mivama/mivama-base
-   ```
-4. Install needed official shadcn components:
-   ```bash
-   pnpm dlx shadcn@latest add button card
-   ```
-5. Commit generated official component source directly in the consumer repository.
+2. Add the Mivama registry URL pinned to an immutable commit SHA in `components.json`.
+3. Run `pnpm dlx shadcn@latest add @mivama/mivama-base`.
+4. Run `pnpm dlx shadcn@latest add button card ...` for official components needed by that consumer.
+5. Commit generated official component source in the consumer repository.
 
-`@mivama/ui` is retired. Do not add it as a runtime dependency or import from it.
+`@mivama/ui` is retired. Do not add it as a dependency or import it.
+
+## Recommended Registry Revision
+
+Use the immutable commit SHA pinned in `components.json`:
+- Recommended revision: `ee852161825024e1ee74eec056afa084c0cc185a`
+
+```json
+{
+  "registries": {
+    "@mivama": "https://raw.githubusercontent.com/mivama-digital/mivama-ui/ee852161825024e1ee74eec056afa084c0cc185a/public/r/{name}.json"
+  }
+}
+```
 
 ## Registry Development
 
