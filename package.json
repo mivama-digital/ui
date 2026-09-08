@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "shadcn build",
-    "test": "node --test tests/registry-contract.test.mjs",
+    "test": "node --test tests/registry-contract.test.mjs tests/fixture-install-contract.test.mjs",
     "verify": "npm run build && npm run test && git diff --check"
   },
   "devDependencies": {
