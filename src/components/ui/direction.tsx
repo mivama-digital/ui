@@ -1,8 +1,3 @@
-"use client"
+import { DirectionProvider, useDirection } from "@radix-ui/react-direction"
 
-export {
-  DirectionProvider,
-  useDirection,
-  type TextDirection,
-  type DirectionProviderProps,
-} from "@base-ui/react/direction-provider"
+export { DirectionProvider, useDirection }

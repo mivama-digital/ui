@@ -3,10 +3,8 @@ import { render, screen } from "@testing-library/react"
 import axe from "axe-core"
 import { describe, expect, it } from "vitest"
 
-import {
-  DirectionProvider,
-  useDirection,
-} from "../../src/components/ui/direction.js"
+import { DirectionProvider } from "../../src/components/ui/direction.js"
+import { useDirection } from "../../src/hooks/use-direction.js"
 
 function Consumer() {
   const dir = useDirection()
@@ -16,7 +14,7 @@ function Consumer() {
 describe("DirectionProvider and useDirection", () => {
   it("provides and propagates reading direction", async () => {
     const { container, rerender } = render(
-      <DirectionProvider direction="ltr">
+      <DirectionProvider dir="ltr">
         <Consumer />
       </DirectionProvider>
     )
@@ -24,7 +22,7 @@ describe("DirectionProvider and useDirection", () => {
     expect(screen.getByTestId("dir-consumer")).toHaveTextContent("ltr")
 
     rerender(
-      <DirectionProvider direction="rtl">
+      <DirectionProvider dir="rtl">
         <Consumer />
       </DirectionProvider>
     )
@@ -37,10 +35,10 @@ describe("DirectionProvider and useDirection", () => {
 
   it("handles nested direction providers correctly", () => {
     render(
-      <DirectionProvider direction="ltr">
+      <DirectionProvider dir="ltr">
         <div data-testid="outer">
           <Consumer />
-          <DirectionProvider direction="rtl">
+          <DirectionProvider dir="rtl">
             <div data-testid="inner">
               <Consumer />
             </div>
