@@ -111,3 +111,4 @@ export {
   PaginationNext,
   PaginationEllipsis,
 }
+export type { PaginationLinkProps }

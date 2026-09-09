@@ -197,8 +197,8 @@ export interface ButtonProps extends React_2.ButtonHTMLAttributes<HTMLButtonElem
 
 // @public (undocumented)
 export const buttonVariants: (props?: ({
-    variant?: "default" | "link" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined;
-    size?: "default" | "icon" | "sm" | "lg" | null | undefined;
+    variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined;
+    size?: "default" | "sm" | "lg" | "icon" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 
 // @public (undocumented)
@@ -364,7 +364,7 @@ export const Command: React_2.ForwardRefExoticComponent<Omit<{
     ref?: React_2.Ref<HTMLDivElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.HTMLAttributes<HTMLDivElement>> & {
+}, "key" | keyof React_2.HTMLAttributes<HTMLDivElement> | "asChild"> & {
     label?: string;
     shouldFilter?: boolean;
     filter?: (value: string, search: string, keywords?: string[]) => number;
@@ -386,7 +386,7 @@ export const CommandEmpty: React_2.ForwardRefExoticComponent<Omit<{
     ref?: React_2.Ref<HTMLDivElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.HTMLAttributes<HTMLDivElement>> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+}, "key" | keyof React_2.HTMLAttributes<HTMLDivElement> | "asChild"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
 export const CommandGroup: React_2.ForwardRefExoticComponent<Omit<{
@@ -395,7 +395,7 @@ export const CommandGroup: React_2.ForwardRefExoticComponent<Omit<{
     ref?: React_2.Ref<HTMLDivElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.HTMLAttributes<HTMLDivElement>>, "heading" | "value"> & {
+}, "key" | keyof React_2.HTMLAttributes<HTMLDivElement> | "asChild">, "heading" | "value"> & {
     heading?: React_2.ReactNode;
     value?: string;
     forceMount?: boolean;
@@ -406,7 +406,7 @@ export const CommandInput: React_2.ForwardRefExoticComponent<Omit<Omit<Pick<Pick
     ref?: React_2.Ref<HTMLInputElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.InputHTMLAttributes<HTMLInputElement>>, "onChange" | "type" | "value"> & {
+}, "key" | "asChild" | keyof React_2.InputHTMLAttributes<HTMLInputElement>>, "onChange" | "type" | "value"> & {
     value?: string;
     onValueChange?: (search: string) => void;
 } & React_2.RefAttributes<HTMLInputElement>, "ref"> & React_2.RefAttributes<HTMLInputElement>>;
@@ -418,7 +418,7 @@ export const CommandItem: React_2.ForwardRefExoticComponent<Omit<{
     ref?: React_2.Ref<HTMLDivElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.HTMLAttributes<HTMLDivElement>>, "onSelect" | "disabled" | "value"> & {
+}, "key" | keyof React_2.HTMLAttributes<HTMLDivElement> | "asChild">, "onSelect" | "disabled" | "value"> & {
     disabled?: boolean;
     onSelect?: (value: string) => void;
     value?: string;
@@ -433,7 +433,7 @@ export const CommandList: React_2.ForwardRefExoticComponent<Omit<{
     ref?: React_2.Ref<HTMLDivElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.HTMLAttributes<HTMLDivElement>> & {
+}, "key" | keyof React_2.HTMLAttributes<HTMLDivElement> | "asChild"> & {
     label?: string;
 } & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
@@ -442,7 +442,7 @@ export const CommandSeparator: React_2.ForwardRefExoticComponent<Omit<Pick<Pick<
     ref?: React_2.Ref<HTMLDivElement>;
 } & {
     asChild?: boolean;
-}, "asChild" | "key" | keyof React_2.HTMLAttributes<HTMLDivElement>> & {
+}, "key" | keyof React_2.HTMLAttributes<HTMLDivElement> | "asChild"> & {
     alwaysRender?: boolean;
 } & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
@@ -945,6 +945,11 @@ export const PaginationLink: {
 };
 
 // @public (undocumented)
+export type PaginationLinkProps = {
+    isActive?: boolean;
+} & React_2.ComponentProps<"a">;
+
+// @public (undocumented)
 export const PaginationNext: {
     (input: React_2.ComponentProps<typeof PaginationLink>): React_2.JSX.Element;
     displayName: string;
@@ -1085,6 +1090,17 @@ export const Sidebar: React_2.ForwardRefExoticComponent<Omit<React_2.ClassAttrib
 export const SidebarContent: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
+export type SidebarContextProps = {
+    state: "expanded" | "collapsed";
+    open: boolean;
+    setOpen: (open: boolean) => void;
+    openMobile: boolean;
+    setOpenMobile: (open: boolean) => void;
+    isMobile: boolean;
+    toggleSidebar: () => void;
+};
+
+// @public (undocumented)
 export const SidebarFooter: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
@@ -1222,6 +1238,12 @@ export const TabsTrigger: React_2.ForwardRefExoticComponent<Omit<TabsPrimitive.T
 // @public (undocumented)
 export const Textarea: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>, "ref"> & React_2.RefAttributes<HTMLTextAreaElement>>;
 
+// @public (undocumented)
+export const THEMES: {
+    readonly light: "";
+    readonly dark: ".dark";
+};
+
 export { Toast }
 
 export { toast }
@@ -1273,15 +1295,8 @@ export interface TypographyProps extends React_2.HTMLAttributes<HTMLElement> {
 
 export { useDirection }
 
-// Warning: (ae-forgotten-export) The symbol "SidebarContextProps" needs to be exported by the entry point index.d.ts
-//
 // @public (undocumented)
 export function useSidebar(): SidebarContextProps;
-
-// Warnings were encountered during analysis:
-//
-// dist/components/ui/chart.d.ts:21:9 - (ae-forgotten-export) The symbol "THEMES" needs to be exported by the entry point index.d.ts
-// dist/components/ui/pagination.d.ts:13:5 - (ae-forgotten-export) The symbol "PaginationLinkProps" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

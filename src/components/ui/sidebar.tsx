@@ -771,3 +771,4 @@ export {
   SidebarTrigger,
   useSidebar,
 }
+export type { SidebarContextProps }

@@ -71,9 +71,9 @@ jobs:
               `Requested version ${process.env.REQUESTED_VERSION} does not match package.json ${pkg.version}`
             )
           }
-          if (repository !== expectedRepository) {
+          if (repository !== expectedRepository && repository !== `git+${expectedRepository}`) {
             throw new Error(
-              `package.json repository must be ${expectedRepository}, got ${repository ?? "missing"}`
+              `package.json repository must be ${expectedRepository} or git+${expectedRepository}, got ${repository ?? "missing"}`
             )
           }
 

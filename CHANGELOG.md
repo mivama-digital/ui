@@ -1,5 +1,12 @@
 # @mivama/ui
 
+## 26.9.9-1
+
+### Patch Changes
+
+- Export missing public symbols (`THEMES`, `PaginationLinkProps`, `SidebarContextProps`), add `engines.node` specification, and update repository URL to canonical git format.
+- Complete official shadcn catalog distribution and clean packaging linting.
+
 ## 26.9.4
 
 ### Patch Changes

@@ -364,4 +364,5 @@ export {
   ChartLegend,
   ChartLegendContent,
   ChartStyle,
+  THEMES,
 }

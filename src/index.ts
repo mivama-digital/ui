@@ -93,6 +93,7 @@ export {
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
+  THEMES,
 } from "./components/ui/chart"
 
 // Checkbox
@@ -308,6 +309,7 @@ export {
 } from "./components/ui/navigation-menu"
 
 // Pagination
+export type { PaginationLinkProps } from "./components/ui/pagination"
 export {
   Pagination,
   PaginationContent,
@@ -378,6 +380,7 @@ export {
 } from "./components/ui/sheet"
 
 // Sidebar
+export type { SidebarContextProps } from "./components/ui/sidebar"
 export {
   Sidebar,
   SidebarContent,

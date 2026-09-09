@@ -1,6 +1,6 @@
 {
   "name": "@mivama/ui",
-  "version": "26.9.9",
+  "version": "26.9.9-1",
   "description": "Shared Mivama design tokens and React UI primitives.",
   "license": "MIT",
   "private": false,
@@ -791,7 +791,7 @@
     "storybook:typecheck": "tsc -p tsconfig.storybook.json",
     "storybook:build": "storybook build",
     "package:publint": "publint",
-    "package:types": "attw --pack . --profile node16 --exclude-entrypoints styles.css reset.css tokens.css themes.css --ignore-rules cjs-resolves-to-esm false-esm",
+    "package:types": "attw --pack . --profile node16 --exclude-entrypoints styles.css --ignore-rules cjs-resolves-to-esm false-esm",
     "package:lint": "npm run package:publint && npm run package:types",
     "registry:write": "node scripts/check-component-registry.mjs --write",
     "registry:check": "node scripts/check-component-registry.mjs",
@@ -905,9 +905,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mivama-digital/ui.git"
+    "url": "git+https://github.com/mivama-digital/ui.git"
   },
   "bugs": {
     "url": "https://github.com/mivama-digital/ui/issues"

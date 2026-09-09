@@ -8,7 +8,7 @@ const repositoryUrl = "https://github.com/mivama-digital/ui"
 test("published package metadata points at the canonical repository", async () => {
   const packageJson = await readJson("package.json")
 
-  assert.equal(packageJson.repository?.url, `${repositoryUrl}.git`)
+  assert.equal(packageJson.repository?.url, `git+${repositoryUrl}.git`)
   assert.equal(packageJson.bugs?.url, `${repositoryUrl}/issues`)
   assert.equal(packageJson.homepage, `${repositoryUrl}#readme`)
 })
