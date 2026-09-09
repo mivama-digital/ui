@@ -6,7 +6,6 @@ import { runNpm } from "./lib/process.mjs"
 const root = path.resolve(import.meta.dirname, "..")
 const fixtureName = process.argv[2]?.trim()
 const fixtures = {
-  "vite-react-18": {},
   "vite-react-19": {},
   "next-app-router": {
     env: { NEXT_TELEMETRY_DISABLED: "1" },
@@ -28,6 +27,10 @@ const consumer = await prepareAppConsumer({
 })
 
 try {
+  if (fixtureName === "next-app-router") {
+    await runNpm(["exec", "--", "next", "typegen"], consumer.npmOptions)
+  }
+
   await runNpm(["run", "typecheck"], consumer.npmOptions)
   await runNpm(["run", "build"], consumer.npmOptions)
 

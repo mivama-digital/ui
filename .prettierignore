@@ -19,3 +19,5 @@ etc/api/*.api.md
 *.woff2
 *.tsbuildinfo
 tests/e2e/**/*.png
+fixtures/next-app-router/next-env.d.ts
+**/next-env.d.ts

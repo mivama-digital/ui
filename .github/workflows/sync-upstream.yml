@@ -1,0 +1,78 @@
+name: Propose shadcn/ui upstream sync
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      target_ref:
+        description: "shadcn-ui/ui ref to compare with the pinned baseline"
+        required: false
+        default: "main"
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shadcn-upstream-sync
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    name: Detect upstream changes and open a draft PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Generate a fail-closed sync proposal
+        id: proposal
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          npm run sync:upstream -- --target "${{ inputs.target_ref || 'main' }}" --write-proposal
+          if git diff --quiet -- docs/upstream/pending-sync.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create or update draft sync PR
+        if: steps.proposal.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/shadcn-upstream-sync
+          delete-branch: true
+          draft: true
+          commit-message: "chore: propose shadcn/ui upstream sync"
+          title: "chore: review shadcn/ui upstream sync"
+          body: |
+            ## Automated upstream detection
+
+            This draft PR was generated from the scheduled shadcn/ui base-registry comparison.
+
+            - It **does not overwrite component source**.
+            - It **does not advance the pinned baseline SHA**.
+            - It **does not publish `@mivama/ui`**.
+
+            Review `docs/upstream/pending-sync.md`, adapt only the intended source changes, update the baseline and parity records, then run the full package verification before marking this PR ready.
+          add-paths: |
+            docs/upstream/pending-sync.md

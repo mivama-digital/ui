@@ -1,6 +1,5 @@
 import type { Decorator, Preview } from "@storybook/react-vite"
 
-import { MivamaProvider } from "../src/components/mivama-provider.js"
 import {
   BUILT_IN_DENSITIES,
   BUILT_IN_THEMES,
@@ -20,13 +19,13 @@ const withMivamaShell: Decorator = (Story, context) => {
       className={mode === "dark" ? "dark min-h-screen" : "min-h-screen"}
       dir={direction}
     >
-      <MivamaProvider
-        theme={theme}
-        density={density}
+      <div
+        data-mivama-theme={theme}
+        data-density={density}
         className="min-h-screen bg-background p-6 text-foreground"
       >
         <Story />
-      </MivamaProvider>
+      </div>
     </div>
   )
 }

@@ -1,80 +1,37 @@
 import * as React from "react"
-import { mergeProps } from "@base-ui/react/merge-props"
-import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"
 
-import { cn } from "../../lib/utils.js"
+import { cn } from "@/lib/utils"
 
-type BadgeVariant =
-  "default" | "secondary" | "destructive" | "outline" | "ghost" | "link"
-
-interface BadgeVariantProps {
-  variant?: BadgeVariant | null
-  wrap?: boolean | null
-  class?: string
-  className?: string
-}
-
-const badgeVariantsImpl = cva(
-  "group/badge inline-flex min-h-5 w-fit items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium transition-colors focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 motion-reduce:transition-none has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none [&>svg]:size-3!",
+const badgeVariants = cva(
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground [a]:hover:bg-primary-hover",
+          "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
         secondary:
-          "bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80",
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
         destructive:
-          "border-destructive-border bg-destructive-subtle text-destructive-foreground focus-visible:ring-destructive/30 [a]:hover:bg-destructive-subtle/80",
-        outline:
-          "border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground",
-        ghost:
-          "hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
-      wrap: {
-        false: "shrink-0 whitespace-nowrap",
-        true: "max-w-full min-w-0 shrink whitespace-normal text-center wrap-anywhere",
+          "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
+        outline: "text-foreground",
       },
     },
     defaultVariants: {
       variant: "default",
-      wrap: false,
     },
   }
 )
 
-function badgeVariants(props?: BadgeVariantProps): string {
-  return badgeVariantsImpl(props as Parameters<typeof badgeVariantsImpl>[0])
+export interface BadgeProps
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, ...props }: BadgeProps) {
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+  )
 }
 
-interface BadgeProps
-  extends
-    useRender.ComponentProps<"span">,
-    VariantProps<typeof badgeVariantsImpl> {}
-
-const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
-  { className, variant = "default", wrap = false, render, ...props },
-  ref
-) {
-  return useRender({
-    defaultTagName: "span",
-    props: mergeProps<"span">(
-      {
-        ref,
-        className: cn(badgeVariantsImpl({ variant, wrap }), className),
-      },
-      props
-    ),
-    render,
-    state: {
-      slot: "badge",
-      variant,
-      wrap,
-    },
-  })
-})
-Badge.displayName = "Badge"
-
 export { Badge, badgeVariants }
-export type { BadgeProps }

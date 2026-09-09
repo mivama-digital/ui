@@ -23,18 +23,18 @@ try {
       `  const namespace = await import(specifier);\n` +
       `  if (Object.keys(namespace).length === 0) throw new Error(\`Empty module: \${specifier}\`);\n` +
       `}\n` +
-      `const bento = await import("@mivama/ui/bento-grid");\n` +
-      `const editorial = await import("@mivama/ui/editorial-grid");\n` +
-      `const scroll = await import("@mivama/ui/scroll-scene");\n` +
+      `const card = await import("@mivama/ui/card");\n` +
+      `const button = await import("@mivama/ui/button");\n` +
+      `const badge = await import("@mivama/ui/badge");\n` +
       `const tree = React.createElement(\n` +
       `  "main",\n` +
       `  null,\n` +
-      `  React.createElement(editorial.EditorialGrid, null, React.createElement("div", null, "SSR editorial")),\n` +
-      `  React.createElement(bento.BentoGrid, null, React.createElement(bento.BentoGridItem, null, "SSR bento")),\n` +
-      `  React.createElement(scroll.ScrollScene, null, React.createElement(scroll.ScrollLayer, null, "SSR scroll"))\n` +
+      `  React.createElement(card.Card, null, React.createElement("div", null, "SSR card")),\n` +
+      `  React.createElement(button.Button, null, "SSR button"),\n` +
+      `  React.createElement(badge.Badge, null, "SSR badge")\n` +
       `);\n` +
       `const html = renderToStaticMarkup(tree);\n` +
-      `for (const text of ["SSR editorial", "SSR bento", "SSR scroll"]) {\n` +
+      `for (const text of ["SSR card", "SSR button", "SSR badge"]) {\n` +
       `  if (!html.includes(text)) throw new Error(\`Missing SSR output: \${text}\`);\n` +
       `}\n` +
       `console.log(\`Imported \${specifiers.length} ESM entry points and rendered SSR markup\`);\n`

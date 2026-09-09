@@ -26,6 +26,17 @@ function collectEntries(dir: string, base = ""): Record<string, string> {
 
 const allEntries = collectEntries(path.resolve(process.cwd(), "src"))
 
+const packageJson = JSON.parse(
+  fs.readFileSync(path.resolve(process.cwd(), "package.json"), "utf8")
+) as { dependencies?: Record<string, string> }
+const runtimeExternal = [
+  "react",
+  "react-dom",
+  "react/jsx-runtime",
+  "react/jsx-dev-runtime",
+  ...Object.keys(packageJson.dependencies ?? {}),
+]
+
 export default defineConfig({
   entry: allEntries,
   format: ["esm", "cjs"],
@@ -33,9 +44,12 @@ export default defineConfig({
   sourcemap: true,
   clean: false,
   target: "es2022",
-  external: ["react", "react-dom"],
+  external: runtimeExternal,
   treeshake: true,
   splitting: false,
-  bundle: false,
+  bundle: true,
+  banner: {
+    js: '"use client";',
+  },
   tsconfig: "tsconfig.build.json",
 })

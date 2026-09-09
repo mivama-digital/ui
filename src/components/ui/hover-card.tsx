@@ -1,95 +1,27 @@
-"use client"
-
 import * as React from "react"
-import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card"
+import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
 
-import { useMivamaPortalContainer } from "../mivama-provider.js"
-import { useShellAttributes } from "../../lib/shell-attributes.js"
-import { cn } from "../../lib/utils.js"
+import { cn } from "@/lib/utils"
 
-function HoverCard(props: PreviewCardPrimitive.Root.Props) {
-  return <PreviewCardPrimitive.Root data-slot="hover-card" {...props} />
-}
-HoverCard.displayName = "HoverCard"
+const HoverCard = HoverCardPrimitive.Root
 
-const HoverCardTrigger = React.forwardRef<
-  HTMLAnchorElement,
-  PreviewCardPrimitive.Trigger.Props
->(function HoverCardTrigger(props, ref) {
-  return (
-    <PreviewCardPrimitive.Trigger
-      ref={ref}
-      data-slot="hover-card-trigger"
-      {...props}
-    />
-  )
-})
-HoverCardTrigger.displayName = "HoverCardTrigger"
-
-function HoverCardPortal({
-  container,
-  ...props
-}: PreviewCardPrimitive.Portal.Props) {
-  const providerContainer = useMivamaPortalContainer()
-  return (
-    <PreviewCardPrimitive.Portal
-      data-slot="hover-card-portal"
-      container={container ?? providerContainer}
-      {...props}
-    />
-  )
-}
-HoverCardPortal.displayName = "HoverCardPortal"
-
-interface HoverCardContentProps extends PreviewCardPrimitive.Popup.Props {
-  sideOffset?: number
-  align?: "start" | "center" | "end"
-  side?: "top" | "right" | "bottom" | "left"
-  alignOffset?: number
-}
+const HoverCardTrigger = HoverCardPrimitive.Trigger
 
 const HoverCardContent = React.forwardRef<
-  HTMLDivElement,
-  HoverCardContentProps
->(function HoverCardContent(
-  {
-    className,
-    align = "center",
-    sideOffset = 4,
-    side = "bottom",
-    alignOffset = 0,
-    children,
-    ...props
-  },
-  ref
-) {
-  useShellAttributes("[data-slot=hover-card-content]")
+  React.ElementRef<typeof HoverCardPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+  <HoverCardPrimitive.Content
+    ref={ref}
+    align={align}
+    sideOffset={sideOffset}
+    className={cn(
+      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-hover-card-content-transform-origin]",
+      className
+    )}
+    {...props}
+  />
+))
+HoverCardContent.displayName = HoverCardPrimitive.Content.displayName
 
-  return (
-    <HoverCardPortal>
-      <PreviewCardPrimitive.Positioner
-        sideOffset={sideOffset}
-        align={align}
-        side={side}
-        alignOffset={alignOffset}
-        className="isolate z-50 outline-none"
-      >
-        <PreviewCardPrimitive.Popup
-          ref={ref}
-          data-slot="hover-card-content"
-          className={cn(
-            "z-50 w-64 rounded-xl border bg-popover p-4 text-sm text-popover-foreground shadow-md ring-1 ring-foreground/10 outline-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95",
-            className
-          )}
-          {...props}
-        >
-          {children}
-        </PreviewCardPrimitive.Popup>
-      </PreviewCardPrimitive.Positioner>
-    </HoverCardPortal>
-  )
-})
-HoverCardContent.displayName = "HoverCardContent"
-
-export { HoverCard, HoverCardTrigger, HoverCardContent, HoverCardPortal }
-export type { HoverCardContentProps }
+export { HoverCard, HoverCardTrigger, HoverCardContent }

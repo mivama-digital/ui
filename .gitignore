@@ -9,5 +9,7 @@ mivama-ui-*.tgz
 # Test & report artifacts
 coverage/
 .artifacts/
+.next/
 playwright-report/
 test-results/
+.tmp/

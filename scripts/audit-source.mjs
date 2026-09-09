@@ -30,9 +30,20 @@ const forbiddenPatterns = [
 const violations = []
 for (const file of await walk(sourceRoot)) {
   const source = await readFile(file, "utf8")
+  const relativePath = path.relative(root, file)
+  const hasVettedChartStyleInjection =
+    relativePath === "src/components/ui/chart.tsx" &&
+    (source.match(/dangerouslySetInnerHTML/g) ?? []).length === 1 &&
+    source.includes("const ChartStyle") &&
+    source.includes("<style") &&
+    source.includes("--color-${key}")
+
   for (const [label, pattern] of forbiddenPatterns) {
-    if (pattern.test(source)) {
-      violations.push(`${path.relative(root, file)}: ${label}`)
+    if (
+      pattern.test(source) &&
+      !(label === "dangerouslySetInnerHTML" && hasVettedChartStyleInjection)
+    ) {
+      violations.push(`${relativePath}: ${label}`)
     }
   }
 }

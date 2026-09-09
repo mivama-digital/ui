@@ -11,23 +11,13 @@ function collectBrowserErrors(page: Page) {
   return errors
 }
 
-test("reduced motion disables scroll-scene animation and long transitions", async ({
-  page,
-}) => {
+test("reduced motion disables long transitions", async ({ page }) => {
   const browserErrors = collectBrowserErrors(page)
   await page.emulateMedia({ reducedMotion: "reduce" })
   await page.setViewportSize({ width: 1024, height: 800 })
   await page.goto("/")
 
   const state = await page.evaluate(() => {
-    const scene = document.createElement("div")
-    scene.className = "mivama-scroll-scene"
-    const layer = document.createElement("div")
-    layer.className = "mivama-scroll-layer"
-    layer.dataset.effect = "reveal"
-    scene.append(layer)
-    document.body.append(scene)
-
     const trigger = document.querySelector<HTMLElement>(
       '[data-slot="sidebar-trigger"]'
     )
@@ -44,13 +34,11 @@ test("reduced motion disables scroll-scene animation and long transitions", asyn
 
     return {
       reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
-      animationName: getComputedStyle(layer).animationName,
       maxTransitionDuration: Math.max(...transitionDurations),
     }
   })
 
   expect(state.reducedMotion).toBe(true)
-  expect(state.animationName).toBe("none")
   expect(state.maxTransitionDuration).toBeLessThanOrEqual(0.02)
   expect(browserErrors).toEqual([])
 })

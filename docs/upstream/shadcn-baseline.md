@@ -1,66 +1,24 @@
 # shadcn Baseline Specification
 
-This document records the exact upstream baseline, style preset, dependencies, and architectural decisions pinned for `@mivama/ui`.
+## Source of truth
 
-## Pinned Reference
+- **Catalog:** `config/components.mjs` (65 component slugs)
+- **Source modules:** `src/components/ui/`
+- **Style entry point:** `src/styles.css` → `@mivama/ui/styles.css`
+- **Release checks:** registry, contracts, Storybook coverage, package linting, packed consumer builds, and API extraction
 
-- **Upstream Repository:** `https://github.com/shadcn-ui/ui`
-- **Pinned Git SHA:** `5c7072da672b0048bc6771e3204063a2537df91a`
-- **Reference Date:** 2026-09-06
-- **License:** MIT (see `THIRD_PARTY_NOTICES.md`)
-- **Visual Baseline Style:** `base-nova`
-- **Color Baseline:** `neutral`
-- **Tailwind Version:** Tailwind CSS 4.x
-- **React Version:** React 19
+## Runtime baseline
 
-## Architecture & Dependency Decisions
+`@mivama/ui` follows the official shadcn component approach:
 
-`@mivama/ui` distributes a single, production-ready package implementing all official shadcn/ui base catalog components using `@base-ui/react` primitives and pinned third-party packages where necessary.
+- React 19 and Tailwind CSS 4;
+- Radix primitives where the corresponding shadcn component uses them;
+- Vaul for Drawer;
+- Sonner for Toast; and
+- the standard specialist packages required by upstream-style Calendar, Carousel, Chart, Command, Data Table, Input OTP, Resizable, and Questionnaire components.
 
-### 1. Primitives Layer (`@base-ui/react` 1.7.0)
+Exact pinned dependency versions live in `package.json` and `package-lock.json`; they are checked by the package and consumer gates.
 
-`@base-ui/react` 1.7.0 provides the accessible headless foundation for:
+## Distribution policy
 
-- Accordion
-- Alert Dialog
-- Avatar
-- Checkbox & CheckboxGroup
-- Collapsible
-- Combobox
-- Context Menu
-- Dialog
-- Direction (`DirectionProvider`, `useDirection`)
-- Drawer (`Drawer` primitive with snap points, gestures, and swipe support)
-- Field & Fieldset
-- Hover Card (`PreviewCard` primitive)
-- Menubar
-- Navigation Menu
-- Popover
-- Progress
-- Radio Group (`Radio`, `RadioGroup`)
-- Scroll Area
-- Select
-- Separator
-- Slider
-- Switch
-- Tabs
-- Toast
-- Toggle & ToggleGroup
-- Tooltip
-
-### 2. Pinned External Dependencies
-
-Only the following external dependencies are approved for complex interactions not provided by Base UI:
-
-- `cmdk` (v1.x): Command palette keyboard filtering and navigation (`Command`, composed with `Popover` for `Combobox`)
-- `embla-carousel-react` (v8.x): Carousel touch/swipe physics and keyboard navigation
-- `input-otp` (v1.x): Segmented one-time password input management
-- `react-day-picker` (v9.x): Accessible date calendar grid navigation
-- `react-resizable-panels` (v2.x): Accessible resizable panel layouts and handles
-- `recharts` (v2.x): Responsive chart visualizations wrapped in theme-aware `ChartContainer`
-- `@tanstack/react-table` (v8.x): Headless table state manager wrapped in generic `DataTable`
-
-### 3. Evaluated & Rejected Dependencies
-
-- `vaul`: Evaluated and decided **NOT** needed. `@base-ui/react` 1.7.0 includes a comprehensive `Drawer` primitive with snap points and swipe gestures, which upstream shadcn's base registry (`apps/v4/registry/bases/base/ui/drawer.tsx`) uses directly.
-- `@radix-ui/*`: **Forbidden**. All primitive primitives are provided by `@base-ui/react`.
+Only the official component registry and its styles are public. The root barrel must agree with its declaration output and must not leak internal hooks or library helpers. Previous proprietary providers, shell contracts, theme/density helpers, custom layout extensions, and legacy stylesheet subpaths are excluded.

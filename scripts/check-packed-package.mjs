@@ -46,12 +46,7 @@ try {
   await runCommand(process.execPath, [checkCjsFile], commandOptions)
 
   assert.deepEqual(installedPackage.sideEffects, ["**/*.css"])
-  for (const stylesheet of [
-    "styles.css",
-    "tokens.css",
-    "themes.css",
-    "reset.css",
-  ]) {
+  for (const stylesheet of ["styles.css"]) {
     assert.equal(
       installedPackage.exports[`./${stylesheet}`],
       `./dist/${stylesheet}`
@@ -61,21 +56,32 @@ try {
 
   for (const [subpath, target] of Object.entries(installedPackage.exports)) {
     if (typeof target === "string") continue
-    assert.equal(typeof target.types, "string", `${subpath} is missing types`)
-    assert.equal(typeof target.import, "string", `${subpath} is missing import`)
+
+    const esm = target.import
+    const commonJs = target.require
+    assert.equal(typeof esm, "object", `${subpath} is missing ESM export`)
+    assert.equal(typeof commonJs, "object", `${subpath} is missing CJS export`)
+    assert.equal(typeof esm.types, "string", `${subpath} is missing ESM types`)
     assert.equal(
-      typeof target.require,
+      typeof esm.default,
       "string",
-      `${subpath} is missing require`
+      `${subpath} is missing ESM runtime`
     )
     assert.equal(
-      target.default,
-      target.import,
-      `${subpath} default/import mismatch`
+      typeof commonJs.types,
+      "string",
+      `${subpath} is missing CommonJS types`
     )
-    await access(path.join(packageDir, target.import))
-    await access(path.join(packageDir, target.require))
-    await access(path.join(packageDir, target.types))
+    assert.equal(
+      typeof commonJs.default,
+      "string",
+      `${subpath} is missing CommonJS runtime`
+    )
+    assert.equal(target.default, esm.default, `${subpath} default/ESM mismatch`)
+    await access(path.join(packageDir, esm.default))
+    await access(path.join(packageDir, commonJs.default))
+    await access(path.join(packageDir, esm.types))
+    await access(path.join(packageDir, commonJs.types))
   }
 
   console.log(

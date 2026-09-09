@@ -37,7 +37,7 @@ test("registry release probe reuses canonical consumer runners", () => {
   ]) {
     assert.match(probe, new RegExp(script.replaceAll(".", "\\.")))
   }
-  assert.match(probe, /"test-app-consumer\.mjs", "vite-react-18"/)
+  assert.doesNotMatch(probe, /"test-app-consumer\.mjs", "vite-react-18"/)
   assert.match(probe, /"test-app-consumer\.mjs", "vite-react-19"/)
   assert.match(probe, /"test-app-consumer\.mjs", "next-app-router"/)
 })

@@ -10,7 +10,7 @@ const basePackage = {
   version: "3.0.0",
   dependencies: { react: "^19.0.0" },
   devDependencies: { prettier: "^3.0.0" },
-  peerDependencies: { react: ">=18 <20" },
+  peerDependencies: { react: ">=19 <20" },
   exports: { ".": "./dist/index.js" },
 }
 
@@ -79,7 +79,7 @@ test("rejects contradictory release intent", () => {
 test("requires release intent when published package fields change", () => {
   const headPackage = {
     ...basePackage,
-    peerDependencies: { react: ">=19 <20" },
+    peerDependencies: { react: ">=20 <21" },
   }
   const result = evaluateReleasePolicy({
     changedFiles: ["package.json"],

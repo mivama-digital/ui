@@ -19,14 +19,35 @@ const setDifference = (left, right) =>
 
 const validateModuleExport = (key, value) => {
   if (!value || typeof value !== "object") {
-    errors.push(`Module export must define types/import/default: ${key}`)
+    errors.push(`Module export must define ESM and CommonJS branches: ${key}`)
     return
   }
-  if (!value.types || !value.import || !value.default) {
+
+  const esm = value.import
+  const commonJs = value.require
+  if (
+    !esm ||
+    typeof esm !== "object" ||
+    typeof esm.types !== "string" ||
+    typeof esm.default !== "string" ||
+    !commonJs ||
+    typeof commonJs !== "object" ||
+    typeof commonJs.types !== "string" ||
+    typeof commonJs.default !== "string" ||
+    typeof value.default !== "string"
+  ) {
     errors.push(`Incomplete package export contract: ${key}`)
+    return
   }
-  if (value.import !== value.default) {
-    errors.push(`Import/default mismatch: ${key}`)
+
+  if (value.default !== esm.default) {
+    errors.push(`ESM/default mismatch: ${key}`)
+  }
+  if (!esm.default.endsWith(".js") || !commonJs.default.endsWith(".cjs")) {
+    errors.push(`Invalid ESM/CommonJS runtime targets: ${key}`)
+  }
+  if (!esm.types.endsWith(".d.ts") || !commonJs.types.endsWith(".d.cts")) {
+    errors.push(`Invalid ESM/CommonJS type targets: ${key}`)
   }
 }
 
@@ -80,7 +101,10 @@ for (const source of setDifference(registeredUiFiles, uiFiles)) {
 
 const moduleExportSlugs = new Set(
   Object.entries(packageJson.exports ?? {})
-    .filter(([key, value]) => key !== "." && typeof value === "object")
+    .filter(
+      ([key, value]) =>
+        key !== "." && !key.startsWith("./hooks/") && typeof value === "object"
+    )
     .map(([key]) => key.slice(2))
 )
 const registeredSlugs = new Set(components.map(({ slug }) => slug))
@@ -93,20 +117,17 @@ for (const slug of setDifference(registeredSlugs, moduleExportSlugs)) {
 }
 
 const sorted = [...components].sort((a, b) => a.slug.localeCompare(b.slug))
-const moduleSections = sorted.map(
-  ({ name, slug, category, status, client, interactive }) => {
-    const packageExport = packageJson.exports[`./${slug}`]
-    return `## \`@mivama/ui/${slug}\`
+const moduleSections = sorted.map(({ name, slug }) => {
+  const packageExport = packageJson.exports[`./${slug}`]
+  return `## \`@mivama/ui/${slug}\`
 
-- Primary component: ${name}
-- Category: ${category}
-- Status: ${status}
-- Client boundary: ${client ? "Yes" : "No"}
-- Interactive: ${interactive ? "Yes" : "No"}
-- Types: \`${packageExport.types}\`
-- Runtime: \`${packageExport.import}\``
-  }
-)
+- Official component: ${name}
+- Source: \`src/components/ui/${slug}.tsx\`
+- ESM types: \`${packageExport.import.types}\`
+- ESM runtime: \`${packageExport.import.default}\`
+- CommonJS types: \`${packageExport.require.types}\`
+- CommonJS runtime: \`${packageExport.require.default}\``
+})
 
 const stylesheetExports = Object.entries(packageJson.exports ?? {})
   .filter(([key, value]) => key !== "." && typeof value === "string")
@@ -124,13 +145,15 @@ const generated = `# Package exports
 
 This file is generated from \`config/components.mjs\` and \`package.json\`. Do not edit it manually.
 
-The registry is the authoritative catalog of public JavaScript/TypeScript component subpaths. Package export validation fails when a public module is missing from the registry or a registered module is missing from \`package.json\`.
+The registry is the authoritative inventory of the official shadcn/ui component subpaths. Package export validation fails when the source, registry, or \`package.json\` disagree.
 
 ## Root barrel
 
 - Import: \`@mivama/ui\`
-- Types: \`${rootExport?.types ?? "missing"}\`
-- Runtime: \`${rootExport?.import ?? "missing"}\`
+- ESM types: \`${rootExport?.import?.types ?? "missing"}\`
+- ESM runtime: \`${rootExport?.import?.default ?? "missing"}\`
+- CommonJS types: \`${rootExport?.require?.types ?? "missing"}\`
+- CommonJS runtime: \`${rootExport?.require?.default ?? "missing"}\`
 
 ## Component and module subpaths
 

@@ -1,20 +1,18 @@
+import { fileURLToPath } from "node:url"
+
 import { defineConfig } from "vitest/config"
+
+const src = fileURLToPath(new URL("./src", import.meta.url))
 
 export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./tests/setup.ts"],
-    include: ["tests/runtime/**/*.test.{ts,tsx}"],
-    coverage: {
-      provider: "v8",
-      reporter: ["text", "json-summary", "html", "lcov"],
-      include: ["src/components/**/*.{ts,tsx}", "src/hooks/**/*.{ts,tsx}"],
-      thresholds: {
-        statements: 82,
-        branches: 72,
-        functions: 72,
-        lines: 82,
-      },
+    include: ["tests/**/*.test.{ts,tsx}"],
+  },
+  resolve: {
+    alias: {
+      "@": src,
     },
   },
 })

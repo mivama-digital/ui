@@ -24,7 +24,7 @@ Use **No package release required** only for changes that do not alter the publi
 
 - [ ] No credentials, personal data, or generated secrets are included
 - [ ] GitHub Actions remain pinned to immutable commit SHAs
-- [ ] React 18/19 and SSR compatibility were considered
+- [ ] React 19 and SSR compatibility were considered
 - [ ] Breaking changes are explicitly identified
 
 ## Screenshots

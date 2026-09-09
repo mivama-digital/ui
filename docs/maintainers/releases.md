@@ -98,7 +98,6 @@ If only GitHub release synchronization fails after npm publication has already s
 
 The canonical `scripts/check-registry-release.mjs` probe verifies the exact package version that consumers receive from npm. It uses bounded retries for registry and attestation propagation, then validates:
 
-- Vite React 18 production build
 - Vite React 19 production build
 - Next.js App Router production build
 - SSR import/render path and public JavaScript/TypeScript subpaths

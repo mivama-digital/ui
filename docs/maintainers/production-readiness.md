@@ -19,7 +19,6 @@ Run this audit before declaring a release train or major design-system milestone
 
 ## Consumers
 
-- [ ] React 18 consumer is green
 - [ ] React 19 consumer is green
 - [ ] Vite production consumer is green
 - [ ] Next.js App Router consumer is green

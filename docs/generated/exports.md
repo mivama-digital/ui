@@ -2,739 +2,603 @@
 
 This file is generated from `config/components.mjs` and `package.json`. Do not edit it manually.
 
-The registry is the authoritative catalog of public JavaScript/TypeScript component subpaths. Package export validation fails when a public module is missing from the registry or a registered module is missing from `package.json`.
+The registry is the authoritative inventory of the official shadcn/ui component subpaths. Package export validation fails when the source, registry, or `package.json` disagree.
 
 ## Root barrel
 
 - Import: `@mivama/ui`
-- Types: `./dist/index.d.ts`
-- Runtime: `./dist/index.js`
+- ESM types: `./dist/index.d.ts`
+- ESM runtime: `./dist/index.js`
+- CommonJS types: `./dist/index.d.cts`
+- CommonJS runtime: `./dist/index.cjs`
 
 ## Component and module subpaths
 
 ## `@mivama/ui/accordion`
 
-- Primary component: Accordion
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/accordion.d.ts`
-- Runtime: `./dist/components/ui/accordion.js`
+- Official component: Accordion
+- Source: `src/components/ui/accordion.tsx`
+- ESM types: `./dist/components/ui/accordion.d.ts`
+- ESM runtime: `./dist/components/ui/accordion.js`
+- CommonJS types: `./dist/components/ui/accordion.d.cts`
+- CommonJS runtime: `./dist/components/ui/accordion.cjs`
 
 ## `@mivama/ui/alert`
 
-- Primary component: Alert
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/alert.d.ts`
-- Runtime: `./dist/components/ui/alert.js`
+- Official component: Alert
+- Source: `src/components/ui/alert.tsx`
+- ESM types: `./dist/components/ui/alert.d.ts`
+- ESM runtime: `./dist/components/ui/alert.js`
+- CommonJS types: `./dist/components/ui/alert.d.cts`
+- CommonJS runtime: `./dist/components/ui/alert.cjs`
 
 ## `@mivama/ui/alert-dialog`
 
-- Primary component: AlertDialog
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/alert-dialog.d.ts`
-- Runtime: `./dist/components/ui/alert-dialog.js`
+- Official component: Alert Dialog
+- Source: `src/components/ui/alert-dialog.tsx`
+- ESM types: `./dist/components/ui/alert-dialog.d.ts`
+- ESM runtime: `./dist/components/ui/alert-dialog.js`
+- CommonJS types: `./dist/components/ui/alert-dialog.d.cts`
+- CommonJS runtime: `./dist/components/ui/alert-dialog.cjs`
 
 ## `@mivama/ui/aspect-ratio`
 
-- Primary component: AspectRatio
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/aspect-ratio.d.ts`
-- Runtime: `./dist/components/ui/aspect-ratio.js`
+- Official component: Aspect Ratio
+- Source: `src/components/ui/aspect-ratio.tsx`
+- ESM types: `./dist/components/ui/aspect-ratio.d.ts`
+- ESM runtime: `./dist/components/ui/aspect-ratio.js`
+- CommonJS types: `./dist/components/ui/aspect-ratio.d.cts`
+- CommonJS runtime: `./dist/components/ui/aspect-ratio.cjs`
 
 ## `@mivama/ui/attachment`
 
-- Primary component: Attachment
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/attachment.d.ts`
-- Runtime: `./dist/components/ui/attachment.js`
+- Official component: Attachment
+- Source: `src/components/ui/attachment.tsx`
+- ESM types: `./dist/components/ui/attachment.d.ts`
+- ESM runtime: `./dist/components/ui/attachment.js`
+- CommonJS types: `./dist/components/ui/attachment.d.cts`
+- CommonJS runtime: `./dist/components/ui/attachment.cjs`
 
 ## `@mivama/ui/avatar`
 
-- Primary component: Avatar
-- Category: feedback
-- Status: stable
-- Client boundary: Yes
-- Interactive: No
-- Types: `./dist/components/ui/avatar.d.ts`
-- Runtime: `./dist/components/ui/avatar.js`
+- Official component: Avatar
+- Source: `src/components/ui/avatar.tsx`
+- ESM types: `./dist/components/ui/avatar.d.ts`
+- ESM runtime: `./dist/components/ui/avatar.js`
+- CommonJS types: `./dist/components/ui/avatar.d.cts`
+- CommonJS runtime: `./dist/components/ui/avatar.cjs`
 
 ## `@mivama/ui/badge`
 
-- Primary component: Badge
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/badge.d.ts`
-- Runtime: `./dist/components/ui/badge.js`
-
-## `@mivama/ui/bento-grid`
-
-- Primary component: BentoGrid
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/bento-grid.d.ts`
-- Runtime: `./dist/components/ui/bento-grid.js`
+- Official component: Badge
+- Source: `src/components/ui/badge.tsx`
+- ESM types: `./dist/components/ui/badge.d.ts`
+- ESM runtime: `./dist/components/ui/badge.js`
+- CommonJS types: `./dist/components/ui/badge.d.cts`
+- CommonJS runtime: `./dist/components/ui/badge.cjs`
 
 ## `@mivama/ui/breadcrumb`
 
-- Primary component: Breadcrumb
-- Category: navigation
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/breadcrumb.d.ts`
-- Runtime: `./dist/components/ui/breadcrumb.js`
+- Official component: Breadcrumb
+- Source: `src/components/ui/breadcrumb.tsx`
+- ESM types: `./dist/components/ui/breadcrumb.d.ts`
+- ESM runtime: `./dist/components/ui/breadcrumb.js`
+- CommonJS types: `./dist/components/ui/breadcrumb.d.cts`
+- CommonJS runtime: `./dist/components/ui/breadcrumb.cjs`
 
 ## `@mivama/ui/bubble`
 
-- Primary component: Bubble
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/bubble.d.ts`
-- Runtime: `./dist/components/ui/bubble.js`
+- Official component: Bubble
+- Source: `src/components/ui/bubble.tsx`
+- ESM types: `./dist/components/ui/bubble.d.ts`
+- ESM runtime: `./dist/components/ui/bubble.js`
+- CommonJS types: `./dist/components/ui/bubble.d.cts`
+- CommonJS runtime: `./dist/components/ui/bubble.cjs`
 
 ## `@mivama/ui/button`
 
-- Primary component: Button
-- Category: action
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/button.d.ts`
-- Runtime: `./dist/components/ui/button.js`
+- Official component: Button
+- Source: `src/components/ui/button.tsx`
+- ESM types: `./dist/components/ui/button.d.ts`
+- ESM runtime: `./dist/components/ui/button.js`
+- CommonJS types: `./dist/components/ui/button.d.cts`
+- CommonJS runtime: `./dist/components/ui/button.cjs`
 
 ## `@mivama/ui/button-group`
 
-- Primary component: ButtonGroup
-- Category: action
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/button-group.d.ts`
-- Runtime: `./dist/components/ui/button-group.js`
+- Official component: Button Group
+- Source: `src/components/ui/button-group.tsx`
+- ESM types: `./dist/components/ui/button-group.d.ts`
+- ESM runtime: `./dist/components/ui/button-group.js`
+- CommonJS types: `./dist/components/ui/button-group.d.cts`
+- CommonJS runtime: `./dist/components/ui/button-group.cjs`
 
 ## `@mivama/ui/calendar`
 
-- Primary component: Calendar
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/calendar.d.ts`
-- Runtime: `./dist/components/ui/calendar.js`
+- Official component: Calendar
+- Source: `src/components/ui/calendar.tsx`
+- ESM types: `./dist/components/ui/calendar.d.ts`
+- ESM runtime: `./dist/components/ui/calendar.js`
+- CommonJS types: `./dist/components/ui/calendar.d.cts`
+- CommonJS runtime: `./dist/components/ui/calendar.cjs`
 
 ## `@mivama/ui/card`
 
-- Primary component: Card
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/card.d.ts`
-- Runtime: `./dist/components/ui/card.js`
+- Official component: Card
+- Source: `src/components/ui/card.tsx`
+- ESM types: `./dist/components/ui/card.d.ts`
+- ESM runtime: `./dist/components/ui/card.js`
+- CommonJS types: `./dist/components/ui/card.d.cts`
+- CommonJS runtime: `./dist/components/ui/card.cjs`
 
 ## `@mivama/ui/carousel`
 
-- Primary component: Carousel
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/carousel.d.ts`
-- Runtime: `./dist/components/ui/carousel.js`
+- Official component: Carousel
+- Source: `src/components/ui/carousel.tsx`
+- ESM types: `./dist/components/ui/carousel.d.ts`
+- ESM runtime: `./dist/components/ui/carousel.js`
+- CommonJS types: `./dist/components/ui/carousel.d.cts`
+- CommonJS runtime: `./dist/components/ui/carousel.cjs`
 
 ## `@mivama/ui/chart`
 
-- Primary component: Chart
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/chart.d.ts`
-- Runtime: `./dist/components/ui/chart.js`
+- Official component: Chart
+- Source: `src/components/ui/chart.tsx`
+- ESM types: `./dist/components/ui/chart.d.ts`
+- ESM runtime: `./dist/components/ui/chart.js`
+- CommonJS types: `./dist/components/ui/chart.d.cts`
+- CommonJS runtime: `./dist/components/ui/chart.cjs`
 
 ## `@mivama/ui/checkbox`
 
-- Primary component: Checkbox
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/checkbox.d.ts`
-- Runtime: `./dist/components/ui/checkbox.js`
-
-## `@mivama/ui/choice`
-
-- Primary component: Choice
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/choice.d.ts`
-- Runtime: `./dist/components/ui/choice.js`
+- Official component: Checkbox
+- Source: `src/components/ui/checkbox.tsx`
+- ESM types: `./dist/components/ui/checkbox.d.ts`
+- ESM runtime: `./dist/components/ui/checkbox.js`
+- CommonJS types: `./dist/components/ui/checkbox.d.cts`
+- CommonJS runtime: `./dist/components/ui/checkbox.cjs`
 
 ## `@mivama/ui/collapsible`
 
-- Primary component: Collapsible
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/collapsible.d.ts`
-- Runtime: `./dist/components/ui/collapsible.js`
+- Official component: Collapsible
+- Source: `src/components/ui/collapsible.tsx`
+- ESM types: `./dist/components/ui/collapsible.d.ts`
+- ESM runtime: `./dist/components/ui/collapsible.js`
+- CommonJS types: `./dist/components/ui/collapsible.d.cts`
+- CommonJS runtime: `./dist/components/ui/collapsible.cjs`
 
 ## `@mivama/ui/combobox`
 
-- Primary component: Combobox
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/combobox.d.ts`
-- Runtime: `./dist/components/ui/combobox.js`
+- Official component: Combobox
+- Source: `src/components/ui/combobox.tsx`
+- ESM types: `./dist/components/ui/combobox.d.ts`
+- ESM runtime: `./dist/components/ui/combobox.js`
+- CommonJS types: `./dist/components/ui/combobox.d.cts`
+- CommonJS runtime: `./dist/components/ui/combobox.cjs`
 
 ## `@mivama/ui/command`
 
-- Primary component: Command
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/command.d.ts`
-- Runtime: `./dist/components/ui/command.js`
-
-## `@mivama/ui/container`
-
-- Primary component: Container
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/container.d.ts`
-- Runtime: `./dist/components/ui/container.js`
+- Official component: Command
+- Source: `src/components/ui/command.tsx`
+- ESM types: `./dist/components/ui/command.d.ts`
+- ESM runtime: `./dist/components/ui/command.js`
+- CommonJS types: `./dist/components/ui/command.d.cts`
+- CommonJS runtime: `./dist/components/ui/command.cjs`
 
 ## `@mivama/ui/context-menu`
 
-- Primary component: ContextMenu
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/context-menu.d.ts`
-- Runtime: `./dist/components/ui/context-menu.js`
+- Official component: Context Menu
+- Source: `src/components/ui/context-menu.tsx`
+- ESM types: `./dist/components/ui/context-menu.d.ts`
+- ESM runtime: `./dist/components/ui/context-menu.js`
+- CommonJS types: `./dist/components/ui/context-menu.d.cts`
+- CommonJS runtime: `./dist/components/ui/context-menu.cjs`
 
 ## `@mivama/ui/data-table`
 
-- Primary component: DataTable
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/data-table.d.ts`
-- Runtime: `./dist/components/ui/data-table.js`
+- Official component: Data Table
+- Source: `src/components/ui/data-table.tsx`
+- ESM types: `./dist/components/ui/data-table.d.ts`
+- ESM runtime: `./dist/components/ui/data-table.js`
+- CommonJS types: `./dist/components/ui/data-table.d.cts`
+- CommonJS runtime: `./dist/components/ui/data-table.cjs`
 
 ## `@mivama/ui/date-picker`
 
-- Primary component: DatePicker
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/date-picker.d.ts`
-- Runtime: `./dist/components/ui/date-picker.js`
+- Official component: Date Picker
+- Source: `src/components/ui/date-picker.tsx`
+- ESM types: `./dist/components/ui/date-picker.d.ts`
+- ESM runtime: `./dist/components/ui/date-picker.js`
+- CommonJS types: `./dist/components/ui/date-picker.d.cts`
+- CommonJS runtime: `./dist/components/ui/date-picker.cjs`
 
 ## `@mivama/ui/dialog`
 
-- Primary component: Dialog
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/dialog.d.ts`
-- Runtime: `./dist/components/ui/dialog.js`
+- Official component: Dialog
+- Source: `src/components/ui/dialog.tsx`
+- ESM types: `./dist/components/ui/dialog.d.ts`
+- ESM runtime: `./dist/components/ui/dialog.js`
+- CommonJS types: `./dist/components/ui/dialog.d.cts`
+- CommonJS runtime: `./dist/components/ui/dialog.cjs`
 
 ## `@mivama/ui/direction`
 
-- Primary component: Direction
-- Category: provider
-- Status: stable
-- Client boundary: Yes
-- Interactive: No
-- Types: `./dist/components/ui/direction.d.ts`
-- Runtime: `./dist/components/ui/direction.js`
+- Official component: Direction
+- Source: `src/components/ui/direction.tsx`
+- ESM types: `./dist/components/ui/direction.d.ts`
+- ESM runtime: `./dist/components/ui/direction.js`
+- CommonJS types: `./dist/components/ui/direction.d.cts`
+- CommonJS runtime: `./dist/components/ui/direction.cjs`
 
 ## `@mivama/ui/drawer`
 
-- Primary component: Drawer
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/drawer.d.ts`
-- Runtime: `./dist/components/ui/drawer.js`
+- Official component: Drawer
+- Source: `src/components/ui/drawer.tsx`
+- ESM types: `./dist/components/ui/drawer.d.ts`
+- ESM runtime: `./dist/components/ui/drawer.js`
+- CommonJS types: `./dist/components/ui/drawer.d.cts`
+- CommonJS runtime: `./dist/components/ui/drawer.cjs`
 
 ## `@mivama/ui/dropdown-menu`
 
-- Primary component: DropdownMenu
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/dropdown-menu.d.ts`
-- Runtime: `./dist/components/ui/dropdown-menu.js`
-
-## `@mivama/ui/editorial-grid`
-
-- Primary component: EditorialGrid
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/editorial-grid.d.ts`
-- Runtime: `./dist/components/ui/editorial-grid.js`
+- Official component: Dropdown Menu
+- Source: `src/components/ui/dropdown-menu.tsx`
+- ESM types: `./dist/components/ui/dropdown-menu.d.ts`
+- ESM runtime: `./dist/components/ui/dropdown-menu.js`
+- CommonJS types: `./dist/components/ui/dropdown-menu.d.cts`
+- CommonJS runtime: `./dist/components/ui/dropdown-menu.cjs`
 
 ## `@mivama/ui/empty`
 
-- Primary component: Empty
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/empty.d.ts`
-- Runtime: `./dist/components/ui/empty.js`
+- Official component: Empty
+- Source: `src/components/ui/empty.tsx`
+- ESM types: `./dist/components/ui/empty.d.ts`
+- ESM runtime: `./dist/components/ui/empty.js`
+- CommonJS types: `./dist/components/ui/empty.d.cts`
+- CommonJS runtime: `./dist/components/ui/empty.cjs`
 
 ## `@mivama/ui/field`
 
-- Primary component: Field
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/field.d.ts`
-- Runtime: `./dist/components/ui/field.js`
-
-## `@mivama/ui/forms`
-
-- Primary component: Forms
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/forms.d.ts`
-- Runtime: `./dist/forms.js`
+- Official component: Field
+- Source: `src/components/ui/field.tsx`
+- ESM types: `./dist/components/ui/field.d.ts`
+- ESM runtime: `./dist/components/ui/field.js`
+- CommonJS types: `./dist/components/ui/field.d.cts`
+- CommonJS runtime: `./dist/components/ui/field.cjs`
 
 ## `@mivama/ui/hover-card`
 
-- Primary component: HoverCard
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/hover-card.d.ts`
-- Runtime: `./dist/components/ui/hover-card.js`
+- Official component: Hover Card
+- Source: `src/components/ui/hover-card.tsx`
+- ESM types: `./dist/components/ui/hover-card.d.ts`
+- ESM runtime: `./dist/components/ui/hover-card.js`
+- CommonJS types: `./dist/components/ui/hover-card.d.cts`
+- CommonJS runtime: `./dist/components/ui/hover-card.cjs`
 
 ## `@mivama/ui/input`
 
-- Primary component: Input
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/input.d.ts`
-- Runtime: `./dist/components/ui/input.js`
+- Official component: Input
+- Source: `src/components/ui/input.tsx`
+- ESM types: `./dist/components/ui/input.d.ts`
+- ESM runtime: `./dist/components/ui/input.js`
+- CommonJS types: `./dist/components/ui/input.d.cts`
+- CommonJS runtime: `./dist/components/ui/input.cjs`
 
 ## `@mivama/ui/input-group`
 
-- Primary component: InputGroup
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/input-group.d.ts`
-- Runtime: `./dist/components/ui/input-group.js`
+- Official component: Input Group
+- Source: `src/components/ui/input-group.tsx`
+- ESM types: `./dist/components/ui/input-group.d.ts`
+- ESM runtime: `./dist/components/ui/input-group.js`
+- CommonJS types: `./dist/components/ui/input-group.d.cts`
+- CommonJS runtime: `./dist/components/ui/input-group.cjs`
 
 ## `@mivama/ui/input-otp`
 
-- Primary component: InputOTP
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/input-otp.d.ts`
-- Runtime: `./dist/components/ui/input-otp.js`
+- Official component: Input OTP
+- Source: `src/components/ui/input-otp.tsx`
+- ESM types: `./dist/components/ui/input-otp.d.ts`
+- ESM runtime: `./dist/components/ui/input-otp.js`
+- CommonJS types: `./dist/components/ui/input-otp.d.cts`
+- CommonJS runtime: `./dist/components/ui/input-otp.cjs`
 
 ## `@mivama/ui/item`
 
-- Primary component: Item
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/item.d.ts`
-- Runtime: `./dist/components/ui/item.js`
+- Official component: Item
+- Source: `src/components/ui/item.tsx`
+- ESM types: `./dist/components/ui/item.d.ts`
+- ESM runtime: `./dist/components/ui/item.js`
+- CommonJS types: `./dist/components/ui/item.d.cts`
+- CommonJS runtime: `./dist/components/ui/item.cjs`
 
 ## `@mivama/ui/kbd`
 
-- Primary component: Kbd
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/kbd.d.ts`
-- Runtime: `./dist/components/ui/kbd.js`
+- Official component: Kbd
+- Source: `src/components/ui/kbd.tsx`
+- ESM types: `./dist/components/ui/kbd.d.ts`
+- ESM runtime: `./dist/components/ui/kbd.js`
+- CommonJS types: `./dist/components/ui/kbd.d.cts`
+- CommonJS runtime: `./dist/components/ui/kbd.cjs`
+
+## `@mivama/ui/kbd-group`
+
+- Official component: Kbd Group
+- Source: `src/components/ui/kbd-group.tsx`
+- ESM types: `./dist/components/ui/kbd-group.d.ts`
+- ESM runtime: `./dist/components/ui/kbd-group.js`
+- CommonJS types: `./dist/components/ui/kbd-group.d.cts`
+- CommonJS runtime: `./dist/components/ui/kbd-group.cjs`
 
 ## `@mivama/ui/label`
 
-- Primary component: Label
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/label.d.ts`
-- Runtime: `./dist/components/ui/label.js`
+- Official component: Label
+- Source: `src/components/ui/label.tsx`
+- ESM types: `./dist/components/ui/label.d.ts`
+- ESM runtime: `./dist/components/ui/label.js`
+- CommonJS types: `./dist/components/ui/label.d.cts`
+- CommonJS runtime: `./dist/components/ui/label.cjs`
 
 ## `@mivama/ui/marker`
 
-- Primary component: Marker
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/marker.d.ts`
-- Runtime: `./dist/components/ui/marker.js`
+- Official component: Marker
+- Source: `src/components/ui/marker.tsx`
+- ESM types: `./dist/components/ui/marker.d.ts`
+- ESM runtime: `./dist/components/ui/marker.js`
+- CommonJS types: `./dist/components/ui/marker.d.cts`
+- CommonJS runtime: `./dist/components/ui/marker.cjs`
 
 ## `@mivama/ui/menubar`
 
-- Primary component: Menubar
-- Category: navigation
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/menubar.d.ts`
-- Runtime: `./dist/components/ui/menubar.js`
+- Official component: Menubar
+- Source: `src/components/ui/menubar.tsx`
+- ESM types: `./dist/components/ui/menubar.d.ts`
+- ESM runtime: `./dist/components/ui/menubar.js`
+- CommonJS types: `./dist/components/ui/menubar.d.cts`
+- CommonJS runtime: `./dist/components/ui/menubar.cjs`
 
 ## `@mivama/ui/message`
 
-- Primary component: Message
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/message.d.ts`
-- Runtime: `./dist/components/ui/message.js`
+- Official component: Message
+- Source: `src/components/ui/message.tsx`
+- ESM types: `./dist/components/ui/message.d.ts`
+- ESM runtime: `./dist/components/ui/message.js`
+- CommonJS types: `./dist/components/ui/message.d.cts`
+- CommonJS runtime: `./dist/components/ui/message.cjs`
 
 ## `@mivama/ui/message-scroller`
 
-- Primary component: MessageScroller
-- Category: feedback
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/message-scroller.d.ts`
-- Runtime: `./dist/components/ui/message-scroller.js`
+- Official component: Message Scroller
+- Source: `src/components/ui/message-scroller.tsx`
+- ESM types: `./dist/components/ui/message-scroller.d.ts`
+- ESM runtime: `./dist/components/ui/message-scroller.js`
+- CommonJS types: `./dist/components/ui/message-scroller.d.cts`
+- CommonJS runtime: `./dist/components/ui/message-scroller.cjs`
 
 ## `@mivama/ui/native-select`
 
-- Primary component: NativeSelect
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/native-select.d.ts`
-- Runtime: `./dist/components/ui/native-select.js`
+- Official component: Native Select
+- Source: `src/components/ui/native-select.tsx`
+- ESM types: `./dist/components/ui/native-select.d.ts`
+- ESM runtime: `./dist/components/ui/native-select.js`
+- CommonJS types: `./dist/components/ui/native-select.d.cts`
+- CommonJS runtime: `./dist/components/ui/native-select.cjs`
 
 ## `@mivama/ui/navigation-menu`
 
-- Primary component: NavigationMenu
-- Category: navigation
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/navigation-menu.d.ts`
-- Runtime: `./dist/components/ui/navigation-menu.js`
+- Official component: Navigation Menu
+- Source: `src/components/ui/navigation-menu.tsx`
+- ESM types: `./dist/components/ui/navigation-menu.d.ts`
+- ESM runtime: `./dist/components/ui/navigation-menu.js`
+- CommonJS types: `./dist/components/ui/navigation-menu.d.cts`
+- CommonJS runtime: `./dist/components/ui/navigation-menu.cjs`
 
 ## `@mivama/ui/pagination`
 
-- Primary component: Pagination
-- Category: navigation
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/pagination.d.ts`
-- Runtime: `./dist/components/ui/pagination.js`
+- Official component: Pagination
+- Source: `src/components/ui/pagination.tsx`
+- ESM types: `./dist/components/ui/pagination.d.ts`
+- ESM runtime: `./dist/components/ui/pagination.js`
+- CommonJS types: `./dist/components/ui/pagination.d.cts`
+- CommonJS runtime: `./dist/components/ui/pagination.cjs`
 
 ## `@mivama/ui/popover`
 
-- Primary component: Popover
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/popover.d.ts`
-- Runtime: `./dist/components/ui/popover.js`
+- Official component: Popover
+- Source: `src/components/ui/popover.tsx`
+- ESM types: `./dist/components/ui/popover.d.ts`
+- ESM runtime: `./dist/components/ui/popover.js`
+- CommonJS types: `./dist/components/ui/popover.d.cts`
+- CommonJS runtime: `./dist/components/ui/popover.cjs`
 
 ## `@mivama/ui/progress`
 
-- Primary component: Progress
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/progress.d.ts`
-- Runtime: `./dist/components/ui/progress.js`
-
-## `@mivama/ui/provider`
-
-- Primary component: MivamaProvider
-- Category: provider
-- Status: stable
-- Client boundary: Yes
-- Interactive: No
-- Types: `./dist/components/mivama-provider.d.ts`
-- Runtime: `./dist/components/mivama-provider.js`
+- Official component: Progress
+- Source: `src/components/ui/progress.tsx`
+- ESM types: `./dist/components/ui/progress.d.ts`
+- ESM runtime: `./dist/components/ui/progress.js`
+- CommonJS types: `./dist/components/ui/progress.d.cts`
+- CommonJS runtime: `./dist/components/ui/progress.cjs`
 
 ## `@mivama/ui/questionnaire`
 
-- Primary component: Questionnaire
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/questionnaire.d.ts`
-- Runtime: `./dist/components/ui/questionnaire.js`
+- Official component: Questionnaire
+- Source: `src/components/ui/questionnaire.tsx`
+- ESM types: `./dist/components/ui/questionnaire.d.ts`
+- ESM runtime: `./dist/components/ui/questionnaire.js`
+- CommonJS types: `./dist/components/ui/questionnaire.d.cts`
+- CommonJS runtime: `./dist/components/ui/questionnaire.cjs`
 
 ## `@mivama/ui/radio-group`
 
-- Primary component: RadioGroup
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/radio-group.d.ts`
-- Runtime: `./dist/components/ui/radio-group.js`
+- Official component: Radio Group
+- Source: `src/components/ui/radio-group.tsx`
+- ESM types: `./dist/components/ui/radio-group.d.ts`
+- ESM runtime: `./dist/components/ui/radio-group.js`
+- CommonJS types: `./dist/components/ui/radio-group.d.cts`
+- CommonJS runtime: `./dist/components/ui/radio-group.cjs`
 
 ## `@mivama/ui/resizable`
 
-- Primary component: Resizable
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/resizable.d.ts`
-- Runtime: `./dist/components/ui/resizable.js`
+- Official component: Resizable
+- Source: `src/components/ui/resizable.tsx`
+- ESM types: `./dist/components/ui/resizable.d.ts`
+- ESM runtime: `./dist/components/ui/resizable.js`
+- CommonJS types: `./dist/components/ui/resizable.d.cts`
+- CommonJS runtime: `./dist/components/ui/resizable.cjs`
 
 ## `@mivama/ui/scroll-area`
 
-- Primary component: ScrollArea
-- Category: layout
-- Status: stable
-- Client boundary: Yes
-- Interactive: No
-- Types: `./dist/components/ui/scroll-area.d.ts`
-- Runtime: `./dist/components/ui/scroll-area.js`
-
-## `@mivama/ui/scroll-scene`
-
-- Primary component: ScrollScene
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/scroll-scene.d.ts`
-- Runtime: `./dist/components/ui/scroll-scene.js`
-
-## `@mivama/ui/section`
-
-- Primary component: Section
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/section.d.ts`
-- Runtime: `./dist/components/ui/section.js`
+- Official component: Scroll Area
+- Source: `src/components/ui/scroll-area.tsx`
+- ESM types: `./dist/components/ui/scroll-area.d.ts`
+- ESM runtime: `./dist/components/ui/scroll-area.js`
+- CommonJS types: `./dist/components/ui/scroll-area.d.cts`
+- CommonJS runtime: `./dist/components/ui/scroll-area.cjs`
 
 ## `@mivama/ui/select`
 
-- Primary component: Select
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/select.d.ts`
-- Runtime: `./dist/components/ui/select.js`
+- Official component: Select
+- Source: `src/components/ui/select.tsx`
+- ESM types: `./dist/components/ui/select.d.ts`
+- ESM runtime: `./dist/components/ui/select.js`
+- CommonJS types: `./dist/components/ui/select.d.cts`
+- CommonJS runtime: `./dist/components/ui/select.cjs`
 
 ## `@mivama/ui/separator`
 
-- Primary component: Separator
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/separator.d.ts`
-- Runtime: `./dist/components/ui/separator.js`
+- Official component: Separator
+- Source: `src/components/ui/separator.tsx`
+- ESM types: `./dist/components/ui/separator.d.ts`
+- ESM runtime: `./dist/components/ui/separator.js`
+- CommonJS types: `./dist/components/ui/separator.d.cts`
+- CommonJS runtime: `./dist/components/ui/separator.cjs`
 
 ## `@mivama/ui/sheet`
 
-- Primary component: Sheet
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/sheet.d.ts`
-- Runtime: `./dist/components/ui/sheet.js`
+- Official component: Sheet
+- Source: `src/components/ui/sheet.tsx`
+- ESM types: `./dist/components/ui/sheet.d.ts`
+- ESM runtime: `./dist/components/ui/sheet.js`
+- CommonJS types: `./dist/components/ui/sheet.d.cts`
+- CommonJS runtime: `./dist/components/ui/sheet.cjs`
 
 ## `@mivama/ui/sidebar`
 
-- Primary component: Sidebar
-- Category: navigation
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/sidebar.d.ts`
-- Runtime: `./dist/components/ui/sidebar.js`
+- Official component: Sidebar
+- Source: `src/components/ui/sidebar.tsx`
+- ESM types: `./dist/components/ui/sidebar.d.ts`
+- ESM runtime: `./dist/components/ui/sidebar.js`
+- CommonJS types: `./dist/components/ui/sidebar.d.cts`
+- CommonJS runtime: `./dist/components/ui/sidebar.cjs`
 
 ## `@mivama/ui/skeleton`
 
-- Primary component: Skeleton
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/skeleton.d.ts`
-- Runtime: `./dist/components/ui/skeleton.js`
+- Official component: Skeleton
+- Source: `src/components/ui/skeleton.tsx`
+- ESM types: `./dist/components/ui/skeleton.d.ts`
+- ESM runtime: `./dist/components/ui/skeleton.js`
+- CommonJS types: `./dist/components/ui/skeleton.d.cts`
+- CommonJS runtime: `./dist/components/ui/skeleton.cjs`
 
 ## `@mivama/ui/slider`
 
-- Primary component: Slider
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/slider.d.ts`
-- Runtime: `./dist/components/ui/slider.js`
+- Official component: Slider
+- Source: `src/components/ui/slider.tsx`
+- ESM types: `./dist/components/ui/slider.d.ts`
+- ESM runtime: `./dist/components/ui/slider.js`
+- CommonJS types: `./dist/components/ui/slider.d.cts`
+- CommonJS runtime: `./dist/components/ui/slider.cjs`
 
 ## `@mivama/ui/spinner`
 
-- Primary component: Spinner
-- Category: feedback
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/spinner.d.ts`
-- Runtime: `./dist/components/ui/spinner.js`
+- Official component: Spinner
+- Source: `src/components/ui/spinner.tsx`
+- ESM types: `./dist/components/ui/spinner.d.ts`
+- ESM runtime: `./dist/components/ui/spinner.js`
+- CommonJS types: `./dist/components/ui/spinner.d.cts`
+- CommonJS runtime: `./dist/components/ui/spinner.cjs`
 
 ## `@mivama/ui/switch`
 
-- Primary component: Switch
-- Category: form
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/switch.d.ts`
-- Runtime: `./dist/components/ui/switch.js`
+- Official component: Switch
+- Source: `src/components/ui/switch.tsx`
+- ESM types: `./dist/components/ui/switch.d.ts`
+- ESM runtime: `./dist/components/ui/switch.js`
+- CommonJS types: `./dist/components/ui/switch.d.cts`
+- CommonJS runtime: `./dist/components/ui/switch.cjs`
 
 ## `@mivama/ui/table`
 
-- Primary component: Table
-- Category: layout
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/table.d.ts`
-- Runtime: `./dist/components/ui/table.js`
+- Official component: Table
+- Source: `src/components/ui/table.tsx`
+- ESM types: `./dist/components/ui/table.d.ts`
+- ESM runtime: `./dist/components/ui/table.js`
+- CommonJS types: `./dist/components/ui/table.d.cts`
+- CommonJS runtime: `./dist/components/ui/table.cjs`
 
 ## `@mivama/ui/tabs`
 
-- Primary component: Tabs
-- Category: navigation
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/tabs.d.ts`
-- Runtime: `./dist/components/ui/tabs.js`
+- Official component: Tabs
+- Source: `src/components/ui/tabs.tsx`
+- ESM types: `./dist/components/ui/tabs.d.ts`
+- ESM runtime: `./dist/components/ui/tabs.js`
+- CommonJS types: `./dist/components/ui/tabs.d.cts`
+- CommonJS runtime: `./dist/components/ui/tabs.cjs`
 
 ## `@mivama/ui/textarea`
 
-- Primary component: Textarea
-- Category: form
-- Status: stable
-- Client boundary: No
-- Interactive: Yes
-- Types: `./dist/components/ui/textarea.d.ts`
-- Runtime: `./dist/components/ui/textarea.js`
+- Official component: Textarea
+- Source: `src/components/ui/textarea.tsx`
+- ESM types: `./dist/components/ui/textarea.d.ts`
+- ESM runtime: `./dist/components/ui/textarea.js`
+- CommonJS types: `./dist/components/ui/textarea.d.cts`
+- CommonJS runtime: `./dist/components/ui/textarea.cjs`
 
 ## `@mivama/ui/toast`
 
-- Primary component: Toast
-- Category: feedback
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/toast.d.ts`
-- Runtime: `./dist/components/ui/toast.js`
+- Official component: Toast
+- Source: `src/components/ui/toast.tsx`
+- ESM types: `./dist/components/ui/toast.d.ts`
+- ESM runtime: `./dist/components/ui/toast.js`
+- CommonJS types: `./dist/components/ui/toast.d.cts`
+- CommonJS runtime: `./dist/components/ui/toast.cjs`
 
 ## `@mivama/ui/toggle`
 
-- Primary component: Toggle
-- Category: action
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/toggle.d.ts`
-- Runtime: `./dist/components/ui/toggle.js`
+- Official component: Toggle
+- Source: `src/components/ui/toggle.tsx`
+- ESM types: `./dist/components/ui/toggle.d.ts`
+- ESM runtime: `./dist/components/ui/toggle.js`
+- CommonJS types: `./dist/components/ui/toggle.d.cts`
+- CommonJS runtime: `./dist/components/ui/toggle.cjs`
 
 ## `@mivama/ui/toggle-group`
 
-- Primary component: ToggleGroup
-- Category: action
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/toggle-group.d.ts`
-- Runtime: `./dist/components/ui/toggle-group.js`
+- Official component: Toggle Group
+- Source: `src/components/ui/toggle-group.tsx`
+- ESM types: `./dist/components/ui/toggle-group.d.ts`
+- ESM runtime: `./dist/components/ui/toggle-group.js`
+- CommonJS types: `./dist/components/ui/toggle-group.d.cts`
+- CommonJS runtime: `./dist/components/ui/toggle-group.cjs`
 
 ## `@mivama/ui/tooltip`
 
-- Primary component: Tooltip
-- Category: overlay
-- Status: stable
-- Client boundary: Yes
-- Interactive: Yes
-- Types: `./dist/components/ui/tooltip.d.ts`
-- Runtime: `./dist/components/ui/tooltip.js`
+- Official component: Tooltip
+- Source: `src/components/ui/tooltip.tsx`
+- ESM types: `./dist/components/ui/tooltip.d.ts`
+- ESM runtime: `./dist/components/ui/tooltip.js`
+- CommonJS types: `./dist/components/ui/tooltip.d.cts`
+- CommonJS runtime: `./dist/components/ui/tooltip.cjs`
 
 ## `@mivama/ui/typography`
 
-- Primary component: Typography
-- Category: typography
-- Status: stable
-- Client boundary: No
-- Interactive: No
-- Types: `./dist/components/ui/typography.d.ts`
-- Runtime: `./dist/components/ui/typography.js`
+- Official component: Typography
+- Source: `src/components/ui/typography.tsx`
+- ESM types: `./dist/components/ui/typography.d.ts`
+- ESM runtime: `./dist/components/ui/typography.js`
+- CommonJS types: `./dist/components/ui/typography.d.cts`
+- CommonJS runtime: `./dist/components/ui/typography.cjs`
 
 ## Stylesheet exports
 
-- `@mivama/ui/reset.css` → `./dist/reset.css`
 - `@mivama/ui/styles.css` → `./dist/styles.css`
-- `@mivama/ui/themes.css` → `./dist/themes.css`
-- `@mivama/ui/tokens.css` → `./dist/tokens.css`

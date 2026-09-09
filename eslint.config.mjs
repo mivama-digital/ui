@@ -24,7 +24,7 @@ export default [
       "node_modules/**",
       "coverage/**",
       ".artifacts/**",
-      ".next/**",
+      "**/.next/**",
       ".vite/**",
       "out/**",
       "playwright-report/**",

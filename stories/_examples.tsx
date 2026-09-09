@@ -17,8 +17,6 @@ import {
   AttachmentTitle,
   AttachmentTrigger,
   Badge,
-  BentoGrid,
-  BentoGridItem,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -31,15 +29,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  Choice,
-  ChoiceGroup,
-  Container,
   Dialog,
   DialogContent,
   DialogDescription,
   DialogTitle,
   DialogTrigger,
-  EditorialGrid,
   Empty,
   EmptyDescription,
   EmptyHeader,
@@ -54,7 +48,6 @@ import {
   MessageContent,
   MessageFooter,
   MessageHeader,
-  MivamaProvider,
   Pagination,
   PaginationContent,
   PaginationItem,
@@ -65,9 +58,6 @@ import {
   ProgressLabel,
   ProgressValue,
   ScrollArea,
-  ScrollLayer,
-  ScrollScene,
-  Section,
   Select,
   Separator,
   Slider,
@@ -103,19 +93,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../src/index.js"
-
-export function MivamaProviderExample() {
-  return (
-    <MivamaProvider
-      theme="editorial"
-      density="compact"
-      className="rounded-xl border p-6"
-    >
-      <Heading variant="title">Provider shell</Heading>
-      <Text>The provider owns theme, density, and portal context.</Text>
-    </MivamaProvider>
-  )
-}
 
 export function ThemePreviewExample() {
   return (
@@ -190,22 +167,6 @@ export function BadgeExample() {
   return <Badge>Stable</Badge>
 }
 
-export function BentoGridExample() {
-  return (
-    <BentoGrid className="w-[44rem] max-w-full">
-      <BentoGridItem className="rounded-xl border bg-card p-5">
-        Primary story
-      </BentoGridItem>
-      <BentoGridItem className="rounded-xl border bg-card p-5">
-        Supporting story
-      </BentoGridItem>
-      <BentoGridItem className="rounded-xl border bg-card p-5">
-        Signal
-      </BentoGridItem>
-    </BentoGrid>
-  )
-}
-
 export function BreadcrumbExample() {
   return (
     <Breadcrumb>
@@ -248,33 +209,6 @@ export function CardExample() {
   )
 }
 
-export function ChoiceExample() {
-  return (
-    <ChoiceGroup className="w-72">
-      <legend className="text-sm font-medium">Notification level</legend>
-      <label className="flex items-center gap-2">
-        <Choice type="radio" name="notification-level" defaultChecked />
-        All activity
-      </label>
-      <label className="flex items-center gap-2">
-        <Choice type="radio" name="notification-level" />
-        Mentions only
-      </label>
-    </ChoiceGroup>
-  )
-}
-
-export function ContainerExample() {
-  return (
-    <Container size="reading" className="rounded-xl border bg-card py-6">
-      <Heading variant="title">Reading container</Heading>
-      <Text>
-        Container centralizes responsive width and page gutter behavior.
-      </Text>
-    </Container>
-  )
-}
-
 export function DialogExample() {
   return (
     <Dialog>
@@ -287,22 +221,6 @@ export function DialogExample() {
         <Input aria-label="Change note" placeholder="Optional note" />
       </DialogContent>
     </Dialog>
-  )
-}
-
-export function EditorialGridExample() {
-  return (
-    <EditorialGrid className="w-[48rem] max-w-full">
-      <Card>
-        <CardContent className="p-5">Lead</CardContent>
-      </Card>
-      <Card>
-        <CardContent className="p-5">Analysis</CardContent>
-      </Card>
-      <Card>
-        <CardContent className="p-5">Context</CardContent>
-      </Card>
-    </EditorialGrid>
   )
 }
 
@@ -382,35 +300,6 @@ export function ProgressExample() {
       <ProgressLabel>Migration</ProgressLabel>
       <ProgressValue />
     </Progress>
-  )
-}
-
-export function ScrollSceneExample() {
-  return (
-    <ScrollScene className="w-[32rem] max-w-full rounded-xl border bg-card p-6">
-      <ScrollLayer effect="reveal" distance={16}>
-        <Heading variant="title">Progressive motion</Heading>
-        <Text>
-          Scroll effects fall back cleanly and respect reduced motion.
-        </Text>
-      </ScrollLayer>
-    </ScrollScene>
-  )
-}
-
-export function SectionExample() {
-  return (
-    <Section
-      density="compact"
-      className="w-[40rem] max-w-full rounded-xl border"
-    >
-      <Container size="reading">
-        <Heading variant="title">Section rhythm</Heading>
-        <Text>
-          Section owns vertical rhythm without fixing document semantics.
-        </Text>
-      </Container>
-    </Section>
   )
 }
 
@@ -584,26 +473,6 @@ export function TypographyExample() {
       <Text>
         Typography primitives use shared semantic tokens across themes.
       </Text>
-    </div>
-  )
-}
-
-export function FormsExample() {
-  return (
-    <div className="grid w-80 max-w-full gap-5">
-      <Field>
-        <FieldLabel htmlFor="forms-name">Name</FieldLabel>
-        <Input id="forms-name" />
-        <FieldDescription>Canonical form-field composition.</FieldDescription>
-      </Field>
-      <Select aria-label="Plan" defaultValue="team">
-        <option value="personal">Personal</option>
-        <option value="team">Team</option>
-      </Select>
-      <label className="flex items-center gap-2">
-        <Choice type="checkbox" /> Email updates
-      </label>
-      <Textarea aria-label="Notes" placeholder="Notes" />
     </div>
   )
 }

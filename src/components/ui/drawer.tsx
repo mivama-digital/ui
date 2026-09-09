@@ -1,223 +1,111 @@
-"use client"
-
 import * as React from "react"
-import { Drawer as DrawerPrimitive } from "@base-ui/react/drawer"
+import { Drawer as DrawerPrimitive } from "vaul"
 
-import { useMivamaPortalContainer } from "../mivama-provider.js"
-import { useShellAttributes } from "../../lib/shell-attributes.js"
-import { cn } from "../../lib/utils.js"
+import { cn } from "@/lib/utils"
 
-type DrawerContextProps = {
-  hasSnapPoints: boolean
-  modal: DrawerPrimitive.Root.Props["modal"]
-  showSwipeHandle: boolean
-  swipeDirection: NonNullable<DrawerPrimitive.Root.Props["swipeDirection"]>
-}
-
-const DrawerContext = React.createContext<DrawerContextProps | null>(null)
-
-function useDrawer() {
-  const context = React.useContext(DrawerContext)
-
-  if (!context) {
-    throw new Error("useDrawer must be used within a Drawer.")
-  }
-
-  return context
-}
-
-function Drawer({
-  modal = true,
-  showSwipeHandle = false,
-  snapPoints,
-  swipeDirection = "down",
+const Drawer = ({
+  shouldScaleBackground = true,
   ...props
-}: DrawerPrimitive.Root.Props & {
-  showSwipeHandle?: boolean
-}) {
-  const hasSnapPoints = snapPoints != null && snapPoints.length > 0
-  const contextValue = React.useMemo(
-    () => ({ hasSnapPoints, modal, showSwipeHandle, swipeDirection }),
-    [hasSnapPoints, modal, showSwipeHandle, swipeDirection]
-  )
+}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+  <DrawerPrimitive.Root
+    shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />
+)
+Drawer.displayName = "Drawer"
 
-  return (
-    <DrawerContext.Provider value={contextValue}>
-      <DrawerPrimitive.Root
-        data-slot="drawer"
-        modal={modal}
-        snapPoints={snapPoints}
-        swipeDirection={swipeDirection}
-        {...props}
-      />
-    </DrawerContext.Provider>
-  )
-}
+const DrawerTrigger = DrawerPrimitive.Trigger
 
-function DrawerTrigger({ ...props }: DrawerPrimitive.Trigger.Props) {
-  return <DrawerPrimitive.Trigger data-slot="drawer-trigger" {...props} />
-}
+const DrawerPortal = DrawerPrimitive.Portal
 
-function DrawerPortal({ container, ...props }: DrawerPrimitive.Portal.Props) {
-  const providerContainer = useMivamaPortalContainer()
+const DrawerClose = DrawerPrimitive.Close
 
-  return (
-    <DrawerPrimitive.Portal
-      data-slot="drawer-portal"
-      container={container ?? providerContainer}
-      {...props}
-    />
-  )
-}
+const DrawerOverlay = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
+>(({ className, ...props }, ref) => (
+  <DrawerPrimitive.Overlay
+    ref={ref}
+    className={cn("fixed inset-0 z-50 bg-black/80", className)}
+    {...props}
+  />
+))
+DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 
-function DrawerClose({ ...props }: DrawerPrimitive.Close.Props) {
-  return <DrawerPrimitive.Close data-slot="drawer-close" {...props} />
-}
-
-function DrawerOverlay({
-  className,
-  ...props
-}: DrawerPrimitive.Backdrop.Props) {
-  useShellAttributes("[data-slot=drawer-overlay]")
-
-  return (
-    <DrawerPrimitive.Backdrop
-      data-slot="drawer-overlay"
+const DrawerContent = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+  <DrawerPortal>
+    <DrawerOverlay />
+    <DrawerPrimitive.Content
+      ref={ref}
       className={cn(
-        "fixed inset-0 z-50 min-h-dvh bg-overlay select-none transition-opacity duration-(--motion-duration-default) ease-(--motion-easing-standard) data-ending-style:pointer-events-none data-ending-style:opacity-0 data-starting-style:opacity-0 supports-backdrop-filter:backdrop-blur-xs motion-reduce:transition-none",
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
         className
       )}
       {...props}
-    />
-  )
-}
+    >
+      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
+      {children}
+    </DrawerPrimitive.Content>
+  </DrawerPortal>
+))
+DrawerContent.displayName = "DrawerContent"
 
-function DrawerSwipeHandle({
+const DrawerHeader = ({
   className,
   ...props
-}: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="drawer-swipe-handle"
-      aria-hidden="true"
-      className={cn(
-        "relative z-10 flex h-1.5 w-12 shrink-0 cursor-grab rounded-full bg-muted transition-opacity duration-200 active:cursor-grabbing",
-        className
-      )}
-      {...props}
-    />
-  )
-}
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}
+    {...props}
+  />
+)
+DrawerHeader.displayName = "DrawerHeader"
 
-function DrawerContent({
-  className,
-  children,
-  container,
-  ...props
-}: DrawerPrimitive.Popup.Props & {
-  container?: HTMLElement | null
-}) {
-  useShellAttributes("[data-slot=drawer-content]")
-  const { hasSnapPoints, modal, showSwipeHandle, swipeDirection } = useDrawer()
-  const swipeAxis =
-    swipeDirection === "down" || swipeDirection === "up" ? "y" : "x"
-
-  return (
-    <DrawerPortal container={container}>
-      {modal === true && (
-        <DrawerOverlay data-snap-points={hasSnapPoints ? "" : undefined} />
-      )}
-      <DrawerPrimitive.Viewport
-        data-slot="drawer-viewport"
-        data-modal={modal}
-        className="pointer-events-none fixed inset-0 z-50 select-none data-[modal=true]:pointer-events-auto"
-      >
-        <DrawerPrimitive.Popup
-          data-slot="drawer-popup"
-          data-swipe-axis={swipeAxis}
-          data-snap-points={hasSnapPoints ? "" : undefined}
-          className={cn(
-            "group/drawer-popup pointer-events-auto fixed z-50 flex flex-col bg-popover text-popover-foreground shadow-(--shadow-elevated) outline-none select-none",
-            "data-[swipe-direction=down]:inset-x-0 data-[swipe-direction=down]:bottom-0 data-[swipe-direction=down]:max-h-[80dvh] data-[swipe-direction=down]:rounded-t-lg data-[swipe-direction=down]:border-t",
-            "data-[swipe-direction=up]:inset-x-0 data-[swipe-direction=up]:top-0 data-[swipe-direction=up]:max-h-[80dvh] data-[swipe-direction=up]:rounded-b-lg data-[swipe-direction=up]:border-b",
-            "data-[swipe-direction=right]:inset-y-0 data-[swipe-direction=right]:right-0 data-[swipe-direction=right]:w-3/4 data-[swipe-direction=right]:border-l sm:data-[swipe-direction=right]:max-w-sm",
-            "data-[swipe-direction=left]:inset-y-0 data-[swipe-direction=left]:left-0 data-[swipe-direction=left]:w-3/4 data-[swipe-direction=left]:border-r sm:data-[swipe-direction=left]:max-w-sm",
-            "transition-[transform,opacity] duration-(--motion-duration-default) ease-(--motion-easing-standard) motion-reduce:transition-none",
-            className
-          )}
-          {...props}
-        >
-          {showSwipeHandle && (
-            <div className="flex justify-center pt-3 pb-1">
-              <DrawerSwipeHandle />
-            </div>
-          )}
-          <DrawerPrimitive.Content
-            data-slot="drawer-content"
-            className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain rounded-[inherit] select-text"
-          >
-            {children}
-          </DrawerPrimitive.Content>
-        </DrawerPrimitive.Popup>
-      </DrawerPrimitive.Viewport>
-    </DrawerPortal>
-  )
-}
-
-function DrawerHeader({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="drawer-header"
-      className={cn(
-        "flex flex-col gap-1.5 p-4 text-center sm:text-left",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-function DrawerFooter({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="drawer-footer"
-      className={cn("mt-auto flex flex-col gap-2 p-4", className)}
-      {...props}
-    />
-  )
-}
-
-function DrawerTitle({ className, ...props }: DrawerPrimitive.Title.Props) {
-  return (
-    <DrawerPrimitive.Title
-      data-slot="drawer-title"
-      className={cn(
-        "font-heading text-lg font-semibold leading-none tracking-tight text-foreground",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-function DrawerDescription({
+const DrawerFooter = ({
   className,
   ...props
-}: DrawerPrimitive.Description.Props) {
-  return (
-    <DrawerPrimitive.Description
-      data-slot="drawer-description"
-      className={cn("text-sm text-muted-foreground", className)}
-      {...props}
-    />
-  )
-}
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn("mt-auto flex flex-col gap-2 p-4", className)}
+    {...props}
+  />
+)
+DrawerFooter.displayName = "DrawerFooter"
+
+const DrawerTitle = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <DrawerPrimitive.Title
+    ref={ref}
+    className={cn(
+      "text-lg font-semibold leading-none tracking-tight",
+      className
+    )}
+    {...props}
+  />
+))
+DrawerTitle.displayName = DrawerPrimitive.Title.displayName
+
+const DrawerDescription = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
+>(({ className, ...props }, ref) => (
+  <DrawerPrimitive.Description
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+    {...props}
+  />
+))
+DrawerDescription.displayName = DrawerPrimitive.Description.displayName
 
 export {
   Drawer,
   DrawerPortal,
   DrawerOverlay,
-  DrawerSwipeHandle,
   DrawerTrigger,
   DrawerClose,
   DrawerContent,

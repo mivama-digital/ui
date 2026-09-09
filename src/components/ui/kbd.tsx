@@ -1,30 +1,16 @@
 import * as React from "react"
+import { cn } from "@/lib/utils"
 
-import { cn } from "../../lib/utils.js"
+interface KbdProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-function Kbd({ className, ...props }: React.ComponentProps<"kbd">) {
+export function Kbd({ className, ...props }: KbdProps) {
   return (
-    <kbd
-      data-slot="kbd"
+    <div
       className={cn(
-        "pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 rounded-sm bg-muted px-1 font-sans text-xs font-medium text-muted-foreground select-none",
-        "[&_svg:not([class*='size-'])]:size-3",
-        "[[data-slot=tooltip-content]_&]:bg-background/20 [[data-slot=tooltip-content]_&]:text-background dark:[[data-slot=tooltip-content]_&]:bg-background/10",
+        "inline-flex h-6 items-center gap-1 rounded border border-border bg-background px-1.5 font-mono text-[11px] font-medium shadow-sm",
         className
       )}
       {...props}
     />
   )
 }
-
-function KbdGroup({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <kbd
-      data-slot="kbd-group"
-      className={cn("inline-flex items-center gap-1", className)}
-      {...props}
-    />
-  )
-}
-
-export { Kbd, KbdGroup }

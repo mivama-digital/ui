@@ -1,14 +1,16 @@
-import { FormsExample } from "./_examples.js"
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
+import { Kbd } from "../src/components/ui/kbd.js"
+import { KbdGroup } from "../src/components/ui/kbd-group.js"
+
 const meta = {
-  title: "Form/Forms",
+  title: "Feedback/Kbd Group",
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
     docs: {
       description: {
-        component: "Canonical aggregate entry point for form primitives.",
+        component: "Groups related keyboard key indicators.",
       },
     },
   },
@@ -19,5 +21,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
-  render: () => <FormsExample />,
+  render: () => (
+    <KbdGroup>
+      <Kbd>⌘</Kbd>
+      <Kbd>K</Kbd>
+    </KbdGroup>
+  ),
 }

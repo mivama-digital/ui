@@ -1,6 +1,6 @@
 # @mivama/ui
 
-Shared Mivama design tokens and React UI primitives for websites, portals, and product surfaces. Complete shadcn/ui distribution with 72 accessible components (64 official components + 8 Mivama extensions) built on Base UI 1.7.0.
+Shared Mivama design tokens and React UI primitives for websites, portals, and product surfaces. Complete shadcn/ui distribution with exactly 64 official components and no proprietary React extensions, built on Base UI 1.7.0.
 
 ## Installation
 
@@ -13,32 +13,34 @@ npm install @mivama/ui
 ## Quick start
 
 ```tsx
-import { MivamaProvider, Button, Toaster } from "@mivama/ui"
+import { Button } from "@mivama/ui/button"
+import { Toaster } from "@mivama/ui/toast"
 import "@mivama/ui/styles.css"
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
-    <MivamaProvider theme="product">
+    <div data-mivama-theme="product">
       {children}
       <Toaster />
-    </MivamaProvider>
+    </div>
   )
 }
 ```
 
-`MivamaProvider` is the canonical application-shell integration. It owns the shared theme/density context and the portal container used by portaled components such as Dialog, Sheet, Drawer, Popover, and Tooltip.
+Theming and density are applied directly via `data-mivama-theme` and `data-density` shell attributes or classes. Overlays (Dialog, Sheet, Drawer, Popover, Tooltip) render into portals with optional custom `container` props.
 
 Frequently used modules can bypass the root barrel using clean subpath imports:
 
 ```tsx
 import { Button } from "@mivama/ui/button"
 import { Card } from "@mivama/ui/card"
-import { Field, Input } from "@mivama/ui/forms"
+import { Field } from "@mivama/ui/field"
+import { Input } from "@mivama/ui/input"
 import { DataTable } from "@mivama/ui/data-table"
 import { ChartContainer } from "@mivama/ui/chart"
 ```
 
-- For the complete API catalog and usage examples for all 72 components, see [`docs/components.md`](docs/components.md).
+- For the complete API catalog and usage examples for all 64 official components, see [`docs/components.md`](docs/components.md).
 - For upstream parity tracking against shadcn/ui, see [`docs/upstream/component-parity.md`](docs/upstream/component-parity.md).
 - For migrating from prior Mivama releases, see [`docs/migration/shadcn-compatible-release.md`](docs/migration/shadcn-compatible-release.md).
 - The authoritative public module and stylesheet catalog is generated from the component registry and package export map in [`docs/generated/exports.md`](docs/generated/exports.md). Do not maintain a second export inventory in this README.
@@ -66,15 +68,7 @@ import "@mivama/ui/themes.css"
 
 When importing them separately, load tokens before themes and include the component styles needed by the application.
 
-Themes and density are explicit application-shell contracts:
-
-```tsx
-<MivamaProvider theme="portal" density="compact" className="dark">
-  ...
-</MivamaProvider>
-```
-
-Equivalent shell attributes are:
+Themes and density are applied via HTML attributes or CSS classes on the application container or root element:
 
 ```html
 <main data-mivama-theme="portal" data-density="compact" class="dark">...</main>
@@ -82,20 +76,20 @@ Equivalent shell attributes are:
 
 Supported themes are `product`, `editorial`, and `portal`. Supported densities are `comfortable` and `compact`. The root stylesheet defaults to product/comfortable so a consumer still has a complete zero-configuration base theme.
 
-For the editorial palette, use the canonical selector:
+For the editorial palette, use `data-mivama-theme="editorial"`:
 
 ```tsx
-<MivamaProvider theme="editorial">
-  <Section tone="brand">
+<div data-mivama-theme="editorial">
+  <section className="space-y-4">
     <Heading variant="statement" tone="inherit">
       Clear systems. Useful outcomes.
     </Heading>
     <Button variant="inverse">Start a project</Button>
-  </Section>
-</MivamaProvider>
+  </section>
+</div>
 ```
 
-The old `.mivama-editorial-theme` class remains only as a v3 compatibility alias. New code must use `theme="editorial"` or `data-mivama-theme="editorial"`; removal of the alias is tracked for v4 in issue #59.
+The old `.mivama-editorial-theme` class remains only as a v3 compatibility alias. New code must use `data-mivama-theme="editorial"`; removal of the alias is tracked for v4 in issue #59.
 
 ## Design tokens
 
@@ -103,7 +97,7 @@ The package owns shared color, layout, typography, shape, focus, density, shadow
 
 Common groups include:
 
-- layout: `--page-gutter`, `--container-*`, `--section-*`, `--layout-gap`, `--content-stack`, `--card-grid-gap`
+- layout: `--page-gutter`, `--layout-gap`, `--content-stack`, `--card-grid-gap`
 - surfaces/text: `--background`, `--foreground`, `--surface`, `--surface-elevated`, `--card`, `--popover`
 - actions: `--primary`, `--secondary`, `--accent`, `--destructive`, `--success`, `--warning`
 - controls: `--muted`, `--border`, `--border-strong`, `--input`, `--ring`, `--focus-ring`, `--overlay`
@@ -117,9 +111,7 @@ Tailwind exposes the maintained semantic color utilities such as `bg-surface`, `
 
 ## Layout and typography
 
-Use `Container` and `Section` for shared page width and vertical rhythm instead of recreating application-specific layout constants.
-
-`EditorialGrid` provides the larger editorial grid contract; `BentoGrid` and `BentoGridItem` provide the smaller card-layout primitive.
+Use standard Tailwind flex/grid utilities and semantic HTML for layout structure.
 
 Use `Heading`, `Text`, and `Eyebrow` for shared typography roles. The visual role is independent from the rendered element:
 
@@ -136,14 +128,14 @@ Use `tone="inherit"` when text should inherit the foreground color of a brand or
 
 `Field`, `FieldLabel`, `FieldDescription`, `FieldError`, `Fieldset`, and `FieldLegend` provide semantic composition without taking control of consumer IDs.
 
-`Choice` renders native checkbox/radio controls and `Select` renders a native select. Consumers retain control of `htmlFor`, `aria-describedby`, and `aria-invalid`.
+Official form controls include `Input`, `Textarea`, `Checkbox`, `RadioGroup`, `Select`, `NativeSelect`, `Switch`, and `Slider`. Consumers retain full control of `htmlFor`, `aria-describedby`, and `aria-invalid`.
 
 ```tsx
 <Field>
   <FieldLabel htmlFor="region">Region</FieldLabel>
-  <Select id="region" aria-describedby="region-help">
+  <NativeSelect id="region" aria-describedby="region-help">
     <option value="eu">Europe</option>
-  </Select>
+  </NativeSelect>
   <FieldDescription id="region-help">
     Used to route your enquiry.
   </FieldDescription>
@@ -164,7 +156,7 @@ The package includes functional keyboard/focus contracts, reduced-motion/contras
 
 ## Motion
 
-`ScrollScene` and `ScrollLayer` are server-compatible wrappers. Reveal is the default; parallax uses bounded transform-only motion. Unsupported browsers, mobile viewports, and reduced-motion preferences receive a complete static layout.
+Transitions and animations use CSS tokens (`--motion-duration-*`, `--motion-easing-*`) with strict accessibility support. Media query `@media (prefers-reduced-motion: reduce)` automatically disables non-essential animations across all components.
 
 Consumer-owned animation should respect reduced-motion preferences rather than relying only on the package fallback.
 
@@ -179,7 +171,7 @@ npm run verify
 
 `npm run verify` includes linting, formatting, source/workflow audits, registry and Storybook coverage, type checking, package build, API checks, bundle budgets, runtime/contract coverage, packed-package validation, Publint, and Are The Types Wrong checks.
 
-Browser compatibility is covered separately by Playwright across Chromium, Firefox, and WebKit. Consumer CI validates React 18, React 19, Vite, Next.js App Router, SSR imports, and tree shaking using the packed package contract.
+Browser compatibility is covered separately by Playwright across Chromium, Firefox, and WebKit. Consumer CI validates React 19, Vite, Next.js App Router, SSR imports, and tree shaking using the packed package contract. React >=19 is required.
 
 ## Registry sync
 

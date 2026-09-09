@@ -1,4 +1,4 @@
-import { CardExample } from "./_examples.js"
+import { CardExample, ThemePreviewExample } from "./_examples.js"
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
 const meta = {
@@ -20,4 +20,8 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => <CardExample />,
+}
+
+export const ThemePreview: Story = {
+  render: () => <ThemePreviewExample />,
 }
