@@ -30,20 +30,18 @@ export const Basic: Story = {
         <h4 className="text-sm font-semibold">
           @peduarte starred 3 repositories
         </h4>
-        <CollapsibleTrigger
-          render={
-            <Button variant="ghost" size="sm">
-              Toggle
-            </Button>
-          }
-        />
+        <CollapsibleTrigger asChild>
+          <Button variant="ghost" size="sm">
+            Toggle
+          </Button>
+        </CollapsibleTrigger>
       </div>
       <div className="rounded-md border border-border px-4 py-2 font-mono text-sm">
         @radix-ui/primitives
       </div>
       <CollapsibleContent className="space-y-2">
         <div className="rounded-md border border-border px-4 py-2 font-mono text-sm">
-          @base-ui/react
+          @radix-ui/react-collapsible
         </div>
         <div className="rounded-md border border-border px-4 py-2 font-mono text-sm">
           @mivama/ui

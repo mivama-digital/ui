@@ -6,7 +6,11 @@ function collectEntries(dir: string, base = ""): Record<string, string> {
   const entries: Record<string, string> = {}
   if (!fs.existsSync(dir)) return entries
 
-  for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+  const items = fs
+    .readdirSync(dir, { withFileTypes: true })
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  for (const item of items) {
     const fullPath = path.join(dir, item.name)
     const relPath = base ? path.join(base, item.name) : item.name
     if (item.isDirectory()) {
@@ -24,7 +28,16 @@ function collectEntries(dir: string, base = ""): Record<string, string> {
   return entries
 }
 
-const allEntries = collectEntries(path.resolve(process.cwd(), "src"))
+const rawEntries = collectEntries(path.resolve(process.cwd(), "src"))
+const allEntries: Record<string, string> = Object.keys(rawEntries)
+  .sort()
+  .reduce(
+    (acc, key) => {
+      acc[key] = rawEntries[key]
+      return acc
+    },
+    {} as Record<string, string>
+  )
 
 const packageJson = JSON.parse(
   fs.readFileSync(path.resolve(process.cwd(), "package.json"), "utf8")
@@ -40,7 +53,7 @@ const runtimeExternal = [
 export default defineConfig({
   entry: allEntries,
   format: ["esm", "cjs"],
-  dts: true,
+  dts: false,
   sourcemap: true,
   clean: false,
   target: "es2022",

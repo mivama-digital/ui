@@ -1,11 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import {
-  Bubble,
-  BubbleContent,
-  BubbleGroup,
-  BubbleReactions,
-} from "../src/components/ui/bubble.js"
+import { Bubble } from "../src/components/ui/bubble.js"
 
 const meta = {
   title: "Feedback/Bubble",
@@ -15,7 +10,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Message bubble component with support for alignments and reactions.",
+          "Message bubble component with support for sent and received variants.",
       },
     },
   },
@@ -27,16 +22,9 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <BubbleGroup className="w-80">
-      <Bubble variant="default" align="start">
-        <BubbleContent>Hello! How can I help you today?</BubbleContent>
-        <BubbleReactions>👍 1</BubbleReactions>
-      </Bubble>
-      <Bubble variant="secondary" align="end">
-        <BubbleContent>
-          I have a question about the design system.
-        </BubbleContent>
-      </Bubble>
-    </BubbleGroup>
+    <div className="flex w-80 flex-col gap-2">
+      <Bubble variant="received">Hello! How can I help you today?</Bubble>
+      <Bubble variant="sent">I have a question about the design system.</Bubble>
+    </div>
   ),
 }

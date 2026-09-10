@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
-import { toast, ToastRootProvider } from "../src/components/ui/toast.js"
+import { toast, Toast } from "../src/components/ui/toast.js"
 import { Button } from "../src/components/ui/button.js"
 
 const meta = {
@@ -21,12 +21,12 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <ToastRootProvider>
+    <div>
+      <Toast />
       <div className="flex gap-2">
         <Button
           onClick={() =>
-            toast({
-              title: "Scheduled: Catch up",
+            toast("Scheduled: Catch up", {
               description: "Friday, February 10, 2026 at 5:57 PM",
             })
           }
@@ -44,6 +44,6 @@ export const Basic: Story = {
           Destructive Toast
         </Button>
       </div>
-    </ToastRootProvider>
+    </div>
   ),
 }

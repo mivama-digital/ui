@@ -35,10 +35,10 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
-      <DirectionProvider direction="ltr">
+      <DirectionProvider dir="ltr">
         <DirectionIndicator />
       </DirectionProvider>
-      <DirectionProvider direction="rtl">
+      <DirectionProvider dir="rtl">
         <DirectionIndicator />
       </DirectionProvider>
     </div>

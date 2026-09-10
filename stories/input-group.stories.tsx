@@ -1,11 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-} from "../src/components/ui/input-group.js"
+import { InputGroup } from "../src/components/ui/input-group.js"
+import { Button } from "../src/components/ui/button.js"
 
 const meta = {
   title: "Form/InputGroup",
@@ -14,7 +10,8 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: "Compound input group with prefix and suffix addons.",
+        component:
+          "Compound input container for combining inputs with addons and actions.",
       },
     },
   },
@@ -27,14 +24,15 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <div className="w-80">
-      <InputGroup>
-        <InputGroupAddon align="inline-start">https://</InputGroupAddon>
-        <InputGroupInput placeholder="example.com" />
-        <InputGroupAddon align="inline-end">
-          <InputGroupButton size="xs" variant="outline">
-            Copy
-          </InputGroupButton>
-        </InputGroupAddon>
+      <InputGroup className="items-center px-3">
+        <span className="text-sm text-muted-foreground">https://</span>
+        <input
+          className="flex-1 bg-transparent px-2 py-1 text-sm outline-none placeholder:text-muted-foreground"
+          placeholder="example.com"
+        />
+        <Button size="sm" variant="ghost" className="h-7 px-2 text-xs">
+          Copy
+        </Button>
       </InputGroup>
     </div>
   ),

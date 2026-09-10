@@ -800,7 +800,7 @@
     "changeset": "changeset",
     "release:status": "changeset status",
     "release:version": "changeset version && node scripts/sync-package-lock-version.mjs",
-    "build:js": "tsup && node scripts/write-root-entry.mjs",
+    "build:js": "tsup && tsc -p tsconfig.build.json --emitDeclarationOnly && node scripts/write-root-entry.mjs",
     "build:css": "tailwindcss -i src/styles.css -o dist/styles.css --minify"
   },
   "peerDependencies": {

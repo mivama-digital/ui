@@ -12,10 +12,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   Attachment,
-  AttachmentContent,
-  AttachmentDescription,
-  AttachmentTitle,
-  AttachmentTrigger,
   Badge,
   Breadcrumb,
   BreadcrumbItem,
@@ -38,16 +34,11 @@ import {
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-  Eyebrow,
   Field,
   FieldDescription,
   FieldLabel,
-  Heading,
   Input,
   Message,
-  MessageContent,
-  MessageFooter,
-  MessageHeader,
   Pagination,
   PaginationContent,
   PaginationItem,
@@ -55,10 +46,12 @@ import {
   PaginationNext,
   PaginationPrevious,
   Progress,
-  ProgressLabel,
-  ProgressValue,
   ScrollArea,
   Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   Separator,
   Slider,
   Sheet,
@@ -86,18 +79,18 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-  Text,
   Textarea,
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
+  Typography,
 } from "../src/index.js"
 
 export function ThemePreviewExample() {
   return (
     <div className="grid gap-6 p-6">
-      <Heading variant="title">Semantic Theme Preview</Heading>
+      <Typography variant="h3">Semantic Theme Preview</Typography>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-xs font-medium">
         <div className="bg-background text-foreground border border-border rounded-lg p-3 shadow-xs">
           Background
@@ -126,12 +119,6 @@ export function ThemePreviewExample() {
         <div className="bg-destructive text-destructive-foreground rounded-lg p-3">
           Destructive
         </div>
-        <div className="bg-success text-success-foreground rounded-lg p-3">
-          Success
-        </div>
-        <div className="bg-warning text-warning-foreground rounded-lg p-3">
-          Warning
-        </div>
         <div className="bg-background text-foreground ring-3 ring-ring rounded-lg p-3">
           Ring Focus
         </div>
@@ -153,12 +140,14 @@ export function AlertExample() {
 
 export function AttachmentExample() {
   return (
-    <Attachment>
-      <AttachmentTrigger aria-label="Open quarterly-report.pdf" />
-      <AttachmentContent>
-        <AttachmentTitle>quarterly-report.pdf</AttachmentTitle>
-        <AttachmentDescription>2.4 MB · PDF</AttachmentDescription>
-      </AttachmentContent>
+    <Attachment className="items-center justify-between p-4 max-w-sm">
+      <div className="space-y-1">
+        <p className="text-sm font-medium">quarterly-report.pdf</p>
+        <p className="text-xs text-muted-foreground">2.4 MB · PDF</p>
+      </div>
+      <Button variant="outline" size="sm">
+        Download
+      </Button>
     </Attachment>
   )
 }
@@ -201,9 +190,9 @@ export function CardExample() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Text>
+        <p className="text-sm text-muted-foreground">
           Card spacing and surface tokens respond to theme and density.
-        </Text>
+        </p>
       </CardContent>
     </Card>
   )
@@ -212,7 +201,9 @@ export function CardExample() {
 export function DialogExample() {
   return (
     <Dialog>
-      <DialogTrigger render={<Button />}>Open dialog</DialogTrigger>
+      <DialogTrigger asChild>
+        <Button variant="outline">Open dialog</Button>
+      </DialogTrigger>
       <DialogContent>
         <DialogTitle>Confirm change</DialogTitle>
         <DialogDescription>
@@ -259,14 +250,11 @@ export function InputExample() {
 
 export function MessageExample() {
   return (
-    <Message className="w-[28rem] max-w-full">
-      <MessageContent>
-        <MessageHeader>Release bot · now</MessageHeader>
-        <div className="rounded-xl bg-muted px-3 py-2">
-          All package checks passed.
-        </div>
-        <MessageFooter>Delivered</MessageFooter>
-      </MessageContent>
+    <Message date={new Date()} className="w-[28rem] max-w-full flex-col gap-1">
+      <div className="text-xs text-muted-foreground">Release bot</div>
+      <div className="rounded-xl bg-muted px-3 py-2 text-sm">
+        All package checks passed.
+      </div>
     </Message>
   )
 }
@@ -296,22 +284,26 @@ export function PaginationExample() {
 
 export function ProgressExample() {
   return (
-    <Progress value={68} className="w-80 max-w-full">
-      <ProgressLabel>Migration</ProgressLabel>
-      <ProgressValue />
-    </Progress>
+    <div className="w-80 max-w-full space-y-2">
+      <div className="flex justify-between text-sm">
+        <span>Migration</span>
+        <span className="text-muted-foreground">68%</span>
+      </div>
+      <Progress value={68} />
+    </div>
   )
 }
 
 export function SelectExample() {
   return (
-    <Select
-      className="w-80 max-w-full"
-      aria-label="Environment"
-      defaultValue="production"
-    >
-      <option value="preview">Preview</option>
-      <option value="production">Production</option>
+    <Select defaultValue="production">
+      <SelectTrigger className="w-80 max-w-full">
+        <SelectValue placeholder="Select environment" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="preview">Preview</SelectItem>
+        <SelectItem value="production">Production</SelectItem>
+      </SelectContent>
     </Select>
   )
 }
@@ -319,9 +311,9 @@ export function SelectExample() {
 export function SeparatorExample() {
   return (
     <div className="w-80 max-w-full">
-      <Text>Overview</Text>
+      <span className="text-sm font-medium">Overview</span>
       <Separator className="my-4" />
-      <Text>Details</Text>
+      <span className="text-sm font-medium">Details</span>
     </div>
   )
 }
@@ -329,8 +321,8 @@ export function SeparatorExample() {
 export function SheetExample() {
   return (
     <Sheet>
-      <SheetTrigger render={<Button variant="outline" />}>
-        Open sheet
+      <SheetTrigger asChild>
+        <Button variant="outline">Open sheet</Button>
       </SheetTrigger>
       <SheetContent>
         <SheetTitle>Project details</SheetTitle>
@@ -347,7 +339,7 @@ function SidebarNavigation() {
   return (
     <>
       <SidebarHeader>
-        <strong>Workspace</strong>
+        <strong className="px-2">Workspace</strong>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
@@ -364,7 +356,7 @@ function SidebarNavigation() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>mivama-ui</SidebarFooter>
+      <SidebarFooter className="p-2 text-xs">mivama-ui</SidebarFooter>
     </>
   )
 }
@@ -377,8 +369,10 @@ export function SidebarExample() {
           <SidebarNavigation />
         </Sidebar>
         <SidebarInset className="min-h-80 p-6">
-          <Heading variant="title">Static sidebar</Heading>
-          <Text>Use the responsive shell for application navigation.</Text>
+          <Typography variant="h3">Static sidebar</Typography>
+          <p className="text-sm text-muted-foreground">
+            Use the responsive shell for application navigation.
+          </p>
         </SidebarInset>
       </SidebarProvider>
     </div>
@@ -388,17 +382,13 @@ export function SidebarExample() {
 export function SidebarCollapsibleExample() {
   return (
     <SidebarProvider defaultOpen>
-      <Sidebar
-        collapsible="icon"
-        mobileTitle="Storybook navigation"
-        mobileDescription="Navigation example for the Sidebar component."
-      >
+      <Sidebar collapsible="icon">
         <SidebarNavigation />
-        <SidebarRail label="Toggle Storybook navigation" />
+        <SidebarRail />
       </Sidebar>
       <SidebarInset className="min-h-[32rem] p-6">
-        <SidebarTrigger label="Toggle Storybook navigation" />
-        <Heading variant="title">Collapsible sidebar</Heading>
+        <SidebarTrigger />
+        <Typography variant="h3">Collapsible sidebar</Typography>
       </SidebarInset>
     </SidebarProvider>
   )
@@ -454,8 +444,8 @@ export function TooltipExample() {
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger render={<Button variant="outline" />}>
-          Hover or focus
+        <TooltipTrigger asChild>
+          <Button variant="outline">Hover or focus</Button>
         </TooltipTrigger>
         <TooltipContent>Keyboard-focusable tooltip target</TooltipContent>
       </Tooltip>
@@ -466,13 +456,18 @@ export function TooltipExample() {
 export function TypographyExample() {
   return (
     <div className="grid w-[36rem] max-w-full gap-3">
-      <Eyebrow>Design system</Eyebrow>
-      <Heading variant="page">
+      <Typography
+        variant="small"
+        className="font-semibold uppercase tracking-wider text-muted-foreground"
+      >
+        Design system
+      </Typography>
+      <Typography variant="h2">
         Clear hierarchy without local type scales
-      </Heading>
-      <Text>
+      </Typography>
+      <Typography variant="p">
         Typography primitives use shared semantic tokens across themes.
-      </Text>
+      </Typography>
     </div>
   )
 }
@@ -480,8 +475,8 @@ export function TypographyExample() {
 export function AlertDialogExample() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger render={<Button variant="destructive" />}>
-        Delete workspace
+      <AlertDialogTrigger asChild>
+        <Button variant="destructive">Delete workspace</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
@@ -493,7 +488,7 @@ export function AlertDialogExample() {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction variant="destructive">Delete</AlertDialogAction>
+          <AlertDialogAction>Delete</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
@@ -507,7 +502,7 @@ export function SliderExample() {
         <span>Volume</span>
         <span className="text-muted-foreground">50%</span>
       </div>
-      <Slider defaultValue={50} max={100} step={1} aria-label="Volume" />
+      <Slider defaultValue={[50]} max={100} step={1} aria-label="Volume" />
     </div>
   )
 }

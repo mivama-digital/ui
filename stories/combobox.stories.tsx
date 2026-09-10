@@ -1,14 +1,7 @@
 import * as React from "react"
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import {
-  Combobox,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxInput,
-  ComboboxItem,
-  ComboboxList,
-} from "../src/components/ui/combobox.js"
+import { Combobox } from "../src/components/ui/combobox.js"
 
 const frameworks = [
   { label: "Next.js", value: "next.js" },
@@ -26,7 +19,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Combobox component built on Base UI combobox primitive with query filtering and selection.",
+          "Combobox component built on Popover and Command primitives with query filtering and selection.",
       },
     },
   },
@@ -36,22 +29,20 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Basic: Story = {
-  render: () => (
+function ComboboxDemo() {
+  const [value, setValue] = React.useState("")
+  return (
     <div className="w-[300px]">
-      <Combobox items={frameworks}>
-        <ComboboxInput placeholder="Select framework..." />
-        <ComboboxContent>
-          <ComboboxEmpty>No framework found.</ComboboxEmpty>
-          <ComboboxList>
-            {(fw: (typeof frameworks)[number]) => (
-              <ComboboxItem key={fw.value} value={fw.value}>
-                {fw.label}
-              </ComboboxItem>
-            )}
-          </ComboboxList>
-        </ComboboxContent>
-      </Combobox>
+      <Combobox
+        options={frameworks}
+        value={value}
+        onValueChange={setValue}
+        placeholder="Select framework..."
+      />
     </div>
-  ),
+  )
+}
+
+export const Basic: Story = {
+  render: () => <ComboboxDemo />,
 }

@@ -85,7 +85,10 @@ export {
 } from "./components/ui/carousel"
 
 // Chart
-export type { ChartConfig } from "./components/ui/chart"
+export type {
+  ChartConfig,
+  ChartTooltipContentProps,
+} from "./components/ui/chart"
 export {
   ChartContainer,
   ChartLegend,

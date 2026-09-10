@@ -8,34 +8,41 @@ import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import * as class_variance_authority_types from 'class-variance-authority/types';
+import { ClassProp } from 'class-variance-authority/types';
 import * as CollapsiblePrimitive from '@radix-ui/react-collapsible';
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 import { DayButton } from 'react-day-picker';
 import { DayPicker } from 'react-day-picker';
+import { DialogCloseProps } from '@radix-ui/react-dialog';
+import { DialogContentProps } from '@radix-ui/react-dialog';
+import { DialogDescriptionProps } from '@radix-ui/react-dialog';
+import { DialogOverlayProps } from '@radix-ui/react-dialog';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { DialogProps } from '@radix-ui/react-dialog';
+import { DialogTitleProps } from '@radix-ui/react-dialog';
+import { DialogTriggerProps } from '@radix-ui/react-dialog';
 import { DirectionProvider } from '@radix-ui/react-direction';
 import { Drawer as Drawer_2 } from 'vaul';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { ForwardRefExoticComponent } from 'react';
 import * as HoverCardPrimitive from '@radix-ui/react-hover-card';
-import * as input_otp from 'input-otp';
+import { JSX } from 'react';
 import * as LabelPrimitive from '@radix-ui/react-label';
 import * as MenubarPrimitive from '@radix-ui/react-menubar';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import * as PopoverPrimitive from '@radix-ui/react-popover';
+import { Portal } from 'vaul';
 import * as ProgressPrimitive from '@radix-ui/react-progress';
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group';
 import * as React_2 from 'react';
-import * as recharts_types_component_DefaultTooltipContent from 'recharts/types/component/DefaultTooltipContent';
-import * as recharts_types_component_Tooltip from 'recharts/types/component/Tooltip';
-import * as recharts_types_util_payload_getUniqPayload from 'recharts/types/util/payload/getUniqPayload';
-import * as recharts_types_util_types from 'recharts/types/util/types';
 import * as RechartsPrimitive from 'recharts';
+import { RefAttributes } from 'react';
+import { RenderProps } from 'input-otp';
 import * as ResizablePrimitive from 'react-resizable-panels';
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
+import { SeparatorProps } from '@radix-ui/react-separator';
 import * as SliderPrimitive from '@radix-ui/react-slider';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
@@ -48,7 +55,6 @@ import { useDirection } from '@radix-ui/react-direction';
 import useEmblaCarousel from 'embla-carousel-react';
 import { UseEmblaCarouselType } from 'embla-carousel-react';
 import { VariantProps } from 'class-variance-authority';
-import * as vaul from 'vaul';
 
 // @public (undocumented)
 export const Accordion: React_2.ForwardRefExoticComponent<(AccordionPrimitive.AccordionSingleProps | AccordionPrimitive.AccordionMultipleProps) & React_2.RefAttributes<HTMLDivElement>>;
@@ -65,7 +71,7 @@ export const AccordionTrigger: React_2.ForwardRefExoticComponent<Omit<AccordionP
 // @public (undocumented)
 export const Alert: React_2.ForwardRefExoticComponent<React_2.HTMLAttributes<HTMLDivElement> & VariantProps<(props?: ({
     variant?: "default" | "destructive" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string> & React_2.RefAttributes<HTMLDivElement>>;
+} & ClassProp) | undefined) => string> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
 export const AlertDescription: React_2.ForwardRefExoticComponent<React_2.HTMLAttributes<HTMLParagraphElement> & React_2.RefAttributes<HTMLParagraphElement>>;
@@ -143,7 +149,7 @@ export interface BadgeProps extends React_2.HTMLAttributes<HTMLDivElement>, Vari
 // @public (undocumented)
 export const badgeVariants: (props?: ({
     variant?: "default" | "destructive" | "outline" | "secondary" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string;
+} & ClassProp) | undefined) => string;
 
 // @public (undocumented)
 export const Breadcrumb: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.HTMLAttributes<HTMLElement>, HTMLElement>, "ref"> & {
@@ -199,7 +205,7 @@ export interface ButtonProps extends React_2.ButtonHTMLAttributes<HTMLButtonElem
 export const buttonVariants: (props?: ({
     variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined;
     size?: "default" | "sm" | "lg" | "icon" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string;
+} & ClassProp) | undefined) => string;
 
 // @public (undocumented)
 export function Calendar(input: React_2.ComponentProps<typeof DayPicker> & {
@@ -286,47 +292,28 @@ export const ChartStyle: (input: {
 export const ChartTooltip: typeof RechartsPrimitive.Tooltip;
 
 // @public (undocumented)
-export const ChartTooltipContent: React_2.ForwardRefExoticComponent<Omit<RechartsPrimitive.DefaultTooltipContentProps<recharts_types_component_DefaultTooltipContent.ValueType, recharts_types_component_DefaultTooltipContent.NameType> & {
-    accessibilityLayer?: boolean;
-    active?: boolean | undefined;
-    includeHidden?: boolean | undefined;
-    allowEscapeViewBox?: recharts_types_util_types.AllowInDimension;
-    animationDuration?: recharts_types_util_types.AnimationDuration;
-    animationEasing?: recharts_types_util_types.AnimationTiming;
-    content?: recharts_types_component_Tooltip.ContentType<recharts_types_component_DefaultTooltipContent.ValueType, recharts_types_component_DefaultTooltipContent.NameType> | undefined;
-    coordinate?: Partial<recharts_types_util_types.Coordinate>;
-    cursor?: boolean | React_2.ReactElement | React_2.SVGProps<SVGElement>;
-    filterNull?: boolean;
-    defaultIndex?: number;
-    isAnimationActive?: boolean;
-    offset?: number;
-    payloadUniqBy?: recharts_types_util_payload_getUniqPayload.UniqueOption<recharts_types_component_DefaultTooltipContent.Payload<recharts_types_component_DefaultTooltipContent.ValueType, recharts_types_component_DefaultTooltipContent.NameType>> | undefined;
-    position?: Partial<recharts_types_util_types.Coordinate>;
-    reverseDirection?: recharts_types_util_types.AllowInDimension;
-    shared?: boolean;
-    trigger?: "hover" | "click";
-    useTranslate3d?: boolean;
-    viewBox?: recharts_types_util_types.CartesianViewBox;
-    wrapperStyle?: React_2.CSSProperties;
-} & React_2.ClassAttributes<HTMLDivElement> & React_2.HTMLAttributes<HTMLDivElement> & {
+export const ChartTooltipContent: React_2.ForwardRefExoticComponent<Omit<ChartTooltipContentProps, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+
+// @public (undocumented)
+export type ChartTooltipContentProps = React_2.ComponentProps<"div"> & RechartsPrimitive.TooltipProps<number | string | Array<number | string>, number | string> & {
     hideLabel?: boolean;
     hideIndicator?: boolean;
     indicator?: "line" | "dot" | "dashed";
     nameKey?: string;
     labelKey?: string;
-}, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+};
 
 // @public (undocumented)
 export const Checkbox: React_2.ForwardRefExoticComponent<Omit<CheckboxPrimitive.CheckboxProps & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
-export const Collapsible: React_2.ForwardRefExoticComponent<CollapsiblePrimitive.CollapsibleProps & React_2.RefAttributes<HTMLDivElement>>;
+export const Collapsible: ForwardRefExoticComponent<CollapsiblePrimitive.CollapsibleProps & RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
-export const CollapsibleContent: React_2.ForwardRefExoticComponent<CollapsiblePrimitive.CollapsibleContentProps & React_2.RefAttributes<HTMLDivElement>>;
+export const CollapsibleContent: ForwardRefExoticComponent<CollapsiblePrimitive.CollapsibleContentProps & RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
-export const CollapsibleTrigger: React_2.ForwardRefExoticComponent<CollapsiblePrimitive.CollapsibleTriggerProps & React_2.RefAttributes<HTMLButtonElement>>;
+export const CollapsibleTrigger: ForwardRefExoticComponent<CollapsiblePrimitive.CollapsibleTriggerProps & RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export function Combobox(input: ComboboxProps): React_2.JSX.Element;
@@ -406,7 +393,7 @@ export const CommandInput: React_2.ForwardRefExoticComponent<Omit<Omit<Pick<Pick
     ref?: React_2.Ref<HTMLInputElement>;
 } & {
     asChild?: boolean;
-}, "key" | "asChild" | keyof React_2.InputHTMLAttributes<HTMLInputElement>>, "onChange" | "type" | "value"> & {
+}, "key" | "asChild" | keyof React_2.InputHTMLAttributes<HTMLInputElement>>, "onChange" | "value" | "type"> & {
     value?: string;
     onValueChange?: (search: string) => void;
 } & React_2.RefAttributes<HTMLInputElement>, "ref"> & React_2.RefAttributes<HTMLInputElement>>;
@@ -585,13 +572,13 @@ export const Drawer: {
 };
 
 // @public (undocumented)
-export const DrawerClose: React_2.ForwardRefExoticComponent<DialogPrimitive.DialogCloseProps & React_2.RefAttributes<HTMLButtonElement>>;
+export const DrawerClose: React_2.ForwardRefExoticComponent<DialogCloseProps & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
-export const DrawerContent: React_2.ForwardRefExoticComponent<Omit<Omit<DialogPrimitive.DialogContentProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+export const DrawerContent: React_2.ForwardRefExoticComponent<Omit<Omit<DialogContentProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
-export const DrawerDescription: React_2.ForwardRefExoticComponent<Omit<DialogPrimitive.DialogDescriptionProps & React_2.RefAttributes<HTMLParagraphElement>, "ref"> & React_2.RefAttributes<HTMLParagraphElement>>;
+export const DrawerDescription: React_2.ForwardRefExoticComponent<Omit<DialogDescriptionProps & React_2.RefAttributes<HTMLParagraphElement>, "ref"> & React_2.RefAttributes<HTMLParagraphElement>>;
 
 // @public (undocumented)
 export const DrawerFooter: {
@@ -606,16 +593,16 @@ export const DrawerHeader: {
 };
 
 // @public (undocumented)
-export const DrawerOverlay: React_2.ForwardRefExoticComponent<Omit<Omit<DialogPrimitive.DialogOverlayProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+export const DrawerOverlay: React_2.ForwardRefExoticComponent<Omit<Omit<DialogOverlayProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
-export const DrawerPortal: typeof vaul.Portal;
+export const DrawerPortal: Portal;
 
 // @public (undocumented)
-export const DrawerTitle: React_2.ForwardRefExoticComponent<Omit<DialogPrimitive.DialogTitleProps & React_2.RefAttributes<HTMLHeadingElement>, "ref"> & React_2.RefAttributes<HTMLHeadingElement>>;
+export const DrawerTitle: React_2.ForwardRefExoticComponent<Omit<DialogTitleProps & React_2.RefAttributes<HTMLHeadingElement>, "ref"> & React_2.RefAttributes<HTMLHeadingElement>>;
 
 // @public (undocumented)
-export const DrawerTrigger: React_2.ForwardRefExoticComponent<DialogPrimitive.DialogTriggerProps & React_2.RefAttributes<HTMLButtonElement>>;
+export const DrawerTrigger: React_2.ForwardRefExoticComponent<DialogTriggerProps & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export const DropdownMenu: React_2.FC<DropdownMenuPrimitive.DropdownMenuProps>;
@@ -672,64 +659,64 @@ export const DropdownMenuSubTrigger: React_2.ForwardRefExoticComponent<Omit<Drop
 export const DropdownMenuTrigger: React_2.ForwardRefExoticComponent<DropdownMenuPrimitive.DropdownMenuTriggerProps & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
-export function Empty(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function Empty(input: React.ComponentProps<"div">): JSX.Element;
 
 // @public (undocumented)
-export function EmptyContent(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function EmptyContent(input: React.ComponentProps<"div">): JSX.Element;
 
 // @public (undocumented)
-export function EmptyDescription(input: React.ComponentProps<"p">): React_2.JSX.Element;
+export function EmptyDescription(input: React.ComponentProps<"p">): JSX.Element;
 
 // @public (undocumented)
-export function EmptyHeader(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function EmptyHeader(input: React.ComponentProps<"div">): JSX.Element;
 
 // Warning: (ae-forgotten-export) The symbol "emptyMediaVariants" needs to be exported by the entry point index.d.ts
 //
 // @public (undocumented)
-export function EmptyMedia(input: React.ComponentProps<"div"> & VariantProps<typeof emptyMediaVariants>): React_2.JSX.Element;
+export function EmptyMedia(input: React.ComponentProps<"div"> & VariantProps<typeof emptyMediaVariants>): JSX.Element;
 
 // @public (undocumented)
-export function EmptyTitle(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function EmptyTitle(input: React.ComponentProps<"div">): JSX.Element;
 
 // Warning: (ae-forgotten-export) The symbol "fieldVariants" needs to be exported by the entry point index.d.ts
 //
 // @public (undocumented)
-export function Field(input: React.ComponentProps<"div"> & VariantProps<typeof fieldVariants>): React_2.JSX.Element;
+export function Field(input: React.ComponentProps<"div"> & VariantProps<typeof fieldVariants>): JSX.Element;
 
 // @public (undocumented)
-export function FieldContent(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function FieldContent(input: React.ComponentProps<"div">): JSX.Element;
 
 // @public (undocumented)
-export function FieldDescription(input: React.ComponentProps<"p">): React_2.JSX.Element;
+export function FieldDescription(input: React.ComponentProps<"p">): JSX.Element;
 
 // @public (undocumented)
 export function FieldError(input: React.ComponentProps<"div"> & {
     errors?: Array<{
         message?: string;
     } | undefined>;
-}): React_2.JSX.Element | null;
+}): JSX.Element | null;
 
 // @public (undocumented)
-export function FieldGroup(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function FieldGroup(input: React.ComponentProps<"div">): JSX.Element;
 
 // @public (undocumented)
-export function FieldLabel(input: React.ComponentProps<typeof Label>): React_2.JSX.Element;
+export function FieldLabel(input: React.ComponentProps<typeof Label>): JSX.Element;
 
 // @public (undocumented)
 export function FieldLegend(input: React.ComponentProps<"legend"> & {
     variant?: "legend" | "label";
-}): React_2.JSX.Element;
+}): JSX.Element;
 
 // @public (undocumented)
 export function FieldSeparator(input: React.ComponentProps<"div"> & {
     children?: React.ReactNode;
-}): React_2.JSX.Element;
+}): JSX.Element;
 
 // @public (undocumented)
-export function FieldSet(input: React.ComponentProps<"fieldset">): React_2.JSX.Element;
+export function FieldSet(input: React.ComponentProps<"fieldset">): JSX.Element;
 
 // @public (undocumented)
-export function FieldTitle(input: React.ComponentProps<"div">): React_2.JSX.Element;
+export function FieldTitle(input: React.ComponentProps<"div">): JSX.Element;
 
 // @public (undocumented)
 export const HoverCard: React_2.FC<HoverCardPrimitive.HoverCardProps>;
@@ -763,7 +750,7 @@ export const InputOTP: React_2.ForwardRefExoticComponent<(Omit<Omit<React_2.Inpu
     noScriptCSSFallback?: string | null;
     nonce?: string;
 } & {
-    render: (props: input_otp.RenderProps) => React_2.ReactNode;
+    render: (props: RenderProps) => React_2.ReactNode;
     children?: never;
 } & React_2.RefAttributes<HTMLInputElement>, "ref"> | Omit<Omit<React_2.InputHTMLAttributes<HTMLInputElement>, "nonce" | "onChange" | "value" | "maxLength" | "textAlign" | "onComplete" | "pushPasswordManagerStrategy" | "pasteTransformer" | "containerClassName" | "noScriptCSSFallback"> & {
     value?: string;
@@ -812,7 +799,7 @@ export interface KbdGroupPropsInternal extends KbdGroupProps {
 }
 
 // @public (undocumented)
-export const Label: React_2.ForwardRefExoticComponent<Omit<LabelPrimitive.LabelProps & React_2.RefAttributes<HTMLLabelElement>, "ref"> & VariantProps<(props?: class_variance_authority_types.ClassProp | undefined) => string> & React_2.RefAttributes<HTMLLabelElement>>;
+export const Label: React_2.ForwardRefExoticComponent<Omit<LabelPrimitive.LabelProps & React_2.RefAttributes<HTMLLabelElement>, "ref"> & VariantProps<(props?: ClassProp | undefined) => string> & React_2.RefAttributes<HTMLLabelElement>>;
 
 // Warning: (ae-forgotten-export) The symbol "MarkerProps" needs to be exported by the entry point index.d.ts
 //
@@ -915,7 +902,7 @@ export const NavigationMenuList: React_2.ForwardRefExoticComponent<Omit<Navigati
 export const NavigationMenuTrigger: React_2.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuTriggerProps & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
-export const navigationMenuTriggerStyle: (props?: class_variance_authority_types.ClassProp | undefined) => string;
+export const navigationMenuTriggerStyle: (props?: ClassProp | undefined) => string;
 
 // @public (undocumented)
 export const NavigationMenuViewport: React_2.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuViewportProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
@@ -994,13 +981,13 @@ export const RadioGroupItem: React_2.ForwardRefExoticComponent<Omit<RadioGroupPr
 // @public (undocumented)
 export const ResizableHandle: (input: React.ComponentProps<typeof ResizablePrimitive.Separator> & {
     withHandle?: boolean;
-}) => React_2.JSX.Element;
+}) => JSX.Element;
 
 // @public (undocumented)
 export const ResizablePanel: typeof ResizablePrimitive.Panel;
 
 // @public (undocumented)
-export const ResizablePanelGroup: (input: React.ComponentProps<typeof ResizablePrimitive.Group>) => React_2.JSX.Element;
+export const ResizablePanelGroup: (input: React.ComponentProps<typeof ResizablePrimitive.Group>) => JSX.Element;
 
 // @public (undocumented)
 export const ScrollArea: React_2.ForwardRefExoticComponent<Omit<ScrollAreaPrimitive.ScrollAreaProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
@@ -1148,7 +1135,7 @@ export const SidebarMenuButton: React_2.ForwardRefExoticComponent<Omit<React_2.C
 } & VariantProps<(props?: ({
     variant?: "default" | "outline" | null | undefined;
     size?: "default" | "sm" | "lg" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
+} & ClassProp) | undefined) => string>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export const SidebarMenuItem: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "ref"> & React_2.RefAttributes<HTMLLIElement>>;
@@ -1182,19 +1169,19 @@ export const SidebarProvider: React_2.ForwardRefExoticComponent<Omit<React_2.Cla
 export const SidebarRail: React_2.ForwardRefExoticComponent<Omit<React_2.DetailedHTMLProps<React_2.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
-export const SidebarSeparator: React_2.ForwardRefExoticComponent<Omit<Omit<SeparatorPrimitive.SeparatorProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
+export const SidebarSeparator: React_2.ForwardRefExoticComponent<Omit<Omit<SeparatorProps & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>, "ref"> & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
 export const SidebarTrigger: React_2.ForwardRefExoticComponent<Omit<ButtonProps & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
-export function Skeleton(input: React.HTMLAttributes<HTMLDivElement>): React_2.JSX.Element;
+export function Skeleton(input: React.HTMLAttributes<HTMLDivElement>): JSX.Element;
 
 // @public (undocumented)
 export const Slider: React_2.ForwardRefExoticComponent<Omit<SliderPrimitive.SliderProps & React_2.RefAttributes<HTMLSpanElement>, "ref"> & React_2.RefAttributes<HTMLSpanElement>>;
 
 // @public (undocumented)
-export function Spinner(input: React.ComponentProps<"svg">): React_2.JSX.Element;
+export function Spinner(input: React.ComponentProps<"svg">): JSX.Element;
 
 // @public (undocumented)
 export const Switch: React_2.ForwardRefExoticComponent<Omit<SwitchPrimitives.SwitchProps & React_2.RefAttributes<HTMLButtonElement>, "ref"> & React_2.RefAttributes<HTMLButtonElement>>;
@@ -1252,25 +1239,25 @@ export { toast }
 export const Toggle: React_2.ForwardRefExoticComponent<Omit<TogglePrimitive.ToggleProps & React_2.RefAttributes<HTMLButtonElement>, "ref"> & VariantProps<(props?: ({
     variant?: "default" | "outline" | null | undefined;
     size?: "default" | "sm" | "lg" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string> & React_2.RefAttributes<HTMLButtonElement>>;
+} & ClassProp) | undefined) => string> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export const ToggleGroup: React_2.ForwardRefExoticComponent<((Omit<ToggleGroupPrimitive.ToggleGroupSingleProps & React_2.RefAttributes<HTMLDivElement>, "ref"> | Omit<ToggleGroupPrimitive.ToggleGroupMultipleProps & React_2.RefAttributes<HTMLDivElement>, "ref">) & VariantProps<(props?: ({
     variant?: "default" | "outline" | null | undefined;
     size?: "default" | "sm" | "lg" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string>) & React_2.RefAttributes<HTMLDivElement>>;
+} & ClassProp) | undefined) => string>) & React_2.RefAttributes<HTMLDivElement>>;
 
 // @public (undocumented)
 export const ToggleGroupItem: React_2.ForwardRefExoticComponent<Omit<ToggleGroupPrimitive.ToggleGroupItemProps & React_2.RefAttributes<HTMLButtonElement>, "ref"> & VariantProps<(props?: ({
     variant?: "default" | "outline" | null | undefined;
     size?: "default" | "sm" | "lg" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string> & React_2.RefAttributes<HTMLButtonElement>>;
+} & ClassProp) | undefined) => string> & React_2.RefAttributes<HTMLButtonElement>>;
 
 // @public (undocumented)
 export const toggleVariants: (props?: ({
     variant?: "default" | "outline" | null | undefined;
     size?: "default" | "sm" | "lg" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string;
+} & ClassProp) | undefined) => string;
 
 // @public (undocumented)
 export const Tooltip: React_2.FC<TooltipPrimitive.TooltipProps>;

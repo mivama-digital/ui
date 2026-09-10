@@ -3,7 +3,6 @@ import {
   Avatar,
   AvatarImage,
   AvatarFallback,
-  AvatarGroup,
 } from "../src/components/ui/avatar.js"
 
 const meta = {
@@ -33,17 +32,6 @@ export const Basic: Story = {
       <Avatar>
         <AvatarFallback>MS</AvatarFallback>
       </Avatar>
-      <AvatarGroup>
-        <Avatar size="sm">
-          <AvatarFallback>A</AvatarFallback>
-        </Avatar>
-        <Avatar size="sm">
-          <AvatarFallback>B</AvatarFallback>
-        </Avatar>
-        <Avatar size="sm">
-          <AvatarFallback>+3</AvatarFallback>
-        </Avatar>
-      </AvatarGroup>
     </div>
   ),
 }

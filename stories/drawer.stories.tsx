@@ -21,7 +21,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Drawer component built on Base UI native drawer primitive with swipe gestures and accessible overlay management.",
+          "Drawer component built on vaul primitive with swipe gestures and accessible overlay management.",
       },
     },
   },
@@ -33,8 +33,10 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <Drawer showSwipeHandle>
-      <DrawerTrigger render={<Button variant="outline">Open Drawer</Button>} />
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button variant="outline">Open Drawer</Button>
+      </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Drawer Title</DrawerTitle>
@@ -48,7 +50,9 @@ export const Basic: Story = {
           </p>
         </div>
         <DrawerFooter>
-          <DrawerClose render={<Button variant="outline">Close</Button>} />
+          <DrawerClose asChild>
+            <Button variant="outline">Close</Button>
+          </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

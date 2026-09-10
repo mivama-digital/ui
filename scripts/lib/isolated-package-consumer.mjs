@@ -9,6 +9,7 @@ export async function prepareIsolatedPackageConsumer({
   root,
   tempPrefix,
   ignorePackScripts = false,
+  additionalPackages = [],
 }) {
   const workspace = await mkdtemp(path.join(tmpdir(), tempPrefix))
   const artifacts = path.join(workspace, "artifacts")
@@ -40,6 +41,7 @@ export async function prepareIsolatedPackageConsumer({
         "--ignore-scripts",
         "--package-lock=false",
         packageSource.spec,
+        ...additionalPackages,
       ],
       commandOptions
     )

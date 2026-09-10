@@ -1,11 +1,8 @@
-import * as React from "react"
 import type { Meta, StoryObj } from "@storybook/react-vite"
-import type { ColumnDef } from "@tanstack/react-table"
 
 import {
   DataTable,
-  DataTableColumnHeader,
-  type DefaultDataTableFeatures,
+  type DataTableColumn,
 } from "../src/components/ui/data-table.js"
 
 interface Payment {
@@ -48,28 +45,21 @@ const data: Payment[] = [
   },
 ]
 
-const columns: ColumnDef<DefaultDataTableFeatures, Payment, any>[] = [
+const columns: DataTableColumn<Payment>[] = [
   {
-    accessorKey: "status",
+    id: "status",
     header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
+    cell: (row) => <div className="capitalize">{row.status}</div>,
   },
   {
-    accessorKey: "email",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Email" />
-    ),
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
+    id: "email",
+    header: "Email",
+    cell: (row) => <div className="lowercase">{row.email}</div>,
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
-      return <div className="text-right font-medium">${amount}</div>
-    },
+    id: "amount",
+    header: "Amount",
+    cell: (row) => <div className="font-medium">${row.amount}</div>,
   },
 ]
 
@@ -81,7 +71,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Generic headless data table built on TanStack Table v9 with sorting, filtering, and pagination.",
+          "Generic data table component rendering typed columnar data.",
       },
     },
   },
@@ -94,7 +84,7 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <div className="w-[650px]">
-      <DataTable columns={columns} data={data} showPagination />
+      <DataTable columns={columns} data={data} getRowId={(row) => row.id} />
     </div>
   ),
 }

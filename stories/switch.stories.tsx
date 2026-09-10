@@ -9,7 +9,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Binary switch with keyboard and focus semantics from Base UI.",
+          "Binary switch with keyboard and focus semantics from Radix UI.",
       },
     },
   },

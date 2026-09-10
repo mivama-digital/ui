@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
 import { Button } from "../src/components/ui/button.js"
-import {
-  ButtonGroup,
-  ButtonGroupSeparator,
-} from "../src/components/ui/button-group.js"
+import { ButtonGroup } from "../src/components/ui/button-group.js"
 
 const meta = {
   title: "Action/ButtonGroup",
@@ -26,11 +23,15 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <ButtonGroup>
-      <Button variant="outline">Left</Button>
-      <ButtonGroupSeparator />
-      <Button variant="outline">Middle</Button>
-      <ButtonGroupSeparator />
-      <Button variant="outline">Right</Button>
+      <Button variant="ghost" size="sm">
+        Left
+      </Button>
+      <Button variant="ghost" size="sm">
+        Middle
+      </Button>
+      <Button variant="ghost" size="sm">
+        Right
+      </Button>
     </ButtonGroup>
   ),
 }

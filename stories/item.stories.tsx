@@ -1,16 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemGroup,
-  ItemMedia,
-  ItemSeparator,
-  ItemTitle,
-} from "../src/components/ui/item.js"
-import { Button } from "../src/components/ui/button.js"
+import { Item } from "../src/components/ui/item.js"
 
 const meta = {
   title: "Layout/Item",
@@ -19,8 +9,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "List or collection item container with media and content slots.",
+        component: "Interactive list or collection item container.",
       },
     },
   },
@@ -32,27 +21,19 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <ItemGroup className="w-80">
-      <Item variant="outline">
-        <ItemMedia variant="icon">📄</ItemMedia>
-        <ItemContent>
-          <ItemTitle>Document</ItemTitle>
-          <ItemDescription>Quarterly performance report</ItemDescription>
-        </ItemContent>
-        <ItemActions>
-          <Button size="xs" variant="ghost">
-            View
-          </Button>
-        </ItemActions>
+    <div className="w-80 space-y-1">
+      <Item>
+        <div className="flex w-full items-center justify-between">
+          <span>Document</span>
+          <span className="text-xs text-muted-foreground">PDF</span>
+        </div>
       </Item>
-      <ItemSeparator />
-      <Item variant="outline">
-        <ItemMedia variant="icon">📊</ItemMedia>
-        <ItemContent>
-          <ItemTitle>Analytics</ItemTitle>
-          <ItemDescription>Usage trends</ItemDescription>
-        </ItemContent>
+      <Item>
+        <div className="flex w-full items-center justify-between">
+          <span>Analytics</span>
+          <span className="text-xs text-muted-foreground">CSV</span>
+        </div>
       </Item>
-    </ItemGroup>
+    </div>
   ),
 }

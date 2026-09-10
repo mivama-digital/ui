@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <Accordion className="w-80">
+    <Accordion type="single" collapsible className="w-80">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>

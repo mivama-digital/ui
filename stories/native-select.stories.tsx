@@ -1,10 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import {
-  NativeSelect,
-  NativeSelectOptGroup,
-  NativeSelectOption,
-} from "../src/components/ui/native-select.js"
+import { NativeSelect } from "../src/components/ui/native-select.js"
 
 const meta = {
   title: "Form/NativeSelect",
@@ -25,12 +21,14 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <NativeSelect defaultValue="apple">
-      <NativeSelectOptGroup label="Fruits">
-        <NativeSelectOption value="apple">Apple</NativeSelectOption>
-        <NativeSelectOption value="banana">Banana</NativeSelectOption>
-        <NativeSelectOption value="orange">Orange</NativeSelectOption>
-      </NativeSelectOptGroup>
-    </NativeSelect>
+    <div className="w-80">
+      <NativeSelect defaultValue="apple">
+        <optgroup label="Fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="orange">Orange</option>
+        </optgroup>
+      </NativeSelect>
+    </div>
   ),
 }

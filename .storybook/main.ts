@@ -11,6 +11,12 @@ const config: StorybookConfig = {
   async viteFinal(viteConfig) {
     viteConfig.plugins ??= []
     viteConfig.plugins.push(tailwindcss())
+    viteConfig.css = {
+      ...viteConfig.css,
+      postcss: {
+        plugins: [],
+      },
+    }
     return viteConfig
   },
 }
