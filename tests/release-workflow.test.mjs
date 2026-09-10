@@ -25,7 +25,8 @@ test("release workflow is manual, authenticated, and GitHub-hosted", () => {
   assert.equal(packageJson.scripts?.["release:publish"], undefined)
   assert.doesNotMatch(workflow, /run: npm run verify/)
 
-  assert.match(workflow, /NODE_AUTH_TOKEN: \$\{\{ secrets\.NPM_TOKEN \}\}/)
+  assert.doesNotMatch(workflow, /NODE_AUTH_TOKEN/)
+  assert.doesNotMatch(workflow, /secrets\.NPM_TOKEN/)
 })
 
 test("release workflow requires provenance-capable repository visibility", () => {
