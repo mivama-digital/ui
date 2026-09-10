@@ -46,7 +46,12 @@ export async function prepareIsolatedPackageConsumer({
       commandOptions
     )
 
-    const packageDir = path.join(workspace, "node_modules", "@mivama", "ui")
+    const packageDir = path.join(
+      workspace,
+      "node_modules",
+      "@mivama-digital",
+      "ui"
+    )
     const installedPackage = JSON.parse(
       await readFile(path.join(packageDir, "package.json"), "utf8")
     )

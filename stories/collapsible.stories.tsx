@@ -44,7 +44,7 @@ export const Basic: Story = {
           @radix-ui/react-collapsible
         </div>
         <div className="rounded-md border border-border px-4 py-2 font-mono text-sm">
-          @mivama/ui
+          @mivama-digital/ui
         </div>
       </CollapsibleContent>
     </Collapsible>

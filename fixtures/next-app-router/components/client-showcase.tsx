@@ -19,7 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
   Switch,
-} from "@mivama/ui"
+} from "@mivama-digital/ui"
 
 export function ClientShowcase() {
   const [enabled, setEnabled] = useState(false)

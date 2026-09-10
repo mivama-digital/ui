@@ -1,21 +1,21 @@
-# @mivama/ui
+# @mivama-digital/ui
 
 Shared Mivama design tokens and React UI primitives for websites, portals, and product surfaces. Complete shadcn/ui distribution with exactly 64 official components and no proprietary React extensions, built on Base UI 1.7.0.
 
 ## Installation
 
-Applications install `@mivama/ui` directly as a pre-built, tree-shakeable package from npm. You do not need to copy and paste code via the shadcn CLI:
+Applications install `@mivama-digital/ui` directly as a pre-built, tree-shakeable package from npm. You do not need to copy and paste code via the shadcn CLI:
 
 ```bash
-npm install @mivama/ui
+npm install @mivama-digital/ui
 ```
 
 ## Quick start
 
 ```tsx
-import { Button } from "@mivama/ui/button"
-import { Toaster } from "@mivama/ui/toast"
-import "@mivama/ui/styles.css"
+import { Button } from "@mivama-digital/ui/button"
+import { Toaster } from "@mivama-digital/ui/toast"
+import "@mivama-digital/ui/styles.css"
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
@@ -32,12 +32,12 @@ Theming and density are applied directly via `data-mivama-theme` and `data-densi
 Frequently used modules can bypass the root barrel using clean subpath imports:
 
 ```tsx
-import { Button } from "@mivama/ui/button"
-import { Card } from "@mivama/ui/card"
-import { Field } from "@mivama/ui/field"
-import { Input } from "@mivama/ui/input"
-import { DataTable } from "@mivama/ui/data-table"
-import { ChartContainer } from "@mivama/ui/chart"
+import { Button } from "@mivama-digital/ui/button"
+import { Card } from "@mivama-digital/ui/card"
+import { Field } from "@mivama-digital/ui/field"
+import { Input } from "@mivama-digital/ui/input"
+import { DataTable } from "@mivama-digital/ui/data-table"
+import { ChartContainer } from "@mivama-digital/ui/chart"
 ```
 
 - For the complete API catalog and usage examples for all 64 official components, see [`docs/components.md`](docs/components.md).
@@ -57,13 +57,13 @@ TypeScript and API Extractor remain the public API contract. Storybook documents
 
 ## Styling and themes
 
-Import `@mivama/ui/styles.css` once for the canonical aggregate stylesheet. It contains the self-hosted Onest variable font, Tailwind utilities, tokens, themes, and component styles.
+Import `@mivama-digital/ui/styles.css` once for the canonical aggregate stylesheet. It contains the self-hosted Onest variable font, Tailwind utilities, tokens, themes, and component styles.
 
 Advanced consumers may import the lower-level stylesheets explicitly:
 
 ```ts
-import "@mivama/ui/tokens.css"
-import "@mivama/ui/themes.css"
+import "@mivama-digital/ui/tokens.css"
+import "@mivama-digital/ui/themes.css"
 ```
 
 When importing them separately, load tokens before themes and include the component styles needed by the application.

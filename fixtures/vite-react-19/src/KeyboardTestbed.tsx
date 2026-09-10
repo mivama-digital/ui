@@ -1,4 +1,9 @@
-import { Button, Popover, PopoverContent, PopoverTrigger } from "@mivama/ui"
+import {
+  Button,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@mivama-digital/ui"
 
 export function KeyboardTestbed() {
   return (

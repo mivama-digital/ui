@@ -6,7 +6,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 
 ## Root barrel
 
-- Import: `@mivama/ui`
+- Import: `@mivama-digital/ui`
 - ESM types: `./dist/index.d.ts`
 - ESM runtime: `./dist/index.js`
 - CommonJS types: `./dist/index.d.cts`
@@ -14,7 +14,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 
 ## Component and module subpaths
 
-## `@mivama/ui/accordion`
+## `@mivama-digital/ui/accordion`
 
 - Official component: Accordion
 - Source: `src/components/ui/accordion.tsx`
@@ -23,7 +23,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/accordion.d.cts`
 - CommonJS runtime: `./dist/components/ui/accordion.cjs`
 
-## `@mivama/ui/alert`
+## `@mivama-digital/ui/alert`
 
 - Official component: Alert
 - Source: `src/components/ui/alert.tsx`
@@ -32,7 +32,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/alert.d.cts`
 - CommonJS runtime: `./dist/components/ui/alert.cjs`
 
-## `@mivama/ui/alert-dialog`
+## `@mivama-digital/ui/alert-dialog`
 
 - Official component: Alert Dialog
 - Source: `src/components/ui/alert-dialog.tsx`
@@ -41,7 +41,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/alert-dialog.d.cts`
 - CommonJS runtime: `./dist/components/ui/alert-dialog.cjs`
 
-## `@mivama/ui/aspect-ratio`
+## `@mivama-digital/ui/aspect-ratio`
 
 - Official component: Aspect Ratio
 - Source: `src/components/ui/aspect-ratio.tsx`
@@ -50,7 +50,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/aspect-ratio.d.cts`
 - CommonJS runtime: `./dist/components/ui/aspect-ratio.cjs`
 
-## `@mivama/ui/attachment`
+## `@mivama-digital/ui/attachment`
 
 - Official component: Attachment
 - Source: `src/components/ui/attachment.tsx`
@@ -59,7 +59,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/attachment.d.cts`
 - CommonJS runtime: `./dist/components/ui/attachment.cjs`
 
-## `@mivama/ui/avatar`
+## `@mivama-digital/ui/avatar`
 
 - Official component: Avatar
 - Source: `src/components/ui/avatar.tsx`
@@ -68,7 +68,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/avatar.d.cts`
 - CommonJS runtime: `./dist/components/ui/avatar.cjs`
 
-## `@mivama/ui/badge`
+## `@mivama-digital/ui/badge`
 
 - Official component: Badge
 - Source: `src/components/ui/badge.tsx`
@@ -77,7 +77,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/badge.d.cts`
 - CommonJS runtime: `./dist/components/ui/badge.cjs`
 
-## `@mivama/ui/breadcrumb`
+## `@mivama-digital/ui/breadcrumb`
 
 - Official component: Breadcrumb
 - Source: `src/components/ui/breadcrumb.tsx`
@@ -86,7 +86,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/breadcrumb.d.cts`
 - CommonJS runtime: `./dist/components/ui/breadcrumb.cjs`
 
-## `@mivama/ui/bubble`
+## `@mivama-digital/ui/bubble`
 
 - Official component: Bubble
 - Source: `src/components/ui/bubble.tsx`
@@ -95,7 +95,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/bubble.d.cts`
 - CommonJS runtime: `./dist/components/ui/bubble.cjs`
 
-## `@mivama/ui/button`
+## `@mivama-digital/ui/button`
 
 - Official component: Button
 - Source: `src/components/ui/button.tsx`
@@ -104,7 +104,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/button.d.cts`
 - CommonJS runtime: `./dist/components/ui/button.cjs`
 
-## `@mivama/ui/button-group`
+## `@mivama-digital/ui/button-group`
 
 - Official component: Button Group
 - Source: `src/components/ui/button-group.tsx`
@@ -113,7 +113,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/button-group.d.cts`
 - CommonJS runtime: `./dist/components/ui/button-group.cjs`
 
-## `@mivama/ui/calendar`
+## `@mivama-digital/ui/calendar`
 
 - Official component: Calendar
 - Source: `src/components/ui/calendar.tsx`
@@ -122,7 +122,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/calendar.d.cts`
 - CommonJS runtime: `./dist/components/ui/calendar.cjs`
 
-## `@mivama/ui/card`
+## `@mivama-digital/ui/card`
 
 - Official component: Card
 - Source: `src/components/ui/card.tsx`
@@ -131,7 +131,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/card.d.cts`
 - CommonJS runtime: `./dist/components/ui/card.cjs`
 
-## `@mivama/ui/carousel`
+## `@mivama-digital/ui/carousel`
 
 - Official component: Carousel
 - Source: `src/components/ui/carousel.tsx`
@@ -140,7 +140,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/carousel.d.cts`
 - CommonJS runtime: `./dist/components/ui/carousel.cjs`
 
-## `@mivama/ui/chart`
+## `@mivama-digital/ui/chart`
 
 - Official component: Chart
 - Source: `src/components/ui/chart.tsx`
@@ -149,7 +149,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/chart.d.cts`
 - CommonJS runtime: `./dist/components/ui/chart.cjs`
 
-## `@mivama/ui/checkbox`
+## `@mivama-digital/ui/checkbox`
 
 - Official component: Checkbox
 - Source: `src/components/ui/checkbox.tsx`
@@ -158,7 +158,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/checkbox.d.cts`
 - CommonJS runtime: `./dist/components/ui/checkbox.cjs`
 
-## `@mivama/ui/collapsible`
+## `@mivama-digital/ui/collapsible`
 
 - Official component: Collapsible
 - Source: `src/components/ui/collapsible.tsx`
@@ -167,7 +167,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/collapsible.d.cts`
 - CommonJS runtime: `./dist/components/ui/collapsible.cjs`
 
-## `@mivama/ui/combobox`
+## `@mivama-digital/ui/combobox`
 
 - Official component: Combobox
 - Source: `src/components/ui/combobox.tsx`
@@ -176,7 +176,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/combobox.d.cts`
 - CommonJS runtime: `./dist/components/ui/combobox.cjs`
 
-## `@mivama/ui/command`
+## `@mivama-digital/ui/command`
 
 - Official component: Command
 - Source: `src/components/ui/command.tsx`
@@ -185,7 +185,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/command.d.cts`
 - CommonJS runtime: `./dist/components/ui/command.cjs`
 
-## `@mivama/ui/context-menu`
+## `@mivama-digital/ui/context-menu`
 
 - Official component: Context Menu
 - Source: `src/components/ui/context-menu.tsx`
@@ -194,7 +194,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/context-menu.d.cts`
 - CommonJS runtime: `./dist/components/ui/context-menu.cjs`
 
-## `@mivama/ui/data-table`
+## `@mivama-digital/ui/data-table`
 
 - Official component: Data Table
 - Source: `src/components/ui/data-table.tsx`
@@ -203,7 +203,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/data-table.d.cts`
 - CommonJS runtime: `./dist/components/ui/data-table.cjs`
 
-## `@mivama/ui/date-picker`
+## `@mivama-digital/ui/date-picker`
 
 - Official component: Date Picker
 - Source: `src/components/ui/date-picker.tsx`
@@ -212,7 +212,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/date-picker.d.cts`
 - CommonJS runtime: `./dist/components/ui/date-picker.cjs`
 
-## `@mivama/ui/dialog`
+## `@mivama-digital/ui/dialog`
 
 - Official component: Dialog
 - Source: `src/components/ui/dialog.tsx`
@@ -221,7 +221,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/dialog.d.cts`
 - CommonJS runtime: `./dist/components/ui/dialog.cjs`
 
-## `@mivama/ui/direction`
+## `@mivama-digital/ui/direction`
 
 - Official component: Direction
 - Source: `src/components/ui/direction.tsx`
@@ -230,7 +230,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/direction.d.cts`
 - CommonJS runtime: `./dist/components/ui/direction.cjs`
 
-## `@mivama/ui/drawer`
+## `@mivama-digital/ui/drawer`
 
 - Official component: Drawer
 - Source: `src/components/ui/drawer.tsx`
@@ -239,7 +239,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/drawer.d.cts`
 - CommonJS runtime: `./dist/components/ui/drawer.cjs`
 
-## `@mivama/ui/dropdown-menu`
+## `@mivama-digital/ui/dropdown-menu`
 
 - Official component: Dropdown Menu
 - Source: `src/components/ui/dropdown-menu.tsx`
@@ -248,7 +248,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/dropdown-menu.d.cts`
 - CommonJS runtime: `./dist/components/ui/dropdown-menu.cjs`
 
-## `@mivama/ui/empty`
+## `@mivama-digital/ui/empty`
 
 - Official component: Empty
 - Source: `src/components/ui/empty.tsx`
@@ -257,7 +257,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/empty.d.cts`
 - CommonJS runtime: `./dist/components/ui/empty.cjs`
 
-## `@mivama/ui/field`
+## `@mivama-digital/ui/field`
 
 - Official component: Field
 - Source: `src/components/ui/field.tsx`
@@ -266,7 +266,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/field.d.cts`
 - CommonJS runtime: `./dist/components/ui/field.cjs`
 
-## `@mivama/ui/hover-card`
+## `@mivama-digital/ui/hover-card`
 
 - Official component: Hover Card
 - Source: `src/components/ui/hover-card.tsx`
@@ -275,7 +275,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/hover-card.d.cts`
 - CommonJS runtime: `./dist/components/ui/hover-card.cjs`
 
-## `@mivama/ui/input`
+## `@mivama-digital/ui/input`
 
 - Official component: Input
 - Source: `src/components/ui/input.tsx`
@@ -284,7 +284,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/input.d.cts`
 - CommonJS runtime: `./dist/components/ui/input.cjs`
 
-## `@mivama/ui/input-group`
+## `@mivama-digital/ui/input-group`
 
 - Official component: Input Group
 - Source: `src/components/ui/input-group.tsx`
@@ -293,7 +293,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/input-group.d.cts`
 - CommonJS runtime: `./dist/components/ui/input-group.cjs`
 
-## `@mivama/ui/input-otp`
+## `@mivama-digital/ui/input-otp`
 
 - Official component: Input OTP
 - Source: `src/components/ui/input-otp.tsx`
@@ -302,7 +302,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/input-otp.d.cts`
 - CommonJS runtime: `./dist/components/ui/input-otp.cjs`
 
-## `@mivama/ui/item`
+## `@mivama-digital/ui/item`
 
 - Official component: Item
 - Source: `src/components/ui/item.tsx`
@@ -311,7 +311,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/item.d.cts`
 - CommonJS runtime: `./dist/components/ui/item.cjs`
 
-## `@mivama/ui/kbd`
+## `@mivama-digital/ui/kbd`
 
 - Official component: Kbd
 - Source: `src/components/ui/kbd.tsx`
@@ -320,7 +320,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/kbd.d.cts`
 - CommonJS runtime: `./dist/components/ui/kbd.cjs`
 
-## `@mivama/ui/kbd-group`
+## `@mivama-digital/ui/kbd-group`
 
 - Official component: Kbd Group
 - Source: `src/components/ui/kbd-group.tsx`
@@ -329,7 +329,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/kbd-group.d.cts`
 - CommonJS runtime: `./dist/components/ui/kbd-group.cjs`
 
-## `@mivama/ui/label`
+## `@mivama-digital/ui/label`
 
 - Official component: Label
 - Source: `src/components/ui/label.tsx`
@@ -338,7 +338,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/label.d.cts`
 - CommonJS runtime: `./dist/components/ui/label.cjs`
 
-## `@mivama/ui/marker`
+## `@mivama-digital/ui/marker`
 
 - Official component: Marker
 - Source: `src/components/ui/marker.tsx`
@@ -347,7 +347,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/marker.d.cts`
 - CommonJS runtime: `./dist/components/ui/marker.cjs`
 
-## `@mivama/ui/menubar`
+## `@mivama-digital/ui/menubar`
 
 - Official component: Menubar
 - Source: `src/components/ui/menubar.tsx`
@@ -356,7 +356,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/menubar.d.cts`
 - CommonJS runtime: `./dist/components/ui/menubar.cjs`
 
-## `@mivama/ui/message`
+## `@mivama-digital/ui/message`
 
 - Official component: Message
 - Source: `src/components/ui/message.tsx`
@@ -365,7 +365,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/message.d.cts`
 - CommonJS runtime: `./dist/components/ui/message.cjs`
 
-## `@mivama/ui/message-scroller`
+## `@mivama-digital/ui/message-scroller`
 
 - Official component: Message Scroller
 - Source: `src/components/ui/message-scroller.tsx`
@@ -374,7 +374,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/message-scroller.d.cts`
 - CommonJS runtime: `./dist/components/ui/message-scroller.cjs`
 
-## `@mivama/ui/native-select`
+## `@mivama-digital/ui/native-select`
 
 - Official component: Native Select
 - Source: `src/components/ui/native-select.tsx`
@@ -383,7 +383,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/native-select.d.cts`
 - CommonJS runtime: `./dist/components/ui/native-select.cjs`
 
-## `@mivama/ui/navigation-menu`
+## `@mivama-digital/ui/navigation-menu`
 
 - Official component: Navigation Menu
 - Source: `src/components/ui/navigation-menu.tsx`
@@ -392,7 +392,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/navigation-menu.d.cts`
 - CommonJS runtime: `./dist/components/ui/navigation-menu.cjs`
 
-## `@mivama/ui/pagination`
+## `@mivama-digital/ui/pagination`
 
 - Official component: Pagination
 - Source: `src/components/ui/pagination.tsx`
@@ -401,7 +401,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/pagination.d.cts`
 - CommonJS runtime: `./dist/components/ui/pagination.cjs`
 
-## `@mivama/ui/popover`
+## `@mivama-digital/ui/popover`
 
 - Official component: Popover
 - Source: `src/components/ui/popover.tsx`
@@ -410,7 +410,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/popover.d.cts`
 - CommonJS runtime: `./dist/components/ui/popover.cjs`
 
-## `@mivama/ui/progress`
+## `@mivama-digital/ui/progress`
 
 - Official component: Progress
 - Source: `src/components/ui/progress.tsx`
@@ -419,7 +419,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/progress.d.cts`
 - CommonJS runtime: `./dist/components/ui/progress.cjs`
 
-## `@mivama/ui/questionnaire`
+## `@mivama-digital/ui/questionnaire`
 
 - Official component: Questionnaire
 - Source: `src/components/ui/questionnaire.tsx`
@@ -428,7 +428,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/questionnaire.d.cts`
 - CommonJS runtime: `./dist/components/ui/questionnaire.cjs`
 
-## `@mivama/ui/radio-group`
+## `@mivama-digital/ui/radio-group`
 
 - Official component: Radio Group
 - Source: `src/components/ui/radio-group.tsx`
@@ -437,7 +437,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/radio-group.d.cts`
 - CommonJS runtime: `./dist/components/ui/radio-group.cjs`
 
-## `@mivama/ui/resizable`
+## `@mivama-digital/ui/resizable`
 
 - Official component: Resizable
 - Source: `src/components/ui/resizable.tsx`
@@ -446,7 +446,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/resizable.d.cts`
 - CommonJS runtime: `./dist/components/ui/resizable.cjs`
 
-## `@mivama/ui/scroll-area`
+## `@mivama-digital/ui/scroll-area`
 
 - Official component: Scroll Area
 - Source: `src/components/ui/scroll-area.tsx`
@@ -455,7 +455,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/scroll-area.d.cts`
 - CommonJS runtime: `./dist/components/ui/scroll-area.cjs`
 
-## `@mivama/ui/select`
+## `@mivama-digital/ui/select`
 
 - Official component: Select
 - Source: `src/components/ui/select.tsx`
@@ -464,7 +464,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/select.d.cts`
 - CommonJS runtime: `./dist/components/ui/select.cjs`
 
-## `@mivama/ui/separator`
+## `@mivama-digital/ui/separator`
 
 - Official component: Separator
 - Source: `src/components/ui/separator.tsx`
@@ -473,7 +473,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/separator.d.cts`
 - CommonJS runtime: `./dist/components/ui/separator.cjs`
 
-## `@mivama/ui/sheet`
+## `@mivama-digital/ui/sheet`
 
 - Official component: Sheet
 - Source: `src/components/ui/sheet.tsx`
@@ -482,7 +482,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/sheet.d.cts`
 - CommonJS runtime: `./dist/components/ui/sheet.cjs`
 
-## `@mivama/ui/sidebar`
+## `@mivama-digital/ui/sidebar`
 
 - Official component: Sidebar
 - Source: `src/components/ui/sidebar.tsx`
@@ -491,7 +491,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/sidebar.d.cts`
 - CommonJS runtime: `./dist/components/ui/sidebar.cjs`
 
-## `@mivama/ui/skeleton`
+## `@mivama-digital/ui/skeleton`
 
 - Official component: Skeleton
 - Source: `src/components/ui/skeleton.tsx`
@@ -500,7 +500,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/skeleton.d.cts`
 - CommonJS runtime: `./dist/components/ui/skeleton.cjs`
 
-## `@mivama/ui/slider`
+## `@mivama-digital/ui/slider`
 
 - Official component: Slider
 - Source: `src/components/ui/slider.tsx`
@@ -509,7 +509,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/slider.d.cts`
 - CommonJS runtime: `./dist/components/ui/slider.cjs`
 
-## `@mivama/ui/spinner`
+## `@mivama-digital/ui/spinner`
 
 - Official component: Spinner
 - Source: `src/components/ui/spinner.tsx`
@@ -518,7 +518,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/spinner.d.cts`
 - CommonJS runtime: `./dist/components/ui/spinner.cjs`
 
-## `@mivama/ui/switch`
+## `@mivama-digital/ui/switch`
 
 - Official component: Switch
 - Source: `src/components/ui/switch.tsx`
@@ -527,7 +527,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/switch.d.cts`
 - CommonJS runtime: `./dist/components/ui/switch.cjs`
 
-## `@mivama/ui/table`
+## `@mivama-digital/ui/table`
 
 - Official component: Table
 - Source: `src/components/ui/table.tsx`
@@ -536,7 +536,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/table.d.cts`
 - CommonJS runtime: `./dist/components/ui/table.cjs`
 
-## `@mivama/ui/tabs`
+## `@mivama-digital/ui/tabs`
 
 - Official component: Tabs
 - Source: `src/components/ui/tabs.tsx`
@@ -545,7 +545,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/tabs.d.cts`
 - CommonJS runtime: `./dist/components/ui/tabs.cjs`
 
-## `@mivama/ui/textarea`
+## `@mivama-digital/ui/textarea`
 
 - Official component: Textarea
 - Source: `src/components/ui/textarea.tsx`
@@ -554,7 +554,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/textarea.d.cts`
 - CommonJS runtime: `./dist/components/ui/textarea.cjs`
 
-## `@mivama/ui/toast`
+## `@mivama-digital/ui/toast`
 
 - Official component: Toast
 - Source: `src/components/ui/toast.tsx`
@@ -563,7 +563,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/toast.d.cts`
 - CommonJS runtime: `./dist/components/ui/toast.cjs`
 
-## `@mivama/ui/toggle`
+## `@mivama-digital/ui/toggle`
 
 - Official component: Toggle
 - Source: `src/components/ui/toggle.tsx`
@@ -572,7 +572,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/toggle.d.cts`
 - CommonJS runtime: `./dist/components/ui/toggle.cjs`
 
-## `@mivama/ui/toggle-group`
+## `@mivama-digital/ui/toggle-group`
 
 - Official component: Toggle Group
 - Source: `src/components/ui/toggle-group.tsx`
@@ -581,7 +581,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/toggle-group.d.cts`
 - CommonJS runtime: `./dist/components/ui/toggle-group.cjs`
 
-## `@mivama/ui/tooltip`
+## `@mivama-digital/ui/tooltip`
 
 - Official component: Tooltip
 - Source: `src/components/ui/tooltip.tsx`
@@ -590,7 +590,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 - CommonJS types: `./dist/components/ui/tooltip.d.cts`
 - CommonJS runtime: `./dist/components/ui/tooltip.cjs`
 
-## `@mivama/ui/typography`
+## `@mivama-digital/ui/typography`
 
 - Official component: Typography
 - Source: `src/components/ui/typography.tsx`
@@ -601,4 +601,4 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 
 ## Stylesheet exports
 
-- `@mivama/ui/styles.css` → `./dist/styles.css`
+- `@mivama-digital/ui/styles.css` → `./dist/styles.css`

@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Security fixes are applied to the latest published major version of `@mivama/ui`.
+Security fixes are applied to the latest published major version of `@mivama-digital/ui`.
 
 ## Reporting a vulnerability
 
