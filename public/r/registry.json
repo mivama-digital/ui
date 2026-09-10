@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "mivama-ui",
-  "homepage": "https://github.com/mivama-digital/mivama-ui",
+  "name": "mivama",
+  "homepage": "https://github.com/mivama-digital/ui",
   "items": [
     {
       "name": "mivama-base",

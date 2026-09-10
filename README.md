@@ -4,7 +4,7 @@
 
 ## Overview
 
-`mivama-ui` serves as a lightweight, versioned theme registry (`registry:base`) providing Mivama design tokens, CSS variables, and minimal base styling rules. Official UI components (`Button`, `Card`, `Dialog`, etc.) are installed directly from the official shadcn CLI into each consumer application.
+`mivama` serves as a lightweight, versioned theme registry (`registry:base`) providing Mivama design tokens, CSS variables, and minimal base styling rules. Official UI components (`Button`, `Card`, `Dialog`, etc.) are installed directly from the official shadcn CLI into each consumer application.
 
 ## Consumer quick start
 
@@ -24,7 +24,7 @@ Use the immutable commit SHA pinned in `components.json`:
 ```json
 {
   "registries": {
-    "@mivama": "https://raw.githubusercontent.com/mivama-digital/mivama-ui/ee852161825024e1ee74eec056afa084c0cc185a/public/r/{name}.json"
+    "@mivama": "https://raw.githubusercontent.com/mivama-digital/ui/ee852161825024e1ee74eec056afa084c0cc185a/public/r/{name}.json"
   }
 }
 ```

@@ -16,7 +16,7 @@ test("registry contains exactly one token-only Mivama base", () => {
   assert.equal(existsSync(registryPath), true, "registry.json must exist");
   const registry = JSON.parse(readFileSync(registryPath, "utf8"));
 
-  assert.equal(registry.name, "mivama-ui");
+  assert.equal(registry.name, "mivama");
   assert.deepEqual(registry.items.map((item) => item.name), ["mivama-base"]);
 
   const base = registry.items[0];

@@ -22,6 +22,6 @@
   "menuColor": "default",
   "menuAccent": "subtle",
   "registries": {
-    "@mivama": "https://raw.githubusercontent.com/mivama-digital/mivama-ui/7524c71a027487991e6bf96f7078bd4d8159fad6/public/r/{name}.json"
+    "@mivama": "https://raw.githubusercontent.com/mivama-digital/ui/7524c71a027487991e6bf96f7078bd4d8159fad6/public/r/{name}.json"
   }
 }

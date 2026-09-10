@@ -10,4 +10,4 @@ For a component update, a consumer maintainer must:
 4. run the consumer's full tests, lint, typecheck, build, and visual smoke check;
 5. commit the reviewed component source in that consumer.
 
-Registry-token changes are separate, reviewed changes in mivama-ui. Consumers pin a registry commit SHA and upgrade it deliberately.
+Registry-token changes are separate, reviewed changes in the mivama-digital/ui registry. Consumers pin a registry commit SHA and upgrade it deliberately.

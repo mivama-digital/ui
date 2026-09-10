@@ -30,7 +30,7 @@ test("fixture components.json defines pinned @mivama registry", () => {
   assert.ok(config.registries?.["@mivama"], "@mivama registry must be defined");
   assert.match(
     config.registries["@mivama"],
-    /^https:\/\/raw\.githubusercontent\.com\/mivama-digital\/mivama-ui\/[0-9a-f]{40}\/public\/r\/\{name\}\.json$/,
+    /^https:\/\/raw\.githubusercontent\.com\/mivama-digital\/ui\/[0-9a-f]{40}\/public\/r\/\{name\}\.json$/,
     "@mivama registry URL must use a 40-character commit SHA pin"
   );
 });
