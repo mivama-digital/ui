@@ -1,18 +1,18 @@
 # Migrating to the shadcn-compatible distribution
 
-Version 27 is a breaking re-baseline of `@mivama-digital/ui` onto the current official shadcn/ui component catalog.
+Version 27 is a breaking re-baseline of `@orevori/ui` onto the current official shadcn/ui component catalog.
 
 ## Install and import
 
 ```bash
-npm install @mivama-digital/ui
+npm install @orevori/ui
 ```
 
 ```tsx
-import { Button } from "@mivama-digital/ui/button"
-import { Dialog, DialogContent } from "@mivama-digital/ui/dialog"
-import { Toast, toast } from "@mivama-digital/ui/toast"
-import "@mivama-digital/ui/styles.css"
+import { Button } from "@orevori/ui/button"
+import { Dialog, DialogContent } from "@orevori/ui/dialog"
+import { Toast, toast } from "@orevori/ui/toast"
+import "@orevori/ui/styles.css"
 ```
 
 The root barrel is also available, but component subpaths are preferred for explicit boundaries and independently verified tree-shaking.

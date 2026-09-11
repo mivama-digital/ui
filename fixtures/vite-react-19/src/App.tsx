@@ -24,7 +24,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@mivama-digital/ui"
+} from "@orevori/ui"
 
 export function App() {
   const [accepted, setAccepted] = useState(false)
@@ -35,7 +35,7 @@ export function App() {
         <CardHeader>
           <CardTitle>Vite consumer probe</CardTitle>
           <CardDescription>
-            Imports the packed @mivama-digital/ui public API.
+            Imports the packed @orevori/ui public API.
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">

@@ -1,17 +1,17 @@
-# @mivama-digital/ui Component Catalog
+# @orevori/ui Component Catalog
 
-`@mivama-digital/ui` is a centrally installable shadcn/ui distribution. The authoritative component inventory is `config/components.mjs`; release checks require the source directory, package subpaths, Storybook coverage, and generated exports to match it exactly.
+`@orevori/ui` is a centrally installable shadcn/ui distribution. The authoritative component inventory is `config/components.mjs`; release checks require the source directory, package subpaths, Storybook coverage, and generated exports to match it exactly.
 
 ## Setup
 
 ```bash
-npm install @mivama-digital/ui
+npm install @orevori/ui
 ```
 
 ```tsx
-import { Button } from "@mivama-digital/ui/button"
-import { Toast } from "@mivama-digital/ui/toast"
-import "@mivama-digital/ui/styles.css"
+import { Button } from "@orevori/ui/button"
+import { Toast } from "@orevori/ui/toast"
+import "@orevori/ui/styles.css"
 
 export function App() {
   return (

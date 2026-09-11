@@ -119,7 +119,7 @@ for (const slug of setDifference(registeredSlugs, moduleExportSlugs)) {
 const sorted = [...components].sort((a, b) => a.slug.localeCompare(b.slug))
 const moduleSections = sorted.map(({ name, slug }) => {
   const packageExport = packageJson.exports[`./${slug}`]
-  return `## \`@mivama-digital/ui/${slug}\`
+  return `## \`@orevori/ui/${slug}\`
 
 - Official component: ${name}
 - Source: \`src/components/ui/${slug}.tsx\`
@@ -136,8 +136,7 @@ const stylesheetExports = Object.entries(packageJson.exports ?? {})
 const stylesheetLines = stylesheetExports.length
   ? stylesheetExports
       .map(
-        ([key, target]) =>
-          `- \`@mivama-digital/ui/${key.slice(2)}\` → \`${target}\``
+        ([key, target]) => `- \`@orevori/ui/${key.slice(2)}\` → \`${target}\``
       )
       .join("\n")
   : "- None"
@@ -150,7 +149,7 @@ The registry is the authoritative inventory of the official shadcn/ui component 
 
 ## Root barrel
 
-- Import: \`@mivama-digital/ui\`
+- Import: \`@orevori/ui\`
 - ESM types: \`${rootExport?.import?.types ?? "missing"}\`
 - ESM runtime: \`${rootExport?.import?.default ?? "missing"}\`
 - CommonJS types: \`${rootExport?.require?.types ?? "missing"}\`

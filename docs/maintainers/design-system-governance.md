@@ -1,6 +1,6 @@
 # Design-system governance
 
-`@mivama-digital/ui` is maintained as a design system, not as a collection of copied application components. New work should strengthen one canonical implementation instead of introducing aliases, parallel primitives, or compatibility layers without a concrete migration need.
+`@orevori/ui` is maintained as a design system, not as a collection of copied application components. New work should strengthen one canonical implementation instead of introducing aliases, parallel primitives, or compatibility layers without a concrete migration need.
 
 ## Sources of truth
 

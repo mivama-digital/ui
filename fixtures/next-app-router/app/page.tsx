@@ -13,7 +13,7 @@ import {
   CardHeader,
   CardTitle,
   Separator,
-} from "@mivama-digital/ui"
+} from "@orevori/ui"
 
 import { ClientShowcase } from "../components/client-showcase"
 
@@ -42,7 +42,7 @@ export default function Page() {
             <AlertTitle>Package CSS loaded</AlertTitle>
             <AlertDescription>
               The Next App Router fixture imports{" "}
-              <code>@mivama-digital/ui/styles.css</code>.
+              <code>@orevori/ui/styles.css</code>.
             </AlertDescription>
           </Alert>
         </CardContent>

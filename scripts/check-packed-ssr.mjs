@@ -23,9 +23,9 @@ try {
       `  const namespace = await import(specifier);\n` +
       `  if (Object.keys(namespace).length === 0) throw new Error(\`Empty module: \${specifier}\`);\n` +
       `}\n` +
-      `const card = await import("@mivama-digital/ui/card");\n` +
-      `const button = await import("@mivama-digital/ui/button");\n` +
-      `const badge = await import("@mivama-digital/ui/badge");\n` +
+      `const card = await import("@orevori/ui/card");\n` +
+      `const button = await import("@orevori/ui/button");\n` +
+      `const badge = await import("@orevori/ui/badge");\n` +
       `const tree = React.createElement(\n` +
       `  "main",\n` +
       `  null,\n` +
