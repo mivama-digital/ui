@@ -13,6 +13,10 @@ export async function prepareIsolatedPackageConsumer({
 }) {
   const workspace = await mkdtemp(path.join(tmpdir(), tempPrefix))
   const artifacts = path.join(workspace, "artifacts")
+  const rootPackage = JSON.parse(
+    await readFile(path.join(root, "package.json"), "utf8")
+  )
+  const packagePathSegments = rootPackage.name.split("/")
   let packageSource
 
   const cleanup = async () => {
@@ -49,8 +53,7 @@ export async function prepareIsolatedPackageConsumer({
     const packageDir = path.join(
       workspace,
       "node_modules",
-      "@mivama-digital",
-      "ui"
+      ...packagePathSegments
     )
     const installedPackage = JSON.parse(
       await readFile(path.join(packageDir, "package.json"), "utf8")

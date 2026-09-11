@@ -6,7 +6,7 @@ import path from "node:path"
 import { runCommand, runNpm } from "./lib/process.mjs"
 
 const root = path.resolve(import.meta.dirname, "..")
-const packageName = "@mivama-digital/ui"
+const packageName = "@orevori/ui"
 const version = process.argv[2]?.trim()
 const exactVersionPattern = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/
 const registryAttempts = 12
