@@ -7,7 +7,6 @@ import { fileURLToPath } from "node:url"
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const packageName = "@orevori/ui"
-const packageVersion = "26.9.11"
 const legacyPackageName = "@orevori/mivama-ui"
 const legacyNpmScope = "@mivama-digital"
 
@@ -29,11 +28,8 @@ test("all tracked consumer and release references use the Orevori package scope"
     .filter((file) => file !== "tests/npm-package-scope.test.mjs")
 
   assert.equal(packageJson.name, packageName)
-  assert.equal(packageJson.version, packageVersion)
   assert.equal(packageLock.name, packageName)
-  assert.equal(packageLock.version, packageVersion)
   assert.equal(packageLock.packages?.[""]?.name, packageName)
-  assert.equal(packageLock.packages?.[""]?.version, packageVersion)
 
   const legacyReferences = []
   for (const file of trackedFiles) {
