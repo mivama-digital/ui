@@ -522,10 +522,7 @@ export interface DataTableProps<TData> {
 export function DatePicker(input: DatePickerProps): React_2.JSX.Element;
 
 // @public (undocumented)
-export interface DatePickerProps {
-    // (undocumented)
-    className?: string;
-}
+export type DatePickerProps = React_2.ComponentProps<typeof Calendar>;
 
 // @public (undocumented)
 export const Dialog: React_2.FC<DialogPrimitive.DialogProps>;
